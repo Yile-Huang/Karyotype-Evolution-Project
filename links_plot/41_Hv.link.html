@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synteny — Hv_2_Os.blast.icl.block.corr.csv-r-r.reform.Claude_filtered.txt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0a0e1a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; min-height:100vh; }
+  .canvas-container { padding:20px 32px; overflow-x:auto; }
+  svg { display:block; max-width:100%; }
+  .legend {
+    padding:10px 32px 16px; display:flex; gap:18px; flex-wrap:wrap;
+    border-top:1px solid #1e2d45;
+  }
+  .legend-item { display:flex; align-items:center; gap:7px; font-size:11px; color:#64748b; }
+  .legend-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0; }
+  .stats-bar {
+    padding:10px 32px 18px; display:flex; gap:28px; font-size:10px; color:#64748b; flex-wrap:wrap;
+  }
+  .stats-bar b { color:#0ea5e9; margin-right:3px; }
+  #tooltip {
+    position:fixed; background:#1e2d45; border:1px solid #38bdf8; border-radius:6px;
+    padding:10px 14px; font-size:11px; line-height:1.8; color:#e2e8f0;
+    pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:1000;
+    max-width:340px;
+  }
+  #tooltip.show { opacity:1; }
+</style>
+</head>
+<body>
+
+<div class="canvas-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2866" width="1400" height="2866" style="background:#0a0e1a;font-family:'JetBrains Mono',monospace">
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="arr_Os01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFD700"/></marker>
+<marker id="arr_rev_Os01" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFD700"/></marker>
+<marker id="arr_Os02" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E63946"/></marker>
+<marker id="arr_rev_Os02" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E63946"/></marker>
+<marker id="arr_Os03" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1A237E"/></marker>
+<marker id="arr_rev_Os03" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#1A237E"/></marker>
+<marker id="arr_Os04" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9C27B0"/></marker>
+<marker id="arr_rev_Os04" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9C27B0"/></marker>
+<marker id="arr_Os05" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E06D10"/></marker>
+<marker id="arr_rev_Os05" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E06D10"/></marker>
+<marker id="arr_Os06" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#43A047"/></marker>
+<marker id="arr_rev_Os06" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#43A047"/></marker>
+<marker id="arr_Os07" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#3498DB"/></marker>
+<marker id="arr_rev_Os07" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#3498DB"/></marker>
+<marker id="arr_Os08" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFA07A"/></marker>
+<marker id="arr_rev_Os08" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFA07A"/></marker>
+<marker id="arr_Os09" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#72d1b9"/></marker>
+<marker id="arr_rev_Os09" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#72d1b9"/></marker>
+<marker id="arr_Os10" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#0055a6"/></marker>
+<marker id="arr_rev_Os10" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#0055a6"/></marker>
+<marker id="arr_Os11" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#e3b58f"/></marker>
+<marker id="arr_rev_Os11" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#e3b58f"/></marker>
+<marker id="arr_Os12" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#f0c9a7"/></marker>
+<marker id="arr_rev_Os12" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#f0c9a7"/></marker>
+</defs>
+<g id="ribbons" opacity="0.35">
+<path d="M232.0,201.6 C700.0,201.6 700.0,194.7 1190.0,194.7 L1190.0,283.2 C700.0,283.2 700.0,288.1 232.0,288.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g38950.1.MSUv7.0 - LOC_Os01g60940.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0266840.1.V3 - HORVU.MOREX.r3.3HG0297860.1.V3 | Dir: + | Size: 792 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1008.2 C700.0,1008.2 700.0,1073.8 1190.0,1073.8 L1190.0,1140.2 C700.0,1140.2 700.0,1067.5 232.0,1067.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g30420.1.MSUv7.0 - LOC_Os04g46190.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0160790.1.V3 - HORVU.MOREX.r3.2HG0185670.1.V3 | Dir: + | Size: 605 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1721.3 C700.0,1721.3 700.0,907.7 1190.0,907.7 L1190.0,996.3 C700.0,996.3 700.0,1790.7 232.0,1790.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Hv02 | Ref: LOC_Os07g49520.1.MSUv7.0 - LOC_Os07g31840.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0107420.1.V3 - HORVU.MOREX.r3.2HG0143250.1.V3 | Dir: - | Size: 584 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,514.3 C700.0,514.3 700.0,482.8 1190.0,482.8 L1190.0,557.5 C700.0,557.5 700.0,566.6 232.0,566.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g37580.1.MSUv7.0 - LOC_Os02g50370.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0589730.1.V3 - HORVU.MOREX.r3.6HG0613550.1.V3 | Dir: + | Size: 495 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2137.5 C700.0,2137.5 700.0,1934.0 1190.0,1934.0 L1190.0,1962.1 C700.0,1962.1 700.0,2176.0 232.0,2176.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g27240.1.MSUv7.0 - LOC_Os09g39230.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0485050.1.V3 - HORVU.MOREX.r3.5HG0507470.1.V3 | Dir: + | Size: 451 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,673.9 C700.0,673.9 700.0,774.8 1190.0,774.8 L1190.0,829.3 C700.0,829.3 700.0,709.8 232.0,709.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g22120.1.MSUv7.0 - LOC_Os03g13170.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0378030.1.V3 - HORVU.MOREX.r3.4HG0393930.1.V3 | Dir: - | Size: 437 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1386.9 C700.0,1386.9 700.0,1466.6 1190.0,1466.6 L1190.0,1501.7 C700.0,1501.7 700.0,1429.8 232.0,1429.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g06040.1.MSUv7.0 - LOC_Os06g16430.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0652780.1.V3 - HORVU.MOREX.r3.7HG0671730.1.V3 | Dir: + | Size: 355 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,823.6 C700.0,823.6 700.0,1963.8 1190.0,1963.8 L1190.0,1977.2 C700.0,1977.2 700.0,846.8 232.0,846.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv05 | Ref: LOC_Os03g52860.1.MSUv7.0 - LOC_Os03g59550.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0509210.1.V3 - HORVU.MOREX.r3.5HG0523030.1.V3 | Dir: + | Size: 297 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,792.9 C700.0,792.9 700.0,614.8 1190.0,614.8 L1190.0,626.4 C700.0,626.4 700.0,824.4 232.0,824.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g45260.1.MSUv7.0 - LOC_Os03g53050.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0332900.1.V3 - HORVU.MOREX.r3.4HG0340900.4.V3 | Dir: + | Size: 259 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,288.2 C700.0,288.2 700.0,283.4 1190.0,283.4 L1190.0,293.7 C700.0,293.7 700.0,306.8 232.0,306.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g65690.1.MSUv7.0 - LOC_Os01g60960.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0298030.1.V3 - HORVU.MOREX.r3.3HG0304610.1.V3 | Dir: - | Size: 227 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,579.3 C700.0,579.3 700.0,569.8 1190.0,569.8 L1190.0,585.0 C700.0,585.0 700.0,600.0 232.0,600.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g53520.1.MSUv7.0 - LOC_Os02g58790.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0619820.1.V3 - HORVU.MOREX.r3.6HG0634290.1.V3 | Dir: + | Size: 225 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1286.5 C700.0,1286.5 700.0,1388.8 1190.0,1388.8 L1190.0,1403.2 C700.0,1403.2 700.0,1307.6 232.0,1307.6 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g42350.1.MSUv7.0 - LOC_Os05g36270.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0067230.1.V3 - HORVU.MOREX.r3.1HG0075240.1.V3 | Dir: - | Size: 223 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,102.2 C700.0,102.2 700.0,108.8 1190.0,108.8 L1190.0,155.0 C700.0,155.0 700.0,124.8 232.0,124.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g11980.1.MSUv7.0 - LOC_Os01g17402.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0246610.1.V3 - HORVU.MOREX.r3.3HG0259030.1.V3 | Dir: + | Size: 201 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,846.2 C700.0,846.2 700.0,1978.2 1190.0,1978.2 L1190.0,1990.7 C700.0,1990.7 700.0,862.9 232.0,862.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv05 | Ref: LOC_Os03g59390.1.MSUv7.0 - LOC_Os03g64400.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0523860.1.V3 - HORVU.MOREX.r3.5HG0538120.1.V3 | Dir: + | Size: 199 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1323.8 C700.0,1323.8 700.0,1411.7 1190.0,1411.7 L1190.0,1422.0 C700.0,1422.0 700.0,1339.8 232.0,1339.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g47620.1.MSUv7.0 - LOC_Os05g51860.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0083270.1.V3 - HORVU.MOREX.r3.1HG0095470.1.V3 | Dir: + | Size: 180 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1155.9 C700.0,1155.9 700.0,1218.4 1190.0,1218.4 L1190.0,1257.8 C700.0,1257.8 700.0,1177.5 232.0,1177.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g03100.1.MSUv7.0 - LOC_Os05g08400.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0012840.1.V3 - HORVU.MOREX.r3.1HG0027800.1.V3 | Dir: + | Size: 166 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2401.1 C700.0,2401.1 700.0,633.3 1190.0,633.3 L1190.0,659.5 C700.0,659.5 700.0,2437.2 232.0,2437.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g14420.1.MSUv7.0 - LOC_Os11g05530.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0343800.2.V3 - HORVU.MOREX.r3.4HG0351790.1.V3 | Dir: - | Size: 158 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,646.4 C700.0,646.4 700.0,844.9 1190.0,844.9 L1190.0,854.8 C700.0,854.8 700.0,658.8 232.0,658.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g05730.1.MSUv7.0 - LOC_Os03g09150.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0400740.1.V3 - HORVU.MOREX.r3.4HG0407020.1.V3 | Dir: + | Size: 154 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,658.9 C700.0,658.9 700.0,832.4 1190.0,832.4 L1190.0,844.7 C700.0,844.7 700.0,670.8 232.0,670.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g12510.1.MSUv7.0 - LOC_Os03g09170.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0394960.1.V3 - HORVU.MOREX.r3.4HG0400710.1.V3 | Dir: - | Size: 150 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1098.5 C700.0,1098.5 700.0,1159.2 1190.0,1159.2 L1190.0,1167.6 C700.0,1167.6 700.0,1110.7 232.0,1110.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g57150.1.MSUv7.0 - LOC_Os04g53990.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0200040.1.V3 - HORVU.MOREX.r3.2HG0208340.1.V3 | Dir: - | Size: 146 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1987.2 C700.0,1987.2 700.0,1530.6 1190.0,1530.6 L1190.0,1560.9 C700.0,1560.9 700.0,2001.1 232.0,2001.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Hv07 | Ref: LOC_Os08g41150.1.MSUv7.0 - LOC_Os08g44820.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0682400.1.V3 - HORVU.MOREX.r3.7HG0690460.1.V3 | Dir: + | Size: 143 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1067.5 C700.0,1067.5 700.0,1140.4 1190.0,1140.4 L1190.0,1148.5 C700.0,1148.5 700.0,1081.2 232.0,1081.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g49420.1.MSUv7.0 - LOC_Os04g46200.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0185840.1.V3 - HORVU.MOREX.r3.2HG0190210.1.V3 | Dir: - | Size: 137 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1551.4 C700.0,1551.4 700.0,1683.8 1190.0,1683.8 L1190.0,1698.3 C700.0,1698.3 700.0,1564.0 232.0,1564.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g49830.1.MSUv7.0 - LOC_Os06g46475.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0725250.1.V3 - HORVU.MOREX.r3.7HG0734740.1.V3 | Dir: - | Size: 137 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,315.5 C700.0,315.5 700.0,297.8 1190.0,297.8 L1190.0,306.3 C700.0,306.3 700.0,326.0 232.0,326.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g67960.1.MSUv7.0 - LOC_Os01g71010.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0307950.1.V3 - HORVU.MOREX.r3.3HG0314780.1.V3 | Dir: + | Size: 135 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2600.0 C700.0,2600.0 700.0,1867.0 1190.0,1867.0 L1190.0,1888.0 C700.0,1888.0 700.0,2613.7 232.0,2613.7 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g04930.1.MSUv7.0 - LOC_Os12g01010.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0460560.1.V3 - HORVU.MOREX.r3.5HG0467290.1.V3 | Dir: - | Size: 115 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1084.9 C700.0,1084.9 700.0,1148.6 1190.0,1148.6 L1190.0,1153.7 C700.0,1153.7 700.0,1092.9 232.0,1092.9 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g52630.1.MSUv7.0 - LOC_Os04g50800.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0190260.1.V3 - HORVU.MOREX.r3.2HG0194540.1.V3 | Dir: - | Size: 108 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2743.1 C700.0,2743.1 700.0,1770.9 1190.0,1770.9 L1190.0,1792.8 C700.0,1792.8 700.0,2760.5 232.0,2760.5 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g40120.1.MSUv7.0 - LOC_Os12g36110.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0438190.1.V3 - HORVU.MOREX.r3.5HG0444870.1.V3 | Dir: - | Size: 103 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2124.8 C700.0,2124.8 700.0,1923.9 1190.0,1923.9 L1190.0,1933.6 C700.0,1933.6 700.0,2137.5 232.0,2137.5 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g27220.1.MSUv7.0 - LOC_Os09g24490.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0479750.1.V3 - HORVU.MOREX.r3.5HG0484930.1.V3 | Dir: - | Size: 103 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,306.9 C700.0,306.9 700.0,293.5 1190.0,293.5 L1190.0,297.4 C700.0,297.4 700.0,315.6 232.0,315.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g67980.1.MSUv7.0 - LOC_Os01g65730.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0304500.1.V3 - HORVU.MOREX.r3.3HG0307630.1.V3 | Dir: - | Size: 102 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1539.7 C700.0,1539.7 700.0,1698.9 1190.0,1698.9 L1190.0,1707.8 C700.0,1707.8 700.0,1551.2 232.0,1551.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g46450.1.MSUv7.0 - LOC_Os06g43840.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0735250.1.V3 - HORVU.MOREX.r3.7HG0744210.1.V3 | Dir: - | Size: 100 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,84.1 C700.0,84.1 700.0,77.1 1190.0,77.1 L1190.0,94.0 C700.0,94.0 700.0,94.0 232.0,94.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g10050.1.MSUv7.0 - LOC_Os01g07740.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0235960.1.V3 - HORVU.MOREX.r3.3HG0241770.1.V3 | Dir: - | Size: 98 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1819.4 C700.0,1819.4 700.0,1620.3 1190.0,1620.3 L1190.0,1638.6 C700.0,1638.6 700.0,1830.3 232.0,1830.3 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Hv07 | Ref: LOC_Os08g03676.1.MSUv7.0 - LOC_Os08g01070.2.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0702450.1.V3 - HORVU.MOREX.r3.7HG0708280.1.V3 | Dir: - | Size: 98 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2314.7 C700.0,2314.7 700.0,1309.7 1190.0,1309.7 L1190.0,1330.8 C700.0,1330.8 700.0,2326.9 232.0,2326.9 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Hv01 | Ref: LOC_Os10g31790.1.MSUv7.0 - LOC_Os10g34730.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0039370.1.V3 - HORVU.MOREX.r3.1HG0045770.1.V3 | Dir: + | Size: 94 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1255.5 C700.0,1255.5 700.0,1368.8 1190.0,1368.8 L1190.0,1377.8 C700.0,1377.8 700.0,1269.6 232.0,1269.6 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g32370.1.MSUv7.0 - LOC_Os05g28500.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0058440.1.V3 - HORVU.MOREX.r3.1HG0062110.1.V3 | Dir: - | Size: 81 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1316.3 C700.0,1316.3 700.0,1407.9 1190.0,1407.9 L1190.0,1411.3 C700.0,1411.3 700.0,1323.4 232.0,1323.4 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g47510.1.MSUv7.0 - LOC_Os05g44930.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0079060.1.V3 - HORVU.MOREX.r3.1HG0082920.1.V3 | Dir: - | Size: 81 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2767.6 C700.0,2767.6 700.0,1744.1 1190.0,1744.1 L1190.0,1754.0 C700.0,1754.0 700.0,2777.7 232.0,2777.7 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g44350.1.MSUv7.0 - LOC_Os12g41860.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0419480.1.V3 - HORVU.MOREX.r3.5HG0429100.1.V3 | Dir: - | Size: 80 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,637.3 C700.0,637.3 700.0,857.4 1190.0,857.4 L1190.0,860.9 C700.0,860.9 700.0,641.5 232.0,641.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g04500.2.MSUv7.0 - LOC_Os03g03370.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0408550.1.V3 - HORVU.MOREX.r3.4HG0411210.1.V3 | Dir: - | Size: 73 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1501.5 C700.0,1501.5 700.0,1661.2 1190.0,1661.2 L1190.0,1669.9 C700.0,1669.9 700.0,1513.2 232.0,1513.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g37660.1.MSUv7.0 - LOC_Os06g35160.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0716180.1.V3 - HORVU.MOREX.r3.7HG0719220.1.V3 | Dir: - | Size: 72 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2104.2 C700.0,2104.2 700.0,1910.4 1190.0,1910.4 L1190.0,1920.4 C700.0,1920.4 700.0,2116.9 232.0,2116.9 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g18594.1.MSUv7.0 - LOC_Os09g22040.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0474380.1.V3 - HORVU.MOREX.r3.5HG0478600.1.V3 | Dir: + | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,566.9 C700.0,566.9 700.0,557.6 1190.0,557.6 L1190.0,564.0 C700.0,564.0 700.0,572.7 232.0,572.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g51770.1.MSUv7.0 - LOC_Os02g50460.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0613660.2.V3 - HORVU.MOREX.r3.6HG0616340.1.V3 | Dir: - | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,392.5 C700.0,392.5 700.0,395.2 1190.0,395.2 L1190.0,406.6 C700.0,406.6 700.0,398.5 232.0,398.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g09180.1.MSUv7.0 - LOC_Os02g07350.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0567800.1.V3 - HORVU.MOREX.r3.6HG0571810.1.V3 | Dir: - | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1976.7 C700.0,1976.7 700.0,1515.9 1190.0,1515.9 L1190.0,1527.5 C700.0,1527.5 700.0,1984.6 232.0,1984.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Hv07 | Ref: LOC_Os08g38560.1.MSUv7.0 - LOC_Os08g40450.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0677230.1.V3 - HORVU.MOREX.r3.7HG0680990.1.V3 | Dir: + | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2341.7 C700.0,2341.7 700.0,1357.0 1190.0,1357.0 L1190.0,1364.2 C700.0,1364.2 700.0,2348.6 232.0,2348.6 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Hv01 | Ref: LOC_Os10g39100.1.MSUv7.0 - LOC_Os10g40780.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0054160.1.V3 - HORVU.MOREX.r3.1HG0056670.1.V3 | Dir: + | Size: 68 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,399.0 C700.0,399.0 700.0,407.4 1190.0,407.4 L1190.0,421.0 C700.0,421.0 700.0,404.2 232.0,404.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g10660.1.MSUv7.0 - LOC_Os02g09340.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0572160.1.V3 - HORVU.MOREX.r3.6HG0576290.1.V3 | Dir: - | Size: 64 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1432.6 C700.0,1432.6 700.0,1501.8 1190.0,1501.8 L1190.0,1510.6 C700.0,1510.6 700.0,1449.6 232.0,1449.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g16980.2.MSUv7.0 - LOC_Os06g21600.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0671800.1.V3 - HORVU.MOREX.r3.7HG0675480.1.V3 | Dir: + | Size: 63 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1269.7 C700.0,1269.7 700.0,1378.6 1190.0,1378.6 L1190.0,1383.7 C700.0,1383.7 700.0,1276.7 232.0,1276.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g33860.1.MSUv7.0 - LOC_Os05g32380.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0062460.1.V3 - HORVU.MOREX.r3.1HG0064740.1.V3 | Dir: - | Size: 62 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1831.9 C700.0,1831.9 700.0,1601.6 1190.0,1601.6 L1190.0,1620.2 C700.0,1620.2 700.0,1843.1 232.0,1843.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Hv07 | Ref: LOC_Os08g06630.1.MSUv7.0 - LOC_Os08g04110.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0697860.1.V3 - HORVU.MOREX.r3.7HG0702400.1.V3 | Dir: - | Size: 61 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1310.3 C700.0,1310.3 700.0,1404.6 1190.0,1404.6 L1190.0,1407.6 C700.0,1407.6 700.0,1316.2 232.0,1316.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g44922.1.MSUv7.0 - LOC_Os05g43300.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0076530.1.V3 - HORVU.MOREX.r3.1HG0078910.1.V3 | Dir: - | Size: 58 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,377.6 C700.0,377.6 700.0,363.9 1190.0,363.9 L1190.0,376.5 C700.0,376.5 700.0,385.7 232.0,385.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g03620.1.MSUv7.0 - LOC_Os02g05630.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0553110.1.V3 - HORVU.MOREX.r3.6HG0559410.1.V3 | Dir: + | Size: 58 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2348.8 C700.0,2348.8 700.0,1364.4 1190.0,1364.4 L1190.0,1368.6 C700.0,1368.6 700.0,2353.3 232.0,2353.3 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Hv01 | Ref: LOC_Os10g42100.1.MSUv7.0 - LOC_Os10g40810.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0056740.1.V3 - HORVU.MOREX.r3.1HG0058390.1.V3 | Dir: - | Size: 54 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2336.0 C700.0,2336.0 700.0,1345.5 1190.0,1345.5 L1190.0,1351.5 C700.0,1351.5 700.0,2341.5 232.0,2341.5 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Hv01 | Ref: LOC_Os10g37260.1.MSUv7.0 - LOC_Os10g39030.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0050190.1.V3 - HORVU.MOREX.r3.1HG0052320.1.V3 | Dir: + | Size: 53 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1111.1 C700.0,1111.1 700.0,1168.4 1190.0,1168.4 L1190.0,1172.0 C700.0,1172.0 700.0,1115.0 232.0,1115.0 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g58380.1.MSUv7.0 - LOC_Os04g57320.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0209160.1.V3 - HORVU.MOREX.r3.2HG0213170.1.V3 | Dir: - | Size: 53 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,633.5 C700.0,633.5 700.0,862.0 1190.0,862.0 L1190.0,864.3 C700.0,864.3 700.0,637.2 232.0,637.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g03350.1.MSUv7.0 - LOC_Os03g02410.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0412200.2.V3 - HORVU.MOREX.r3.4HG0414310.1.V3 | Dir: - | Size: 53 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,326.1 C700.0,326.1 700.0,307.3 1190.0,307.3 L1190.0,311.0 C700.0,311.0 700.0,331.3 232.0,331.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g71060.1.MSUv7.0 - LOC_Os01g72310.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0316110.1.V3 - HORVU.MOREX.r3.3HG0320710.1.V3 | Dir: + | Size: 52 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,782.9 C700.0,782.9 700.0,1962.1 1190.0,1962.1 L1190.0,1963.8 C700.0,1963.8 700.0,791.3 232.0,791.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv05 | Ref: LOC_Os03g44840.1.MSUv7.0 - LOC_Os03g43020.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0507500.1.V3 - HORVU.MOREX.r3.5HG0509180.1.V3 | Dir: - | Size: 49 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1081.2 C700.0,1081.2 700.0,1155.7 1190.0,1155.7 L1190.0,1157.4 C700.0,1157.4 700.0,1084.8 232.0,1084.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g49430.1.MSUv7.0 - LOC_Os04g50790.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0196020.1.V3 - HORVU.MOREX.r3.2HG0197560.1.V3 | Dir: + | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,71.4 C700.0,71.4 700.0,65.5 1190.0,65.5 L1190.0,68.6 C700.0,68.6 700.0,75.5 232.0,75.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g04070.1.MSUv7.0 - LOC_Os01g05100.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0225310.1.V3 - HORVU.MOREX.r3.3HG0228970.1.V3 | Dir: + | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,80.0 C700.0,80.0 700.0,73.2 1190.0,73.2 L1190.0,77.0 C700.0,77.0 700.0,84.0 232.0,84.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g07720.4.MSUv7.0 - LOC_Os01g06560.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0233380.1.V3 - HORVU.MOREX.r3.3HG0235930.1.V3 | Dir: - | Size: 46 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,97.6 C700.0,97.6 700.0,102.5 1190.0,102.5 L1190.0,108.8 C700.0,108.8 700.0,102.2 232.0,102.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g11970.1.MSUv7.0 - LOC_Os01g10890.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0244690.1.V3 - HORVU.MOREX.r3.3HG0246590.1.V3 | Dir: - | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,576.2 C700.0,576.2 700.0,566.8 1190.0,566.8 L1190.0,569.5 C700.0,569.5 700.0,579.3 232.0,579.3 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g53500.1.MSUv7.0 - LOC_Os02g52710.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0617940.1.V3 - HORVU.MOREX.r3.6HG0619750.1.V3 | Dir: - | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1374.4 C700.0,1374.4 700.0,1454.7 1190.0,1454.7 L1190.0,1457.7 C700.0,1457.7 700.0,1380.0 232.0,1380.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g02430.1.MSUv7.0 - LOC_Os06g04090.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0640430.1.V3 - HORVU.MOREX.r3.7HG0644360.1.V3 | Dir: + | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2081.6 C700.0,2081.6 700.0,1904.6 1190.0,1904.6 L1190.0,1910.1 C700.0,1910.1 700.0,2097.5 232.0,2097.5 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g13575.1.MSUv7.0 - LOC_Os09g16920.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0472040.1.V3 - HORVU.MOREX.r3.5HG0474290.1.V3 | Dir: + | Size: 43 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,387.7 C700.0,387.7 700.0,385.0 1190.0,385.0 L1190.0,394.6 C700.0,394.6 700.0,392.0 232.0,392.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g06120.1.MSUv7.0 - LOC_Os02g07240.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0563460.1.V3 - HORVU.MOREX.r3.6HG0567530.1.V3 | Dir: + | Size: 43 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1515.2 C700.0,1515.2 700.0,1655.2 1190.0,1655.2 L1190.0,1661.1 C700.0,1661.1 700.0,1523.2 232.0,1523.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g40070.1.MSUv7.0 - LOC_Os06g38210.2.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0713590.1.V3 - HORVU.MOREX.r3.7HG0716130.1.V3 | Dir: - | Size: 43 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1095.8 C700.0,1095.8 700.0,1157.4 1190.0,1157.4 L1190.0,1159.2 C700.0,1159.2 700.0,1099.1 232.0,1099.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g53310.1.MSUv7.0 - LOC_Os04g54140.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0197610.1.V3 - HORVU.MOREX.r3.2HG0200000.1.V3 | Dir: + | Size: 42 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2329.0 C700.0,2329.0 700.0,1334.3 1190.0,1334.3 L1190.0,1341.9 C700.0,1341.9 700.0,2332.9 232.0,2332.9 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Hv01 | Ref: LOC_Os10g35294.1.MSUv7.0 - LOC_Os10g36420.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0046850.1.V3 - HORVU.MOREX.r3.1HG0049220.1.V3 | Dir: + | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2032.8 C700.0,2032.8 700.0,1888.4 1190.0,1888.4 L1190.0,1896.0 C700.0,1896.0 700.0,2051.6 232.0,2051.6 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g01360.1.MSUv7.0 - LOC_Os09g06740.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0467390.1.V3 - HORVU.MOREX.r3.5HG0469700.1.V3 | Dir: + | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2353.4 C700.0,2353.4 700.0,1351.8 1190.0,1351.8 L1190.0,1356.6 C700.0,1356.6 700.0,2357.0 232.0,2357.0 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Hv01 | Ref: LOC_Os10g42110.1.MSUv7.0 - LOC_Os10g43075.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0052470.1.V3 - HORVU.MOREX.r3.1HG0054030.1.V3 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1149.4 C700.0,1149.4 700.0,1207.3 1190.0,1207.3 L1190.0,1211.2 C700.0,1211.2 700.0,1153.1 232.0,1153.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g01350.1.MSUv7.0 - LOC_Os05g02410.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0002630.1.V3 - HORVU.MOREX.r3.1HG0007220.1.V3 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1117.2 C700.0,1117.2 700.0,1173.4 1190.0,1173.4 L1190.0,1176.6 C700.0,1176.6 700.0,1119.7 232.0,1119.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g58960.1.MSUv7.0 - LOC_Os04g59624.2.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0214630.1.V3 - HORVU.MOREX.r3.2HG0217790.1.V3 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,643.4 C700.0,643.4 700.0,854.9 1190.0,854.9 L1190.0,857.3 C700.0,857.3 700.0,646.2 232.0,646.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g04950.1.MSUv7.0 - LOC_Os03g05640.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0407030.1.V3 - HORVU.MOREX.r3.4HG0408500.1.V3 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,331.0 C700.0,331.0 700.0,311.4 1190.0,311.4 L1190.0,313.9 C700.0,313.9 700.0,334.1 232.0,334.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g72240.1.MSUv7.0 - LOC_Os01g73000.2.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0321170.1.V3 - HORVU.MOREX.r3.3HG0323770.1.V3 | Dir: + | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,368.0 C700.0,368.0 700.0,350.5 1190.0,350.5 L1190.0,354.6 C700.0,354.6 700.0,372.9 232.0,372.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g01010.1.MSUv7.0 - LOC_Os02g02290.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0539510.1.V3 - HORVU.MOREX.r3.6HG0543700.1.V3 | Dir: + | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1526.4 C700.0,1526.4 700.0,1679.7 1190.0,1679.7 L1190.0,1683.4 C700.0,1683.4 700.0,1532.1 232.0,1532.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g42030.1.MSUv7.0 - LOC_Os06g40818.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0723120.1.V3 - HORVU.MOREX.r3.7HG0725070.1.V3 | Dir: - | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,94.1 C700.0,94.1 700.0,96.3 1190.0,96.3 L1190.0,102.4 C700.0,102.4 700.0,97.5 232.0,97.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g10870.1.MSUv7.0 - LOC_Os01g10090.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0242960.1.V3 - HORVU.MOREX.r3.3HG0244620.1.V3 | Dir: - | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1599.1 C700.0,1599.1 700.0,1054.3 1190.0,1054.3 L1190.0,1062.7 C700.0,1062.7 700.0,1603.8 232.0,1603.8 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Hv02 | Ref: LOC_Os07g02290.1.MSUv7.0 - LOC_Os07g01020.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0155680.1.V3 - HORVU.MOREX.r3.2HG0158270.1.V3 | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1277.9 C700.0,1277.9 700.0,1384.5 1190.0,1384.5 L1190.0,1387.3 C700.0,1387.3 700.0,1281.7 232.0,1281.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g34940.1.MSUv7.0 - LOC_Os05g34110.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0065060.1.V3 - HORVU.MOREX.r3.1HG0066390.1.V3 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1093.3 C700.0,1093.3 700.0,1153.9 1190.0,1153.9 L1190.0,1155.6 C700.0,1155.6 700.0,1095.8 232.0,1095.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g53300.1.MSUv7.0 - LOC_Os04g52690.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0194630.1.V3 - HORVU.MOREX.r3.2HG0195950.1.V3 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,670.8 C700.0,670.8 700.0,829.3 1190.0,829.3 L1190.0,832.4 C700.0,832.4 700.0,673.8 232.0,673.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g12530.1.MSUv7.0 - LOC_Os03g13140.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0393950.1.V3 - HORVU.MOREX.r3.4HG0394960.1.V3 | Dir: + | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,628.7 C700.0,628.7 700.0,864.3 1190.0,864.3 L1190.0,866.5 C700.0,866.5 700.0,631.0 232.0,631.0 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g01750.1.MSUv7.0 - LOC_Os03g01150.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0414320.1.V3 - HORVU.MOREX.r3.4HG0416460.1.V3 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,572.8 C700.0,572.8 700.0,564.2 1190.0,564.2 L1190.0,565.9 C700.0,565.9 700.0,575.0 232.0,575.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g52390.1.MSUv7.0 - LOC_Os02g51780.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0616430.1.V3 - HORVU.MOREX.r3.6HG0617410.1.V3 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1523.2 C700.0,1523.2 700.0,1670.6 1190.0,1670.6 L1190.0,1674.5 C700.0,1674.5 700.0,1526.3 232.0,1526.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g40080.1.MSUv7.0 - LOC_Os06g40790.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0719440.1.V3 - HORVU.MOREX.r3.7HG0720960.1.V3 | Dir: + | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1536.4 C700.0,1536.4 700.0,1708.2 1190.0,1708.2 L1190.0,1709.8 C700.0,1709.8 700.0,1539.5 232.0,1539.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g43800.1.MSUv7.0 - LOC_Os06g43090.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0744630.1.V3 - HORVU.MOREX.r3.7HG0746520.1.V3 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,334.6 C700.0,334.6 700.0,315.1 1190.0,315.1 L1190.0,317.6 C700.0,317.6 700.0,337.4 232.0,337.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g73190.1.MSUv7.0 - LOC_Os01g74010.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0325140.1.V3 - HORVU.MOREX.r3.3HG0327740.1.V3 | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,774.0 C700.0,774.0 700.0,629.2 1190.0,629.2 L1190.0,632.5 C700.0,632.5 700.0,779.8 232.0,779.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g40690.1.MSUv7.0 - LOC_Os03g42280.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0342130.1.V3 - HORVU.MOREX.r3.4HG0343440.1.V3 | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2734.2 C700.0,2734.2 700.0,1795.4 1190.0,1795.4 L1190.0,1801.8 C700.0,1801.8 700.0,2739.8 232.0,2739.8 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g35570.1.MSUv7.0 - LOC_Os12g34220.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0445500.1.V3 - HORVU.MOREX.r3.5HG0447190.1.V3 | Dir: - | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1568.5 C700.0,1568.5 700.0,1712.0 1190.0,1712.0 L1190.0,1714.3 C700.0,1714.3 700.0,1570.7 232.0,1570.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g51510.1.MSUv7.0 - LOC_Os06g51000.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0749360.1.V3 - HORVU.MOREX.r3.7HG0751810.1.V3 | Dir: - | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1611.9 C700.0,1611.9 700.0,1042.1 1190.0,1042.1 L1190.0,1049.1 C700.0,1049.1 700.0,1617.6 232.0,1617.6 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Hv02 | Ref: LOC_Os07g05960.1.MSUv7.0 - LOC_Os07g04520.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0152100.1.V3 - HORVU.MOREX.r3.2HG0154100.1.V3 | Dir: - | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,374.7 C700.0,374.7 700.0,358.6 1190.0,358.6 L1190.0,360.1 C700.0,360.1 700.0,375.7 232.0,375.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g03050.2.MSUv7.0 - LOC_Os02g02740.2.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0548830.1.V3 - HORVU.MOREX.r3.6HG0550270.1.V3 | Dir: - | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1380.7 C700.0,1380.7 700.0,1458.6 1190.0,1458.6 L1190.0,1461.1 C700.0,1461.1 700.0,1382.9 232.0,1382.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g04270.1.MSUv7.0 - LOC_Os06g04900.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0645350.1.V3 - HORVU.MOREX.r3.7HG0648440.1.V3 | Dir: + | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2613.9 C700.0,2613.9 700.0,1859.6 1190.0,1859.6 L1190.0,1866.1 C700.0,1866.1 700.0,2617.6 232.0,2617.6 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g04980.1.MSUv7.0 - LOC_Os12g05920.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0458920.1.V3 - HORVU.MOREX.r3.5HG0460350.1.V3 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2723.9 C700.0,2723.9 700.0,1801.8 1190.0,1801.8 L1190.0,1808.2 C700.0,1808.2 700.0,2729.9 232.0,2729.9 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g33220.1.MSUv7.0 - LOC_Os12g31840.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0447190.1.V3 - HORVU.MOREX.r3.5HG0448940.1.V3 | Dir: - | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,409.3 C700.0,409.3 700.0,429.8 1190.0,429.8 L1190.0,439.6 C700.0,439.6 700.0,414.1 232.0,414.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g12290.1.MSUv7.0 - LOC_Os02g13380.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0578870.1.V3 - HORVU.MOREX.r3.6HG0580890.1.V3 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1384.4 C700.0,1384.4 700.0,1462.2 1190.0,1462.2 L1190.0,1464.3 C700.0,1464.3 700.0,1386.8 232.0,1386.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g05284.1.MSUv7.0 - LOC_Os06g05980.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0649750.1.V3 - HORVU.MOREX.r3.7HG0651960.1.V3 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1984.7 C700.0,1984.7 700.0,1527.5 1190.0,1527.5 L1190.0,1530.6 C700.0,1530.6 700.0,1987.1 232.0,1987.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Hv07 | Ref: LOC_Os08g41110.1.MSUv7.0 - LOC_Os08g40490.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0681040.1.V3 - HORVU.MOREX.r3.7HG0682400.1.V3 | Dir: - | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,60.1 C700.0,60.1 700.0,70.9 1190.0,70.9 L1190.0,72.7 C700.0,72.7 700.0,62.0 232.0,62.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g01600.1.MSUv7.0 - LOC_Os01g01010.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0231320.1.V3 - HORVU.MOREX.r3.3HG0232870.3.V3 | Dir: - | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,631.1 C700.0,631.1 700.0,866.7 1190.0,866.7 L1190.0,868.6 C700.0,868.6 700.0,633.5 232.0,633.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g02400.1.MSUv7.0 - LOC_Os03g01760.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0416550.1.V3 - HORVU.MOREX.r3.4HG0418610.1.V3 | Dir: - | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2118.2 C700.0,2118.2 700.0,1920.2 1190.0,1920.2 L1190.0,1922.7 C700.0,1922.7 700.0,2122.0 232.0,2122.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g22440.1.MSUv7.0 - LOC_Os09g23780.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0478580.1.V3 - HORVU.MOREX.r3.5HG0479280.1.V3 | Dir: + | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,375.8 C700.0,375.8 700.0,361.1 1190.0,361.1 L1190.0,363.1 C700.0,363.1 700.0,378.2 232.0,378.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g03060.1.MSUv7.0 - LOC_Os02g03760.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0550810.1.V3 - HORVU.MOREX.r3.6HG0552460.1.V3 | Dir: + | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1495.0 C700.0,1495.0 700.0,1639.4 1190.0,1639.4 L1190.0,1644.1 C700.0,1644.1 700.0,1502.7 232.0,1502.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g33450.2.MSUv7.0 - LOC_Os06g35480.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0708530.1.V3 - HORVU.MOREX.r3.7HG0710070.1.V3 | Dir: + | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2326.9 C700.0,2326.9 700.0,1331.2 1190.0,1331.2 L1190.0,1334.1 C700.0,1334.1 700.0,2328.9 232.0,2328.9 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Hv01 | Ref: LOC_Os10g35280.1.MSUv7.0 - LOC_Os10g34740.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0045870.1.V3 - HORVU.MOREX.r3.1HG0046770.1.V3 | Dir: - | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,891.8 C700.0,891.8 700.0,901.4 1190.0,901.4 L1190.0,902.4 C700.0,902.4 700.0,895.6 232.0,895.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g02140.1.MSUv7.0 - LOC_Os04g01150.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0099690.1.V3 - HORVU.MOREX.r3.2HG0101260.1.V3 | Dir: - | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2568.4 C700.0,2568.4 700.0,677.1 1190.0,677.1 L1190.0,682.7 C700.0,682.7 700.0,2571.8 232.0,2571.8 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g48070.1.MSUv7.0 - LOC_Os11g47320.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0357220.1.V3 - HORVU.MOREX.r3.4HG0358890.1.V3 | Dir: - | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2762.2 C700.0,2762.2 700.0,1758.3 1190.0,1758.3 L1190.0,1764.9 C700.0,1764.9 700.0,2765.8 232.0,2765.8 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g41390.1.MSUv7.0 - LOC_Os12g40540.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0431780.1.V3 - HORVU.MOREX.r3.5HG0434210.1.V3 | Dir: - | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,373.0 C700.0,373.0 700.0,355.1 1190.0,355.1 L1190.0,357.1 C700.0,357.1 700.0,374.2 232.0,374.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g02320.1.MSUv7.0 - LOC_Os02g02620.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0544350.1.V3 - HORVU.MOREX.r3.6HG0547370.1.V3 | Dir: + | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,404.4 C700.0,404.4 700.0,423.2 1190.0,423.2 L1190.0,428.9 C700.0,428.9 700.0,407.5 232.0,407.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g11830.2.MSUv7.0 - LOC_Os02g10700.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0576880.1.V3 - HORVU.MOREX.r3.6HG0578570.1.V3 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2333.1 C700.0,2333.1 700.0,1342.8 1190.0,1342.8 L1190.0,1345.4 C700.0,1345.4 700.0,2335.8 232.0,2335.8 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Hv01 | Ref: LOC_Os10g37240.4.MSUv7.0 - LOC_Os10g36470.2.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0049410.1.V3 - HORVU.MOREX.r3.1HG0050170.1.V3 | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1283.9 C700.0,1283.9 700.0,1403.2 1190.0,1403.2 L1190.0,1404.0 C700.0,1404.0 700.0,1286.5 232.0,1286.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g35500.1.MSUv7.0 - LOC_Os05g36260.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0075320.1.V3 - HORVU.MOREX.r3.1HG0075990.1.V3 | Dir: + | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,64.0 C700.0,64.0 700.0,61.6 1190.0,61.6 L1190.0,62.6 C700.0,62.6 700.0,67.1 232.0,67.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g02120.1.MSUv7.0 - LOC_Os01g02940.2.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0220190.1.V3 - HORVU.MOREX.r3.3HG0221460.1.V3 | Dir: + | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2068.2 C700.0,2068.2 700.0,1900.0 1190.0,1900.0 L1190.0,1902.5 C700.0,1902.5 700.0,2072.4 232.0,2072.4 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g10600.1.MSUv7.0 - LOC_Os09g11520.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0470890.1.V3 - HORVU.MOREX.r3.5HG0471460.1.V3 | Dir: + | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1453.7 C700.0,1453.7 700.0,1645.9 1190.0,1645.9 L1190.0,1650.9 C700.0,1650.9 700.0,1458.5 232.0,1458.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g22550.1.MSUv7.0 - LOC_Os06g23684.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0710750.1.V3 - HORVU.MOREX.r3.7HG0712100.1.V3 | Dir: + | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2308.0 C700.0,2308.0 700.0,1302.3 1190.0,1302.3 L1190.0,1309.6 C700.0,1309.6 700.0,2311.6 232.0,2311.6 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Hv01 | Ref: LOC_Os10g30080.1.MSUv7.0 - LOC_Os10g31000.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0037770.1.V3 - HORVU.MOREX.r3.1HG0039350.1.V3 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2765.5 C700.0,2765.5 700.0,1754.5 1190.0,1754.5 L1190.0,1756.8 C700.0,1756.8 700.0,2767.5 232.0,2767.5 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g41830.1.MSUv7.0 - LOC_Os12g41270.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0429580.1.V3 - HORVU.MOREX.r3.5HG0430860.1.V3 | Dir: - | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1474.0 C700.0,1474.0 700.0,1511.2 1190.0,1511.2 L1190.0,1515.4 C700.0,1515.4 700.0,1481.3 232.0,1481.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g30130.1.MSUv7.0 - LOC_Os06g28550.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0675830.1.V3 - HORVU.MOREX.r3.7HG0677060.1.V3 | Dir: - | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1178.5 C700.0,1178.5 700.0,1258.4 1190.0,1258.4 L1190.0,1265.8 C700.0,1265.8 700.0,1183.1 232.0,1183.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g08640.1.MSUv7.0 - LOC_Os05g09640.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0027940.1.V3 - HORVU.MOREX.r3.1HG0030090.1.V3 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,337.4 C700.0,337.4 700.0,318.1 1190.0,318.1 L1190.0,320.1 C700.0,320.1 700.0,339.1 232.0,339.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g74020.1.MSUv7.0 - LOC_Os01g74470.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0328340.1.V3 - HORVU.MOREX.r3.3HG0330430.1.V3 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,385.9 C700.0,385.9 700.0,377.4 1190.0,377.4 L1190.0,382.7 C700.0,382.7 700.0,387.6 232.0,387.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g05680.1.MSUv7.0 - LOC_Os02g06070.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0559990.1.V3 - HORVU.MOREX.r3.6HG0561620.1.V3 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2388.6 C700.0,2388.6 700.0,659.4 1190.0,659.4 L1190.0,666.1 C700.0,666.1 700.0,2391.1 232.0,2391.1 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g02070.1.MSUv7.0 - LOC_Os11g02830.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0351750.1.V3 - HORVU.MOREX.r3.4HG0353940.1.V3 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2621.5 C700.0,2621.5 700.0,1840.2 1190.0,1840.2 L1190.0,1848.5 C700.0,1848.5 700.0,2627.0 232.0,2627.0 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g06850.1.MSUv7.0 - LOC_Os12g08180.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0454390.1.V3 - HORVU.MOREX.r3.5HG0456460.1.V3 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,191.7 C700.0,191.7 700.0,178.3 1190.0,178.3 L1190.0,190.2 C700.0,190.2 700.0,197.7 232.0,197.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g36670.1.MSUv7.0 - LOC_Os01g37980.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0263560.1.V3 - HORVU.MOREX.r3.3HG0266070.1.V3 | Dir: + | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2617.8 C700.0,2617.8 700.0,1852.4 1190.0,1852.4 L1190.0,1859.5 C700.0,1859.5 700.0,2621.5 232.0,2621.5 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g06840.1.MSUv7.0 - LOC_Os12g05980.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0457310.1.V3 - HORVU.MOREX.r3.5HG0458890.1.V3 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2075.7 C700.0,2075.7 700.0,1902.8 1190.0,1902.8 L1190.0,1904.5 C700.0,1904.5 700.0,2078.3 232.0,2078.3 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g12230.1.MSUv7.0 - LOC_Os09g12800.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0471520.1.V3 - HORVU.MOREX.r3.5HG0472010.1.V3 | Dir: + | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,76.6 C700.0,76.6 700.0,69.5 1190.0,69.5 L1190.0,70.9 C700.0,70.9 700.0,78.2 232.0,78.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g05420.1.MSUv7.0 - LOC_Os01g05860.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0230160.1.V3 - HORVU.MOREX.r3.3HG0231290.1.V3 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,69.1 C700.0,69.1 700.0,62.8 1190.0,62.8 L1190.0,63.9 C700.0,63.9 700.0,71.3 232.0,71.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g04020.2.MSUv7.0 - LOC_Os01g03490.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0221630.1.V3 - HORVU.MOREX.r3.3HG0222830.1.V3 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1115.9 C700.0,1115.9 700.0,1172.3 1190.0,1172.3 L1190.0,1173.3 C700.0,1173.3 700.0,1117.1 232.0,1117.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g58920.1.MSUv7.0 - LOC_Os04g58620.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0213610.1.V3 - HORVU.MOREX.r3.2HG0214490.1.V3 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,779.8 C700.0,779.8 700.0,626.4 1190.0,626.4 L1190.0,627.6 C700.0,627.6 700.0,782.8 232.0,782.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g43010.1.MSUv7.0 - LOC_Os03g42280.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0340910.1.V3 - HORVU.MOREX.r3.4HG0341540.1.V3 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1369.8 C700.0,1369.8 700.0,1450.2 1190.0,1450.2 L1190.0,1451.5 C700.0,1451.5 700.0,1371.5 232.0,1371.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g01170.1.MSUv7.0 - LOC_Os06g01650.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0634470.1.V3 - HORVU.MOREX.r3.7HG0635820.1.V3 | Dir: + | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1533.8 C700.0,1533.8 700.0,1677.5 1190.0,1677.5 L1190.0,1679.4 C700.0,1679.4 700.0,1536.2 232.0,1536.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g43044.1.MSUv7.0 - LOC_Os06g42430.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0722000.1.V3 - HORVU.MOREX.r3.7HG0722960.1.V3 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,944.0 C700.0,944.0 700.0,904.1 1190.0,904.1 L1190.0,905.1 C700.0,905.1 700.0,948.7 232.0,948.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g14654.2.MSUv7.0 - LOC_Os04g16450.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0103870.1.V3 - HORVU.MOREX.r3.2HG0105020.1.V3 | Dir: + | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,67.1 C700.0,67.1 700.0,64.4 1190.0,64.4 L1190.0,65.2 C700.0,65.2 700.0,69.2 232.0,69.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g03520.1.MSUv7.0 - LOC_Os01g02940.2.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0223700.1.V3 - HORVU.MOREX.r3.3HG0224800.1.V3 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2396.8 C700.0,2396.8 700.0,670.0 1190.0,670.0 L1190.0,673.7 C700.0,673.7 700.0,2400.9 232.0,2400.9 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g05480.1.MSUv7.0 - LOC_Os11g04390.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0355210.1.V3 - HORVU.MOREX.r3.4HG0356150.1.V3 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2759.8 C700.0,2759.8 700.0,1766.7 1190.0,1766.7 L1190.0,1770.0 C700.0,1770.0 700.0,2762.1 232.0,2762.1 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g40520.1.MSUv7.0 - LOC_Os12g39980.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0436490.1.V3 - HORVU.MOREX.r3.5HG0437720.1.V3 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2054.0 C700.0,2054.0 700.0,1893.3 1190.0,1893.3 L1190.0,1898.1 C700.0,1898.1 700.0,2060.0 232.0,2060.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g07290.1.MSUv7.0 - LOC_Os09g08620.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0468830.1.V3 - HORVU.MOREX.r3.5HG0470360.1.V3 | Dir: + | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1564.1 C700.0,1564.1 700.0,1675.2 1190.0,1675.2 L1190.0,1676.9 C700.0,1676.9 700.0,1565.4 232.0,1565.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g49870.1.MSUv7.0 - LOC_Os06g50170.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0721140.1.V3 - HORVU.MOREX.r3.7HG0721880.1.V3 | Dir: + | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1605.3 C700.0,1605.3 700.0,1051.0 1190.0,1051.0 L1190.0,1054.4 C700.0,1054.4 700.0,1607.5 232.0,1607.5 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Hv02 | Ref: LOC_Os07g03270.1.MSUv7.0 - LOC_Os07g02710.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0154370.1.V3 - HORVU.MOREX.r3.2HG0155700.1.V3 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2394.6 C700.0,2394.6 700.0,673.9 1190.0,673.9 L1190.0,675.7 C700.0,675.7 700.0,2396.0 232.0,2396.0 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g03780.1.MSUv7.0 - LOC_Os11g04190.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0356240.1.V3 - HORVU.MOREX.r3.4HG0356750.1.V3 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,575.1 C700.0,575.1 700.0,566.1 1190.0,566.1 L1190.0,566.7 C700.0,566.7 700.0,576.2 232.0,576.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Hv06 | Ref: LOC_Os02g52710.1.MSUv7.0 - LOC_Os02g52410.1.MSUv7.0 | Query: HORVU.MOREX.r3.6HG0617500.1.V3 - HORVU.MOREX.r3.6HG0617860.1.V3 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1371.7 C700.0,1371.7 700.0,1451.8 1190.0,1451.8 L1190.0,1452.8 C700.0,1452.8 700.0,1373.6 232.0,1373.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g01690.1.MSUv7.0 - LOC_Os06g02250.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0636340.1.V3 - HORVU.MOREX.r3.7HG0637970.1.V3 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,935.5 C700.0,935.5 700.0,903.5 1190.0,903.5 L1190.0,904.1 C700.0,904.1 700.0,939.5 232.0,939.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g12480.1.MSUv7.0 - LOC_Os04g13470.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0102720.1.V3 - HORVU.MOREX.r3.2HG0103820.1.V3 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,78.7 C700.0,78.7 700.0,94.3 1190.0,94.3 L1190.0,96.2 C700.0,96.2 700.0,80.0 232.0,80.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g06060.1.MSUv7.0 - LOC_Os01g06550.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0242030.1.V3 - HORVU.MOREX.r3.3HG0242950.1.V3 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,62.7 C700.0,62.7 700.0,60.1 1190.0,60.1 L1190.0,61.3 C700.0,61.3 700.0,64.2 232.0,64.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g01800.1.MSUv7.0 - LOC_Os01g02200.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0218230.1.V3 - HORVU.MOREX.r3.3HG0219670.1.V3 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2454.2 C700.0,2454.2 700.0,627.7 1190.0,627.7 L1190.0,628.6 C700.0,628.6 700.0,2462.2 232.0,2462.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g18870.1.MSUv7.0 - LOC_Os11g20689.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0341560.1.V3 - HORVU.MOREX.r3.4HG0341950.1.V3 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1379.3 C700.0,1379.3 700.0,1457.6 1190.0,1457.6 L1190.0,1458.0 C700.0,1458.0 700.0,1380.4 232.0,1380.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g04190.1.MSUv7.0 - LOC_Os06g03940.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0644260.1.V3 - HORVU.MOREX.r3.7HG0644630.1.V3 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1383.0 C700.0,1383.0 700.0,1461.2 1190.0,1461.2 L1190.0,1462.4 C700.0,1462.4 700.0,1384.3 232.0,1384.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g05260.1.MSUv7.0 - LOC_Os06g04920.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0648570.1.V3 - HORVU.MOREX.r3.7HG0649960.1.V3 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1254.2 C700.0,1254.2 700.0,1376.8 1190.0,1376.8 L1190.0,1378.0 C700.0,1378.0 700.0,1255.7 232.0,1255.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g28180.1.MSUv7.0 - LOC_Os05g28530.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0061730.1.V3 - HORVU.MOREX.r3.1HG0062160.1.V3 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1567.8 C700.0,1567.8 700.0,1711.2 1190.0,1711.2 L1190.0,1711.9 C700.0,1711.9 700.0,1568.5 232.0,1568.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g50830.1.MSUv7.0 - LOC_Os06g50980.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0748290.1.V3 - HORVU.MOREX.r3.7HG0749150.1.V3 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1276.7 C700.0,1276.7 700.0,1383.8 1190.0,1383.8 L1190.0,1384.4 C700.0,1384.4 700.0,1277.7 232.0,1277.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g33880.1.MSUv7.0 - LOC_Os05g34070.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0064780.1.V3 - HORVU.MOREX.r3.1HG0065030.2.V3 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,976.2 C700.0,976.2 700.0,1065.6 1190.0,1065.6 L1190.0,1068.2 C700.0,1068.2 700.0,980.3 232.0,980.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g23210.1.MSUv7.0 - LOC_Os04g24180.2.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0158850.1.V3 - HORVU.MOREX.r3.2HG0159340.1.V3 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,902.7 C700.0,902.7 700.0,898.2 1190.0,898.2 L1190.0,899.2 C700.0,899.2 700.0,909.3 232.0,909.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g03980.1.MSUv7.0 - LOC_Os04g05580.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0096800.1.V3 - HORVU.MOREX.r3.2HG0097720.1.V3 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,925.4 C700.0,925.4 700.0,899.6 1190.0,899.6 L1190.0,901.2 C700.0,901.2 700.0,928.4 232.0,928.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g10680.5.MSUv7.0 - LOC_Os04g09900.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0098410.1.V3 - HORVU.MOREX.r3.2HG0099470.1.V3 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2441.7 C700.0,2441.7 700.0,631.7 1190.0,631.7 L1190.0,633.2 C700.0,633.2 700.0,2443.6 232.0,2443.6 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g16430.1.MSUv7.0 - LOC_Os11g15520.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0343180.1.V3 - HORVU.MOREX.r3.4HG0343740.1.V3 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2390.7 C700.0,2390.7 700.0,663.8 1190.0,663.8 L1190.0,666.7 C700.0,666.7 700.0,2393.5 232.0,2393.5 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g03440.1.MSUv7.0 - LOC_Os11g02740.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0353430.1.V3 - HORVU.MOREX.r3.4HG0354070.1.V3 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,641.0 C700.0,641.0 700.0,861.1 1190.0,861.1 L1190.0,862.0 C700.0,862.0 700.0,643.4 232.0,643.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g04360.1.MSUv7.0 - LOC_Os03g04940.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0411330.1.V3 - HORVU.MOREX.r3.4HG0412180.1.V3 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1177.5 C700.0,1177.5 700.0,1255.6 1190.0,1255.6 L1190.0,1258.0 C700.0,1258.0 700.0,1178.3 232.0,1178.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g08610.2.MSUv7.0 - LOC_Os05g08370.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0027180.2.V3 - HORVU.MOREX.r3.1HG0027850.1.V3 | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1153.4 C700.0,1153.4 700.0,1211.9 1190.0,1211.9 L1190.0,1214.0 C700.0,1214.0 700.0,1154.0 232.0,1154.0 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g02650.1.MSUv7.0 - LOC_Os05g02450.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0007850.1.V3 - HORVU.MOREX.r3.1HG0008980.1.V3 | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,966.4 C700.0,966.4 700.0,1062.8 1190.0,1062.8 L1190.0,1065.1 C700.0,1065.1 700.0,971.2 232.0,971.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g20810.1.MSUv7.0 - LOC_Os04g21950.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0158290.1.V3 - HORVU.MOREX.r3.2HG0158690.1.V3 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,895.6 C700.0,895.6 700.0,897.5 1190.0,897.5 L1190.0,898.1 C700.0,898.1 700.0,898.4 232.0,898.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g02150.1.MSUv7.0 - LOC_Os04g02910.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0095990.1.V3 - HORVU.MOREX.r3.2HG0096610.1.V3 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2393.8 C700.0,2393.8 700.0,675.2 1190.0,675.2 L1190.0,676.6 C700.0,676.6 700.0,2395.7 232.0,2395.7 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g04104.3.MSUv7.0 - LOC_Os11g03530.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0356550.2.V3 - HORVU.MOREX.r3.4HG0357020.1.V3 | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1470.6 C700.0,1470.6 700.0,1515.4 1190.0,1515.4 L1190.0,1516.7 C700.0,1516.7 700.0,1472.3 232.0,1472.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g27770.1.MSUv7.0 - LOC_Os06g28124.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0677060.1.V3 - HORVU.MOREX.r3.7HG0677570.1.V3 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1565.4 C700.0,1565.4 700.0,1709.8 1190.0,1709.8 L1190.0,1710.6 C700.0,1710.6 700.0,1566.2 232.0,1566.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g50180.1.MSUv7.0 - LOC_Os06g50390.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0746590.2.V3 - HORVU.MOREX.r3.7HG0747610.1.V3 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1282.5 C700.0,1282.5 700.0,1388.1 1190.0,1388.1 L1190.0,1388.5 C700.0,1388.5 700.0,1283.5 232.0,1283.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g35410.1.MSUv7.0 - LOC_Os05g35160.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0066800.1.V3 - HORVU.MOREX.r3.1HG0067060.1.V3 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,62.1 C700.0,62.1 700.0,60.1 1190.0,60.1 L1190.0,60.5 C700.0,60.5 700.0,63.1 232.0,63.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g01890.1.MSUv7.0 - LOC_Os01g01640.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0218130.1.V3 - HORVU.MOREX.r3.3HG0218450.1.V3 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2386.3 C700.0,2386.3 700.0,667.7 1190.0,667.7 L1190.0,669.4 C700.0,669.4 700.0,2388.1 232.0,2388.1 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g01875.1.MSUv7.0 - LOC_Os11g01330.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0354460.1.V3 - HORVU.MOREX.r3.4HG0354980.1.V3 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1373.0 C700.0,1373.0 700.0,1452.8 1190.0,1452.8 L1190.0,1453.8 C700.0,1453.8 700.0,1373.7 232.0,1373.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g02260.2.MSUv7.0 - LOC_Os06g02100.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0637960.1.V3 - HORVU.MOREX.r3.7HG0639300.1.V3 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1154.1 C700.0,1154.1 700.0,1215.1 1190.0,1215.1 L1190.0,1216.3 C700.0,1216.3 700.0,1154.8 232.0,1154.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g02900.1.MSUv7.0 - LOC_Os05g02670.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0010330.1.V3 - HORVU.MOREX.r3.1HG0011190.1.V3 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1114.8 C700.0,1114.8 700.0,1168.2 1190.0,1168.2 L1190.0,1168.4 C700.0,1168.4 700.0,1115.2 232.0,1115.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g58280.2.MSUv7.0 - LOC_Os04g58420.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0209020.1.V3 - HORVU.MOREX.r3.2HG0209210.1.V3 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1115.3 C700.0,1115.3 700.0,1172.0 1190.0,1172.0 L1190.0,1172.7 C700.0,1172.7 700.0,1116.6 232.0,1116.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g58470.1.MSUv7.0 - LOC_Os04g58780.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0213250.1.V3 - HORVU.MOREX.r3.2HG0214010.1.V3 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,919.6 C700.0,919.6 700.0,897.0 1190.0,897.0 L1190.0,897.2 C700.0,897.2 700.0,921.6 232.0,921.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g08740.2.MSUv7.0 - LOC_Os04g08310.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0095490.1.V3 - HORVU.MOREX.r3.2HG0095620.2.V3 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1716.8 C700.0,1716.8 700.0,1000.2 1190.0,1000.2 L1190.0,1013.5 C700.0,1013.5 700.0,1718.8 232.0,1718.8 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Hv02 | Ref: LOC_Os07g30790.1.MSUv7.0 - LOC_Os07g31300.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0144110.1.V3 - HORVU.MOREX.r3.2HG0146530.1.V3 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,710.8 C700.0,710.8 700.0,763.7 1190.0,763.7 L1190.0,771.9 C700.0,771.9 700.0,712.9 232.0,712.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Hv04 | Ref: LOC_Os03g22420.1.MSUv7.0 - LOC_Os03g22780.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0375390.1.V3 - HORVU.MOREX.r3.4HG0377120.1.V3 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2123.4 C700.0,2123.4 700.0,1923.0 1190.0,1923.0 L1190.0,1924.3 C700.0,1924.3 700.0,2125.1 232.0,2125.1 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g24200.1.MSUv7.0 - LOC_Os09g24570.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0479410.1.V3 - HORVU.MOREX.r3.5HG0479980.1.V3 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1253.0 C700.0,1253.0 700.0,1377.2 1190.0,1377.2 L1190.0,1378.4 C700.0,1378.4 700.0,1254.7 232.0,1254.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g28300.1.MSUv7.0 - LOC_Os05g27920.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0061920.1.V3 - HORVU.MOREX.r3.1HG0062400.1.V3 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1110.7 C700.0,1110.7 700.0,1167.6 1190.0,1167.6 L1190.0,1168.1 C700.0,1168.1 700.0,1111.1 232.0,1111.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g57180.1.MSUv7.0 - LOC_Os04g57310.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0208390.1.V3 - HORVU.MOREX.r3.2HG0208890.1.V3 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,962.2 C700.0,962.2 700.0,907.0 1190.0,907.0 L1190.0,907.5 C700.0,907.5 700.0,964.1 232.0,964.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g19750.1.MSUv7.0 - LOC_Os04g20270.2.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0106580.1.V3 - HORVU.MOREX.r3.2HG0107190.2.V3 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,997.1 C700.0,997.1 700.0,1070.2 1190.0,1070.2 L1190.0,1073.2 C700.0,1073.2 700.0,999.7 232.0,999.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g27850.1.MSUv7.0 - LOC_Os04g28460.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0159780.1.V3 - HORVU.MOREX.r3.2HG0160620.1.V3 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,950.9 C700.0,950.9 700.0,905.1 1190.0,905.1 L1190.0,906.5 C700.0,906.5 700.0,958.4 232.0,958.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Hv02 | Ref: LOC_Os04g16970.1.MSUv7.0 - LOC_Os04g18790.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0105080.1.V3 - HORVU.MOREX.r3.2HG0105980.1.V3 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1609.2 C700.0,1609.2 700.0,1049.1 1190.0,1049.1 L1190.0,1050.1 C700.0,1050.1 700.0,1611.0 232.0,1611.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Hv02 | Ref: LOC_Os07g04240.1.MSUv7.0 - LOC_Os07g03770.1.MSUv7.0 | Query: HORVU.MOREX.r3.2HG0154110.1.V3 - HORVU.MOREX.r3.2HG0154270.1.V3 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,78.2 C700.0,78.2 700.0,73.0 1190.0,73.0 L1190.0,73.6 C700.0,73.6 700.0,79.2 232.0,79.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g05900.1.MSUv7.0 - LOC_Os01g06240.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0233150.1.V3 - HORVU.MOREX.r3.3HG0233690.1.V3 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2554.5 C700.0,2554.5 700.0,700.4 1190.0,700.4 L1190.0,703.9 C700.0,703.9 700.0,2556.2 232.0,2556.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g43590.1.MSUv7.0 - LOC_Os11g43970.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0362850.1.V3 - HORVU.MOREX.r3.4HG0363340.1.V3 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2561.6 C700.0,2561.6 700.0,683.9 1190.0,683.9 L1190.0,685.6 C700.0,685.6 700.0,2563.3 232.0,2563.3 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Hv04 | Ref: LOC_Os11g45740.1.MSUv7.0 - LOC_Os11g45280.1.MSUv7.0 | Query: HORVU.MOREX.r3.4HG0359060.1.V3 - HORVU.MOREX.r3.4HG0359590.1.V3 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2063.2 C700.0,2063.2 700.0,1898.3 1190.0,1898.3 L1190.0,1899.5 C700.0,1899.5 700.0,2065.9 232.0,2065.9 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g09360.1.MSUv7.0 - LOC_Os09g09980.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0470430.1.V3 - HORVU.MOREX.r3.5HG0470760.1.V3 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2098.7 C700.0,2098.7 700.0,1907.7 1190.0,1907.7 L1190.0,1910.8 C700.0,1910.8 700.0,2101.3 232.0,2101.3 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Hv05 | Ref: LOC_Os09g17152.1.MSUv7.0 - LOC_Os09g17850.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0473390.1.V3 - HORVU.MOREX.r3.5HG0474550.1.V3 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1373.1 C700.0,1373.1 700.0,1453.4 1190.0,1453.4 L1190.0,1453.9 C700.0,1453.9 700.0,1374.4 232.0,1374.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g02130.1.MSUv7.0 - LOC_Os06g02400.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0639080.1.V3 - HORVU.MOREX.r3.7HG0639390.1.V3 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1386.5 C700.0,1386.5 700.0,1464.3 1190.0,1464.3 L1190.0,1464.4 C700.0,1464.4 700.0,1386.9 232.0,1386.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g06030.1.MSUv7.0 - LOC_Os06g05890.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0651920.1.V3 - HORVU.MOREX.r3.7HG0652150.1.V3 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1484.3 C700.0,1484.3 700.0,1644.4 1190.0,1644.4 L1190.0,1646.4 C700.0,1646.4 700.0,1486.1 232.0,1486.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g31190.1.MSUv7.0 - LOC_Os06g30750.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0710190.1.V3 - HORVU.MOREX.r3.7HG0710810.1.V3 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1309.0 C700.0,1309.0 700.0,1404.3 1190.0,1404.3 L1190.0,1404.6 C700.0,1404.6 700.0,1310.1 232.0,1310.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g43040.1.MSUv7.0 - LOC_Os05g43240.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0076260.1.V3 - HORVU.MOREX.r3.1HG0076420.1.V3 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1281.9 C700.0,1281.9 700.0,1387.5 1190.0,1387.5 L1190.0,1388.5 C700.0,1388.5 700.0,1282.6 232.0,1282.6 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g34980.1.MSUv7.0 - LOC_Os05g35190.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0066460.2.V3 - HORVU.MOREX.r3.1HG0067030.1.V3 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1185.3 C700.0,1185.3 700.0,1266.1 1190.0,1266.1 L1190.0,1270.0 C700.0,1270.0 700.0,1188.9 232.0,1188.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g10630.1.MSUv7.0 - LOC_Os05g11250.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0030120.2.V3 - HORVU.MOREX.r3.1HG0031310.1.V3 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1194.9 C700.0,1194.9 700.0,1271.6 1190.0,1271.6 L1190.0,1273.7 C700.0,1273.7 700.0,1196.5 232.0,1196.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Hv01 | Ref: LOC_Os05g13580.1.MSUv7.0 - LOC_Os05g12680.1.MSUv7.0 | Query: HORVU.MOREX.r3.1HG0031820.1.V3 - HORVU.MOREX.r3.1HG0032260.1.V3 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,334.4 C700.0,334.4 700.0,314.5 1190.0,314.5 L1190.0,315.0 C700.0,315.0 700.0,334.7 232.0,334.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g73110.1.MSUv7.0 - LOC_Os01g73234.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0324410.1.V3 - HORVU.MOREX.r3.3HG0325100.1.V3 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,331.0 C700.0,331.0 700.0,310.9 1190.0,310.9 L1190.0,311.5 C700.0,311.5 700.0,331.3 232.0,331.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Hv03 | Ref: LOC_Os01g72320.1.MSUv7.0 - LOC_Os01g72230.1.MSUv7.0 | Query: HORVU.MOREX.r3.3HG0320660.1.V3 - HORVU.MOREX.r3.3HG0321270.1.V3 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2759.7 C700.0,2759.7 700.0,1770.0 1190.0,1770.0 L1190.0,1771.5 C700.0,1771.5 700.0,2760.5 232.0,2760.5 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Hv05 | Ref: LOC_Os12g39980.1.MSUv7.0 - LOC_Os12g40130.1.MSUv7.0 | Query: HORVU.MOREX.r3.5HG0437720.1.V3 - HORVU.MOREX.r3.5HG0438450.1.V3 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1564.1 C700.0,1564.1 700.0,1674.9 1190.0,1674.9 L1190.0,1675.3 C700.0,1675.3 700.0,1564.6 232.0,1564.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g49970.2.MSUv7.0 - LOC_Os06g49840.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0721060.1.V3 - HORVU.MOREX.r3.7HG0721170.1.V3 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1460.0 C700.0,1460.0 700.0,1653.6 1190.0,1653.6 L1190.0,1654.6 C700.0,1654.6 700.0,1465.2 232.0,1465.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Hv07 | Ref: LOC_Os06g25439.1.MSUv7.0 - LOC_Os06g24070.1.MSUv7.0 | Query: HORVU.MOREX.r3.7HG0713010.1.V3 - HORVU.MOREX.r3.7HG0713350.1.V3 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+</g>
+<g id="refChrs">
+<rect x="210" y="60" width="22" height="280" rx="5" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="1"/>
+<rect x="211" y="60.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="66.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="211" y="62.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="68.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="211" y="62.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="68.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="211" y="64.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="70.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="211" y="67.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="73.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="211" y="69.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="75.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="211" y="71.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="77.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="211" y="76.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="82.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="211" y="78.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="84.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="211" y="78.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="84.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="211" y="80.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="86.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="211" y="84.1" width="20" height="9.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="93.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="211" y="94.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="100.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="211" y="97.6" width="20" height="4.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="103.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="211" y="102.2" width="20" height="22.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="113.5" x2="226" y2="113.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="205" y="117.5" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="211" y="191.7" width="20" height="6.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="198.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="211" y="201.6" width="20" height="86.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="244.8" x2="226" y2="244.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="205" y="248.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="211" y="288.2" width="20" height="18.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="297.5" x2="216" y2="297.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="205" y="301.5" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="211" y="306.9" width="20" height="8.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="315.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<rect x="211" y="315.5" width="20" height="10.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="320.7" x2="226" y2="320.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="205" y="324.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">20</text>
+<rect x="211" y="326.1" width="20" height="5.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="332.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">21</text>
+<rect x="211" y="331.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="337.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">22</text>
+<rect x="211" y="331.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="337.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">23</text>
+<rect x="211" y="334.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="340.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">24</text>
+<rect x="211" y="334.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="340.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">25</text>
+<rect x="211" y="337.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="343.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">26</text>
+<text x="205" y="55" text-anchor="end" fill="#FFD700" font-size="12" font-weight="700" letter-spacing="0.5">Os01</text>
+<circle cx="221.0" cy="168.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="172.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="368" width="22" height="232" rx="5" fill="#E63946" opacity="0.15" stroke="#E63946" stroke-width="1"/>
+<rect x="211" y="368.0" width="20" height="4.9" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="374.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="211" y="373.0" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="379.0" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="211" y="374.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="380.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="211" y="375.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="381.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="211" y="377.6" width="20" height="8.2" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="385.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="211" y="385.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="391.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="211" y="387.7" width="20" height="4.3" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="393.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="211" y="392.5" width="20" height="5.9" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="399.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="211" y="399.0" width="20" height="5.2" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="405.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="211" y="404.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="410.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="211" y="409.3" width="20" height="4.8" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="415.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="211" y="514.3" width="20" height="52.3" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="540.5" x2="226" y2="540.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="205" y="544.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="211" y="566.9" width="20" height="5.8" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="573.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="211" y="572.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="578.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">14</text>
+<rect x="211" y="575.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="581.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">15</text>
+<rect x="211" y="576.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="582.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">16</text>
+<rect x="211" y="579.3" width="20" height="20.6" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="589.6" x2="226" y2="589.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="205" y="593.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">17</text>
+<text x="205" y="363" text-anchor="end" fill="#E63946" font-size="12" font-weight="700" letter-spacing="0.5">Os02</text>
+<circle cx="221.0" cy="456.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="460.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="628" width="22" height="235" rx="5" fill="#1A237E" opacity="0.15" stroke="#1A237E" stroke-width="1"/>
+<rect x="211" y="628.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="634.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="211" y="631.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="637.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="211" y="633.5" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="639.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="211" y="637.3" width="20" height="4.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="643.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="211" y="641.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="647.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="211" y="643.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="649.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="211" y="646.4" width="20" height="12.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="652.6" x2="226" y2="652.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os03)" opacity="0.8"/>
+<text x="205" y="656.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="211" y="658.9" width="20" height="11.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="664.8" x2="216" y2="664.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="205" y="668.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="211" y="670.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="676.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="211" y="673.9" width="20" height="35.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="691.8" x2="216" y2="691.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="205" y="695.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="211" y="710.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="716.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="211" y="774.0" width="20" height="5.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="780.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="211" y="779.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="785.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<rect x="211" y="782.9" width="20" height="8.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="791.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">14</text>
+<rect x="211" y="792.9" width="20" height="31.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="808.6" x2="226" y2="808.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os03)" opacity="0.8"/>
+<text x="205" y="812.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">15</text>
+<rect x="211" y="823.6" width="20" height="23.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="835.2" x2="226" y2="835.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os03)" opacity="0.8"/>
+<text x="205" y="839.2" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">16</text>
+<rect x="211" y="846.2" width="20" height="16.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="854.5" x2="226" y2="854.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os03)" opacity="0.8"/>
+<text x="205" y="858.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">17</text>
+<text x="205" y="623" text-anchor="end" fill="#1A237E" font-size="12" font-weight="700" letter-spacing="0.5">Os03</text>
+<circle cx="221.0" cy="754.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="758.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="891" width="22" height="229" rx="5" fill="#9C27B0" opacity="0.15" stroke="#9C27B0" stroke-width="1"/>
+<rect x="211" y="891.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="897.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="211" y="895.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="901.6" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="211" y="902.7" width="20" height="6.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="910.0" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="211" y="919.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="925.6" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="211" y="925.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="931.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="211" y="935.5" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="941.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="211" y="944.0" width="20" height="4.7" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="950.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="211" y="950.9" width="20" height="7.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="958.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<rect x="211" y="962.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="968.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="211" y="966.4" width="20" height="4.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="972.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="211" y="976.2" width="20" height="4.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="982.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="211" y="997.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1003.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1008.2" width="20" height="59.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="1037.8" x2="226" y2="1037.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os04)" opacity="0.8"/>
+<text x="205" y="1041.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1067.5" width="20" height="13.7" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="1074.4" x2="216" y2="1074.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os04)" opacity="0.8"/>
+<text x="205" y="1078.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1081.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1087.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1084.9" width="20" height="8.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1092.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1093.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1099.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<rect x="211" y="1095.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1101.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1098.5" width="20" height="12.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="1104.6" x2="216" y2="1104.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os04)" opacity="0.8"/>
+<text x="205" y="1108.6" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">19</text>
+<rect x="211" y="1110.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1116.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">20</text>
+<rect x="211" y="1111.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1117.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">21</text>
+<rect x="211" y="1114.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1120.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">22</text>
+<rect x="211" y="1115.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1121.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">23</text>
+<rect x="211" y="1115.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1121.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">24</text>
+<rect x="211" y="1117.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1123.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">25</text>
+<text x="205" y="886" text-anchor="end" fill="#9C27B0" font-size="12" font-weight="700" letter-spacing="0.5">Os04</text>
+<circle cx="221.0" cy="954.4" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="958.4" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1148" width="22" height="193" rx="5" fill="#E06D10" opacity="0.15" stroke="#E06D10" stroke-width="1"/>
+<rect x="211" y="1149.4" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1155.4" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1153.4" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1159.4" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1154.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1160.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1155.9" width="20" height="21.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1166.7" x2="226" y2="1166.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os05)" opacity="0.8"/>
+<text x="205" y="1170.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1177.5" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1183.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1178.5" width="20" height="4.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1184.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1185.3" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1191.3" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1194.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1200.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1253.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1259.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1254.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1260.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1255.5" width="20" height="14.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1262.6" x2="216" y2="1262.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="205" y="1266.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1269.7" width="20" height="7.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1277.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1276.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1282.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1277.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1283.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1281.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1287.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1282.5" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1288.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1283.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1289.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">17</text>
+<rect x="211" y="1286.5" width="20" height="21.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1297.1" x2="216" y2="1297.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="205" y="1301.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1309.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1315.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">19</text>
+<rect x="211" y="1310.3" width="20" height="5.9" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1317.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">20</text>
+<rect x="211" y="1316.3" width="20" height="7.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1323.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">21</text>
+<rect x="211" y="1323.8" width="20" height="16.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1331.8" x2="226" y2="1331.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os05)" opacity="0.8"/>
+<text x="205" y="1335.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">22</text>
+<text x="205" y="1143" text-anchor="end" fill="#E06D10" font-size="12" font-weight="700" letter-spacing="0.5">Os05</text>
+<circle cx="221.0" cy="1228.7" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1232.7" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1369" width="22" height="202" rx="5" fill="#43A047" opacity="0.15" stroke="#43A047" stroke-width="1"/>
+<rect x="211" y="1369.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1375.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1371.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1377.7" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1373.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1379.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1373.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1379.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1374.4" width="20" height="5.6" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1381.2" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1379.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1385.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1380.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1386.7" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1383.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1389.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1384.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1390.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1386.5" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1392.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1386.9" width="20" height="42.9" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1408.4" x2="226" y2="1408.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os06)" opacity="0.8"/>
+<text x="205" y="1412.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1432.6" width="20" height="16.9" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1441.1" x2="226" y2="1441.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os06)" opacity="0.8"/>
+<text x="205" y="1445.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1453.7" width="20" height="4.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1460.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1460.0" width="20" height="5.2" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1466.6" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1470.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1476.6" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1474.0" width="20" height="7.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1481.7" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1484.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1490.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">17</text>
+<rect x="211" y="1495.0" width="20" height="7.7" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1502.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1501.5" width="20" height="11.7" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1507.3" x2="216" y2="1507.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os06)" opacity="0.8"/>
+<text x="205" y="1511.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">19</text>
+<rect x="211" y="1515.2" width="20" height="8.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1523.2" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">20</text>
+<rect x="211" y="1523.2" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1529.2" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">21</text>
+<rect x="211" y="1526.4" width="20" height="5.7" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1533.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">22</text>
+<rect x="211" y="1533.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1539.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">23</text>
+<rect x="211" y="1536.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1542.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">24</text>
+<rect x="211" y="1539.7" width="20" height="11.5" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1545.5" x2="216" y2="1545.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os06)" opacity="0.8"/>
+<text x="205" y="1549.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">25</text>
+<rect x="211" y="1551.4" width="20" height="12.6" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1557.7" x2="216" y2="1557.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os06)" opacity="0.8"/>
+<text x="205" y="1561.7" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">26</text>
+<rect x="211" y="1564.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1570.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">27</text>
+<rect x="211" y="1564.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1570.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">28</text>
+<rect x="211" y="1565.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1571.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">29</text>
+<rect x="211" y="1567.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1573.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">30</text>
+<rect x="211" y="1568.5" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1574.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">31</text>
+<text x="205" y="1364" text-anchor="end" fill="#43A047" font-size="12" font-weight="700" letter-spacing="0.5">Os06</text>
+<circle cx="221.0" cy="1469.0" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1473.0" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1599" width="22" height="192" rx="5" fill="#3498DB" opacity="0.15" stroke="#3498DB" stroke-width="1"/>
+<rect x="211" y="1599.1" width="20" height="4.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1605.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1605.3" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1611.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1609.2" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1615.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1611.9" width="20" height="5.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1618.8" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1716.8" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1722.8" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1721.3" width="20" height="69.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1756.0" x2="216" y2="1756.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os07)" opacity="0.8"/>
+<text x="205" y="1760.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<text x="205" y="1594" text-anchor="end" fill="#3498DB" font-size="12" font-weight="700" letter-spacing="0.5">Os07</text>
+<circle cx="221.0" cy="1678.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1682.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1819" width="22" height="184" rx="5" fill="#FFA07A" opacity="0.15" stroke="#FFA07A" stroke-width="1"/>
+<rect x="211" y="1819.4" width="20" height="10.9" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1824.8" x2="216" y2="1824.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os08)" opacity="0.8"/>
+<text x="205" y="1828.8" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1831.9" width="20" height="11.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1837.5" x2="216" y2="1837.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os08)" opacity="0.8"/>
+<text x="205" y="1841.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1976.7" width="20" height="7.9" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1984.6" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1984.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1990.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1987.2" width="20" height="13.9" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1994.1" x2="226" y2="1994.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os08)" opacity="0.8"/>
+<text x="205" y="1998.1" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<text x="205" y="1814" text-anchor="end" fill="#FFA07A" font-size="12" font-weight="700" letter-spacing="0.5">Os08</text>
+<circle cx="221.0" cy="1902.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1906.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2031" width="22" height="148" rx="5" fill="#72d1b9" opacity="0.15" stroke="#72d1b9" stroke-width="1"/>
+<rect x="211" y="2032.8" width="20" height="18.8" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="214" y1="2042.2" x2="226" y2="2042.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os09)" opacity="0.8"/>
+<text x="205" y="2046.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2054.0" width="20" height="6.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2061.0" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2063.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2069.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2068.2" width="20" height="4.2" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2074.3" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2075.7" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2081.7" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2081.6" width="20" height="15.9" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="214" y1="2089.6" x2="226" y2="2089.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os09)" opacity="0.8"/>
+<text x="205" y="2093.6" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2098.7" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2104.7" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2104.2" width="20" height="12.7" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="214" y1="2110.6" x2="226" y2="2110.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os09)" opacity="0.8"/>
+<text x="205" y="2114.6" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2118.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2124.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2123.4" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2129.4" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">10</text>
+<rect x="211" y="2124.8" width="20" height="12.6" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2131.1" x2="216" y2="2131.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os09)" opacity="0.8"/>
+<text x="205" y="2135.1" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">11</text>
+<rect x="211" y="2137.5" width="20" height="38.5" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="214" y1="2156.7" x2="226" y2="2156.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os09)" opacity="0.8"/>
+<text x="205" y="2160.7" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">12</text>
+<text x="205" y="2026" text-anchor="end" fill="#72d1b9" font-size="12" font-weight="700" letter-spacing="0.5">Os09</text>
+<circle cx="221.0" cy="2049.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2053.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2207" width="22" height="150" rx="5" fill="#0055a6" opacity="0.15" stroke="#0055a6" stroke-width="1"/>
+<rect x="211" y="2308.0" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2314.0" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2314.7" width="20" height="12.2" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="214" y1="2320.8" x2="226" y2="2320.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os10)" opacity="0.8"/>
+<text x="205" y="2324.8" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2326.9" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2332.9" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2329.0" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2335.0" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2333.1" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2339.1" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2336.0" width="20" height="5.5" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2342.7" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2341.7" width="20" height="6.9" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2349.1" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2348.8" width="20" height="4.5" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2355.1" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2353.4" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2359.4" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">9</text>
+<text x="205" y="2202" text-anchor="end" fill="#0055a6" font-size="12" font-weight="700" letter-spacing="0.5">Os10</text>
+<circle cx="221.0" cy="2259.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2263.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2385" width="22" height="187" rx="5" fill="#e3b58f" opacity="0.15" stroke="#e3b58f" stroke-width="1"/>
+<rect x="211" y="2386.3" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2392.3" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2388.6" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2394.6" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2390.7" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2396.7" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2393.8" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2399.8" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2394.6" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2400.6" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2396.8" width="20" height="4.1" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2402.8" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2401.1" width="20" height="36.1" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="228" y1="2419.1" x2="216" y2="2419.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os11)" opacity="0.8"/>
+<text x="205" y="2423.1" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2441.7" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2447.7" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2454.2" width="20" height="8.1" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2462.2" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2554.5" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2560.5" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">10</text>
+<rect x="211" y="2561.6" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2567.6" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">11</text>
+<rect x="211" y="2568.4" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2574.4" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">12</text>
+<text x="205" y="2380" text-anchor="end" fill="#e3b58f" font-size="12" font-weight="700" letter-spacing="0.5">Os11</text>
+<circle cx="221.0" cy="2463.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2467.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2600" width="22" height="178" rx="5" fill="#f0c9a7" opacity="0.15" stroke="#f0c9a7" stroke-width="1"/>
+<rect x="211" y="2600.0" width="20" height="13.7" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="228" y1="2606.9" x2="216" y2="2606.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os12)" opacity="0.8"/>
+<text x="205" y="2610.9" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2613.9" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2619.9" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2617.8" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2623.8" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2621.5" width="20" height="5.5" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2628.3" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2723.9" width="20" height="6.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2730.9" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2734.2" width="20" height="5.6" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2741.0" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2743.1" width="20" height="17.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="228" y1="2751.8" x2="216" y2="2751.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os12)" opacity="0.8"/>
+<text x="205" y="2755.8" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2759.7" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2765.7" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2759.8" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2765.8" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2762.2" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2768.2" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">10</text>
+<rect x="211" y="2765.5" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2771.5" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">11</text>
+<rect x="211" y="2767.6" width="20" height="10.1" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="228" y1="2772.7" x2="216" y2="2772.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os12)" opacity="0.8"/>
+<text x="205" y="2776.7" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">12</text>
+<text x="205" y="2595" text-anchor="end" fill="#f0c9a7" font-size="12" font-weight="700" letter-spacing="0.5">Os12</text>
+<circle cx="221.0" cy="2678.0" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2682.0" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+</g>
+<g id="queryChrs">
+<rect x="1190" y="60" width="22" height="261" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="60.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="66.1" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="60.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="66.1" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="61.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="67.6" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="62.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="68.8" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="64.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="70.4" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="65.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="71.5" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="69.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="75.5" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="70.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="76.9" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="73.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="79.0" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="73.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="79.2" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="77.1" width="20" height="16.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="85.5" x2="1196" y2="85.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="1217" y="89.5" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="94.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="100.3" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="96.3" width="20" height="6.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="103.3" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="102.5" width="20" height="6.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="109.7" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="108.8" width="20" height="46.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="131.9" x2="1206" y2="131.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="1217" y="135.9" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="178.3" width="20" height="11.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="184.3" x2="1206" y2="184.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="1217" y="188.3" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="194.7" width="20" height="88.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="239.0" x2="1206" y2="239.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="1217" y="243.0" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="283.4" width="20" height="10.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="288.6" x2="1196" y2="288.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="1217" y="292.6" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="293.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="299.5" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="297.8" width="20" height="8.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="306.0" fill="#FFD700" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="307.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="313.3" fill="#FFD700" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="310.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="316.9" fill="#FFD700" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="311.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="317.4" fill="#FFD700" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="314.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="320.5" fill="#FFD700" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="315.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="321.1" fill="#FFD700" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="318.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="324.1" fill="#FFD700" font-size="10" font-weight="500">26</text>
+<text x="1217" y="55" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Hv03</text>
+<rect x="1190" y="349" width="22" height="236" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="350.5" width="20" height="4.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="356.6" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="355.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="361.1" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="358.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="364.6" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="361.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="367.1" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="363.9" width="20" height="12.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="370.2" x2="1206" y2="370.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="1217" y="374.2" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="377.4" width="20" height="5.3" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="384.1" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="385.0" width="20" height="9.6" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="393.8" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="395.2" width="20" height="11.3" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="400.9" x2="1196" y2="400.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os02)" opacity="0.8"/>
+<text x="1217" y="404.9" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="407.4" width="20" height="13.6" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="414.2" x2="1196" y2="414.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os02)" opacity="0.8"/>
+<text x="1217" y="418.2" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="423.2" width="20" height="5.6" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="430.0" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="429.8" width="20" height="9.8" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="438.7" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="482.8" width="20" height="74.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="520.1" x2="1206" y2="520.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="1217" y="524.1" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="557.6" width="20" height="6.4" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="564.8" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="564.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="570.2" fill="#E63946" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="566.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="572.1" fill="#E63946" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="566.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="572.8" fill="#E63946" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="569.8" width="20" height="15.2" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="577.4" x2="1206" y2="577.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="1217" y="581.4" fill="#E63946" font-size="10" font-weight="500">17</text>
+<text x="1217" y="344" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Hv06</text>
+<rect x="1190" y="613" width="22" height="256" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="614.8" width="20" height="11.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="620.6" x2="1206" y2="620.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os03)" opacity="0.8"/>
+<text x="1217" y="624.6" fill="#1A237E" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="626.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="632.4" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="627.7" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="633.7" fill="#e3b58f" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="629.2" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="635.2" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="631.7" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="637.7" fill="#e3b58f" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="633.3" width="20" height="26.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="646.4" x2="1196" y2="646.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os11)" opacity="0.8"/>
+<text x="1217" y="650.4" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="659.4" width="20" height="6.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="666.7" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="663.8" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="669.8" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="667.7" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="673.7" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="670.0" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="676.0" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="673.9" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="679.9" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="675.2" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="681.2" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="677.1" width="20" height="5.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="683.9" fill="#e3b58f" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="683.9" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="689.9" fill="#e3b58f" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="700.4" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="706.4" fill="#e3b58f" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="763.7" width="20" height="8.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="771.8" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="774.8" width="20" height="54.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="802.0" x2="1196" y2="802.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="1217" y="806.0" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="829.3" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="835.3" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="832.4" width="20" height="12.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="838.6" x2="1196" y2="838.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="1217" y="842.6" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="844.9" width="20" height="9.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="853.8" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="854.9" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="860.9" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="857.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="863.4" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="861.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="867.1" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="862.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="868.0" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="864.3" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="870.3" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="866.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="872.7" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<text x="1217" y="608" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Hv04</text>
+<rect x="1190" y="897" width="22" height="280" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="897.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="903.0" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="897.5" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="903.5" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="898.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="904.2" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="899.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="905.6" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="901.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="907.4" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="903.5" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="909.5" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="904.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="910.1" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="905.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="911.1" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="907.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="913.0" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="907.7" width="20" height="88.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="952.0" x2="1196" y2="952.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os07)" opacity="0.8"/>
+<text x="1217" y="956.0" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1000.2" width="20" height="13.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1006.9" x2="1206" y2="1006.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os07)" opacity="0.8"/>
+<text x="1217" y="1010.9" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1042.1" width="20" height="7.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1049.6" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1049.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1055.1" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1051.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1057.0" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1054.3" width="20" height="8.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1062.5" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1062.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1068.8" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1065.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1071.6" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1070.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1076.2" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1073.8" width="20" height="66.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="1107.0" x2="1206" y2="1107.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os04)" opacity="0.8"/>
+<text x="1217" y="1111.0" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1140.4" width="20" height="8.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1148.5" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1148.6" width="20" height="5.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1155.2" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1153.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1159.9" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1155.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1161.7" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1157.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1163.4" fill="#9C27B0" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="1159.2" width="20" height="8.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1167.4" fill="#9C27B0" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="1167.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1173.6" fill="#9C27B0" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="1168.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1174.2" fill="#9C27B0" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="1168.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1174.4" fill="#9C27B0" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="1172.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1178.0" fill="#9C27B0" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="1172.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1178.3" fill="#9C27B0" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="1173.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1179.4" fill="#9C27B0" font-size="10" font-weight="500">25</text>
+<text x="1217" y="892" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Hv02</text>
+<rect x="1190" y="1205" width="22" height="217" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1207.3" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1213.3" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1211.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1217.9" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1215.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1221.1" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1218.4" width="20" height="39.4" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="1238.1" x2="1206" y2="1238.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os05)" opacity="0.8"/>
+<text x="1217" y="1242.1" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1255.6" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1261.6" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1258.4" width="20" height="7.4" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1266.1" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1266.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1272.1" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1271.6" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1277.6" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1302.3" width="20" height="7.3" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1309.9" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1309.7" width="20" height="21.1" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="1320.2" x2="1206" y2="1320.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os10)" opacity="0.8"/>
+<text x="1217" y="1324.2" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1331.2" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1337.2" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1334.3" width="20" height="7.5" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1342.1" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1342.8" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1348.8" fill="#0055a6" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1345.5" width="20" height="6.1" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1352.5" fill="#0055a6" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1351.8" width="20" height="4.8" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1358.2" fill="#0055a6" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1357.0" width="20" height="7.2" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1364.6" fill="#0055a6" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1364.4" width="20" height="4.2" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1370.5" fill="#0055a6" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1368.8" width="20" height="9.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1377.3" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1376.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1382.8" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1377.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1383.2" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1378.6" width="20" height="5.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1385.2" fill="#E06D10" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1383.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1389.8" fill="#E06D10" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1384.5" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1390.5" fill="#E06D10" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1387.5" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1393.5" fill="#E06D10" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1388.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1394.1" fill="#E06D10" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1388.8" width="20" height="14.4" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1396.0" x2="1196" y2="1396.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="1217" y="1400.0" fill="#E06D10" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="1403.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1409.2" fill="#E06D10" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1404.3" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1410.3" fill="#E06D10" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="1404.6" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1410.6" fill="#E06D10" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="1407.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1413.9" fill="#E06D10" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="1411.7" width="20" height="10.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="1416.8" x2="1206" y2="1416.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os05)" opacity="0.8"/>
+<text x="1217" y="1420.8" fill="#E06D10" font-size="10" font-weight="500">22</text>
+<text x="1217" y="1200" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Hv01</text>
+<rect x="1190" y="1450" width="22" height="266" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1450.2" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1456.2" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1451.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1457.8" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1452.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1458.8" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1453.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1459.4" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1454.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1460.7" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1457.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1463.6" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1458.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1464.6" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1461.2" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1467.2" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1462.2" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1468.2" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1464.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1470.3" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1466.6" width="20" height="35.1" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="1484.2" x2="1206" y2="1484.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os06)" opacity="0.8"/>
+<text x="1217" y="1488.2" fill="#43A047" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1501.8" width="20" height="8.7" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1510.2" fill="#43A047" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1511.2" width="20" height="4.2" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1517.3" fill="#43A047" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1515.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1521.4" fill="#43A047" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1515.9" width="20" height="11.6" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1521.7" x2="1206" y2="1521.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os08)" opacity="0.8"/>
+<text x="1217" y="1525.7" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1527.5" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1533.5" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1530.6" width="20" height="30.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1545.7" x2="1206" y2="1545.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os08)" opacity="0.8"/>
+<text x="1217" y="1549.7" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1601.6" width="20" height="18.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1610.9" x2="1196" y2="1610.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os08)" opacity="0.8"/>
+<text x="1217" y="1614.9" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1620.3" width="20" height="18.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1629.5" x2="1196" y2="1629.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os08)" opacity="0.8"/>
+<text x="1217" y="1633.5" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1639.4" width="20" height="4.6" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1645.8" fill="#43A047" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="1644.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1650.4" fill="#43A047" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1645.9" width="20" height="5.1" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1652.4" fill="#43A047" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1653.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1659.6" fill="#43A047" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1655.2" width="20" height="6.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1662.1" fill="#43A047" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="1661.2" width="20" height="8.7" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1669.6" fill="#43A047" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="1670.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1676.6" fill="#43A047" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="1674.9" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1680.9" fill="#43A047" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="1675.2" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1681.2" fill="#43A047" font-size="10" font-weight="500">28</text>
+<rect x="1191" y="1677.5" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1683.5" fill="#43A047" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="1679.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1685.7" fill="#43A047" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="1683.8" width="20" height="14.5" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="1691.1" x2="1196" y2="1691.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os06)" opacity="0.8"/>
+<text x="1217" y="1695.1" fill="#43A047" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="1698.9" width="20" height="8.9" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1707.4" fill="#43A047" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="1708.2" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1714.2" fill="#43A047" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="1709.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1715.8" fill="#43A047" font-size="10" font-weight="500">29</text>
+<rect x="1191" y="1711.2" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1717.2" fill="#43A047" font-size="10" font-weight="500">30</text>
+<rect x="1191" y="1712.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1718.0" fill="#43A047" font-size="10" font-weight="500">31</text>
+<text x="1217" y="1445" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Hv07</text>
+<rect x="1190" y="1744" width="22" height="247" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1744.1" width="20" height="9.9" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1753.0" fill="#f0c9a7" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1754.5" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1760.5" fill="#f0c9a7" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1758.3" width="20" height="6.6" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1765.6" fill="#f0c9a7" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1766.7" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1772.7" fill="#f0c9a7" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1770.0" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1776.0" fill="#f0c9a7" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1770.9" width="20" height="21.9" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1208" y1="1781.8" x2="1196" y2="1781.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os12)" opacity="0.8"/>
+<text x="1217" y="1785.8" fill="#f0c9a7" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1795.4" width="20" height="6.4" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1802.6" fill="#f0c9a7" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1801.8" width="20" height="6.4" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1809.0" fill="#f0c9a7" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1840.2" width="20" height="8.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1848.3" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1852.4" width="20" height="7.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1859.9" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1859.6" width="20" height="6.5" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="1866.9" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1867.0" width="20" height="21.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1208" y1="1877.5" x2="1196" y2="1877.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os12)" opacity="0.8"/>
+<text x="1217" y="1881.5" fill="#f0c9a7" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1888.4" width="20" height="7.5" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1896.2" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1893.3" width="20" height="4.8" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1899.7" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1898.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1904.3" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1900.0" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1906.0" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1902.8" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1908.8" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1904.6" width="20" height="5.5" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1911.3" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1907.7" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1913.7" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1910.4" width="20" height="10.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1919.4" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1920.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1926.2" fill="#72d1b9" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1923.0" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1929.0" fill="#72d1b9" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1923.9" width="20" height="9.7" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1932.7" fill="#72d1b9" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1934.0" width="20" height="28.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1194" y1="1948.0" x2="1206" y2="1948.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os09)" opacity="0.8"/>
+<text x="1217" y="1952.0" fill="#72d1b9" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1962.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1968.1" fill="#1A237E" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1963.8" width="20" height="13.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="1970.5" x2="1206" y2="1970.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os03)" opacity="0.8"/>
+<text x="1217" y="1974.5" fill="#1A237E" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1978.2" width="20" height="12.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="1984.5" x2="1206" y2="1984.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os03)" opacity="0.8"/>
+<text x="1217" y="1988.5" fill="#1A237E" font-size="10" font-weight="500">17</text>
+<text x="1217" y="1739" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Hv05</text>
+</g>
+</svg>
+</div>
+
+<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#FFD700"></div><span>Os01</span></div><div class="legend-item"><div class="legend-dot" style="background:#E63946"></div><span>Os02</span></div><div class="legend-item"><div class="legend-dot" style="background:#1A237E"></div><span>Os03</span></div><div class="legend-item"><div class="legend-dot" style="background:#9C27B0"></div><span>Os04</span></div><div class="legend-item"><div class="legend-dot" style="background:#E06D10"></div><span>Os05</span></div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div><span>Os06</span></div><div class="legend-item"><div class="legend-dot" style="background:#3498DB"></div><span>Os07</span></div><div class="legend-item"><div class="legend-dot" style="background:#FFA07A"></div><span>Os08</span></div><div class="legend-item"><div class="legend-dot" style="background:#72d1b9"></div><span>Os09</span></div><div class="legend-item"><div class="legend-dot" style="background:#0055a6"></div><span>Os10</span></div><div class="legend-item"><div class="legend-dot" style="background:#e3b58f"></div><span>Os11</span></div><div class="legend-item"><div class="legend-dot" style="background:#f0c9a7"></div><span>Os12</span></div></div>
+<div class="stats-bar"><span><b>194</b> synteny fragments</span><span><b>12</b> ref chromosomes</span><span><b>7</b> query chromosomes</span><span><b>101</b> forward &nbsp;|&nbsp; <b>93</b> reverse</span><span>max size <b>792</b> genes</span></div>
+<div id="tooltip"></div>
+
+<script>
+function showTip(e, el) {
+  const parts = el.dataset.tip.split(' | ');
+  const tip = document.getElementById('tooltip');
+  tip.innerHTML = parts.map((p,i) => i===0
+    ? `<div style="color:#0ea5e9;font-weight:700;margin-bottom:5px">${p}</div>`
+    : `<div>${p}</div>`
+  ).join('');
+  tip.style.left = (e.clientX + 14) + 'px';
+  tip.style.top  = (e.clientY - 10) + 'px';
+  tip.classList.add('show');
+}
+function hideTip() { document.getElementById('tooltip').classList.remove('show'); }
+</script>
+</body>
+</html>

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synteny — Tg_2_Pf.blast.icl.block.corr.csv-r-r.reform-claude_filtered.txt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0a0e1a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; min-height:100vh; }
+  .canvas-container { padding:20px 32px; overflow-x:auto; }
+  svg { display:block; max-width:100%; }
+  .legend {
+    padding:10px 32px 16px; display:flex; gap:18px; flex-wrap:wrap;
+    border-top:1px solid #1e2d45;
+  }
+  .legend-item { display:flex; align-items:center; gap:7px; font-size:11px; color:#64748b; }
+  .legend-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0; }
+  .stats-bar {
+    padding:10px 32px 18px; display:flex; gap:28px; font-size:10px; color:#64748b; flex-wrap:wrap;
+  }
+  .stats-bar b { color:#0ea5e9; margin-right:3px; }
+  #tooltip {
+    position:fixed; background:#1e2d45; border:1px solid #38bdf8; border-radius:6px;
+    padding:10px 14px; font-size:11px; line-height:1.8; color:#e2e8f0;
+    pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:1000;
+    max-width:340px;
+  }
+  #tooltip.show { opacity:1; }
+</style>
+</head>
+<body>
+
+<div class="canvas-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 4815" width="1400" height="4815" style="background:#0a0e1a;font-family:'JetBrains Mono',monospace">
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="arr_Pf01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFD700"/></marker>
+<marker id="arr_rev_Pf01" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFD700"/></marker>
+<marker id="arr_Pf02" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E63946"/></marker>
+<marker id="arr_rev_Pf02" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E63946"/></marker>
+<marker id="arr_Pf03" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1A237E"/></marker>
+<marker id="arr_rev_Pf03" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#1A237E"/></marker>
+<marker id="arr_Pf04" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9C27B0"/></marker>
+<marker id="arr_rev_Pf04" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9C27B0"/></marker>
+<marker id="arr_Pf05" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E06D10"/></marker>
+<marker id="arr_rev_Pf05" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E06D10"/></marker>
+<marker id="arr_Pf06" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#43A047"/></marker>
+<marker id="arr_rev_Pf06" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#43A047"/></marker>
+<marker id="arr_Pf07" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#3498DB"/></marker>
+<marker id="arr_rev_Pf07" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#3498DB"/></marker>
+<marker id="arr_Pf08" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFA07A"/></marker>
+<marker id="arr_rev_Pf08" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFA07A"/></marker>
+<marker id="arr_Pf09" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#72d1b9"/></marker>
+<marker id="arr_rev_Pf09" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#72d1b9"/></marker>
+<marker id="arr_Pf10" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#0055a6"/></marker>
+<marker id="arr_rev_Pf10" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#0055a6"/></marker>
+<marker id="arr_Pf11" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#e3b58f"/></marker>
+<marker id="arr_rev_Pf11" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#e3b58f"/></marker>
+<marker id="arr_Pf12" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#f0c9a7"/></marker>
+<marker id="arr_rev_Pf12" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#f0c9a7"/></marker>
+<marker id="arr_Pf13" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#f5aa3e"/></marker>
+<marker id="arr_rev_Pf13" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#f5aa3e"/></marker>
+<marker id="arr_Pf14" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#7b0d1a"/></marker>
+<marker id="arr_rev_Pf14" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#7b0d1a"/></marker>
+<marker id="arr_Pf15" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#f2a69b"/></marker>
+<marker id="arr_rev_Pf15" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#f2a69b"/></marker>
+<marker id="arr_Pf16" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9f4e9a"/></marker>
+<marker id="arr_rev_Pf16" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9f4e9a"/></marker>
+<marker id="arr_Pf17" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#4ca3c7"/></marker>
+<marker id="arr_rev_Pf17" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#4ca3c7"/></marker>
+<marker id="arr_Pf18" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#b0d7e6"/></marker>
+<marker id="arr_rev_Pf18" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#b0d7e6"/></marker>
+<marker id="arr_Pf19" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#a32a3a"/></marker>
+<marker id="arr_rev_Pf19" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#a32a3a"/></marker>
+<marker id="arr_Pf20" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#4e2e5c"/></marker>
+<marker id="arr_rev_Pf20" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#4e2e5c"/></marker>
+</defs>
+<g id="ribbons" opacity="0.35">
+<path d="M232.0,288.4 C700.0,288.4 700.0,359.7 1190.0,359.7 L1190.0,460.5 C700.0,460.5 700.0,400.8 232.0,400.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pf02 → Tg16 | Ref: rna-gnl|WGS:JAGSPU|Pfo02g009020.1 - rna-gnl|WGS:JAGSPU|Pfo02g000190.1 | Query: Tecgr33S14451_TECGRA - Tecgr33S02657_TECGRA | Dir: - | Size: 533 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1621.4 C700.0,1621.4 700.0,1957.8 1190.0,1957.8 L1190.0,2082.0 C700.0,2082.0 700.0,1743.6 232.0,1743.6 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pf07 → Tg08 | Ref: rna-gnl|WGS:JAGSPU|Pfo07g009450.1 - rna-gnl|WGS:JAGSPU|Pfo07g000240.1 | Query: Tecgr16S06309_TECGRA - Tecgr16S06638_TECGRA | Dir: - | Size: 459 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2105.5 C700.0,2105.5 700.0,2726.3 1190.0,2726.3 L1190.0,2813.8 C700.0,2813.8 700.0,2155.6 232.0,2155.6 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pf09 → Tg04 | Ref: rna-gnl|WGS:JAGSPU|Pfo09g000390.1 - rna-gnl|WGS:JAGSPU|Pfo09g008450.1 | Query: Tecgr39S03355_TECGRA - Tecgr39S16818_TECGRA | Dir: + | Size: 420 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2031.5 C700.0,2031.5 700.0,2490.5 1190.0,2490.5 L1190.0,2606.6 C700.0,2606.6 700.0,2073.4 232.0,2073.4 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pf08 → Tg14 | Ref: rna-gnl|WGS:JAGSPU|Pfo08g009450.1 - rna-gnl|WGS:JAGSPU|Pfo08g015490.1 | Query: Tecgr92S22309_TECGRA - Tecgr52S17960_TECGRA | Dir: + | Size: 382 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3781.1 C700.0,3781.1 700.0,4336.3 1190.0,4336.3 L1190.0,4412.2 C700.0,4412.2 700.0,3828.0 232.0,3828.0 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pf17 → Tg02 | Ref: rna-gnl|WGS:JAGSPU|Pfo17g006480.1 - rna-gnl|WGS:JAGSPU|Pfo17g000060.1 | Query: Tecgr21S10499_TECGRA - Tecgr64S04531_TECGRA | Dir: - | Size: 381 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1784.4 C700.0,1784.4 700.0,2185.3 1190.0,2185.3 L1190.0,2273.7 C700.0,2273.7 700.0,1832.9 232.0,1832.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pf07 → Tg15 | Ref: rna-gnl|WGS:JAGSPU|Pfo07g010790.1 - rna-gnl|WGS:JAGSPU|Pfo07g016830.1 | Query: Tecgr25S12034_TECGRA - Tecgr25S11836_TECGRA | Dir: + | Size: 371 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4145.0 C700.0,4145.0 700.0,4521.6 1190.0,4521.6 L1190.0,4632.8 C700.0,4632.8 700.0,4188.8 232.0,4188.8 Z" fill="#a32a3a" opacity="0.6" style="cursor:pointer" data-tip="Pf19 → Tg10 | Ref: rna-gnl|WGS:JAGSPU|Pfo19g006490.1 - rna-gnl|WGS:JAGSPU|Pfo19g000320.1 | Query: Tecgr77S20951_TECGRA - Tecgr30S13604_TECGRA | Dir: - | Size: 355 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3398.5 C700.0,3398.5 700.0,3930.1 1190.0,3930.1 L1190.0,4042.7 C700.0,4042.7 700.0,3439.0 232.0,3439.0 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pf15 → Tg12 | Ref: rna-gnl|WGS:JAGSPU|Pfo15g000810.1 - rna-gnl|WGS:JAGSPU|Pfo15g006840.1 | Query: Tecgr36S15730_TECGRA - Tecgr36S15772_TECGRA | Dir: + | Size: 341 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,990.2 C700.0,990.2 700.0,926.7 1190.0,926.7 L1190.0,1009.4 C700.0,1009.4 700.0,1097.4 232.0,1097.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pf04 → Tg05 | Ref: rna-gnl|WGS:JAGSPU|Pfo04g008180.1 - rna-gnl|WGS:JAGSPU|Pfo04g014710.1 | Query: Tecgr58S18879_TECGRA - Tecgr50S03857_TECGRA | Dir: + | Size: 340 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1561.1 C700.0,1561.1 700.0,1774.3 1190.0,1774.3 L1190.0,1839.0 C700.0,1839.0 700.0,1590.9 232.0,1590.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pf06 → Tg11 | Ref: rna-gnl|WGS:JAGSPU|Pfo06g011430.1 - rna-gnl|WGS:JAGSPU|Pfo06g016660.1 | Query: Tecgr47S17038_TECGRA - Tecgr57S18749_TECGRA | Dir: + | Size: 304 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,863.5 C700.0,863.5 700.0,1118.1 1190.0,1118.1 L1190.0,1174.3 C700.0,1174.3 700.0,893.5 232.0,893.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pf04 → Tg17 | Ref: rna-gnl|WGS:JAGSPU|Pfo04g004810.1 - rna-gnl|WGS:JAGSPU|Pfo04g000160.1 | Query: Tecgr66S04660_TECGRA - Tecgr66S04695_TECGRA | Dir: - | Size: 257 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2155.9 C700.0,2155.9 700.0,3273.6 1190.0,3273.6 L1190.0,3334.7 C700.0,3334.7 700.0,2186.5 232.0,2186.5 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pf09 → Tg18 | Ref: rna-gnl|WGS:JAGSPU|Pfo09g008490.1 - rna-gnl|WGS:JAGSPU|Pfo09g012910.1 | Query: Tecgr39S03513_TECGRA - Tecgr39S16177_TECGRA | Dir: + | Size: 248 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1282.2 C700.0,1282.2 700.0,1320.1 1190.0,1320.1 L1190.0,1364.4 C700.0,1364.4 700.0,1334.0 232.0,1334.0 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pf05 → Tg13 | Ref: rna-gnl|WGS:JAGSPU|Pfo05g014640.1 - rna-gnl|WGS:JAGSPU|Pfo05g010710.1 | Query: Tecgr27S12837_TECGRA - Tecgr27S12486_TECGRA | Dir: - | Size: 232 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2559.9 C700.0,2559.9 700.0,629.4 1190.0,629.4 L1190.0,679.2 C700.0,679.2 700.0,2657.7 232.0,2657.7 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pf11 → Tg07 | Ref: rna-gnl|WGS:JAGSPU|Pfo11g000100.1 - rna-gnl|WGS:JAGSPU|Pfo11g005910.1 | Query: Tecgr17S08217_TECGRA - Tecgr17S07086_TECGRA | Dir: + | Size: 226 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,526.9 C700.0,526.9 700.0,2906.7 1190.0,2906.7 L1190.0,2971.7 C700.0,2971.7 700.0,552.3 232.0,552.3 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pf02 → Tg06 | Ref: rna-gnl|WGS:JAGSPU|Pfo02g018150.1 - rna-gnl|WGS:JAGSPU|Pfo02g014340.1 | Query: Tecgr34S14710_TECGRA - Tecgr61S19234_TECGRA | Dir: - | Size: 220 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2338.0 C700.0,2338.0 700.0,3214.2 1190.0,3214.2 L1190.0,3251.5 C700.0,3251.5 700.0,2354.7 232.0,2354.7 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pf10 → Tg18 | Ref: rna-gnl|WGS:JAGSPU|Pfo10g002830.1 - rna-gnl|WGS:JAGSPU|Pfo10g000010.1 | Query: Tecgr18S00664_TECGRA - Tecgr18S08662_TECGRA | Dir: - | Size: 210 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3204.5 C700.0,3204.5 700.0,2290.0 1190.0,2290.0 L1190.0,2339.6 C700.0,2339.6 700.0,3234.5 232.0,3234.5 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pf14 → Tg15 | Ref: rna-gnl|WGS:JAGSPU|Pfo14g001650.1 - rna-gnl|WGS:JAGSPU|Pfo14g005110.1 | Query: Tecgr31S14013_TECGRA - Tecgr7412S20583_TECGRA | Dir: + | Size: 208 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,70.3 C700.0,70.3 700.0,172.2 1190.0,172.2 L1190.0,243.1 C700.0,243.1 700.0,165.1 232.0,165.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pf01 → Tg03 | Ref: rna-gnl|WGS:JAGSPU|Pfo01g005270.1 - rna-gnl|WGS:JAGSPU|Pfo01g001110.1 | Query: Tecgr19S09146_TECGRA - Tecgr19S09177_TECGRA | Dir: - | Size: 207 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1537.4 C700.0,1537.4 700.0,1657.9 1190.0,1657.9 L1190.0,1715.7 C700.0,1715.7 700.0,1561.4 232.0,1561.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pf06 → Tg11 | Ref: rna-gnl|WGS:JAGSPU|Pfo06g008350.1 - rna-gnl|WGS:JAGSPU|Pfo06g011460.1 | Query: Tecgr18S08837_TECGRA - Tecgr74S20519_TECGRA | Dir: + | Size: 207 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2411.0 C700.0,2411.0 700.0,3160.4 1190.0,3160.4 L1190.0,3211.3 C700.0,3211.3 700.0,2530.7 232.0,2530.7 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pf10 → Tg18 | Ref: rna-gnl|WGS:JAGSPU|Pfo10g008920.1 - rna-gnl|WGS:JAGSPU|Pfo10g014210.1 | Query: Tecgr54S18385_TECGRA - Tecgr54S04171_TECGRA | Dir: + | Size: 207 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1128.3 C700.0,1128.3 700.0,1499.3 1190.0,1499.3 L1190.0,1536.0 C700.0,1536.0 700.0,1146.9 232.0,1146.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pf05 → Tg13 | Ref: rna-gnl|WGS:JAGSPU|Pfo05g003680.1 - rna-gnl|WGS:JAGSPU|Pfo05g000330.1 | Query: Tecgr16S06202_TECGRA - Tecgr16S06649_TECGRA | Dir: - | Size: 199 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3127.5 C700.0,3127.5 700.0,3733.3 1190.0,3733.3 L1190.0,3803.8 C700.0,3803.8 700.0,3153.5 232.0,3153.5 Z" fill="#f5aa3e" opacity="0.6" style="cursor:pointer" data-tip="Pf13 → Tg09 | Ref: rna-gnl|WGS:JAGSPU|Pfo13g010120.1 - rna-gnl|WGS:JAGSPU|Pfo13g006610.1 | Query: Tecgr48S17190_TECGRA - Tecgr26S12344_TECGRA | Dir: - | Size: 188 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3963.2 C700.0,3963.2 700.0,2831.5 1190.0,2831.5 L1190.0,2864.4 C700.0,2864.4 700.0,3980.4 232.0,3980.4 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pf18 → Tg04 | Ref: rna-gnl|WGS:JAGSPU|Pfo18g000030.1 - rna-gnl|WGS:JAGSPU|Pfo18g002790.1 | Query: Tecgr17S07691_TECGRA - Tecgr17S07572_TECGRA | Dir: + | Size: 178 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,234.4 C700.0,234.4 700.0,2666.3 1190.0,2666.3 L1190.0,2702.9 C700.0,2702.9 700.0,258.8 232.0,258.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pf01 → Tg04 | Ref: rna-gnl|WGS:JAGSPU|Pfo01g007690.1 - rna-gnl|WGS:JAGSPU|Pfo01g010460.1 | Query: Tecgr19S09242_TECGRA - Tecgr19S01055_TECGRA | Dir: + | Size: 176 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1378.2 C700.0,1378.2 700.0,1613.3 1190.0,1613.3 L1190.0,1648.1 C700.0,1648.1 700.0,1428.7 232.0,1428.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pf06 → Tg11 | Ref: rna-gnl|WGS:JAGSPU|Pfo06g000240.1 - rna-gnl|WGS:JAGSPU|Pfo06g004090.1 | Query: Tecgr18S08728_TECGRA - Tecgr18S08815_TECGRA | Dir: + | Size: 175 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2998.4 C700.0,2998.4 700.0,3851.4 1190.0,3851.4 L1190.0,3899.0 C700.0,3899.0 700.0,3062.0 232.0,3062.0 Z" fill="#f5aa3e" opacity="0.6" style="cursor:pointer" data-tip="Pf13 → Tg09 | Ref: rna-gnl|WGS:JAGSPU|Pfo13g004300.1 - rna-gnl|WGS:JAGSPU|Pfo13g001270.1 | Query: Tecgr87S22100_TECGRA - Tecgr56S18614_TECGRA | Dir: - | Size: 174 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4435.7 C700.0,4435.7 700.0,4306.2 1190.0,4306.2 L1190.0,4336.2 C700.0,4336.2 700.0,4452.6 232.0,4452.6 Z" fill="#4e2e5c" opacity="0.6" style="cursor:pointer" data-tip="Pf20 → Tg02 | Ref: rna-gnl|WGS:JAGSPU|Pfo20g010010.1 - rna-gnl|WGS:JAGSPU|Pfo20g007300.1 | Query: Tecgr21S10339_TECGRA - Tecgr21S10500_TECGRA | Dir: - | Size: 172 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2787.3 C700.0,2787.3 700.0,839.1 1190.0,839.1 L1190.0,905.5 C700.0,905.5 700.0,2808.9 232.0,2808.9 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pf12 → Tg05 | Ref: rna-gnl|WGS:JAGSPU|Pfo12g000010.1 - rna-gnl|WGS:JAGSPU|Pfo12g003530.1 | Query: Tecgr17S07402_TECGRA - Tecgr58S18977_TECGRA | Dir: + | Size: 171 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3828.2 C700.0,3828.2 700.0,4254.2 1190.0,4254.2 L1190.0,4306.2 C700.0,4306.2 700.0,3916.7 232.0,3916.7 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pf17 → Tg02 | Ref: rna-gnl|WGS:JAGSPU|Pfo17g006500.1 - rna-gnl|WGS:JAGSPU|Pfo17g010170.1 | Query: Tecgr21S10474_TECGRA - Tecgr21S10340_TECGRA | Dir: + | Size: 170 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1880.8 C700.0,1880.8 700.0,2398.1 1190.0,2398.1 L1190.0,2436.1 C700.0,2436.1 700.0,1911.9 232.0,1911.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pf08 → Tg14 | Ref: rna-gnl|WGS:JAGSPU|Pfo08g002290.1 - rna-gnl|WGS:JAGSPU|Pfo08g005130.1 | Query: Tecgr35S15268_TECGRA - Tecgr35S02932_TECGRA | Dir: + | Size: 162 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2187.7 C700.0,2187.7 700.0,2981.3 1190.0,2981.3 L1190.0,3026.8 C700.0,3026.8 700.0,2276.9 232.0,2276.9 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pf09 → Tg06 | Ref: rna-gnl|WGS:JAGSPU|Pfo09g016260.1 - rna-gnl|WGS:JAGSPU|Pfo09g012990.1 | Query: Tecgr29S13365_TECGRA - Tecgr29S13115_TECGRA | Dir: - | Size: 159 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4317.8 C700.0,4317.8 700.0,2087.3 1190.0,2087.3 L1190.0,2115.4 C700.0,2115.4 700.0,4349.8 232.0,4349.8 Z" fill="#4e2e5c" opacity="0.6" style="cursor:pointer" data-tip="Pf20 → Tg08 | Ref: rna-gnl|WGS:JAGSPU|Pfo20g000280.1 - rna-gnl|WGS:JAGSPU|Pfo20g002810.1 | Query: Tecgr85S21964_TECGRA - Tecgr7336S05764_TECGRA | Dir: + | Size: 151 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2373.0 C700.0,2373.0 700.0,1228.3 1190.0,1228.3 L1190.0,1283.7 C700.0,1283.7 700.0,2405.4 232.0,2405.4 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pf10 → Tg17 | Ref: rna-gnl|WGS:JAGSPU|Pfo10g005520.1 - rna-gnl|WGS:JAGSPU|Pfo10g008690.1 | Query: Tecgr61S19267_TECGRA - Tecgr54S18384_TECGRA | Dir: + | Size: 147 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4006.6 C700.0,4006.6 700.0,3519.9 1190.0,3519.9 L1190.0,3556.8 C700.0,3556.8 700.0,4025.6 232.0,4025.6 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pf18 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo18g006410.1 - rna-gnl|WGS:JAGSPU|Pfo18g008730.1 | Query: Tecgr76S20753_TECGRA - Tecgr76S05052_TECGRA | Dir: + | Size: 146 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4399.1 C700.0,4399.1 700.0,3706.0 1190.0,3706.0 L1190.0,3734.9 C700.0,3734.9 700.0,4430.8 232.0,4430.8 Z" fill="#4e2e5c" opacity="0.6" style="cursor:pointer" data-tip="Pf20 → Tg09 | Ref: rna-gnl|WGS:JAGSPU|Pfo20g003930.1 - rna-gnl|WGS:JAGSPU|Pfo20g006580.1 | Query: Tecgr48S17272_TECGRA - Tecgr48S03726_TECGRA | Dir: + | Size: 145 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3984.6 C700.0,3984.6 700.0,792.1 1190.0,792.1 L1190.0,827.4 C700.0,827.4 700.0,4006.5 232.0,4006.5 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pf18 → Tg05 | Ref: rna-gnl|WGS:JAGSPU|Pfo18g003420.1 - rna-gnl|WGS:JAGSPU|Pfo18g006390.1 | Query: Tecgr17S07547_TECGRA - Tecgr17S07434_TECGRA | Dir: + | Size: 134 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2819.7 C700.0,2819.7 700.0,3491.5 1190.0,3491.5 L1190.0,3519.8 C700.0,3519.8 700.0,2838.4 232.0,2838.4 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pf12 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo12g007270.1 - rna-gnl|WGS:JAGSPU|Pfo12g005130.1 | Query: Tecgr22S11028_TECGRA - Tecgr22S11112_TECGRA | Dir: - | Size: 130 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2919.6 C700.0,2919.6 700.0,3460.4 1190.0,3460.4 L1190.0,3482.5 C700.0,3482.5 700.0,2959.3 232.0,2959.3 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pf12 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo12g009440.1 - rna-gnl|WGS:JAGSPU|Pfo12g012380.1 | Query: Tecgr22S10881_TECGRA - Tecgr22S11285_TECGRA | Dir: + | Size: 129 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1865.3 C700.0,1865.3 700.0,1177.4 1190.0,1177.4 L1190.0,1197.7 C700.0,1197.7 700.0,1880.0 232.0,1880.0 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pf08 → Tg17 | Ref: rna-gnl|WGS:JAGSPU|Pfo08g000140.1 - rna-gnl|WGS:JAGSPU|Pfo08g002210.1 | Query: Tecgr35S15320_TECGRA - Tecgr35S15127_TECGRA | Dir: + | Size: 123 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,402.7 C700.0,402.7 700.0,319.8 1190.0,319.8 L1190.0,365.8 C700.0,365.8 700.0,508.8 232.0,508.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pf02 → Tg16 | Ref: rna-gnl|WGS:JAGSPU|Pfo02g012160.1 - rna-gnl|WGS:JAGSPU|Pfo02g009030.1 | Query: Tecgr7744S20994_TECGRA - Tecgr33S23219_TECGRA | Dir: - | Size: 120 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1164.5 C700.0,1164.5 700.0,1386.8 1190.0,1386.8 L1190.0,1429.1 C700.0,1429.1 700.0,1183.2 232.0,1183.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pf05 → Tg13 | Ref: rna-gnl|WGS:JAGSPU|Pfo05g008300.1 - rna-gnl|WGS:JAGSPU|Pfo05g006280.1 | Query: Tecgr27S12740_TECGRA - Tecgr27S02064_TECGRA | Dir: - | Size: 117 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1334.2 C700.0,1334.2 700.0,4155.4 1190.0,4155.4 L1190.0,4172.0 C700.0,4172.0 700.0,1346.1 232.0,1346.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pf05 → Tg12 | Ref: rna-gnl|WGS:JAGSPU|Pfo05g016490.1 - rna-gnl|WGS:JAGSPU|Pfo05g014660.1 | Query: Tecgr27S12712_TECGRA - Tecgr27S12635_TECGRA | Dir: - | Size: 115 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3499.3 C700.0,3499.3 700.0,4090.6 1190.0,4090.6 L1190.0,4126.5 C700.0,4126.5 700.0,3548.2 232.0,3548.2 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pf15 → Tg12 | Ref: rna-gnl|WGS:JAGSPU|Pfo15g009490.1 - rna-gnl|WGS:JAGSPU|Pfo15g011570.1 | Query: Tecgr24S11610_TECGRA - Tecgr24S11508_TECGRA | Dir: + | Size: 115 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2729.4 C700.0,2729.4 700.0,3419.1 1190.0,3419.1 L1190.0,3445.4 C700.0,3445.4 700.0,2742.6 232.0,2742.6 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pf11 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo11g013120.1 - rna-gnl|WGS:JAGSPU|Pfo11g011060.1 | Query: Tecgr22S22841_TECGRA - Tecgr22S10816_TECGRA | Dir: - | Size: 113 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3737.5 C700.0,3737.5 700.0,695.1 1190.0,695.1 L1190.0,729.7 C700.0,729.7 700.0,3752.0 232.0,3752.0 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pf16 → Tg07 | Ref: rna-gnl|WGS:JAGSPU|Pfo16g011860.1 - rna-gnl|WGS:JAGSPU|Pfo16g014350.1 | Query: Tecgr20S01227_TECGRA - Tecgr20S10183_TECGRA | Dir: + | Size: 112 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,821.7 C700.0,821.7 700.0,573.2 1190.0,573.2 L1190.0,593.2 C700.0,593.2 700.0,833.7 232.0,833.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pf03 → Tg07 | Ref: rna-gnl|WGS:JAGSPU|Pfo03g015530.1 - rna-gnl|WGS:JAGSPU|Pfo03g013590.1 | Query: Tecgr51S17800_TECGRA - Tecgr78S05149_TECGRA | Dir: - | Size: 110 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1512.8 C700.0,1512.8 700.0,1739.2 1190.0,1739.2 L1190.0,1778.9 C700.0,1778.9 700.0,1537.0 232.0,1537.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pf06 → Tg11 | Ref: rna-gnl|WGS:JAGSPU|Pfo06g008310.1 - rna-gnl|WGS:JAGSPU|Pfo06g006090.1 | Query: Tecgr72S20432_TECGRA - Tecgr47S03603_TECGRA | Dir: - | Size: 110 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4025.1 C700.0,4025.1 700.0,3594.9 1190.0,3594.9 L1190.0,3636.6 C700.0,3636.6 700.0,4081.5 232.0,4081.5 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pf18 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo18g010950.1 - rna-gnl|WGS:JAGSPU|Pfo18g008700.1 | Query: Tecgr79S21224_TECGRA - Tecgr79S21359_TECGRA | Dir: - | Size: 109 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1147.0 C700.0,1147.0 700.0,1458.7 1190.0,1458.7 L1190.0,1490.9 C700.0,1490.9 700.0,1160.1 232.0,1160.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pf05 → Tg13 | Ref: rna-gnl|WGS:JAGSPU|Pfo05g005590.1 - rna-gnl|WGS:JAGSPU|Pfo05g003690.1 | Query: Tecgr16S06289_TECGRA - Tecgr16S06733_TECGRA | Dir: - | Size: 107 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3327.7 C700.0,3327.7 700.0,1884.4 1190.0,1884.4 L1190.0,1931.2 C700.0,1931.2 700.0,3351.3 232.0,3351.3 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pf14 → Tg08 | Ref: rna-gnl|WGS:JAGSPU|Pfo14g009430.1 - rna-gnl|WGS:JAGSPU|Pfo14g007420.1 | Query: Tecgr37S15830_TECGRA - Tecgr16S00223_TECGRA | Dir: - | Size: 106 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,595.9 C700.0,595.9 700.0,610.0 1190.0,610.0 L1190.0,628.9 C700.0,628.9 700.0,607.2 232.0,607.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pf03 → Tg07 | Ref: rna-gnl|WGS:JAGSPU|Pfo03g001920.1 - rna-gnl|WGS:JAGSPU|Pfo03g000070.1 | Query: Tecgr78S21026_TECGRA - Tecgr78S23898_TECGRA | Dir: - | Size: 102 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3067.6 C700.0,3067.6 700.0,3800.7 1190.0,3800.7 L1190.0,3852.4 C700.0,3852.4 700.0,3127.2 232.0,3127.2 Z" fill="#f5aa3e" opacity="0.6" style="cursor:pointer" data-tip="Pf13 → Tg09 | Ref: rna-gnl|WGS:JAGSPU|Pfo13g004350.1 - rna-gnl|WGS:JAGSPU|Pfo13g006570.1 | Query: Tecgr7573S20743_TECGRA - Tecgr87S22099_TECGRA | Dir: + | Size: 97 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,155.7 C700.0,155.7 700.0,243.5 1190.0,243.5 L1190.0,265.0 C700.0,265.0 700.0,234.3 232.0,234.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pf01 → Tg03 | Ref: rna-gnl|WGS:JAGSPU|Pfo01g005150.1 - rna-gnl|WGS:JAGSPU|Pfo01g007680.1 | Query: Tecgr19S09179_TECGRA - Tecgr19S09247_TECGRA | Dir: + | Size: 93 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,750.5 C700.0,750.5 700.0,3340.8 1190.0,3340.8 L1190.0,3382.9 C700.0,3382.9 700.0,782.5 232.0,782.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pf03 → Tg18 | Ref: rna-gnl|WGS:JAGSPU|Pfo03g006690.1 - rna-gnl|WGS:JAGSPU|Pfo03g008420.1 | Query: Tecgr38S16117_TECGRA - Tecgr38S03284_TECGRA | Dir: + | Size: 90 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,804.3 C700.0,804.3 700.0,555.3 1190.0,555.3 L1190.0,573.0 C700.0,573.0 700.0,812.5 232.0,812.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pf03 → Tg07 | Ref: rna-gnl|WGS:JAGSPU|Pfo03g010930.1 - rna-gnl|WGS:JAGSPU|Pfo03g012130.1 | Query: Tecgr75S20684_TECGRA - Tecgr51S17854_TECGRA | Dir: + | Size: 89 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2354.9 C700.0,2354.9 700.0,3252.4 1190.0,3252.4 L1190.0,3273.1 C700.0,3273.1 700.0,2363.0 232.0,2363.0 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pf10 → Tg18 | Ref: rna-gnl|WGS:JAGSPU|Pfo10g002840.1 - rna-gnl|WGS:JAGSPU|Pfo10g004150.1 | Query: Tecgr18S08986_TECGRA - Tecgr18S08613_TECGRA | Dir: + | Size: 88 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3439.1 C700.0,3439.1 700.0,4056.8 1190.0,4056.8 L1190.0,4086.4 C700.0,4086.4 700.0,3451.8 232.0,3451.8 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pf15 → Tg12 | Ref: rna-gnl|WGS:JAGSPU|Pfo15g008070.1 - rna-gnl|WGS:JAGSPU|Pfo15g006850.1 | Query: Tecgr24S11815_TECGRA - Tecgr24S01840_TECGRA | Dir: - | Size: 84 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1184.0 C700.0,1184.0 700.0,1364.5 1190.0,1364.5 L1190.0,1385.6 C700.0,1385.6 700.0,1279.5 232.0,1279.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pf05 → Tg13 | Ref: rna-gnl|WGS:JAGSPU|Pfo05g008340.1 - rna-gnl|WGS:JAGSPU|Pfo05g010690.1 | Query: Tecgr27S12764_TECGRA - Tecgr27S12408_TECGRA | Dir: + | Size: 84 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3194.7 C700.0,3194.7 700.0,736.4 1190.0,736.4 L1190.0,762.8 C700.0,762.8 700.0,3204.5 232.0,3204.5 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pf14 → Tg07 | Ref: rna-gnl|WGS:JAGSPU|Pfo14g000040.1 - rna-gnl|WGS:JAGSPU|Pfo14g001650.1 | Query: Tecgr37S15901_TECGRA - Tecgr37S15835_TECGRA | Dir: + | Size: 83 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2649.3 C700.0,2649.3 700.0,462.3 1190.0,462.3 L1190.0,488.6 C700.0,488.6 700.0,2697.2 232.0,2697.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pf11 → Tg16 | Ref: rna-gnl|WGS:JAGSPU|Pfo11g007570.1 - rna-gnl|WGS:JAGSPU|Pfo11g005770.1 | Query: Tecgr17S07149_TECGRA - Tecgr17S07897_TECGRA | Dir: - | Size: 79 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2989.2 C700.0,2989.2 700.0,4468.1 1190.0,4468.1 L1190.0,4482.5 C700.0,4482.5 700.0,2998.0 232.0,2998.0 Z" fill="#f5aa3e" opacity="0.6" style="cursor:pointer" data-tip="Pf13 → Tg10 | Ref: rna-gnl|WGS:JAGSPU|Pfo13g001250.1 - rna-gnl|WGS:JAGSPU|Pfo13g000030.1 | Query: Tecgr56S18607_TECGRA - Tecgr56S18559_TECGRA | Dir: - | Size: 75 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2277.2 C700.0,2277.2 700.0,3046.9 1190.0,3046.9 L1190.0,3079.1 C700.0,3079.1 700.0,2290.1 232.0,2290.1 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pf09 → Tg06 | Ref: rna-gnl|WGS:JAGSPU|Pfo09g016290.1 - rna-gnl|WGS:JAGSPU|Pfo09g017800.1 | Query: Tecgr23S11416_TECGRA - Tecgr23S11438_TECGRA | Dir: + | Size: 73 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2363.2 C700.0,2363.2 700.0,2341.1 1190.0,2341.1 L1190.0,2367.3 C700.0,2367.3 700.0,2371.5 232.0,2371.5 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pf10 → Tg15 | Ref: rna-gnl|WGS:JAGSPU|Pfo10g004190.1 - rna-gnl|WGS:JAGSPU|Pfo10g005300.1 | Query: Tecgr18S08608_TECGRA - Tecgr68S20003_TECGRA | Dir: + | Size: 72 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,611.6 C700.0,611.6 700.0,593.5 1190.0,593.5 L1190.0,606.9 C700.0,606.9 700.0,623.2 232.0,623.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pf03 → Tg07 | Ref: rna-gnl|WGS:JAGSPU|Pfo03g003660.1 - rna-gnl|WGS:JAGSPU|Pfo03g002270.1 | Query: Tecgr78S05153_TECGRA - Tecgr78S21037_TECGRA | Dir: - | Size: 71 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4189.1 C700.0,4189.1 700.0,4675.9 1190.0,4675.9 L1190.0,4711.4 C700.0,4711.4 700.0,4202.9 232.0,4202.9 Z" fill="#a32a3a" opacity="0.6" style="cursor:pointer" data-tip="Pf19 → Tg10 | Ref: rna-gnl|WGS:JAGSPU|Pfo19g006520.1 - rna-gnl|WGS:JAGSPU|Pfo19g007930.1 | Query: Tecgr71S04867_TECGRA - Tecgr60S04401_TECGRA | Dir: + | Size: 71 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3551.6 C700.0,3551.6 700.0,4138.8 1190.0,4138.8 L1190.0,4155.2 C700.0,4155.2 700.0,3560.8 232.0,3560.8 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pf15 → Tg12 | Ref: rna-gnl|WGS:JAGSPU|Pfo15g011900.1 - rna-gnl|WGS:JAGSPU|Pfo15g012960.1 | Query: Tecgr24S01764_TECGRA - Tecgr24S11464_TECGRA | Dir: + | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3668.6 C700.0,3668.6 700.0,4711.7 1190.0,4711.7 L1190.0,4727.0 C700.0,4727.0 700.0,3690.6 232.0,3690.6 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pf16 → Tg10 | Ref: rna-gnl|WGS:JAGSPU|Pfo16g004770.1 - rna-gnl|WGS:JAGSPU|Pfo16g003450.1 | Query: Tecgr62S19390_TECGRA - Tecgr62S04483_TECGRA | Dir: - | Size: 63 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1979.2 C700.0,1979.2 700.0,2450.7 1190.0,2450.7 L1190.0,2488.7 C700.0,2488.7 700.0,2027.5 232.0,2027.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pf08 → Tg14 | Ref: rna-gnl|WGS:JAGSPU|Pfo08g009070.1 - rna-gnl|WGS:JAGSPU|Pfo08g006960.1 | Query: Tecgr35S15059_TECGRA - Tecgr92S24021_TECGRA | Dir: - | Size: 63 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2697.9 C700.0,2697.9 700.0,680.4 1190.0,680.4 L1190.0,694.2 C700.0,694.2 700.0,2707.2 232.0,2707.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pf11 → Tg07 | Ref: rna-gnl|WGS:JAGSPU|Pfo11g008730.1 - rna-gnl|WGS:JAGSPU|Pfo11g007630.1 | Query: Tecgr17S00356_TECGRA - Tecgr17S07142_TECGRA | Dir: - | Size: 62 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2718.5 C700.0,2718.5 700.0,488.9 1190.0,488.9 L1190.0,511.9 C700.0,511.9 700.0,2727.9 232.0,2727.9 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pf11 → Tg16 | Ref: rna-gnl|WGS:JAGSPU|Pfo11g010890.1 - rna-gnl|WGS:JAGSPU|Pfo11g009700.1 | Query: Tecgr17S07898_TECGRA - Tecgr17S07927_TECGRA | Dir: - | Size: 59 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4238.9 C700.0,4238.9 700.0,4634.2 1190.0,4634.2 L1190.0,4674.1 C700.0,4674.1 700.0,4284.6 232.0,4284.6 Z" fill="#a32a3a" opacity="0.6" style="cursor:pointer" data-tip="Pf19 → Tg10 | Ref: rna-gnl|WGS:JAGSPU|Pfo19g011410.1 - rna-gnl|WGS:JAGSPU|Pfo19g009220.1 | Query: Tecgr32S14146_TECGRA - Tecgr7652S20926_TECGRA | Dir: - | Size: 56 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2838.8 C700.0,2838.8 700.0,3445.5 1190.0,3445.5 L1190.0,3459.8 C700.0,3459.8 700.0,2903.7 232.0,2903.7 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pf12 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo12g007310.1 - rna-gnl|WGS:JAGSPU|Pfo12g009070.1 | Query: Tecgr22S11192_TECGRA - Tecgr22S11224_TECGRA | Dir: + | Size: 54 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2299.2 C700.0,2299.2 700.0,2972.0 1190.0,2972.0 L1190.0,2981.1 C700.0,2981.1 700.0,2305.5 232.0,2305.5 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pf09 → Tg06 | Ref: rna-gnl|WGS:JAGSPU|Pfo09g019750.1 - rna-gnl|WGS:JAGSPU|Pfo09g018950.1 | Query: Tecgr29S13267_TECGRA - Tecgr29S13366_TECGRA | Dir: - | Size: 54 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2290.6 C700.0,2290.6 700.0,3025.7 1190.0,3025.7 L1190.0,3046.6 C700.0,3046.6 700.0,2299.0 232.0,2299.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pf09 → Tg06 | Ref: rna-gnl|WGS:JAGSPU|Pfo09g017900.1 - rna-gnl|WGS:JAGSPU|Pfo09g018920.1 | Query: Tecgr29S13119_TECGRA - Tecgr23S11419_TECGRA | Dir: + | Size: 52 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2814.1 C700.0,2814.1 700.0,827.8 1190.0,827.8 L1190.0,839.3 C700.0,839.3 700.0,2819.7 232.0,2819.7 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pf12 → Tg05 | Ref: rna-gnl|WGS:JAGSPU|Pfo12g005130.1 - rna-gnl|WGS:JAGSPU|Pfo12g004310.1 | Query: Tecgr17S07432_TECGRA - Tecgr7743S05101_TECGRA | Dir: - | Size: 51 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3352.8 C700.0,3352.8 700.0,2274.1 1190.0,2274.1 L1190.0,2289.6 C700.0,2289.6 700.0,3361.1 232.0,3361.1 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pf14 → Tg15 | Ref: rna-gnl|WGS:JAGSPU|Pfo14g010670.1 - rna-gnl|WGS:JAGSPU|Pfo14g009560.1 | Query: Tecgr31S13928_TECGRA - Tecgr31S13894_TECGRA | Dir: - | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4207.0 C700.0,4207.0 700.0,4483.5 1190.0,4483.5 L1190.0,4517.1 C700.0,4517.1 700.0,4230.8 232.0,4230.8 Z" fill="#a32a3a" opacity="0.6" style="cursor:pointer" data-tip="Pf19 → Tg10 | Ref: rna-gnl|WGS:JAGSPU|Pfo19g008180.1 - rna-gnl|WGS:JAGSPU|Pfo19g009030.1 | Query: Tecgr53S18073_TECGRA - Tecgr77S20961_TECGRA | Dir: + | Size: 44 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,894.1 C700.0,894.1 700.0,906.0 1190.0,906.0 L1190.0,926.3 C700.0,926.3 700.0,902.2 232.0,902.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pf04 → Tg05 | Ref: rna-gnl|WGS:JAGSPU|Pfo04g004900.1 - rna-gnl|WGS:JAGSPU|Pfo04g005670.1 | Query: Tecgr58S18978_TECGRA - Tecgr58S18985_TECGRA | Dir: + | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3452.6 C700.0,3452.6 700.0,4127.1 1190.0,4127.1 L1190.0,4138.8 C700.0,4138.8 700.0,3493.5 232.0,3493.5 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pf15 → Tg12 | Ref: rna-gnl|WGS:JAGSPU|Pfo15g009370.1 - rna-gnl|WGS:JAGSPU|Pfo15g008100.1 | Query: Tecgr24S11711_TECGRA - Tecgr24S01764_TECGRA | Dir: - | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1449.1 C700.0,1449.1 700.0,1648.4 1190.0,1648.4 L1190.0,1657.8 C700.0,1657.8 700.0,1502.5 232.0,1502.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pf06 → Tg11 | Ref: rna-gnl|WGS:JAGSPU|Pfo06g005430.1 - rna-gnl|WGS:JAGSPU|Pfo06g004290.1 | Query: Tecgr18S08431_TECGRA - Tecgr18S08836_TECGRA | Dir: - | Size: 35 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2810.7 C700.0,2810.7 700.0,3482.9 1190.0,3482.9 L1190.0,3488.6 C700.0,3488.6 700.0,2814.3 232.0,2814.3 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pf12 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo12g004330.1 - rna-gnl|WGS:JAGSPU|Pfo12g003820.1 | Query: Tecgr22S11286_TECGRA - Tecgr22S11302_TECGRA | Dir: - | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,904.3 C700.0,904.3 700.0,1066.7 1190.0,1066.7 L1190.0,1089.9 C700.0,1089.9 700.0,918.6 232.0,918.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pf04 → Tg17 | Ref: rna-gnl|WGS:JAGSPU|Pfo04g005860.1 - rna-gnl|WGS:JAGSPU|Pfo04g006850.1 | Query: Tecgr17S07288_TECGRA - Tecgr7676S20931_TECGRA | Dir: + | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,509.3 C700.0,509.3 700.0,293.2 1190.0,293.2 L1190.0,311.6 C700.0,311.6 700.0,516.0 232.0,516.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pf02 → Tg16 | Ref: rna-gnl|WGS:JAGSPU|Pfo02g012230.1 - rna-gnl|WGS:JAGSPU|Pfo02g012960.1 | Query: Tecgr68S04725_TECGRA - Tecgr94S05595_TECGRA | Dir: + | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,552.7 C700.0,552.7 700.0,2897.0 1190.0,2897.0 L1190.0,2903.1 C700.0,2903.1 700.0,555.5 232.0,555.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pf02 → Tg06 | Ref: rna-gnl|WGS:JAGSPU|Pfo02g018670.1 - rna-gnl|WGS:JAGSPU|Pfo02g018230.1 | Query: Tecgr34S14677_TECGRA - Tecgr34S14704_TECGRA | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1912.7 C700.0,1912.7 700.0,2436.1 1190.0,2436.1 L1190.0,2443.9 C700.0,2443.9 700.0,1932.2 232.0,1932.2 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pf08 → Tg14 | Ref: rna-gnl|WGS:JAGSPU|Pfo08g006080.1 - rna-gnl|WGS:JAGSPU|Pfo08g005200.1 | Query: Tecgr35S15027_TECGRA - Tecgr35S15193_TECGRA | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3302.7 C700.0,3302.7 700.0,1930.7 1190.0,1930.7 L1190.0,1952.5 C700.0,1952.5 700.0,3323.2 232.0,3323.2 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pf14 → Tg08 | Ref: rna-gnl|WGS:JAGSPU|Pfo14g006750.1 - rna-gnl|WGS:JAGSPU|Pfo14g007360.1 | Query: Tecgr16S06423_TECGRA - Tecgr16S00165_TECGRA | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4278.4 C700.0,4278.4 700.0,4633.2 1190.0,4633.2 L1190.0,4640.5 C700.0,4640.5 700.0,4285.0 232.0,4285.0 Z" fill="#a32a3a" opacity="0.6" style="cursor:pointer" data-tip="Pf19 → Tg10 | Ref: rna-gnl|WGS:JAGSPU|Pfo19g010870.1 - rna-gnl|WGS:JAGSPU|Pfo19g011450.1 | Query: Tecgr32S14101_TECGRA - Tecgr32S14134_TECGRA | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,605.6 C700.0,605.6 700.0,607.7 1190.0,607.7 L1190.0,614.1 C700.0,614.1 700.0,610.4 232.0,610.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pf03 → Tg07 | Ref: rna-gnl|WGS:JAGSPU|Pfo03g001680.1 - rna-gnl|WGS:JAGSPU|Pfo03g002190.1 | Query: Tecgr78S21031_TECGRA - Tecgr78S21018_TECGRA | Dir: + | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,917.3 C700.0,917.3 700.0,1095.4 1190.0,1095.4 L1190.0,1117.0 C700.0,1117.0 700.0,977.3 232.0,977.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pf04 → Tg17 | Ref: rna-gnl|WGS:JAGSPU|Pfo04g006800.1 - rna-gnl|WGS:JAGSPU|Pfo04g008060.1 | Query: Tecgr17S07316_TECGRA - Tecgr66S19889_TECGRA | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,563.5 C700.0,563.5 700.0,1602.6 1190.0,1602.6 L1190.0,1606.0 C700.0,1606.0 700.0,566.2 232.0,566.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pf02 → Tg11 | Ref: rna-gnl|WGS:JAGSPU|Pfo02g020100.1 - rna-gnl|WGS:JAGSPU|Pfo02g020570.1 | Query: Tecgr34S14770_TECGRA - Tecgr34S14654_TECGRA | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,557.6 C700.0,557.6 700.0,1598.6 1190.0,1598.6 L1190.0,1602.2 C700.0,1602.2 700.0,560.6 232.0,560.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pf02 → Tg11 | Ref: rna-gnl|WGS:JAGSPU|Pfo02g019030.1 - rna-gnl|WGS:JAGSPU|Pfo02g019610.1 | Query: Tecgr34S02833_TECGRA - Tecgr34S14865_TECGRA | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,60.2 C700.0,60.2 700.0,80.2 1190.0,80.2 L1190.0,84.3 C700.0,84.3 700.0,62.8 232.0,62.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pf01 → Tg03 | Ref: rna-gnl|WGS:JAGSPU|Pfo01g000330.1 - rna-gnl|WGS:JAGSPU|Pfo01g000010.1 | Query: Tecgr80S21737_TECGRA - Tecgr80S21512_TECGRA | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3981.1 C700.0,3981.1 700.0,2861.2 1190.0,2861.2 L1190.0,2868.9 C700.0,2868.9 700.0,3984.1 232.0,3984.1 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pf18 → Tg04 | Ref: rna-gnl|WGS:JAGSPU|Pfo18g002910.1 - rna-gnl|WGS:JAGSPU|Pfo18g003360.1 | Query: Tecgr17S08136_TECGRA - Tecgr17S00516_TECGRA | Dir: + | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2307.2 C700.0,2307.2 700.0,2825.8 1190.0,2825.8 L1190.0,2829.5 C700.0,2829.5 700.0,2309.8 232.0,2309.8 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pf09 → Tg04 | Ref: rna-gnl|WGS:JAGSPU|Pfo09g020270.1 - rna-gnl|WGS:JAGSPU|Pfo09g020010.1 | Query: Tecgr27S02230_TECGRA - Tecgr29S13278_TECGRA | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1504.0 C700.0,1504.0 700.0,1714.9 1190.0,1714.9 L1190.0,1735.1 C700.0,1735.1 700.0,1515.7 232.0,1515.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pf06 → Tg11 | Ref: rna-gnl|WGS:JAGSPU|Pfo06g006260.1 - rna-gnl|WGS:JAGSPU|Pfo06g005540.1 | Query: Tecgr74S20517_TECGRA - Tecgr73S20484_TECGRA | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4104.1 C700.0,4104.1 700.0,3560.0 1190.0,3560.0 L1190.0,3589.7 C700.0,3589.7 700.0,4113.6 232.0,4113.6 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pf18 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo18g012450.1 - rna-gnl|WGS:JAGSPU|Pfo18g011930.1 | Query: Tecgr76S20819_TECGRA - Tecgr79S21306_TECGRA | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,4431.0 C700.0,4431.0 700.0,4229.3 1190.0,4229.3 L1190.0,4252.6 C700.0,4252.6 700.0,4435.5 232.0,4435.5 Z" fill="#4e2e5c" opacity="0.6" style="cursor:pointer" data-tip="Pf20 → Tg02 | Ref: rna-gnl|WGS:JAGSPU|Pfo20g006610.1 - rna-gnl|WGS:JAGSPU|Pfo20g007260.1 | Query: Tecgr26S23000_TECGRA - Tecgr21S10635_TECGRA | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2103.3 C700.0,2103.3 700.0,2817.6 1190.0,2817.6 L1190.0,2819.9 C700.0,2819.9 700.0,2104.6 232.0,2104.6 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pf09 → Tg04 | Ref: rna-gnl|WGS:JAGSPU|Pfo09g000210.1 - rna-gnl|WGS:JAGSPU|Pfo09g000020.1 | Query: Tecgr39S16623_TECGRA - Tecgr39S16131_TECGRA | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2707.4 C700.0,2707.4 700.0,3488.8 1190.0,3488.8 L1190.0,3490.8 C700.0,3490.8 700.0,2710.8 232.0,2710.8 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pf11 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo11g008740.1 - rna-gnl|WGS:JAGSPU|Pfo11g009080.1 | Query: Tecgr22S11016_TECGRA - Tecgr22S11021_TECGRA | Dir: + | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1160.9 C700.0,1160.9 700.0,1435.2 1190.0,1435.2 L1190.0,1448.4 C700.0,1448.4 700.0,1164.2 232.0,1164.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pf05 → Tg13 | Ref: rna-gnl|WGS:JAGSPU|Pfo05g005720.1 - rna-gnl|WGS:JAGSPU|Pfo05g006240.1 | Query: Tecgr16S06785_TECGRA - Tecgr16S06776_TECGRA | Dir: + | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1770.4 C700.0,1770.4 700.0,2144.2 1190.0,2144.2 L1190.0,2155.2 C700.0,2155.2 700.0,1780.7 232.0,1780.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pf07 → Tg15 | Ref: rna-gnl|WGS:JAGSPU|Pfo07g010130.1 - rna-gnl|WGS:JAGSPU|Pfo07g010620.1 | Query: Tecgr89S22186_TECGRA - Tecgr89S05559_TECGRA | Dir: + | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1775.2 C700.0,1775.2 700.0,2151.3 1190.0,2151.3 L1190.0,2157.2 C700.0,2157.2 700.0,1784.1 232.0,1784.1 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pf07 → Tg15 | Ref: rna-gnl|WGS:JAGSPU|Pfo07g010780.1 - rna-gnl|WGS:JAGSPU|Pfo07g010390.1 | Query: Tecgr89S22268_TECGRA - Tecgr89S22232_TECGRA | Dir: - | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1944.6 C700.0,1944.6 700.0,2444.6 1190.0,2444.6 L1190.0,2449.9 C700.0,2449.9 700.0,1971.9 232.0,1971.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pf08 → Tg14 | Ref: rna-gnl|WGS:JAGSPU|Pfo08g006850.1 - rna-gnl|WGS:JAGSPU|Pfo08g006410.1 | Query: Tecgr35S15189_TECGRA - Tecgr35S15058_TECGRA | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3549.0 C700.0,3549.0 700.0,4042.9 1190.0,4042.9 L1190.0,4055.9 C700.0,4055.9 700.0,3551.1 232.0,3551.1 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pf15 → Tg12 | Ref: rna-gnl|WGS:JAGSPU|Pfo15g011850.1 - rna-gnl|WGS:JAGSPU|Pfo15g011610.1 | Query: Tecgr36S15771_TECGRA - Tecgr24S11671_TECGRA | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1725.8 C700.0,1725.8 700.0,2144.2 1190.0,2144.2 L1190.0,2169.4 C700.0,2169.4 700.0,1770.4 232.0,1770.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pf07 → Tg15 | Ref: rna-gnl|WGS:JAGSPU|Pfo07g010130.1 - rna-gnl|WGS:JAGSPU|Pfo07g009260.1 | Query: Tecgr89S22186_TECGRA - Tecgr89S22192_TECGRA | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,63.1 C700.0,63.1 700.0,154.8 1190.0,154.8 L1190.0,172.0 C700.0,172.0 700.0,65.1 232.0,65.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pf01 → Tg03 | Ref: rna-gnl|WGS:JAGSPU|Pfo01g000400.1 - rna-gnl|WGS:JAGSPU|Pfo01g000640.1 | Query: Tecgr80S21756_TECGRA - Tecgr19S09485_TECGRA | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3060.2 C700.0,3060.2 700.0,3850.5 1190.0,3850.5 L1190.0,3854.1 C700.0,3854.1 700.0,3069.9 232.0,3069.9 Z" fill="#f5aa3e" opacity="0.6" style="cursor:pointer" data-tip="Pf13 → Tg09 | Ref: rna-gnl|WGS:JAGSPU|Pfo13g004250.1 - rna-gnl|WGS:JAGSPU|Pfo13g004400.1 | Query: Tecgr87S22104_TECGRA - Tecgr87S22121_TECGRA | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2728.1 C700.0,2728.1 700.0,3490.9 1190.0,3490.9 L1190.0,3493.7 C700.0,3493.7 700.0,2730.3 232.0,2730.3 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pf11 → Tg01 | Ref: rna-gnl|WGS:JAGSPU|Pfo11g010910.1 - rna-gnl|WGS:JAGSPU|Pfo11g011210.1 | Query: Tecgr22S01656_TECGRA - Tecgr22S01661_TECGRA | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1262.0 C700.0,1262.0 700.0,1363.4 1190.0,1363.4 L1190.0,1364.5 C700.0,1364.5 700.0,1283.3 232.0,1283.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pf05 → Tg13 | Ref: rna-gnl|WGS:JAGSPU|Pfo05g010500.1 - rna-gnl|WGS:JAGSPU|Pfo05g010740.1 | Query: Tecgr27S12768_TECGRA - Tecgr27S12484_TECGRA | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+</g>
+<g id="refChrs">
+<rect x="210" y="60" width="22" height="199" rx="5" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="1"/>
+<rect x="211" y="60.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="66.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="211" y="63.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="69.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="211" y="70.3" width="20" height="94.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="117.7" x2="216" y2="117.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf01)" opacity="0.8"/>
+<text x="205" y="121.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="211" y="155.7" width="20" height="78.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="195.0" x2="226" y2="195.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf01)" opacity="0.8"/>
+<text x="205" y="199.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="211" y="234.4" width="20" height="24.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="246.6" x2="226" y2="246.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf01)" opacity="0.8"/>
+<text x="205" y="250.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<text x="205" y="55" text-anchor="end" fill="#FFD700" font-size="12" font-weight="700" letter-spacing="0.5">Pf01</text>
+<circle cx="221.0" cy="152.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="156.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="287" width="22" height="280" rx="5" fill="#E63946" opacity="0.15" stroke="#E63946" stroke-width="1"/>
+<rect x="211" y="288.4" width="20" height="112.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="344.6" x2="216" y2="344.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf02)" opacity="0.8"/>
+<text x="205" y="348.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="211" y="402.7" width="20" height="106.1" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="455.7" x2="216" y2="455.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf02)" opacity="0.8"/>
+<text x="205" y="459.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="211" y="509.3" width="20" height="6.7" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="516.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="211" y="526.9" width="20" height="25.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="539.6" x2="216" y2="539.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf02)" opacity="0.8"/>
+<text x="205" y="543.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="211" y="552.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="558.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="211" y="557.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="563.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="211" y="563.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="569.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">7</text>
+<text x="205" y="282" text-anchor="end" fill="#E63946" font-size="12" font-weight="700" letter-spacing="0.5">Pf02</text>
+<circle cx="221.0" cy="411.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="415.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="595" width="22" height="239" rx="5" fill="#1A237E" opacity="0.15" stroke="#1A237E" stroke-width="1"/>
+<rect x="211" y="595.9" width="20" height="11.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="601.6" x2="216" y2="601.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf03)" opacity="0.8"/>
+<text x="205" y="605.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="211" y="605.6" width="20" height="4.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="612.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="211" y="611.6" width="20" height="11.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="617.4" x2="216" y2="617.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf03)" opacity="0.8"/>
+<text x="205" y="621.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="211" y="750.5" width="20" height="32.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="766.5" x2="226" y2="766.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf03)" opacity="0.8"/>
+<text x="205" y="770.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="211" y="804.3" width="20" height="8.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="812.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="211" y="821.7" width="20" height="12.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="827.7" x2="216" y2="827.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf03)" opacity="0.8"/>
+<text x="205" y="831.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<text x="205" y="590" text-anchor="end" fill="#1A237E" font-size="12" font-weight="700" letter-spacing="0.5">Pf03</text>
+<circle cx="221.0" cy="672.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="676.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="862" width="22" height="236" rx="5" fill="#9C27B0" opacity="0.15" stroke="#9C27B0" stroke-width="1"/>
+<rect x="211" y="863.5" width="20" height="30.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="878.5" x2="216" y2="878.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf04)" opacity="0.8"/>
+<text x="205" y="882.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="211" y="894.1" width="20" height="8.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="902.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="211" y="904.3" width="20" height="14.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="911.5" x2="226" y2="911.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
+<text x="205" y="915.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="211" y="917.3" width="20" height="60.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="947.3" x2="226" y2="947.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
+<text x="205" y="951.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="211" y="990.2" width="20" height="107.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="1043.8" x2="226" y2="1043.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
+<text x="205" y="1047.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<text x="205" y="857" text-anchor="end" fill="#9C27B0" font-size="12" font-weight="700" letter-spacing="0.5">Pf04</text>
+<circle cx="221.0" cy="982.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="986.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1126" width="22" height="222" rx="5" fill="#E06D10" opacity="0.15" stroke="#E06D10" stroke-width="1"/>
+<rect x="211" y="1128.3" width="20" height="18.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1137.6" x2="216" y2="1137.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="205" y="1141.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1147.0" width="20" height="13.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1153.6" x2="216" y2="1153.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="205" y="1157.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1160.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1166.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1164.5" width="20" height="18.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1173.9" x2="216" y2="1173.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="205" y="1177.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1184.0" width="20" height="95.5" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1231.8" x2="226" y2="1231.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf05)" opacity="0.8"/>
+<text x="205" y="1235.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1262.0" width="20" height="21.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1272.6" x2="226" y2="1272.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf05)" opacity="0.8"/>
+<text x="205" y="1276.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1282.2" width="20" height="51.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1308.1" x2="216" y2="1308.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="205" y="1312.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1334.2" width="20" height="11.9" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1340.2" x2="216" y2="1340.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="205" y="1344.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<text x="205" y="1121" text-anchor="end" fill="#E06D10" font-size="12" font-weight="700" letter-spacing="0.5">Pf05</text>
+<circle cx="221.0" cy="1246.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1250.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1376" width="22" height="215" rx="5" fill="#43A047" opacity="0.15" stroke="#43A047" stroke-width="1"/>
+<rect x="211" y="1378.2" width="20" height="50.5" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1403.4" x2="226" y2="1403.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf06)" opacity="0.8"/>
+<text x="205" y="1407.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1449.1" width="20" height="53.4" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1475.8" x2="216" y2="1475.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf06)" opacity="0.8"/>
+<text x="205" y="1479.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1504.0" width="20" height="11.7" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1509.8" x2="216" y2="1509.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf06)" opacity="0.8"/>
+<text x="205" y="1513.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1512.8" width="20" height="24.2" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1524.9" x2="216" y2="1524.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf06)" opacity="0.8"/>
+<text x="205" y="1528.9" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1537.4" width="20" height="24.0" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1549.4" x2="226" y2="1549.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf06)" opacity="0.8"/>
+<text x="205" y="1553.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1561.1" width="20" height="29.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1576.0" x2="226" y2="1576.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf06)" opacity="0.8"/>
+<text x="205" y="1580.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">6</text>
+<text x="205" y="1371" text-anchor="end" fill="#43A047" font-size="12" font-weight="700" letter-spacing="0.5">Pf06</text>
+<circle cx="221.0" cy="1448.5" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1452.5" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1619" width="22" height="216" rx="5" fill="#3498DB" opacity="0.15" stroke="#3498DB" stroke-width="1"/>
+<rect x="211" y="1621.4" width="20" height="122.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1682.5" x2="216" y2="1682.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf07)" opacity="0.8"/>
+<text x="205" y="1686.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1725.8" width="20" height="44.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1748.1" x2="216" y2="1748.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf07)" opacity="0.8"/>
+<text x="205" y="1752.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1770.4" width="20" height="10.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1775.5" x2="226" y2="1775.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf07)" opacity="0.8"/>
+<text x="205" y="1779.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1775.2" width="20" height="8.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1783.6" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1784.4" width="20" height="48.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1808.7" x2="226" y2="1808.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf07)" opacity="0.8"/>
+<text x="205" y="1812.7" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<text x="205" y="1614" text-anchor="end" fill="#3498DB" font-size="12" font-weight="700" letter-spacing="0.5">Pf07</text>
+<circle cx="221.0" cy="1746.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1750.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1863" width="22" height="212" rx="5" fill="#FFA07A" opacity="0.15" stroke="#FFA07A" stroke-width="1"/>
+<rect x="211" y="1865.3" width="20" height="14.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1872.7" x2="226" y2="1872.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf08)" opacity="0.8"/>
+<text x="205" y="1876.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1880.8" width="20" height="31.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1896.4" x2="226" y2="1896.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf08)" opacity="0.8"/>
+<text x="205" y="1900.4" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1912.7" width="20" height="19.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1922.5" x2="216" y2="1922.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf08)" opacity="0.8"/>
+<text x="205" y="1926.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1944.6" width="20" height="27.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1958.3" x2="216" y2="1958.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf08)" opacity="0.8"/>
+<text x="205" y="1962.3" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1979.2" width="20" height="48.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="2003.4" x2="216" y2="2003.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf08)" opacity="0.8"/>
+<text x="205" y="2007.4" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2031.5" width="20" height="42.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="2052.4" x2="226" y2="2052.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf08)" opacity="0.8"/>
+<text x="205" y="2056.4" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<text x="205" y="1858" text-anchor="end" fill="#FFA07A" font-size="12" font-weight="700" letter-spacing="0.5">Pf08</text>
+<circle cx="221.0" cy="1961.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1965.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2103" width="22" height="207" rx="5" fill="#72d1b9" opacity="0.15" stroke="#72d1b9" stroke-width="1"/>
+<rect x="211" y="2103.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2109.3" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2105.5" width="20" height="50.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="214" y1="2130.6" x2="226" y2="2130.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
+<text x="205" y="2134.6" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2155.9" width="20" height="30.5" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="214" y1="2171.2" x2="226" y2="2171.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
+<text x="205" y="2175.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2187.7" width="20" height="89.2" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2232.3" x2="216" y2="2232.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf09)" opacity="0.8"/>
+<text x="205" y="2236.3" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2277.2" width="20" height="12.9" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="214" y1="2283.7" x2="226" y2="2283.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
+<text x="205" y="2287.7" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2290.6" width="20" height="8.4" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2298.8" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2299.2" width="20" height="6.3" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2306.3" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2307.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2313.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<text x="205" y="2098" text-anchor="end" fill="#72d1b9" font-size="12" font-weight="700" letter-spacing="0.5">Pf09</text>
+<circle cx="221.0" cy="2215.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2219.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2338" width="22" height="193" rx="5" fill="#0055a6" opacity="0.15" stroke="#0055a6" stroke-width="1"/>
+<rect x="211" y="2338.0" width="20" height="16.7" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="228" y1="2346.4" x2="216" y2="2346.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf10)" opacity="0.8"/>
+<text x="205" y="2350.4" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2354.9" width="20" height="8.1" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2362.9" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2363.2" width="20" height="8.3" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2371.4" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2373.0" width="20" height="32.4" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="214" y1="2389.2" x2="226" y2="2389.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
+<text x="205" y="2393.2" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2411.0" width="20" height="119.8" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="214" y1="2470.8" x2="226" y2="2470.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
+<text x="205" y="2474.8" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">5</text>
+<text x="205" y="2333" text-anchor="end" fill="#0055a6" font-size="12" font-weight="700" letter-spacing="0.5">Pf10</text>
+<circle cx="221.0" cy="2428.4" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2432.4" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2559" width="22" height="200" rx="5" fill="#e3b58f" opacity="0.15" stroke="#e3b58f" stroke-width="1"/>
+<rect x="211" y="2559.9" width="20" height="97.8" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="214" y1="2608.8" x2="226" y2="2608.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf11)" opacity="0.8"/>
+<text x="205" y="2612.8" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2649.3" width="20" height="47.9" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="228" y1="2673.2" x2="216" y2="2673.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
+<text x="205" y="2677.2" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2697.9" width="20" height="9.3" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2706.5" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2707.4" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2713.4" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2718.5" width="20" height="9.4" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2727.2" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2728.1" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2734.1" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2729.4" width="20" height="13.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="228" y1="2736.0" x2="216" y2="2736.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
+<text x="205" y="2740.0" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<text x="205" y="2554" text-anchor="end" fill="#e3b58f" font-size="12" font-weight="700" letter-spacing="0.5">Pf11</text>
+<circle cx="221.0" cy="2643.7" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2647.7" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2787" width="22" height="174" rx="5" fill="#f0c9a7" opacity="0.15" stroke="#f0c9a7" stroke-width="1"/>
+<rect x="211" y="2787.3" width="20" height="21.5" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="214" y1="2798.1" x2="226" y2="2798.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf12)" opacity="0.8"/>
+<text x="205" y="2802.1" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2810.7" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2816.7" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2814.1" width="20" height="5.5" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2820.9" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2819.7" width="20" height="18.6" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="228" y1="2829.1" x2="216" y2="2829.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf12)" opacity="0.8"/>
+<text x="205" y="2833.1" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2838.8" width="20" height="64.9" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="214" y1="2871.3" x2="226" y2="2871.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf12)" opacity="0.8"/>
+<text x="205" y="2875.3" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2919.6" width="20" height="39.7" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="214" y1="2939.4" x2="226" y2="2939.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf12)" opacity="0.8"/>
+<text x="205" y="2943.4" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">6</text>
+<text x="205" y="2782" text-anchor="end" fill="#f0c9a7" font-size="12" font-weight="700" letter-spacing="0.5">Pf12</text>
+<circle cx="221.0" cy="2910.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2914.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2989" width="22" height="177" rx="5" fill="#f5aa3e" opacity="0.15" stroke="#f5aa3e" stroke-width="1"/>
+<rect x="211" y="2989.2" width="20" height="8.8" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<text x="205" y="2997.6" text-anchor="end" fill="#f5aa3e" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2998.4" width="20" height="63.7" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="228" y1="3030.2" x2="216" y2="3030.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf13)" opacity="0.8"/>
+<text x="205" y="3034.2" text-anchor="end" fill="#f5aa3e" font-size="10" font-weight="500">2</text>
+<rect x="211" y="3060.2" width="20" height="9.7" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<text x="205" y="3069.0" text-anchor="end" fill="#f5aa3e" font-size="10" font-weight="500">3</text>
+<rect x="211" y="3067.6" width="20" height="59.6" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="214" y1="3097.4" x2="226" y2="3097.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf13)" opacity="0.8"/>
+<text x="205" y="3101.4" text-anchor="end" fill="#f5aa3e" font-size="10" font-weight="500">4</text>
+<rect x="211" y="3127.5" width="20" height="26.0" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="228" y1="3140.5" x2="216" y2="3140.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf13)" opacity="0.8"/>
+<text x="205" y="3144.5" text-anchor="end" fill="#f5aa3e" font-size="10" font-weight="500">5</text>
+<text x="205" y="2984" text-anchor="end" fill="#f5aa3e" font-size="12" font-weight="700" letter-spacing="0.5">Pf13</text>
+<circle cx="221.0" cy="3050.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="3054.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="3194" width="22" height="172" rx="5" fill="#7b0d1a" opacity="0.15" stroke="#7b0d1a" stroke-width="1"/>
+<rect x="211" y="3194.7" width="20" height="9.9" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<text x="205" y="3203.6" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">1</text>
+<rect x="211" y="3204.5" width="20" height="30.0" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="214" y1="3219.5" x2="226" y2="3219.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf14)" opacity="0.8"/>
+<text x="205" y="3223.5" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">2</text>
+<rect x="211" y="3302.7" width="20" height="20.5" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="214" y1="3313.0" x2="226" y2="3313.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf14)" opacity="0.8"/>
+<text x="205" y="3317.0" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">3</text>
+<rect x="211" y="3327.7" width="20" height="23.6" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="228" y1="3339.5" x2="216" y2="3339.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf14)" opacity="0.8"/>
+<text x="205" y="3343.5" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">4</text>
+<rect x="211" y="3352.8" width="20" height="8.3" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<text x="205" y="3360.9" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">5</text>
+<text x="205" y="3189" text-anchor="end" fill="#7b0d1a" font-size="12" font-weight="700" letter-spacing="0.5">Pf14</text>
+<circle cx="221.0" cy="3323.0" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="3327.0" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="3394" width="22" height="167" rx="5" fill="#f2a69b" opacity="0.15" stroke="#f2a69b" stroke-width="1"/>
+<rect x="211" y="3398.5" width="20" height="40.5" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="214" y1="3418.8" x2="226" y2="3418.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf15)" opacity="0.8"/>
+<text x="205" y="3422.8" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">1</text>
+<rect x="211" y="3439.1" width="20" height="12.7" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="228" y1="3445.4" x2="216" y2="3445.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf15)" opacity="0.8"/>
+<text x="205" y="3449.4" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">2</text>
+<rect x="211" y="3452.6" width="20" height="40.9" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="228" y1="3473.0" x2="216" y2="3473.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf15)" opacity="0.8"/>
+<text x="205" y="3477.0" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">3</text>
+<rect x="211" y="3499.3" width="20" height="48.9" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="214" y1="3523.7" x2="226" y2="3523.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf15)" opacity="0.8"/>
+<text x="205" y="3527.7" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">4</text>
+<rect x="211" y="3549.0" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="3555.0" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">5</text>
+<rect x="211" y="3551.6" width="20" height="9.2" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="3560.2" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">6</text>
+<text x="205" y="3389" text-anchor="end" fill="#f2a69b" font-size="12" font-weight="700" letter-spacing="0.5">Pf15</text>
+<circle cx="221.0" cy="3498.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="3502.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="3589" width="22" height="163" rx="5" fill="#9f4e9a" opacity="0.15" stroke="#9f4e9a" stroke-width="1"/>
+<rect x="211" y="3668.6" width="20" height="22.0" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="228" y1="3679.6" x2="216" y2="3679.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf16)" opacity="0.8"/>
+<text x="205" y="3683.6" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">1</text>
+<rect x="211" y="3737.5" width="20" height="14.5" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="214" y1="3744.7" x2="226" y2="3744.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf16)" opacity="0.8"/>
+<text x="205" y="3748.7" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">2</text>
+<text x="205" y="3584" text-anchor="end" fill="#9f4e9a" font-size="12" font-weight="700" letter-spacing="0.5">Pf16</text>
+<circle cx="221.0" cy="3626.7" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="3630.7" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="3780" width="22" height="155" rx="5" fill="#4ca3c7" opacity="0.15" stroke="#4ca3c7" stroke-width="1"/>
+<rect x="211" y="3781.1" width="20" height="46.9" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="228" y1="3804.6" x2="216" y2="3804.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf17)" opacity="0.8"/>
+<text x="205" y="3808.6" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">1</text>
+<rect x="211" y="3828.2" width="20" height="88.5" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="214" y1="3872.4" x2="226" y2="3872.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf17)" opacity="0.8"/>
+<text x="205" y="3876.4" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">2</text>
+<text x="205" y="3775" text-anchor="end" fill="#4ca3c7" font-size="12" font-weight="700" letter-spacing="0.5">Pf17</text>
+<circle cx="221.0" cy="3886.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="3890.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="3963" width="22" height="152" rx="5" fill="#b0d7e6" opacity="0.15" stroke="#b0d7e6" stroke-width="1"/>
+<rect x="211" y="3963.2" width="20" height="17.3" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="214" y1="3971.8" x2="226" y2="3971.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf18)" opacity="0.8"/>
+<text x="205" y="3975.8" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">1</text>
+<rect x="211" y="3981.1" width="20" height="4.0" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="205" y="3987.1" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">2</text>
+<rect x="211" y="3984.6" width="20" height="21.9" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="214" y1="3995.6" x2="226" y2="3995.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf18)" opacity="0.8"/>
+<text x="205" y="3999.6" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">3</text>
+<rect x="211" y="4006.6" width="20" height="19.0" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="214" y1="4016.1" x2="226" y2="4016.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf18)" opacity="0.8"/>
+<text x="205" y="4020.1" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">4</text>
+<rect x="211" y="4025.1" width="20" height="56.4" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="228" y1="4053.3" x2="216" y2="4053.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf18)" opacity="0.8"/>
+<text x="205" y="4057.3" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">5</text>
+<rect x="211" y="4104.1" width="20" height="9.5" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="205" y="4112.9" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">6</text>
+<text x="205" y="3958" text-anchor="end" fill="#b0d7e6" font-size="12" font-weight="700" letter-spacing="0.5">Pf18</text>
+<circle cx="221.0" cy="4066.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="4070.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="4143" width="22" height="144" rx="5" fill="#a32a3a" opacity="0.15" stroke="#a32a3a" stroke-width="1"/>
+<rect x="211" y="4145.0" width="20" height="43.8" rx="3" fill="#a32a3a" opacity="0.9"/>
+<line x1="228" y1="4166.9" x2="216" y2="4166.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf19)" opacity="0.8"/>
+<text x="205" y="4170.9" text-anchor="end" fill="#a32a3a" font-size="10" font-weight="500">1</text>
+<rect x="211" y="4189.1" width="20" height="13.9" rx="3" fill="#a32a3a" opacity="0.9"/>
+<line x1="214" y1="4196.0" x2="226" y2="4196.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf19)" opacity="0.8"/>
+<text x="205" y="4200.0" text-anchor="end" fill="#a32a3a" font-size="10" font-weight="500">2</text>
+<rect x="211" y="4207.0" width="20" height="23.8" rx="3" fill="#a32a3a" opacity="0.9"/>
+<line x1="214" y1="4218.9" x2="226" y2="4218.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf19)" opacity="0.8"/>
+<text x="205" y="4222.9" text-anchor="end" fill="#a32a3a" font-size="10" font-weight="500">3</text>
+<rect x="211" y="4238.9" width="20" height="45.7" rx="3" fill="#a32a3a" opacity="0.9"/>
+<line x1="228" y1="4261.7" x2="216" y2="4261.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf19)" opacity="0.8"/>
+<text x="205" y="4265.7" text-anchor="end" fill="#a32a3a" font-size="10" font-weight="500">4</text>
+<rect x="211" y="4278.4" width="20" height="6.6" rx="3" fill="#a32a3a" opacity="0.9"/>
+<text x="205" y="4285.7" text-anchor="end" fill="#a32a3a" font-size="10" font-weight="500">5</text>
+<text x="205" y="4138" text-anchor="end" fill="#a32a3a" font-size="12" font-weight="700" letter-spacing="0.5">Pf19</text>
+<circle cx="221.0" cy="4241.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="4245.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="4315" width="22" height="138" rx="5" fill="#4e2e5c" opacity="0.15" stroke="#4e2e5c" stroke-width="1"/>
+<rect x="211" y="4317.8" width="20" height="32.1" rx="3" fill="#4e2e5c" opacity="0.9"/>
+<line x1="214" y1="4333.8" x2="226" y2="4333.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf20)" opacity="0.8"/>
+<text x="205" y="4337.8" text-anchor="end" fill="#4e2e5c" font-size="10" font-weight="500">1</text>
+<rect x="211" y="4399.1" width="20" height="31.8" rx="3" fill="#4e2e5c" opacity="0.9"/>
+<line x1="214" y1="4415.0" x2="226" y2="4415.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf20)" opacity="0.8"/>
+<text x="205" y="4419.0" text-anchor="end" fill="#4e2e5c" font-size="10" font-weight="500">2</text>
+<rect x="211" y="4431.0" width="20" height="4.5" rx="3" fill="#4e2e5c" opacity="0.9"/>
+<text x="205" y="4437.2" text-anchor="end" fill="#4e2e5c" font-size="10" font-weight="500">3</text>
+<rect x="211" y="4435.7" width="20" height="16.9" rx="3" fill="#4e2e5c" opacity="0.9"/>
+<line x1="228" y1="4444.2" x2="216" y2="4444.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf20)" opacity="0.8"/>
+<text x="205" y="4448.2" text-anchor="end" fill="#4e2e5c" font-size="10" font-weight="500">4</text>
+<text x="205" y="4310" text-anchor="end" fill="#4e2e5c" font-size="12" font-weight="700" letter-spacing="0.5">Pf20</text>
+<circle cx="221.0" cy="4372.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="4376.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+</g>
+<g id="queryChrs">
+<rect x="1190" y="60" width="22" height="205" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="80.2" width="20" height="4.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="86.3" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="154.8" width="20" height="17.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="163.4" x2="1206" y2="163.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf01)" opacity="0.8"/>
+<text x="1217" y="167.4" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="172.2" width="20" height="70.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="207.7" x2="1196" y2="207.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf01)" opacity="0.8"/>
+<text x="1217" y="211.7" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="243.5" width="20" height="21.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="254.2" x2="1206" y2="254.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf01)" opacity="0.8"/>
+<text x="1217" y="258.2" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<text x="1217" y="55" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg03</text>
+<rect x="1190" y="293" width="22" height="219" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="293.2" width="20" height="18.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="302.4" x2="1206" y2="302.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf02)" opacity="0.8"/>
+<text x="1217" y="306.4" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="319.8" width="20" height="46.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="342.8" x2="1196" y2="342.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf02)" opacity="0.8"/>
+<text x="1217" y="346.8" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="359.7" width="20" height="100.9" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="410.1" x2="1196" y2="410.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf02)" opacity="0.8"/>
+<text x="1217" y="414.1" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="462.3" width="20" height="26.3" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="475.4" x2="1196" y2="475.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
+<text x="1217" y="479.4" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="488.9" width="20" height="23.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="500.4" x2="1196" y2="500.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
+<text x="1217" y="504.4" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<text x="1217" y="288" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg16</text>
+<rect x="1190" y="540" width="22" height="224" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="555.3" width="20" height="17.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="564.2" x2="1206" y2="564.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf03)" opacity="0.8"/>
+<text x="1217" y="568.2" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="573.2" width="20" height="20.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="583.2" x2="1196" y2="583.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf03)" opacity="0.8"/>
+<text x="1217" y="587.2" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="593.5" width="20" height="13.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="600.2" x2="1196" y2="600.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf03)" opacity="0.8"/>
+<text x="1217" y="604.2" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="607.7" width="20" height="6.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="614.9" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="610.0" width="20" height="18.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="619.5" x2="1196" y2="619.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf03)" opacity="0.8"/>
+<text x="1217" y="623.5" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="629.4" width="20" height="49.9" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1194" y1="654.3" x2="1206" y2="654.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf11)" opacity="0.8"/>
+<text x="1217" y="658.3" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="680.4" width="20" height="13.8" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="687.3" x2="1196" y2="687.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
+<text x="1217" y="691.3" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="695.1" width="20" height="34.6" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="1194" y1="712.4" x2="1206" y2="712.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf16)" opacity="0.8"/>
+<text x="1217" y="716.4" fill="#9f4e9a" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="736.4" width="20" height="26.4" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="1194" y1="749.6" x2="1206" y2="749.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf14)" opacity="0.8"/>
+<text x="1217" y="753.6" fill="#7b0d1a" font-size="10" font-weight="500">1</text>
+<text x="1217" y="535" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg07</text>
+<rect x="1190" y="792" width="22" height="218" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="792.1" width="20" height="35.2" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="1194" y1="809.7" x2="1206" y2="809.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf18)" opacity="0.8"/>
+<text x="1217" y="813.7" fill="#b0d7e6" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="827.8" width="20" height="11.5" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1208" y1="833.6" x2="1196" y2="833.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf12)" opacity="0.8"/>
+<text x="1217" y="837.6" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="839.1" width="20" height="66.4" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1194" y1="872.3" x2="1206" y2="872.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf12)" opacity="0.8"/>
+<text x="1217" y="876.3" fill="#f0c9a7" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="906.0" width="20" height="20.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="916.1" x2="1206" y2="916.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
+<text x="1217" y="920.1" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="926.7" width="20" height="82.7" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="968.0" x2="1206" y2="968.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
+<text x="1217" y="972.0" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<text x="1217" y="787" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg05</text>
+<rect x="1190" y="1038" width="22" height="254" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1066.7" width="20" height="23.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="1078.3" x2="1206" y2="1078.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
+<text x="1217" y="1082.3" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1095.4" width="20" height="21.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="1106.2" x2="1206" y2="1106.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
+<text x="1217" y="1110.2" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1118.1" width="20" height="56.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="1146.2" x2="1196" y2="1146.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf04)" opacity="0.8"/>
+<text x="1217" y="1150.2" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1177.4" width="20" height="20.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1187.6" x2="1206" y2="1187.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf08)" opacity="0.8"/>
+<text x="1217" y="1191.6" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1228.3" width="20" height="55.4" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="1256.0" x2="1206" y2="1256.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
+<text x="1217" y="1260.0" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<text x="1217" y="1033" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg17</text>
+<rect x="1190" y="1320" width="22" height="218" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1320.1" width="20" height="44.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1342.3" x2="1196" y2="1342.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="1217" y="1346.3" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1363.4" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1369.4" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1364.5" width="20" height="21.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="1375.0" x2="1206" y2="1375.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf05)" opacity="0.8"/>
+<text x="1217" y="1379.0" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1386.8" width="20" height="42.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1407.9" x2="1196" y2="1407.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="1217" y="1411.9" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1435.2" width="20" height="13.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="1441.8" x2="1206" y2="1441.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf05)" opacity="0.8"/>
+<text x="1217" y="1445.8" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1458.7" width="20" height="32.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1474.8" x2="1196" y2="1474.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="1217" y="1478.8" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1499.3" width="20" height="36.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1517.7" x2="1196" y2="1517.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="1217" y="1521.7" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1315" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg13</text>
+<rect x="1190" y="1566" width="22" height="280" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1598.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="1604.6" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1602.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="1608.6" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1613.3" width="20" height="34.9" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="1630.7" x2="1206" y2="1630.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf06)" opacity="0.8"/>
+<text x="1217" y="1634.7" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1648.4" width="20" height="9.4" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1657.1" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1657.9" width="20" height="57.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="1686.8" x2="1206" y2="1686.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf06)" opacity="0.8"/>
+<text x="1217" y="1690.8" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1714.9" width="20" height="20.2" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="1725.0" x2="1196" y2="1725.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf06)" opacity="0.8"/>
+<text x="1217" y="1729.0" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1739.2" width="20" height="39.6" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="1759.1" x2="1196" y2="1759.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf06)" opacity="0.8"/>
+<text x="1217" y="1763.1" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1774.3" width="20" height="64.7" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="1806.6" x2="1206" y2="1806.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf06)" opacity="0.8"/>
+<text x="1217" y="1810.6" fill="#43A047" font-size="10" font-weight="500">6</text>
+<text x="1217" y="1561" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg11</text>
+<rect x="1190" y="1874" width="22" height="242" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1884.4" width="20" height="46.7" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="1208" y1="1907.8" x2="1196" y2="1907.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf14)" opacity="0.8"/>
+<text x="1217" y="1911.8" fill="#7b0d1a" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1930.7" width="20" height="21.8" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="1194" y1="1941.6" x2="1206" y2="1941.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf14)" opacity="0.8"/>
+<text x="1217" y="1945.6" fill="#7b0d1a" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1957.8" width="20" height="124.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="2019.9" x2="1196" y2="2019.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf07)" opacity="0.8"/>
+<text x="1217" y="2023.9" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="2087.3" width="20" height="28.0" rx="3" fill="#4e2e5c" opacity="0.9"/>
+<line x1="1194" y1="2101.4" x2="1206" y2="2101.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf20)" opacity="0.8"/>
+<text x="1217" y="2105.4" fill="#4e2e5c" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1869" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg08</text>
+<rect x="1190" y="2144" width="22" height="224" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2144.2" width="20" height="11.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="2149.7" x2="1206" y2="2149.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf07)" opacity="0.8"/>
+<text x="1217" y="2153.7" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="2144.2" width="20" height="25.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="2156.8" x2="1196" y2="2156.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf07)" opacity="0.8"/>
+<text x="1217" y="2160.8" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2151.3" width="20" height="5.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="2158.3" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="2185.3" width="20" height="88.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="2229.5" x2="1206" y2="2229.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf07)" opacity="0.8"/>
+<text x="1217" y="2233.5" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2274.1" width="20" height="15.5" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="1208" y1="2281.8" x2="1196" y2="2281.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf14)" opacity="0.8"/>
+<text x="1217" y="2285.8" fill="#7b0d1a" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2290.0" width="20" height="49.6" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="1194" y1="2314.8" x2="1206" y2="2314.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf14)" opacity="0.8"/>
+<text x="1217" y="2318.8" fill="#7b0d1a" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2341.1" width="20" height="26.2" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="2354.2" x2="1206" y2="2354.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
+<text x="1217" y="2358.2" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<text x="1217" y="2139" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg15</text>
+<rect x="1190" y="2396" width="22" height="235" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2398.1" width="20" height="37.9" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="2417.1" x2="1206" y2="2417.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf08)" opacity="0.8"/>
+<text x="1217" y="2421.1" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2436.1" width="20" height="7.8" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="2444.0" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="2444.6" width="20" height="5.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="2451.2" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="2450.7" width="20" height="38.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="2469.7" x2="1196" y2="2469.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf08)" opacity="0.8"/>
+<text x="1217" y="2473.7" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2490.5" width="20" height="116.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="2548.5" x2="1206" y2="2548.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf08)" opacity="0.8"/>
+<text x="1217" y="2552.5" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<text x="1217" y="2391" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg14</text>
+<rect x="1190" y="2659" width="22" height="210" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2666.3" width="20" height="36.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="2684.6" x2="1206" y2="2684.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf01)" opacity="0.8"/>
+<text x="1217" y="2688.6" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2726.3" width="20" height="87.5" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1194" y1="2770.1" x2="1206" y2="2770.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
+<text x="1217" y="2774.1" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2817.6" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="2823.6" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="2825.8" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="2831.8" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="2831.5" width="20" height="32.9" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="1194" y1="2847.9" x2="1206" y2="2847.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf18)" opacity="0.8"/>
+<text x="1217" y="2851.9" fill="#b0d7e6" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="2861.2" width="20" height="7.7" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="1217" y="2869.0" fill="#b0d7e6" font-size="10" font-weight="500">2</text>
+<text x="1217" y="2654" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg04</text>
+<rect x="1190" y="2897" width="22" height="229" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2897.0" width="20" height="6.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="2904.0" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2906.7" width="20" height="65.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="2939.2" x2="1196" y2="2939.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf02)" opacity="0.8"/>
+<text x="1217" y="2943.2" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="2972.0" width="20" height="9.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="2980.6" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="2981.3" width="20" height="45.6" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="3004.0" x2="1196" y2="3004.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf09)" opacity="0.8"/>
+<text x="1217" y="3008.0" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="3025.7" width="20" height="20.9" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1194" y1="3036.1" x2="1206" y2="3036.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
+<text x="1217" y="3040.1" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="3046.9" width="20" height="32.3" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1194" y1="3063.0" x2="1206" y2="3063.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
+<text x="1217" y="3067.0" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<text x="1217" y="2892" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg06</text>
+<rect x="1190" y="3154" width="22" height="237" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="3160.4" width="20" height="51.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="3185.9" x2="1206" y2="3185.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
+<text x="1217" y="3189.9" fill="#0055a6" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="3214.2" width="20" height="37.3" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1208" y1="3232.9" x2="1196" y2="3232.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf10)" opacity="0.8"/>
+<text x="1217" y="3236.9" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="3252.4" width="20" height="20.7" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="3262.8" x2="1206" y2="3262.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
+<text x="1217" y="3266.8" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="3273.6" width="20" height="61.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1194" y1="3304.1" x2="1206" y2="3304.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
+<text x="1217" y="3308.1" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="3340.8" width="20" height="42.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="3361.9" x2="1206" y2="3361.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf03)" opacity="0.8"/>
+<text x="1217" y="3365.9" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<text x="1217" y="3149" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg18</text>
+<rect x="1190" y="3419" width="22" height="240" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="3419.1" width="20" height="26.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="3432.2" x2="1196" y2="3432.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
+<text x="1217" y="3436.2" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="3445.5" width="20" height="14.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1194" y1="3452.6" x2="1206" y2="3452.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf12)" opacity="0.8"/>
+<text x="1217" y="3456.6" fill="#f0c9a7" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="3460.4" width="20" height="22.1" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1194" y1="3471.4" x2="1206" y2="3471.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf12)" opacity="0.8"/>
+<text x="1217" y="3475.4" fill="#f0c9a7" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="3482.9" width="20" height="5.7" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="3489.7" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="3488.8" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="3494.8" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="3490.9" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="3496.9" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="3491.5" width="20" height="28.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1208" y1="3505.7" x2="1196" y2="3505.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf12)" opacity="0.8"/>
+<text x="1217" y="3509.7" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="3519.9" width="20" height="36.9" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="1194" y1="3538.3" x2="1206" y2="3538.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf18)" opacity="0.8"/>
+<text x="1217" y="3542.3" fill="#b0d7e6" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="3560.0" width="20" height="29.7" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="1208" y1="3574.8" x2="1196" y2="3574.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf18)" opacity="0.8"/>
+<text x="1217" y="3578.8" fill="#b0d7e6" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="3594.9" width="20" height="41.7" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="1208" y1="3615.7" x2="1196" y2="3615.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf18)" opacity="0.8"/>
+<text x="1217" y="3619.7" fill="#b0d7e6" font-size="10" font-weight="500">5</text>
+<text x="1217" y="3414" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg01</text>
+<rect x="1190" y="3687" width="22" height="212" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="3706.0" width="20" height="29.0" rx="3" fill="#4e2e5c" opacity="0.9"/>
+<line x1="1194" y1="3720.5" x2="1206" y2="3720.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf20)" opacity="0.8"/>
+<text x="1217" y="3724.5" fill="#4e2e5c" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="3733.3" width="20" height="70.5" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="1208" y1="3768.5" x2="1196" y2="3768.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf13)" opacity="0.8"/>
+<text x="1217" y="3772.5" fill="#f5aa3e" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="3800.7" width="20" height="51.7" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="1194" y1="3826.6" x2="1206" y2="3826.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf13)" opacity="0.8"/>
+<text x="1217" y="3830.6" fill="#f5aa3e" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="3850.5" width="20" height="4.0" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<text x="1217" y="3856.5" fill="#f5aa3e" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="3851.4" width="20" height="47.5" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="1208" y1="3875.2" x2="1196" y2="3875.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf13)" opacity="0.8"/>
+<text x="1217" y="3879.2" fill="#f5aa3e" font-size="10" font-weight="500">2</text>
+<text x="1217" y="3682" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg09</text>
+<rect x="1190" y="3927" width="22" height="245" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="3930.1" width="20" height="112.6" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="1194" y1="3986.4" x2="1206" y2="3986.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf15)" opacity="0.8"/>
+<text x="1217" y="3990.4" fill="#f2a69b" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="4042.9" width="20" height="13.1" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="1208" y1="4049.4" x2="1196" y2="4049.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf15)" opacity="0.8"/>
+<text x="1217" y="4053.4" fill="#f2a69b" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="4056.8" width="20" height="29.6" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="1208" y1="4071.6" x2="1196" y2="4071.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf15)" opacity="0.8"/>
+<text x="1217" y="4075.6" fill="#f2a69b" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="4090.6" width="20" height="36.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="1194" y1="4108.6" x2="1206" y2="4108.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf15)" opacity="0.8"/>
+<text x="1217" y="4112.6" fill="#f2a69b" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="4127.1" width="20" height="11.7" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="1208" y1="4133.0" x2="1196" y2="4133.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf15)" opacity="0.8"/>
+<text x="1217" y="4137.0" fill="#f2a69b" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="4138.8" width="20" height="16.4" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="1194" y1="4147.0" x2="1206" y2="4147.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf15)" opacity="0.8"/>
+<text x="1217" y="4151.0" fill="#f2a69b" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="4155.4" width="20" height="16.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="4163.7" x2="1196" y2="4163.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
+<text x="1217" y="4167.7" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<text x="1217" y="3922" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg12</text>
+<rect x="1190" y="4200" width="22" height="222" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="4229.3" width="20" height="23.3" rx="3" fill="#4e2e5c" opacity="0.9"/>
+<line x1="1194" y1="4240.9" x2="1206" y2="4240.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf20)" opacity="0.8"/>
+<text x="1217" y="4244.9" fill="#4e2e5c" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="4254.2" width="20" height="52.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="1194" y1="4280.2" x2="1206" y2="4280.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf17)" opacity="0.8"/>
+<text x="1217" y="4284.2" fill="#4ca3c7" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="4306.2" width="20" height="29.9" rx="3" fill="#4e2e5c" opacity="0.9"/>
+<line x1="1208" y1="4321.2" x2="1196" y2="4321.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf20)" opacity="0.8"/>
+<text x="1217" y="4325.2" fill="#4e2e5c" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="4336.3" width="20" height="75.9" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="1208" y1="4374.3" x2="1196" y2="4374.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf17)" opacity="0.8"/>
+<text x="1217" y="4378.3" fill="#4ca3c7" font-size="10" font-weight="500">1</text>
+<text x="1217" y="4195" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg02</text>
+<rect x="1190" y="4450" width="22" height="277" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="4468.1" width="20" height="14.3" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="1208" y1="4475.3" x2="1196" y2="4475.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf13)" opacity="0.8"/>
+<text x="1217" y="4479.3" fill="#f5aa3e" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="4483.5" width="20" height="33.6" rx="3" fill="#a32a3a" opacity="0.9"/>
+<line x1="1194" y1="4500.3" x2="1206" y2="4500.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf19)" opacity="0.8"/>
+<text x="1217" y="4504.3" fill="#a32a3a" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="4521.6" width="20" height="111.1" rx="3" fill="#a32a3a" opacity="0.9"/>
+<line x1="1208" y1="4577.2" x2="1196" y2="4577.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf19)" opacity="0.8"/>
+<text x="1217" y="4581.2" fill="#a32a3a" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="4633.2" width="20" height="7.3" rx="3" fill="#a32a3a" opacity="0.9"/>
+<text x="1217" y="4640.9" fill="#a32a3a" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="4634.2" width="20" height="39.9" rx="3" fill="#a32a3a" opacity="0.9"/>
+<line x1="1208" y1="4654.2" x2="1196" y2="4654.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf19)" opacity="0.8"/>
+<text x="1217" y="4658.2" fill="#a32a3a" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="4675.9" width="20" height="35.4" rx="3" fill="#a32a3a" opacity="0.9"/>
+<line x1="1194" y1="4693.7" x2="1206" y2="4693.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf19)" opacity="0.8"/>
+<text x="1217" y="4697.7" fill="#a32a3a" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="4711.7" width="20" height="15.3" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="1208" y1="4719.3" x2="1196" y2="4719.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf16)" opacity="0.8"/>
+<text x="1217" y="4723.3" fill="#9f4e9a" font-size="10" font-weight="500">1</text>
+<text x="1217" y="4445" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg10</text>
+</g>
+</svg>
+</div>
+
+<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#FFD700"></div><span>Pf01</span></div><div class="legend-item"><div class="legend-dot" style="background:#E63946"></div><span>Pf02</span></div><div class="legend-item"><div class="legend-dot" style="background:#1A237E"></div><span>Pf03</span></div><div class="legend-item"><div class="legend-dot" style="background:#9C27B0"></div><span>Pf04</span></div><div class="legend-item"><div class="legend-dot" style="background:#E06D10"></div><span>Pf05</span></div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div><span>Pf06</span></div><div class="legend-item"><div class="legend-dot" style="background:#3498DB"></div><span>Pf07</span></div><div class="legend-item"><div class="legend-dot" style="background:#FFA07A"></div><span>Pf08</span></div><div class="legend-item"><div class="legend-dot" style="background:#72d1b9"></div><span>Pf09</span></div><div class="legend-item"><div class="legend-dot" style="background:#0055a6"></div><span>Pf10</span></div><div class="legend-item"><div class="legend-dot" style="background:#e3b58f"></div><span>Pf11</span></div><div class="legend-item"><div class="legend-dot" style="background:#f0c9a7"></div><span>Pf12</span></div><div class="legend-item"><div class="legend-dot" style="background:#f5aa3e"></div><span>Pf13</span></div><div class="legend-item"><div class="legend-dot" style="background:#7b0d1a"></div><span>Pf14</span></div><div class="legend-item"><div class="legend-dot" style="background:#f2a69b"></div><span>Pf15</span></div><div class="legend-item"><div class="legend-dot" style="background:#9f4e9a"></div><span>Pf16</span></div><div class="legend-item"><div class="legend-dot" style="background:#4ca3c7"></div><span>Pf17</span></div><div class="legend-item"><div class="legend-dot" style="background:#b0d7e6"></div><span>Pf18</span></div><div class="legend-item"><div class="legend-dot" style="background:#a32a3a"></div><span>Pf19</span></div><div class="legend-item"><div class="legend-dot" style="background:#4e2e5c"></div><span>Pf20</span></div></div>
+<div class="stats-bar"><span><b>109</b> synteny fragments</span><span><b>20</b> ref chromosomes</span><span><b>18</b> query chromosomes</span><span><b>58</b> forward &nbsp;|&nbsp; <b>51</b> reverse</span><span>max size <b>533</b> genes</span></div>
+<div id="tooltip"></div>
+
+<script>
+function showTip(e, el) {
+  const parts = el.dataset.tip.split(' | ');
+  const tip = document.getElementById('tooltip');
+  tip.innerHTML = parts.map((p,i) => i===0
+    ? `<div style="color:#0ea5e9;font-weight:700;margin-bottom:5px">${p}</div>`
+    : `<div>${p}</div>`
+  ).join('');
+  tip.style.left = (e.clientX + 14) + 'px';
+  tip.style.top  = (e.clientY - 10) + 'px';
+  tip.classList.add('show');
+}
+function hideTip() { document.getElementById('tooltip').classList.remove('show'); }
+</script>
+</body>
+</html>

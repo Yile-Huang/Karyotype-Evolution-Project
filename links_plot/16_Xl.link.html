@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synteny — Xl_2_Cd.blast.icl.block.corr.csv-r-r.reform.Claude_filtered.txt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0a0e1a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; min-height:100vh; }
+  .canvas-container { padding:20px 32px; overflow-x:auto; }
+  svg { display:block; max-width:100%; }
+  .legend {
+    padding:10px 32px 16px; display:flex; gap:18px; flex-wrap:wrap;
+    border-top:1px solid #1e2d45;
+  }
+  .legend-item { display:flex; align-items:center; gap:7px; font-size:11px; color:#64748b; }
+  .legend-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0; }
+  .stats-bar {
+    padding:10px 32px 18px; display:flex; gap:28px; font-size:10px; color:#64748b; flex-wrap:wrap;
+  }
+  .stats-bar b { color:#0ea5e9; margin-right:3px; }
+  #tooltip {
+    position:fixed; background:#1e2d45; border:1px solid #38bdf8; border-radius:6px;
+    padding:10px 14px; font-size:11px; line-height:1.8; color:#e2e8f0;
+    pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:1000;
+    max-width:340px;
+  }
+  #tooltip.show { opacity:1; }
+</style>
+</head>
+<body>
+
+<div class="canvas-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2572" width="1400" height="2572" style="background:#0a0e1a;font-family:'JetBrains Mono',monospace">
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="arr_Cd01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFD700"/></marker>
+<marker id="arr_rev_Cd01" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFD700"/></marker>
+<marker id="arr_Cd02" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E63946"/></marker>
+<marker id="arr_rev_Cd02" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E63946"/></marker>
+<marker id="arr_Cd03" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1A237E"/></marker>
+<marker id="arr_rev_Cd03" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#1A237E"/></marker>
+<marker id="arr_Cd04" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9C27B0"/></marker>
+<marker id="arr_rev_Cd04" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9C27B0"/></marker>
+<marker id="arr_Cd05" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E06D10"/></marker>
+<marker id="arr_rev_Cd05" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E06D10"/></marker>
+<marker id="arr_Cd06" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#43A047"/></marker>
+<marker id="arr_rev_Cd06" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#43A047"/></marker>
+<marker id="arr_Cd07" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#3498DB"/></marker>
+<marker id="arr_rev_Cd07" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#3498DB"/></marker>
+<marker id="arr_Cd08" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFA07A"/></marker>
+<marker id="arr_rev_Cd08" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFA07A"/></marker>
+<marker id="arr_Cd09" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#72d1b9"/></marker>
+<marker id="arr_rev_Cd09" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#72d1b9"/></marker>
+<marker id="arr_Cd10" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#0055a6"/></marker>
+<marker id="arr_rev_Cd10" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#0055a6"/></marker>
+<marker id="arr_Cd11" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#e3b58f"/></marker>
+<marker id="arr_rev_Cd11" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#e3b58f"/></marker>
+</defs>
+<g id="ribbons" opacity="0.35">
+<path d="M232.0,370.6 C700.0,370.6 700.0,257.9 1190.0,257.9 L1190.0,303.1 C700.0,303.1 700.0,423.9 232.0,423.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.003800.t1 - Cde.001Chr.096200.t1 | Query: Xlo.001Chr.076100.t1 - Xlo.001Chr.171400.t1 | Dir: + | Size: 738 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1779.6 C700.0,1779.6 700.0,1299.9 1190.0,1299.9 L1190.0,1373.4 C700.0,1373.4 700.0,1838.1 232.0,1838.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl06 | Ref: Cde.008Chr.139400.t1 - Cde.008Chr.044000.t1 | Query: Xlo.007Chr.022200.t1 - Xlo.007Chr.128400.t1 | Dir: - | Size: 722 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1160.2 C700.0,1160.2 700.0,775.8 1190.0,775.8 L1190.0,824.3 C700.0,824.3 700.0,1251.2 232.0,1251.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Cd05 → Xl10 | Ref: Cde.005Chr.104300.t1 - Cde.005Chr.000200.t1 | Query: Xlo.004Chr.044500.t1 - Xlo.004Chr.149700.t1 | Dir: - | Size: 720 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,645.8 C700.0,645.8 700.0,444.5 1190.0,444.5 L1190.0,478.0 C700.0,478.0 700.0,685.3 232.0,685.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.079200.t1 - Cde.002Chr.003400.t1 | Query: Xlo.001Chr.388400.t1 - Xlo.001Chr.469400.t1 | Dir: - | Size: 609 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1613.3 C700.0,1613.3 700.0,1086.6 1190.0,1086.6 L1190.0,1220.1 C700.0,1220.1 700.0,1727.9 232.0,1727.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cd07 → Xl02 | Ref: Cde.007Chr.067900.t1 - Cde.007Chr.171400.t1 | Query: Xlo.006Chr.087100.t1 - Xlo.006Chr.194200.t1 | Dir: + | Size: 594 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,76.9 C700.0,76.9 700.0,62.0 1190.0,62.0 L1190.0,96.8 C700.0,96.8 700.0,116.7 232.0,116.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.100600.t1 - Cde.004Chr.032300.t1 | Query: Xlo.003Chr.004700.t1 - Xlo.003Chr.081100.t1 | Dir: - | Size: 587 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1947.2 C700.0,1947.2 700.0,1506.6 1190.0,1506.6 L1190.0,1571.5 C700.0,1571.5 700.0,2012.0 232.0,2012.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Cd09 → Xl05 | Ref: Cde.009Chr.078500.t1 - Cde.009Chr.000100.t1 | Query: Xlo.008Chr.082000.t1 - Xlo.008Chr.166700.t1 | Dir: - | Size: 574 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2028.6 C700.0,2028.6 700.0,1419.8 1190.0,1419.8 L1190.0,1510.6 C700.0,1510.6 700.0,2107.8 232.0,2107.8 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Cd09 → Xl05 | Ref: Cde.009Chr.165200.t1 - Cde.009Chr.082100.t1 | Query: Xlo.008Chr.000100.t1 - Xlo.008Chr.083900.t1 | Dir: - | Size: 510 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,150.5 C700.0,150.5 700.0,97.2 1190.0,97.2 L1190.0,134.5 C700.0,134.5 700.0,187.5 232.0,187.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.160700.t1 - Cde.004Chr.218900.t1 | Query: Xlo.003Chr.082300.t1 - Xlo.003Chr.145800.t1 | Dir: + | Size: 483 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1482.2 C700.0,1482.2 700.0,854.2 1190.0,854.2 L1190.0,928.5 C700.0,928.5 700.0,1535.0 232.0,1535.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cd06 → Xl07 | Ref: Cde.010Chr.167700.t1 - Cde.010Chr.095200.t1 | Query: Xlo.009Chr.000600.t1 - Xlo.009Chr.084100.t1 | Dir: - | Size: 478 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2141.9 C700.0,2141.9 700.0,1655.2 1190.0,1655.2 L1190.0,1680.0 C700.0,1680.0 700.0,2195.8 232.0,2195.8 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.072900.t1 - Cde.003Chr.004000.t1 | Query: Xlo.002Chr.074100.t1 - Xlo.002Chr.136200.t1 | Dir: - | Size: 468 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1012.3 C700.0,1012.3 700.0,621.3 1190.0,621.3 L1190.0,700.4 C700.0,700.4 700.0,1098.2 232.0,1098.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Cd04 → Xl04 | Ref: Cde.006Chr.057500.t1 - Cde.006Chr.132500.t1 | Query: Xlo.005Chr.098300.t1 - Xlo.005Chr.180200.t1 | Dir: + | Size: 438 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1098.5 C700.0,1098.5 700.0,531.1 1190.0,531.1 L1190.0,590.7 C700.0,590.7 700.0,1131.7 232.0,1131.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Cd04 → Xl04 | Ref: Cde.006Chr.192200.t1 - Cde.006Chr.133100.t1 | Query: Xlo.005Chr.000200.t1 - Xlo.005Chr.085300.t1 | Dir: - | Size: 438 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1366.2 C700.0,1366.2 700.0,948.4 1190.0,948.4 L1190.0,990.1 C700.0,990.1 700.0,1413.6 232.0,1413.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cd06 → Xl07 | Ref: Cde.010Chr.060600.t1 - Cde.010Chr.000200.t1 | Query: Xlo.009Chr.099600.t1 - Xlo.009Chr.160500.t1 | Dir: - | Size: 384 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1563.1 C700.0,1563.1 700.0,1019.9 1190.0,1019.9 L1190.0,1064.4 C700.0,1064.4 700.0,1598.9 232.0,1598.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cd07 → Xl02 | Ref: Cde.007Chr.000100.t1 - Cde.007Chr.052400.t1 | Query: Xlo.006Chr.000100.t1 - Xlo.006Chr.064600.t1 | Dir: + | Size: 376 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2325.1 C700.0,2325.1 700.0,1725.5 1190.0,1725.5 L1190.0,1767.8 C700.0,1767.8 700.0,2360.4 232.0,2360.4 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Cd11 → Xl03 | Ref: Cde.011Chr.000100.t1 - Cde.011Chr.050600.t1 | Query: Xlo.010Chr.000100.t1 - Xlo.010Chr.065400.t1 | Dir: + | Size: 360 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,730.8 C700.0,730.8 700.0,415.4 1190.0,415.4 L1190.0,434.0 C700.0,434.0 700.0,813.5 232.0,813.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.207900.t1 - Cde.002Chr.157800.t1 | Query: Xlo.001Chr.329100.t1 - Xlo.001Chr.364100.t1 | Dir: - | Size: 287 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,60.2 C700.0,60.2 700.0,490.3 1190.0,490.3 L1190.0,501.7 C700.0,501.7 700.0,75.3 232.0,75.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl01 | Ref: Cde.004Chr.029500.t1 - Cde.004Chr.000100.t1 | Query: Xlo.001Chr.499800.t1 - Xlo.001Chr.532300.t1 | Dir: - | Size: 263 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2229.6 C700.0,2229.6 700.0,1640.0 1190.0,1640.0 L1190.0,1654.1 C700.0,1654.1 700.0,2267.5 232.0,2267.5 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.086300.t1 - Cde.003Chr.127800.t1 | Query: Xlo.002Chr.038000.t1 - Xlo.002Chr.071500.t1 | Dir: + | Size: 253 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1285.3 C700.0,1285.3 700.0,746.1 1190.0,746.1 L1190.0,775.6 C700.0,775.6 700.0,1337.7 232.0,1337.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Cd05 → Xl10 | Ref: Cde.005Chr.119300.t1 - Cde.005Chr.164800.t1 | Query: Xlo.004Chr.005500.t1 - Xlo.004Chr.044200.t1 | Dir: + | Size: 250 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,116.8 C700.0,116.8 700.0,478.0 1190.0,478.0 L1190.0,490.2 C700.0,490.2 700.0,132.3 232.0,132.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl01 | Ref: Cde.004Chr.100700.t1 - Cde.004Chr.128400.t1 | Query: Xlo.001Chr.469500.t1 - Xlo.001Chr.499500.t1 | Dir: + | Size: 235 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2462.2 C700.0,2462.2 700.0,1373.4 1190.0,1373.4 L1190.0,1389.0 C700.0,1389.0 700.0,2483.8 232.0,2483.8 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Cd11 → Xl06 | Ref: Cde.011Chr.123600.t1 - Cde.011Chr.153200.t1 | Query: Xlo.007Chr.128600.t1 - Xlo.007Chr.168400.t1 | Dir: + | Size: 222 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,187.3 C700.0,187.3 700.0,177.3 1190.0,177.3 L1190.0,188.3 C700.0,188.3 700.0,225.1 232.0,225.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.251800.t1 - Cde.004Chr.218300.t1 | Query: Xlo.003Chr.198800.t1 - Xlo.003Chr.225100.t1 | Dir: - | Size: 204 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,454.0 C700.0,454.0 700.0,242.8 1190.0,242.8 L1190.0,255.7 C700.0,255.7 700.0,483.7 232.0,483.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.138100.t1 - Cde.001Chr.164100.t1 | Query: Xlo.001Chr.045100.t1 - Xlo.001Chr.072200.t1 | Dir: + | Size: 189 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,685.4 C700.0,685.4 700.0,384.3 1190.0,384.3 L1190.0,397.4 C700.0,397.4 700.0,698.6 232.0,698.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.103800.t1 - Cde.002Chr.079300.t1 | Query: Xlo.001Chr.272600.t1 - Xlo.001Chr.296800.t1 | Dir: - | Size: 189 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,434.2 C700.0,434.2 700.0,311.4 1190.0,311.4 L1190.0,325.0 C700.0,325.0 700.0,453.6 232.0,453.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.111000.t1 - Cde.001Chr.137400.t1 | Query: Xlo.001Chr.185900.t1 - Xlo.001Chr.208000.t1 | Dir: + | Size: 175 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2440.2 C700.0,2440.2 700.0,1857.8 1190.0,1857.8 L1190.0,1887.2 C700.0,1887.2 700.0,2462.2 232.0,2462.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Cd11 → Xl03 | Ref: Cde.011Chr.098200.t1 - Cde.011Chr.123500.t1 | Query: Xlo.010Chr.110300.t1 - Xlo.010Chr.145000.t1 | Dir: + | Size: 171 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,714.6 C700.0,714.6 700.0,401.0 1190.0,401.0 L1190.0,410.7 C700.0,410.7 700.0,725.6 232.0,725.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.150200.t1 - Cde.002Chr.132600.t1 | Query: Xlo.001Chr.302400.t1 - Xlo.001Chr.320100.t1 | Dir: - | Size: 141 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,581.6 C700.0,581.6 700.0,234.1 1190.0,234.1 L1190.0,242.1 C700.0,242.1 700.0,595.6 232.0,595.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.228600.t1 - Cde.001Chr.209900.t1 | Query: Xlo.001Chr.022400.t1 - Xlo.001Chr.042900.t1 | Dir: - | Size: 119 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,423.9 C700.0,423.9 700.0,223.5 1190.0,223.5 L1190.0,234.0 C700.0,234.0 700.0,434.2 232.0,434.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.096200.t1 - Cde.001Chr.110800.t1 | Query: Xlo.001Chr.001800.t1 - Xlo.001Chr.022300.t1 | Dir: + | Size: 118 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,143.0 C700.0,143.0 700.0,156.1 1190.0,156.1 L1190.0,164.2 C700.0,164.2 700.0,150.4 232.0,150.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.147000.t1 - Cde.004Chr.160600.t1 | Query: Xlo.003Chr.162600.t1 - Xlo.003Chr.175400.t1 | Dir: + | Size: 98 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,702.2 C700.0,702.2 700.0,361.4 1190.0,361.4 L1190.0,376.1 C700.0,376.1 700.0,708.7 232.0,708.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.110500.t1 - Cde.002Chr.122400.t1 | Query: Xlo.001Chr.242700.t1 - Xlo.001Chr.258000.t1 | Dir: + | Size: 96 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2359.4 C700.0,2359.4 700.0,1770.0 1190.0,1770.0 L1190.0,1796.5 C700.0,1796.5 700.0,2391.8 232.0,2391.8 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Cd11 → Xl03 | Ref: Cde.011Chr.049100.t1 - Cde.011Chr.073700.t1 | Query: Xlo.010Chr.067600.t1 - Xlo.010Chr.085200.t1 | Dir: + | Size: 87 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1769.9 C700.0,1769.9 700.0,1680.1 1190.0,1680.1 L1190.0,1684.5 C700.0,1684.5 700.0,1775.2 232.0,1775.2 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl09 | Ref: Cde.008Chr.035700.t1 - Cde.008Chr.024100.t1 | Query: Xlo.002Chr.136300.t1 - Xlo.002Chr.149700.t1 | Dir: - | Size: 85 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,595.8 C700.0,595.8 700.0,304.5 1190.0,304.5 L1190.0,311.3 C700.0,311.3 700.0,615.8 232.0,615.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.244700.t1 - Cde.001Chr.228700.t1 | Query: Xlo.001Chr.173300.t1 - Xlo.001Chr.185800.t1 | Dir: - | Size: 83 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,708.7 C700.0,708.7 700.0,375.1 1190.0,375.1 L1190.0,381.4 C700.0,381.4 700.0,715.5 232.0,715.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.134100.t1 - Cde.002Chr.122500.t1 | Query: Xlo.001Chr.256500.t1 - Xlo.001Chr.266500.t1 | Dir: - | Size: 74 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,559.7 C700.0,559.7 700.0,332.9 1190.0,332.9 L1190.0,343.2 C700.0,343.2 700.0,575.1 232.0,575.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.189200.t1 - Cde.001Chr.204200.t1 | Query: Xlo.001Chr.217100.t1 - Xlo.001Chr.229600.t1 | Dir: + | Size: 73 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,300.2 C700.0,300.2 700.0,167.1 1190.0,167.1 L1190.0,172.4 C700.0,172.4 700.0,339.4 232.0,339.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.317200.t1 - Cde.004Chr.288700.t1 | Query: Xlo.003Chr.179900.t1 - Xlo.003Chr.188700.t1 | Dir: - | Size: 70 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2276.2 C700.0,2276.2 700.0,1603.8 1190.0,1603.8 L1190.0,1619.5 C700.0,1619.5 700.0,2285.0 232.0,2285.0 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.140300.t1 - Cde.003Chr.151700.t1 | Query: Xlo.002Chr.002300.t1 - Xlo.002Chr.016400.t1 | Dir: + | Size: 68 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1603.7 C700.0,1603.7 700.0,1074.2 1190.0,1074.2 L1190.0,1086.3 C700.0,1086.3 700.0,1613.2 232.0,1613.2 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cd07 → Xl02 | Ref: Cde.007Chr.067800.t1 - Cde.007Chr.057800.t1 | Query: Xlo.006Chr.075100.t1 - Xlo.006Chr.087000.t1 | Dir: - | Size: 63 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,856.0 C700.0,856.0 700.0,411.7 1190.0,411.7 L1190.0,415.4 C700.0,415.4 700.0,865.7 232.0,865.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.239000.t1 - Cde.002Chr.251500.t1 | Query: Xlo.001Chr.322300.t1 - Xlo.001Chr.329000.t1 | Dir: + | Size: 62 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,725.8 C700.0,725.8 700.0,440.0 1190.0,440.0 L1190.0,443.1 C700.0,443.1 700.0,730.7 232.0,730.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.157700.t1 - Cde.002Chr.150300.t1 | Query: Xlo.001Chr.376900.t1 - Xlo.001Chr.384700.t1 | Dir: - | Size: 62 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2421.9 C700.0,2421.9 700.0,1816.3 1190.0,1816.3 L1190.0,1851.3 C700.0,1851.3 700.0,2442.1 232.0,2442.1 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Cd11 → Xl03 | Ref: Cde.011Chr.085300.t1 - Cde.011Chr.100200.t1 | Query: Xlo.010Chr.088500.t1 - Xlo.010Chr.104800.t1 | Dir: + | Size: 61 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1432.6 C700.0,1432.6 700.0,928.9 1190.0,928.9 L1190.0,942.1 C700.0,942.1 700.0,1474.4 232.0,1474.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cd06 → Xl07 | Ref: Cde.010Chr.091900.t1 - Cde.010Chr.074100.t1 | Query: Xlo.009Chr.084200.t1 - Xlo.009Chr.094900.t1 | Dir: - | Size: 58 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1760.1 C700.0,1760.1 700.0,1686.5 1190.0,1686.5 L1190.0,1690.3 C700.0,1690.3 700.0,1765.4 232.0,1765.4 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl09 | Ref: Cde.008Chr.016400.t1 - Cde.008Chr.007100.t1 | Query: Xlo.002Chr.154600.t1 - Xlo.002Chr.163900.t1 | Dir: - | Size: 58 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2288.5 C700.0,2288.5 700.0,1624.8 1190.0,1624.8 L1190.0,1639.8 C700.0,1639.8 700.0,2296.9 232.0,2296.9 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.155300.t1 - Cde.003Chr.168100.t1 | Query: Xlo.002Chr.023300.t1 - Xlo.002Chr.037500.t1 | Dir: + | Size: 56 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,825.9 C700.0,825.9 700.0,396.8 1190.0,396.8 L1190.0,400.8 C700.0,400.8 700.0,841.9 232.0,841.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.215600.t1 - Cde.002Chr.225500.t1 | Query: Xlo.001Chr.296300.t1 - Xlo.001Chr.302200.t1 | Dir: + | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,699.4 C700.0,699.4 700.0,434.0 1190.0,434.0 L1190.0,436.5 C700.0,436.5 700.0,702.2 232.0,702.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.110400.t1 - Cde.002Chr.105000.t1 | Query: Xlo.001Chr.364200.t1 - Xlo.001Chr.370100.t1 | Dir: - | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,133.6 C700.0,133.6 700.0,190.4 1190.0,190.4 L1190.0,192.7 C700.0,192.7 700.0,136.8 232.0,136.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.135600.t1 - Cde.004Chr.130900.t1 | Query: Xlo.003Chr.230900.t1 - Xlo.003Chr.236300.t1 | Dir: - | Size: 44 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1841.9 C700.0,1841.9 700.0,1272.1 1190.0,1272.1 L1190.0,1283.3 C700.0,1283.3 700.0,1858.9 232.0,1858.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl06 | Ref: Cde.008Chr.143500.t1 - Cde.008Chr.154800.t1 | Query: Xlo.007Chr.010800.t1 - Xlo.007Chr.016400.t1 | Dir: + | Size: 41 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1599.2 C700.0,1599.2 700.0,1065.0 1190.0,1065.0 L1190.0,1072.8 C700.0,1072.8 700.0,1603.2 232.0,1603.2 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cd07 → Xl02 | Ref: Cde.007Chr.057500.t1 - Cde.007Chr.052800.t1 | Query: Xlo.006Chr.065800.t1 - Xlo.006Chr.073500.t1 | Dir: - | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,930.2 C700.0,930.2 700.0,596.4 1190.0,596.4 L1190.0,620.9 C700.0,620.9 700.0,966.4 232.0,966.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Cd04 → Xl04 | Ref: Cde.006Chr.021500.t1 - Cde.006Chr.038400.t1 | Query: Xlo.005Chr.090500.t1 - Xlo.005Chr.098200.t1 | Dir: + | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,139.6 C700.0,139.6 700.0,188.4 1190.0,188.4 L1190.0,190.4 C700.0,190.4 700.0,142.9 232.0,142.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.141200.t1 - Cde.004Chr.146800.t1 | Query: Xlo.003Chr.225600.t1 - Xlo.003Chr.230800.t1 | Dir: + | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1765.6 C700.0,1765.6 700.0,1692.2 1190.0,1692.2 L1190.0,1694.2 C700.0,1694.2 700.0,1768.0 232.0,1768.0 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl09 | Ref: Cde.008Chr.021300.t1 - Cde.008Chr.016500.t1 | Query: Xlo.002Chr.169200.t1 - Xlo.002Chr.174900.t1 | Dir: - | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2269.7 C700.0,2269.7 700.0,1694.5 1190.0,1694.5 L1190.0,1695.8 C700.0,1695.8 700.0,2272.7 232.0,2272.7 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.136600.t1 - Cde.003Chr.131400.t1 | Query: Xlo.002Chr.175400.t1 - Xlo.002Chr.180500.t1 | Dir: - | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,870.3 C700.0,870.3 700.0,437.8 1190.0,437.8 L1190.0,439.9 C700.0,439.9 700.0,876.6 232.0,876.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.255900.t1 - Cde.002Chr.262600.t1 | Query: Xlo.001Chr.372900.t1 - Xlo.001Chr.376800.t1 | Dir: + | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,814.7 C700.0,814.7 700.0,443.1 1190.0,443.1 L1190.0,444.4 C700.0,444.4 700.0,824.9 232.0,824.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.208600.t1 - Cde.002Chr.215300.t1 | Query: Xlo.001Chr.384800.t1 - Xlo.001Chr.388200.t1 | Dir: + | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,497.2 C700.0,497.2 700.0,325.1 1190.0,325.1 L1190.0,327.8 C700.0,327.8 700.0,517.2 232.0,517.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.166000.t1 - Cde.001Chr.173900.t1 | Query: Xlo.001Chr.208400.t1 - Xlo.001Chr.212800.t1 | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,851.1 C700.0,851.1 700.0,382.5 1190.0,382.5 L1190.0,384.3 C700.0,384.3 700.0,855.9 232.0,855.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.238900.t1 - Cde.002Chr.234000.t1 | Query: Xlo.001Chr.268800.t1 - Xlo.001Chr.272500.t1 | Dir: - | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,75.4 C700.0,75.4 700.0,149.3 1190.0,149.3 L1190.0,152.8 C700.0,152.8 700.0,76.9 232.0,76.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.029600.t1 - Cde.004Chr.032500.t1 | Query: Xlo.003Chr.155300.t1 - Xlo.003Chr.160000.t1 | Dir: + | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,224.1 C700.0,224.1 700.0,175.8 1190.0,175.8 L1190.0,177.3 C700.0,177.3 700.0,244.2 232.0,244.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.251400.t1 - Cde.004Chr.260400.t1 | Query: Xlo.003Chr.195300.t1 - Xlo.003Chr.198700.t1 | Dir: + | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,534.4 C700.0,534.4 700.0,327.8 1190.0,327.8 L1190.0,332.8 C700.0,332.8 700.0,552.8 232.0,552.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.176500.t1 - Cde.001Chr.185600.t1 | Query: Xlo.001Chr.212900.t1 - Xlo.001Chr.216900.t1 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,876.9 C700.0,876.9 700.0,358.9 1190.0,358.9 L1190.0,361.0 C700.0,361.0 700.0,878.8 232.0,878.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.265900.t1 - Cde.002Chr.262800.t1 | Query: Xlo.001Chr.239600.t1 - Xlo.001Chr.242300.t1 | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,848.3 C700.0,848.3 700.0,381.5 1190.0,381.5 L1190.0,383.6 C700.0,383.6 700.0,852.9 232.0,852.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.230600.t1 - Cde.002Chr.235900.t1 | Query: Xlo.001Chr.266800.t1 - Xlo.001Chr.271100.t1 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,914.8 C700.0,914.8 700.0,590.8 1190.0,590.8 L1190.0,595.7 C700.0,595.7 700.0,923.7 232.0,923.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Cd04 → Xl04 | Ref: Cde.006Chr.008400.t1 - Cde.006Chr.017400.t1 | Query: Xlo.005Chr.085500.t1 - Xlo.005Chr.089900.t1 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1768.0 C700.0,1768.0 700.0,1621.0 1190.0,1621.0 L1190.0,1623.2 C700.0,1623.2 700.0,1769.6 232.0,1769.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl09 | Ref: Cde.008Chr.024000.t1 - Cde.008Chr.021300.t1 | Query: Xlo.002Chr.018300.t1 - Xlo.002Chr.021900.t1 | Dir: - | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2195.2 C700.0,2195.2 700.0,1655.0 1190.0,1655.0 L1190.0,1656.3 C700.0,1656.3 700.0,2206.1 232.0,2206.1 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.072200.t1 - Cde.003Chr.077500.t1 | Query: Xlo.002Chr.073500.t1 - Xlo.002Chr.076300.t1 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1777.8 C700.0,1777.8 700.0,1887.2 1190.0,1887.2 L1190.0,1890.7 C700.0,1890.7 700.0,1779.6 232.0,1779.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl03 | Ref: Cde.008Chr.044100.t1 - Cde.008Chr.040600.t1 | Query: Xlo.010Chr.145100.t1 - Xlo.010Chr.150600.t1 | Dir: - | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2286.0 C700.0,2286.0 700.0,1690.9 1190.0,1690.9 L1190.0,1692.2 C700.0,1692.2 700.0,2289.5 232.0,2289.5 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.152300.t1 - Cde.003Chr.156300.t1 | Query: Xlo.002Chr.165500.t1 - Xlo.002Chr.169100.t1 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1264.4 C700.0,1264.4 700.0,736.3 1190.0,736.3 L1190.0,745.9 C700.0,745.9 700.0,1276.9 232.0,1276.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Cd05 → Xl10 | Ref: Cde.005Chr.109700.t1 - Cde.005Chr.116300.t1 | Query: Xlo.004Chr.000300.t1 - Xlo.004Chr.005300.t1 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1891.3 C700.0,1891.3 700.0,1267.2 1190.0,1267.2 L1190.0,1269.9 C700.0,1269.9 700.0,1903.1 232.0,1903.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl06 | Ref: Cde.008Chr.174600.t1 - Cde.008Chr.170900.t1 | Query: Xlo.007Chr.006600.t1 - Xlo.007Chr.009200.t1 | Dir: - | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,131.7 C700.0,131.7 700.0,146.7 1190.0,146.7 L1190.0,150.1 C700.0,150.1 700.0,133.5 232.0,133.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.130800.t1 - Cde.004Chr.127100.t1 | Query: Xlo.003Chr.153000.t1 - Xlo.003Chr.156100.t1 | Dir: - | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1775.9 C700.0,1775.9 700.0,1894.8 1190.0,1894.8 L1190.0,1897.9 C700.0,1897.9 700.0,1778.5 232.0,1778.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl03 | Ref: Cde.008Chr.041800.t1 - Cde.008Chr.037000.t1 | Query: Xlo.010Chr.157300.t1 - Xlo.010Chr.161800.t1 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1759.5 C700.0,1759.5 700.0,1689.7 1190.0,1689.7 L1190.0,1690.7 C700.0,1690.7 700.0,1760.9 232.0,1760.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl09 | Ref: Cde.008Chr.005900.t1 - Cde.008Chr.008800.t1 | Query: Xlo.002Chr.162600.t1 - Xlo.002Chr.164900.t1 | Dir: + | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,907.2 C700.0,907.2 700.0,701.8 1190.0,701.8 L1190.0,703.1 C700.0,703.1 700.0,910.9 232.0,910.9 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Cd04 → Xl04 | Ref: Cde.006Chr.000300.t1 - Cde.006Chr.004300.t1 | Query: Xlo.005Chr.182800.t1 - Xlo.005Chr.185400.t1 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,250.2 C700.0,250.2 700.0,172.9 1190.0,172.9 L1190.0,175.4 C700.0,175.4 700.0,272.2 232.0,272.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.275100.t1 - Cde.004Chr.264100.t1 | Query: Xlo.003Chr.189600.t1 - Xlo.003Chr.194500.t1 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1757.3 C700.0,1757.3 700.0,1684.6 1190.0,1684.6 L1190.0,1685.9 C700.0,1685.9 700.0,1758.4 232.0,1758.4 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl09 | Ref: Cde.008Chr.004200.t1 - Cde.008Chr.002000.t1 | Query: Xlo.002Chr.149900.t1 - Xlo.002Chr.152700.t1 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,368.2 C700.0,368.2 700.0,354.8 1190.0,354.8 L1190.0,356.7 C700.0,356.7 700.0,369.3 232.0,369.3 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.001600.t1 - Cde.001Chr.000100.t1 | Query: Xlo.001Chr.236100.t1 - Xlo.001Chr.238000.t1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2415.2 C700.0,2415.2 700.0,1805.7 1190.0,1805.7 L1190.0,1824.8 C700.0,1824.8 700.0,2428.3 232.0,2428.3 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Cd11 → Xl03 | Ref: Cde.011Chr.088500.t1 - Cde.011Chr.081400.t1 | Query: Xlo.010Chr.087400.t1 - Xlo.010Chr.091100.t1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1867.6 C700.0,1867.6 700.0,1287.1 1190.0,1287.1 L1190.0,1296.1 C700.0,1296.1 700.0,1874.8 232.0,1874.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl06 | Ref: Cde.008Chr.165900.t1 - Cde.008Chr.161600.t1 | Query: Xlo.007Chr.018500.t1 - Xlo.007Chr.021100.t1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2268.1 C700.0,2268.1 700.0,1602.2 1190.0,1602.2 L1190.0,1603.7 C700.0,1603.7 700.0,2269.5 232.0,2269.5 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.128900.t1 - Cde.003Chr.131300.t1 | Query: Xlo.002Chr.000100.t1 - Xlo.002Chr.002200.t1 | Dir: + | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,865.8 C700.0,865.8 700.0,437.0 1190.0,437.0 L1190.0,437.7 C700.0,437.7 700.0,867.0 232.0,867.0 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.251600.t1 - Cde.002Chr.253400.t1 | Query: Xlo.001Chr.370800.t1 - Xlo.001Chr.372800.t1 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,264.0 C700.0,264.0 700.0,172.4 1190.0,172.4 L1190.0,173.4 C700.0,173.4 700.0,276.7 232.0,276.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.270600.t1 - Cde.004Chr.278800.t1 | Query: Xlo.003Chr.188800.t1 - Xlo.003Chr.190200.t1 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,137.4 C700.0,137.4 700.0,134.6 1190.0,134.6 L1190.0,141.2 C700.0,141.2 700.0,139.5 232.0,139.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.141000.t1 - Cde.004Chr.136700.t1 | Query: Xlo.003Chr.146000.t1 - Xlo.003Chr.150600.t1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2204.9 C700.0,2204.9 700.0,1654.2 1190.0,1654.2 L1190.0,1656.0 C700.0,1656.0 700.0,2211.8 232.0,2211.8 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.081200.t1 - Cde.003Chr.076600.t1 | Query: Xlo.002Chr.071600.t1 - Xlo.002Chr.075700.t1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,580.4 C700.0,580.4 700.0,255.8 1190.0,255.8 L1190.0,256.4 C700.0,256.4 700.0,581.5 232.0,581.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.209800.t1 - Cde.001Chr.208000.t1 | Query: Xlo.001Chr.072500.t1 - Xlo.001Chr.074000.t1 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,369.5 C700.0,369.5 700.0,343.3 1190.0,343.3 L1190.0,346.1 C700.0,346.1 700.0,370.5 232.0,370.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.003600.t1 - Cde.001Chr.001700.t1 | Query: Xlo.001Chr.229900.t1 - Xlo.001Chr.232300.t1 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1758.6 C700.0,1758.6 700.0,1619.7 1190.0,1619.7 L1190.0,1620.7 C700.0,1620.7 700.0,1759.4 232.0,1759.4 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl09 | Ref: Cde.008Chr.005800.t1 - Cde.008Chr.004300.t1 | Query: Xlo.002Chr.016700.t1 - Xlo.002Chr.018100.t1 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,910.9 C700.0,910.9 700.0,700.8 1190.0,700.8 L1190.0,701.4 C700.0,701.4 700.0,913.4 232.0,913.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Cd04 → Xl04 | Ref: Cde.006Chr.004300.t1 - Cde.006Chr.007400.t1 | Query: Xlo.005Chr.181200.t1 - Xlo.005Chr.182500.t1 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1838.2 C700.0,1838.2 700.0,1283.9 1190.0,1283.9 L1190.0,1286.5 C700.0,1286.5 700.0,1840.7 232.0,1840.7 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl06 | Ref: Cde.008Chr.139500.t1 - Cde.008Chr.141700.t1 | Query: Xlo.007Chr.016500.t1 - Xlo.007Chr.017900.t1 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1415.0 C700.0,1415.0 700.0,943.3 1190.0,943.3 L1190.0,946.2 C700.0,946.2 700.0,1418.4 232.0,1418.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cd06 → Xl07 | Ref: Cde.010Chr.061800.t1 - Cde.010Chr.064300.t1 | Query: Xlo.009Chr.095600.t1 - Xlo.009Chr.097800.t1 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,245.3 C700.0,245.3 700.0,175.1 1190.0,175.1 L1190.0,175.8 C700.0,175.8 700.0,253.3 232.0,253.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cd01 → Xl08 | Ref: Cde.004Chr.261300.t1 - Cde.004Chr.265000.t1 | Query: Xlo.003Chr.193800.t1 - Xlo.003Chr.195000.t1 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,491.6 C700.0,491.6 700.0,242.2 1190.0,242.2 L1190.0,242.8 C700.0,242.8 700.0,497.2 232.0,497.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.164400.t1 - Cde.001Chr.165900.t1 | Query: Xlo.001Chr.043300.t1 - Xlo.001Chr.044900.t1 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1430.8 C700.0,1430.8 700.0,941.1 1190.0,941.1 L1190.0,943.1 C700.0,943.1 700.0,1433.3 232.0,1433.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cd06 → Xl07 | Ref: Cde.010Chr.072500.t1 - Cde.010Chr.074500.t1 | Query: Xlo.009Chr.094200.t1 - Xlo.009Chr.095400.t1 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1756.2 C700.0,1756.2 700.0,1695.8 1190.0,1695.8 L1190.0,1696.2 C700.0,1696.2 700.0,1756.9 232.0,1756.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl09 | Ref: Cde.008Chr.001400.t1 - Cde.008Chr.000100.t1 | Query: Xlo.002Chr.180600.t1 - Xlo.002Chr.181700.t1 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2407.4 C700.0,2407.4 700.0,1802.8 1190.0,1802.8 L1190.0,1805.3 C700.0,1805.3 700.0,2415.0 232.0,2415.0 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Cd11 → Xl03 | Ref: Cde.011Chr.081300.t1 - Cde.011Chr.078300.t1 | Query: Xlo.010Chr.086400.t1 - Xlo.010Chr.087300.t1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1861.2 C700.0,1861.2 700.0,1270.2 1190.0,1270.2 L1190.0,1272.1 C700.0,1272.1 700.0,1865.6 232.0,1865.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl06 | Ref: Cde.008Chr.160000.t1 - Cde.008Chr.157200.t1 | Query: Xlo.007Chr.009600.t1 - Xlo.007Chr.010600.t1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2275.2 C700.0,2275.2 700.0,1685.8 1190.0,1685.8 L1190.0,1686.3 C700.0,1686.3 700.0,2276.9 232.0,2276.9 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.139100.t1 - Cde.003Chr.141200.t1 | Query: Xlo.002Chr.152400.t1 - Xlo.002Chr.153900.t1 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2274.7 C700.0,2274.7 700.0,1686.0 1190.0,1686.0 L1190.0,1686.4 C700.0,1686.4 700.0,2276.6 232.0,2276.6 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Cd10 → Xl09 | Ref: Cde.003Chr.140800.t1 - Cde.003Chr.138500.t1 | Query: Xlo.002Chr.153000.t1 - Xlo.002Chr.154500.t1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,575.2 C700.0,575.2 700.0,257.3 1190.0,257.3 L1190.0,257.7 C700.0,257.7 700.0,575.6 232.0,575.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cd02 → Xl01 | Ref: Cde.001Chr.204900.t1 - Cde.001Chr.204300.t1 | Query: Xlo.001Chr.074900.t1 - Xlo.001Chr.075600.t1 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,847.7 C700.0,847.7 700.0,410.7 1190.0,410.7 L1190.0,411.3 C700.0,411.3 700.0,848.5 232.0,848.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.229800.t1 - Cde.002Chr.230900.t1 | Query: Xlo.001Chr.320200.t1 - Xlo.001Chr.321300.t1 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,698.8 C700.0,698.8 700.0,411.4 1190.0,411.4 L1190.0,411.7 C700.0,411.7 700.0,699.3 232.0,699.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.104900.t1 - Cde.002Chr.103900.t1 | Query: Xlo.001Chr.321600.t1 - Xlo.001Chr.322200.t1 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,842.1 C700.0,842.1 700.0,410.7 1190.0,410.7 L1190.0,411.4 C700.0,411.4 700.0,847.7 232.0,847.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cd03 → Xl01 | Ref: Cde.002Chr.229800.t1 - Cde.002Chr.225600.t1 | Query: Xlo.001Chr.320200.t1 - Xlo.001Chr.321500.t1 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2393.6 C700.0,2393.6 700.0,1792.4 1190.0,1792.4 L1190.0,1804.2 C700.0,1804.2 700.0,2408.8 232.0,2408.8 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Cd11 → Xl03 | Ref: Cde.011Chr.075300.t1 - Cde.011Chr.078600.t1 | Query: Xlo.010Chr.084200.t1 - Xlo.010Chr.086900.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1867.0 C700.0,1867.0 700.0,1287.5 1190.0,1287.5 L1190.0,1300.4 C700.0,1300.4 700.0,1872.8 232.0,1872.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cd08 → Xl06 | Ref: Cde.008Chr.161200.t1 - Cde.008Chr.164900.t1 | Query: Xlo.007Chr.018600.t1 - Xlo.007Chr.022500.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1428.4 C700.0,1428.4 700.0,945.7 1190.0,945.7 L1190.0,948.2 C700.0,948.2 700.0,1430.4 232.0,1430.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cd06 → Xl07 | Ref: Cde.010Chr.070200.t1 - Cde.010Chr.072100.t1 | Query: Xlo.009Chr.097600.t1 - Xlo.009Chr.099500.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+</g>
+<g id="refChrs">
+<rect x="210" y="60" width="22" height="280" rx="5" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="1"/>
+<rect x="211" y="60.2" width="20" height="15.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="67.8" x2="216" y2="67.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd01)" opacity="0.8"/>
+<text x="205" y="71.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="211" y="75.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="81.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="211" y="76.9" width="20" height="39.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="96.8" x2="216" y2="96.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd01)" opacity="0.8"/>
+<text x="205" y="100.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="211" y="116.8" width="20" height="15.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="124.5" x2="226" y2="124.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd01)" opacity="0.8"/>
+<text x="205" y="128.5" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="211" y="131.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="137.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="211" y="133.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="139.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="211" y="137.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="143.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="211" y="139.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="145.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="211" y="143.0" width="20" height="7.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="150.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="211" y="150.5" width="20" height="37.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="169.0" x2="226" y2="169.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd01)" opacity="0.8"/>
+<text x="205" y="173.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="211" y="187.3" width="20" height="37.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="206.2" x2="216" y2="206.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd01)" opacity="0.8"/>
+<text x="205" y="210.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="211" y="224.1" width="20" height="20.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="234.1" x2="226" y2="234.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd01)" opacity="0.8"/>
+<text x="205" y="238.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="211" y="245.3" width="20" height="8.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="253.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="211" y="250.2" width="20" height="22.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="261.2" x2="216" y2="261.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd01)" opacity="0.8"/>
+<text x="205" y="265.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="211" y="264.0" width="20" height="12.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="270.3" x2="226" y2="270.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd01)" opacity="0.8"/>
+<text x="205" y="274.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="211" y="300.2" width="20" height="39.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="319.8" x2="216" y2="319.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd01)" opacity="0.8"/>
+<text x="205" y="323.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<text x="205" y="55" text-anchor="end" fill="#FFD700" font-size="12" font-weight="700" letter-spacing="0.5">Cd01</text>
+<circle cx="221.0" cy="221.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="225.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="368" width="22" height="248" rx="5" fill="#E63946" opacity="0.15" stroke="#E63946" stroke-width="1"/>
+<rect x="211" y="368.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="374.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="211" y="369.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="375.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="211" y="370.6" width="20" height="53.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="397.3" x2="226" y2="397.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="205" y="401.3" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="211" y="423.9" width="20" height="10.3" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="429.1" x2="226" y2="429.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="205" y="433.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="211" y="434.2" width="20" height="19.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="443.9" x2="226" y2="443.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="205" y="447.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="211" y="454.0" width="20" height="29.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="468.9" x2="226" y2="468.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="205" y="472.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="211" y="491.6" width="20" height="5.6" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="498.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="211" y="497.2" width="20" height="20.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="507.2" x2="226" y2="507.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="205" y="511.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="211" y="534.4" width="20" height="18.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="543.6" x2="226" y2="543.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="205" y="547.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="211" y="559.7" width="20" height="15.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="567.4" x2="226" y2="567.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="205" y="571.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="211" y="575.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="581.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="211" y="580.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="586.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="211" y="581.6" width="20" height="14.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="588.6" x2="216" y2="588.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd02)" opacity="0.8"/>
+<text x="205" y="592.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="211" y="595.8" width="20" height="20.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="605.8" x2="216" y2="605.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd02)" opacity="0.8"/>
+<text x="205" y="609.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">14</text>
+<text x="205" y="363" text-anchor="end" fill="#E63946" font-size="12" font-weight="700" letter-spacing="0.5">Cd02</text>
+<circle cx="221.0" cy="486.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="490.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="644" width="22" height="235" rx="5" fill="#1A237E" opacity="0.15" stroke="#1A237E" stroke-width="1"/>
+<rect x="211" y="645.8" width="20" height="39.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="665.5" x2="216" y2="665.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd03)" opacity="0.8"/>
+<text x="205" y="669.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="211" y="685.4" width="20" height="13.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="692.0" x2="216" y2="692.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd03)" opacity="0.8"/>
+<text x="205" y="696.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="211" y="698.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="704.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="211" y="699.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="705.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="211" y="702.2" width="20" height="6.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="709.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="211" y="708.7" width="20" height="6.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="716.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="211" y="714.6" width="20" height="11.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="720.1" x2="216" y2="720.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd03)" opacity="0.8"/>
+<text x="205" y="724.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="211" y="725.8" width="20" height="4.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="732.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="211" y="730.8" width="20" height="82.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="772.2" x2="216" y2="772.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd03)" opacity="0.8"/>
+<text x="205" y="776.2" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="211" y="814.7" width="20" height="10.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="819.8" x2="226" y2="819.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd03)" opacity="0.8"/>
+<text x="205" y="823.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="211" y="825.9" width="20" height="16.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="833.9" x2="226" y2="833.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd03)" opacity="0.8"/>
+<text x="205" y="837.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="211" y="842.1" width="20" height="5.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="848.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="211" y="847.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="853.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<rect x="211" y="848.3" width="20" height="4.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="854.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">14</text>
+<rect x="211" y="851.1" width="20" height="4.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="857.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">15</text>
+<rect x="211" y="856.0" width="20" height="9.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="864.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">16</text>
+<rect x="211" y="865.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="871.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">17</text>
+<rect x="211" y="870.3" width="20" height="6.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="877.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">18</text>
+<rect x="211" y="876.9" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="882.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">19</text>
+<text x="205" y="639" text-anchor="end" fill="#1A237E" font-size="12" font-weight="700" letter-spacing="0.5">Cd03</text>
+<circle cx="221.0" cy="779.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="783.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="907" width="22" height="225" rx="5" fill="#9C27B0" opacity="0.15" stroke="#9C27B0" stroke-width="1"/>
+<rect x="211" y="907.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="913.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="211" y="910.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="916.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="211" y="914.8" width="20" height="9.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="923.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="211" y="930.2" width="20" height="36.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="948.3" x2="226" y2="948.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd04)" opacity="0.8"/>
+<text x="205" y="952.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1012.3" width="20" height="86.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="1055.2" x2="226" y2="1055.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd04)" opacity="0.8"/>
+<text x="205" y="1059.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1098.5" width="20" height="33.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="1115.1" x2="216" y2="1115.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd04)" opacity="0.8"/>
+<text x="205" y="1119.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<text x="205" y="902" text-anchor="end" fill="#9C27B0" font-size="12" font-weight="700" letter-spacing="0.5">Cd04</text>
+<circle cx="221.0" cy="1022.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1026.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1160" width="22" height="178" rx="5" fill="#E06D10" opacity="0.15" stroke="#E06D10" stroke-width="1"/>
+<rect x="211" y="1160.2" width="20" height="91.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1205.7" x2="216" y2="1205.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd05)" opacity="0.8"/>
+<text x="205" y="1209.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1264.4" width="20" height="12.5" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1270.6" x2="226" y2="1270.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd05)" opacity="0.8"/>
+<text x="205" y="1274.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1285.3" width="20" height="52.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1311.5" x2="226" y2="1311.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd05)" opacity="0.8"/>
+<text x="205" y="1315.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<text x="205" y="1155" text-anchor="end" fill="#E06D10" font-size="12" font-weight="700" letter-spacing="0.5">Cd05</text>
+<circle cx="221.0" cy="1245.7" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1249.7" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1366" width="22" height="169" rx="5" fill="#43A047" opacity="0.15" stroke="#43A047" stroke-width="1"/>
+<rect x="211" y="1366.2" width="20" height="47.4" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1389.9" x2="216" y2="1389.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd06)" opacity="0.8"/>
+<text x="205" y="1393.9" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1415.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1421.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1428.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1434.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1430.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1436.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1432.6" width="20" height="41.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1453.5" x2="216" y2="1453.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd06)" opacity="0.8"/>
+<text x="205" y="1457.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1482.2" width="20" height="52.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1508.6" x2="216" y2="1508.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd06)" opacity="0.8"/>
+<text x="205" y="1512.6" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">6</text>
+<text x="205" y="1361" text-anchor="end" fill="#43A047" font-size="12" font-weight="700" letter-spacing="0.5">Cd06</text>
+<circle cx="221.0" cy="1451.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1455.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1563" width="22" height="165" rx="5" fill="#3498DB" opacity="0.15" stroke="#3498DB" stroke-width="1"/>
+<rect x="211" y="1563.1" width="20" height="35.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1581.0" x2="226" y2="1581.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd07)" opacity="0.8"/>
+<text x="205" y="1585.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1599.2" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1605.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1603.7" width="20" height="9.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1612.4" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1613.3" width="20" height="114.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1670.6" x2="226" y2="1670.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd07)" opacity="0.8"/>
+<text x="205" y="1674.6" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<text x="205" y="1558" text-anchor="end" fill="#3498DB" font-size="12" font-weight="700" letter-spacing="0.5">Cd07</text>
+<circle cx="221.0" cy="1652.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1656.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1756" width="22" height="163" rx="5" fill="#FFA07A" opacity="0.15" stroke="#FFA07A" stroke-width="1"/>
+<rect x="211" y="1756.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1762.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1757.3" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1763.3" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1758.6" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1764.6" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1759.5" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1765.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1760.1" width="20" height="5.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1766.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1765.6" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1771.6" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1768.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1774.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1769.9" width="20" height="5.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1776.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1775.9" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1781.9" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1777.8" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1783.8" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1779.6" width="20" height="58.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1808.9" x2="216" y2="1808.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd08)" opacity="0.8"/>
+<text x="205" y="1812.9" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1838.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1844.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1841.9" width="20" height="17.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1850.4" x2="226" y2="1850.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd08)" opacity="0.8"/>
+<text x="205" y="1854.4" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1861.2" width="20" height="4.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1867.4" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1867.0" width="20" height="5.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1873.9" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1867.6" width="20" height="7.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1875.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1891.3" width="20" height="11.8" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1897.2" x2="216" y2="1897.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd08)" opacity="0.8"/>
+<text x="205" y="1901.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">17</text>
+<text x="205" y="1751" text-anchor="end" fill="#FFA07A" font-size="12" font-weight="700" letter-spacing="0.5">Cd08</text>
+<circle cx="221.0" cy="1903.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1907.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1947" width="22" height="161" rx="5" fill="#72d1b9" opacity="0.15" stroke="#72d1b9" stroke-width="1"/>
+<rect x="211" y="1947.2" width="20" height="64.9" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="1979.6" x2="216" y2="1979.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd09)" opacity="0.8"/>
+<text x="205" y="1983.6" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2028.6" width="20" height="79.2" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2068.2" x2="216" y2="2068.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd09)" opacity="0.8"/>
+<text x="205" y="2072.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<text x="205" y="1942" text-anchor="end" fill="#72d1b9" font-size="12" font-weight="700" letter-spacing="0.5">Cd09</text>
+<circle cx="221.0" cy="2024.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2028.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2136" width="22" height="161" rx="5" fill="#0055a6" opacity="0.15" stroke="#0055a6" stroke-width="1"/>
+<rect x="211" y="2141.9" width="20" height="53.9" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="228" y1="2168.9" x2="216" y2="2168.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd10)" opacity="0.8"/>
+<text x="205" y="2172.9" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2195.2" width="20" height="10.9" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="214" y1="2200.6" x2="226" y2="2200.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd10)" opacity="0.8"/>
+<text x="205" y="2204.6" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2204.9" width="20" height="6.9" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2212.4" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2229.6" width="20" height="37.9" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="214" y1="2248.6" x2="226" y2="2248.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd10)" opacity="0.8"/>
+<text x="205" y="2252.6" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2268.1" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2274.1" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2269.7" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2275.7" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2274.7" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2280.7" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2275.2" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2281.2" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2276.2" width="20" height="8.8" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2284.6" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2286.0" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2292.0" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">10</text>
+<rect x="211" y="2288.5" width="20" height="8.4" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2296.7" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">11</text>
+<text x="205" y="2131" text-anchor="end" fill="#0055a6" font-size="12" font-weight="700" letter-spacing="0.5">Cd10</text>
+<circle cx="221.0" cy="2217.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2221.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2325" width="22" height="159" rx="5" fill="#e3b58f" opacity="0.15" stroke="#e3b58f" stroke-width="1"/>
+<rect x="211" y="2325.1" width="20" height="35.3" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="214" y1="2342.8" x2="226" y2="2342.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="205" y="2346.8" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2359.4" width="20" height="32.4" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="214" y1="2375.6" x2="226" y2="2375.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="205" y="2379.6" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2393.6" width="20" height="15.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="214" y1="2401.2" x2="226" y2="2401.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="205" y="2405.2" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2407.4" width="20" height="7.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2415.2" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2415.2" width="20" height="13.1" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="228" y1="2421.7" x2="216" y2="2421.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd11)" opacity="0.8"/>
+<text x="205" y="2425.7" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2421.9" width="20" height="20.3" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="214" y1="2432.0" x2="226" y2="2432.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="205" y="2436.0" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2440.2" width="20" height="22.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="214" y1="2451.2" x2="226" y2="2451.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="205" y="2455.2" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2462.2" width="20" height="21.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="214" y1="2473.0" x2="226" y2="2473.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="205" y="2477.0" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">8</text>
+<text x="205" y="2320" text-anchor="end" fill="#e3b58f" font-size="12" font-weight="700" letter-spacing="0.5">Cd11</text>
+<circle cx="221.0" cy="2398.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2402.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+</g>
+<g id="queryChrs">
+<rect x="1190" y="60" width="22" height="134" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="62.0" width="20" height="34.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="79.4" x2="1196" y2="79.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd01)" opacity="0.8"/>
+<text x="1217" y="83.4" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="97.2" width="20" height="37.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="115.9" x2="1206" y2="115.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd01)" opacity="0.8"/>
+<text x="1217" y="119.9" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="134.6" width="20" height="6.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="141.9" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="146.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="152.7" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="149.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="155.3" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="156.1" width="20" height="8.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="164.2" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="167.1" width="20" height="5.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="173.7" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="172.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="178.4" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="172.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="178.9" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="175.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="181.1" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="175.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="181.8" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="177.3" width="20" height="11.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="182.8" x2="1196" y2="182.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd01)" opacity="0.8"/>
+<text x="1217" y="186.8" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="188.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="194.4" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="190.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="196.4" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<text x="1217" y="55" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl08</text>
+<rect x="1190" y="222" width="22" height="280" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="223.5" width="20" height="10.5" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="228.8" x2="1206" y2="228.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="1217" y="232.8" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="234.1" width="20" height="8.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="242.1" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="242.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="248.2" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="242.8" width="20" height="12.9" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="249.3" x2="1206" y2="249.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="1217" y="253.3" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="255.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="261.8" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="257.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="263.3" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="257.9" width="20" height="45.2" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="280.5" x2="1206" y2="280.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="1217" y="284.5" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="304.5" width="20" height="6.9" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="311.9" fill="#E63946" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="311.4" width="20" height="13.6" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="318.2" x2="1206" y2="318.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="1217" y="322.2" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="325.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="331.1" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="327.8" width="20" height="5.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="334.3" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="332.9" width="20" height="10.3" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="338.0" x2="1206" y2="338.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd02)" opacity="0.8"/>
+<text x="1217" y="342.0" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="343.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="349.3" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="354.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="360.8" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="358.9" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="364.9" fill="#1A237E" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="361.4" width="20" height="14.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="368.8" x2="1206" y2="368.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd03)" opacity="0.8"/>
+<text x="1217" y="372.8" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="375.1" width="20" height="6.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="382.3" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="381.5" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="387.5" fill="#1A237E" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="382.5" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="388.5" fill="#1A237E" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="384.3" width="20" height="13.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="390.9" x2="1196" y2="390.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd03)" opacity="0.8"/>
+<text x="1217" y="394.9" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="396.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="402.8" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="401.0" width="20" height="9.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="409.8" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="410.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="416.7" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="410.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="416.7" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="411.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="417.4" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="411.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="417.7" fill="#1A237E" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="415.4" width="20" height="18.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="424.7" x2="1196" y2="424.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd03)" opacity="0.8"/>
+<text x="1217" y="428.7" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="434.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="440.0" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="437.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="443.0" fill="#1A237E" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="437.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="443.8" fill="#1A237E" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="440.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="446.0" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="443.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="449.1" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="444.5" width="20" height="33.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="461.3" x2="1196" y2="461.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd03)" opacity="0.8"/>
+<text x="1217" y="465.3" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="478.0" width="20" height="12.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="484.1" x2="1206" y2="484.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd01)" opacity="0.8"/>
+<text x="1217" y="488.1" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="490.3" width="20" height="11.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="496.0" x2="1196" y2="496.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd01)" opacity="0.8"/>
+<text x="1217" y="500.0" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<text x="1217" y="217" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl01</text>
+<rect x="1190" y="530" width="22" height="176" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="531.1" width="20" height="59.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="560.9" x2="1196" y2="560.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd04)" opacity="0.8"/>
+<text x="1217" y="564.9" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="590.8" width="20" height="4.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="597.2" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="596.4" width="20" height="24.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="608.6" x2="1206" y2="608.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd04)" opacity="0.8"/>
+<text x="1217" y="612.6" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="621.3" width="20" height="79.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="660.9" x2="1206" y2="660.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd04)" opacity="0.8"/>
+<text x="1217" y="664.9" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="700.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="706.8" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="701.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="707.8" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<text x="1217" y="525" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl04</text>
+<rect x="1190" y="734" width="22" height="91" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="736.3" width="20" height="9.5" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="745.1" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="746.1" width="20" height="29.5" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="760.9" x2="1206" y2="760.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd05)" opacity="0.8"/>
+<text x="1217" y="764.9" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="775.8" width="20" height="48.5" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="800.0" x2="1196" y2="800.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd05)" opacity="0.8"/>
+<text x="1217" y="804.0" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<text x="1217" y="729" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl10</text>
+<rect x="1190" y="853" width="22" height="138" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="854.2" width="20" height="74.4" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="891.3" x2="1196" y2="891.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd06)" opacity="0.8"/>
+<text x="1217" y="895.3" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="928.9" width="20" height="13.2" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="935.5" x2="1196" y2="935.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd06)" opacity="0.8"/>
+<text x="1217" y="939.5" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="941.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="947.1" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="943.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="949.3" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="945.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="951.7" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="948.4" width="20" height="41.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="969.2" x2="1196" y2="969.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd06)" opacity="0.8"/>
+<text x="1217" y="973.2" fill="#43A047" font-size="10" font-weight="500">1</text>
+<text x="1217" y="848" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl07</text>
+<rect x="1190" y="1019" width="22" height="202" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1019.9" width="20" height="44.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1042.1" x2="1206" y2="1042.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd07)" opacity="0.8"/>
+<text x="1217" y="1046.1" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1065.0" width="20" height="7.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1072.9" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1074.2" width="20" height="12.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="1080.2" x2="1196" y2="1080.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd07)" opacity="0.8"/>
+<text x="1217" y="1084.2" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1086.6" width="20" height="133.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1153.3" x2="1206" y2="1153.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd07)" opacity="0.8"/>
+<text x="1217" y="1157.3" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<text x="1217" y="1014" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl02</text>
+<rect x="1190" y="1249" width="22" height="142" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1267.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1273.2" fill="#FFA07A" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1270.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1276.2" fill="#FFA07A" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1272.1" width="20" height="11.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1277.7" x2="1206" y2="1277.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd08)" opacity="0.8"/>
+<text x="1217" y="1281.7" fill="#FFA07A" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1283.9" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1289.9" fill="#FFA07A" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1287.1" width="20" height="9.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1295.6" fill="#FFA07A" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1287.5" width="20" height="12.9" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1294.0" x2="1206" y2="1294.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd08)" opacity="0.8"/>
+<text x="1217" y="1298.0" fill="#FFA07A" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1299.9" width="20" height="73.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1336.6" x2="1196" y2="1336.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd08)" opacity="0.8"/>
+<text x="1217" y="1340.6" fill="#FFA07A" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1373.4" width="20" height="15.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1194" y1="1381.2" x2="1206" y2="1381.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="1217" y="1385.2" fill="#e3b58f" font-size="10" font-weight="500">8</text>
+<text x="1217" y="1244" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl06</text>
+<rect x="1190" y="1419" width="22" height="155" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1419.8" width="20" height="90.8" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="1465.2" x2="1196" y2="1465.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd09)" opacity="0.8"/>
+<text x="1217" y="1469.2" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1506.6" width="20" height="64.9" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="1539.1" x2="1196" y2="1539.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd09)" opacity="0.8"/>
+<text x="1217" y="1543.1" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1414" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl05</text>
+<rect x="1190" y="1602" width="22" height="95" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1602.2" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1608.2" fill="#0055a6" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1603.8" width="20" height="15.7" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="1611.6" x2="1206" y2="1611.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd10)" opacity="0.8"/>
+<text x="1217" y="1615.6" fill="#0055a6" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1619.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1625.7" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1621.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1627.0" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1624.8" width="20" height="15.1" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="1632.3" x2="1206" y2="1632.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd10)" opacity="0.8"/>
+<text x="1217" y="1636.3" fill="#0055a6" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1640.0" width="20" height="14.2" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="1647.1" x2="1206" y2="1647.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd10)" opacity="0.8"/>
+<text x="1217" y="1651.1" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1654.2" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1660.2" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1655.0" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1661.0" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1655.2" width="20" height="24.8" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1208" y1="1667.6" x2="1196" y2="1667.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd10)" opacity="0.8"/>
+<text x="1217" y="1671.6" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1680.1" width="20" height="4.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1686.3" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1684.6" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1690.6" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1685.8" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1691.8" fill="#0055a6" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1686.0" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1692.0" fill="#0055a6" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1686.5" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1692.5" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1689.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1695.7" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1690.9" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1696.9" fill="#0055a6" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1692.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1698.2" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1694.5" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1700.5" fill="#0055a6" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1695.8" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1701.8" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1597" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl09</text>
+<rect x="1190" y="1725" width="22" height="187" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1725.5" width="20" height="42.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1194" y1="1746.7" x2="1206" y2="1746.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="1217" y="1750.7" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1770.0" width="20" height="26.5" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1194" y1="1783.2" x2="1206" y2="1783.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="1217" y="1787.2" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1792.4" width="20" height="11.8" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1194" y1="1798.3" x2="1206" y2="1798.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="1217" y="1802.3" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1802.8" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1808.8" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1805.7" width="20" height="19.1" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="1815.2" x2="1196" y2="1815.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cd11)" opacity="0.8"/>
+<text x="1217" y="1819.2" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1816.3" width="20" height="35.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1194" y1="1833.8" x2="1206" y2="1833.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="1217" y="1837.8" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1857.8" width="20" height="29.3" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1194" y1="1872.5" x2="1206" y2="1872.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cd11)" opacity="0.8"/>
+<text x="1217" y="1876.5" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1887.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1893.2" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1894.8" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1900.8" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<text x="1217" y="1720" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Xl03</text>
+</g>
+</svg>
+</div>
+
+<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#FFD700"></div><span>Cd01</span></div><div class="legend-item"><div class="legend-dot" style="background:#E63946"></div><span>Cd02</span></div><div class="legend-item"><div class="legend-dot" style="background:#1A237E"></div><span>Cd03</span></div><div class="legend-item"><div class="legend-dot" style="background:#9C27B0"></div><span>Cd04</span></div><div class="legend-item"><div class="legend-dot" style="background:#E06D10"></div><span>Cd05</span></div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div><span>Cd06</span></div><div class="legend-item"><div class="legend-dot" style="background:#3498DB"></div><span>Cd07</span></div><div class="legend-item"><div class="legend-dot" style="background:#FFA07A"></div><span>Cd08</span></div><div class="legend-item"><div class="legend-dot" style="background:#72d1b9"></div><span>Cd09</span></div><div class="legend-item"><div class="legend-dot" style="background:#0055a6"></div><span>Cd10</span></div><div class="legend-item"><div class="legend-dot" style="background:#e3b58f"></div><span>Cd11</span></div></div>
+<div class="stats-bar"><span><b>106</b> synteny fragments</span><span><b>11</b> ref chromosomes</span><span><b>10</b> query chromosomes</span><span><b>53</b> forward &nbsp;|&nbsp; <b>53</b> reverse</span><span>max size <b>738</b> genes</span></div>
+<div id="tooltip"></div>
+
+<script>
+function showTip(e, el) {
+  const parts = el.dataset.tip.split(' | ');
+  const tip = document.getElementById('tooltip');
+  tip.innerHTML = parts.map((p,i) => i===0
+    ? `<div style="color:#0ea5e9;font-weight:700;margin-bottom:5px">${p}</div>`
+    : `<div>${p}</div>`
+  ).join('');
+  tip.style.left = (e.clientX + 14) + 'px';
+  tip.style.top  = (e.clientY - 10) + 'px';
+  tip.classList.add('show');
+}
+function hideTip() { document.getElementById('tooltip').classList.remove('show'); }
+</script>
+</body>
+</html>

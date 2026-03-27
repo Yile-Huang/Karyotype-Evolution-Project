@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synteny — Ara_Cru.blast.icl.block.corr.csv-r-r.reform.Claude_filtered.txt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0a0e1a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; min-height:100vh; }
+  .canvas-container { padding:20px 32px; overflow-x:auto; }
+  svg { display:block; max-width:100%; }
+  .legend {
+    padding:10px 32px 16px; display:flex; gap:18px; flex-wrap:wrap;
+    border-top:1px solid #1e2d45;
+  }
+  .legend-item { display:flex; align-items:center; gap:7px; font-size:11px; color:#64748b; }
+  .legend-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0; }
+  .stats-bar {
+    padding:10px 32px 18px; display:flex; gap:28px; font-size:10px; color:#64748b; flex-wrap:wrap;
+  }
+  .stats-bar b { color:#0ea5e9; margin-right:3px; }
+  #tooltip {
+    position:fixed; background:#1e2d45; border:1px solid #38bdf8; border-radius:6px;
+    padding:10px 14px; font-size:11px; line-height:1.8; color:#e2e8f0;
+    pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:1000;
+    max-width:340px;
+  }
+  #tooltip.show { opacity:1; }
+</style>
+</head>
+<body>
+
+<div class="canvas-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2122" width="1400" height="2122" style="background:#0a0e1a;font-family:'JetBrains Mono',monospace">
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="arr_Cr01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFD700"/></marker>
+<marker id="arr_rev_Cr01" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFD700"/></marker>
+<marker id="arr_Cr02" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E63946"/></marker>
+<marker id="arr_rev_Cr02" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E63946"/></marker>
+<marker id="arr_Cr03" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1A237E"/></marker>
+<marker id="arr_rev_Cr03" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#1A237E"/></marker>
+<marker id="arr_Cr04" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9C27B0"/></marker>
+<marker id="arr_rev_Cr04" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9C27B0"/></marker>
+<marker id="arr_Cr05" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E06D10"/></marker>
+<marker id="arr_rev_Cr05" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E06D10"/></marker>
+<marker id="arr_Cr06" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#43A047"/></marker>
+<marker id="arr_rev_Cr06" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#43A047"/></marker>
+<marker id="arr_Cr07" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#3498DB"/></marker>
+<marker id="arr_rev_Cr07" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#3498DB"/></marker>
+<marker id="arr_Cr08" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFA07A"/></marker>
+<marker id="arr_rev_Cr08" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFA07A"/></marker>
+</defs>
+<g id="ribbons" opacity="0.35">
+<path d="M232.0,839.1 C700.0,839.1 700.0,693.7 1190.0,693.7 L1190.0,791.9 C700.0,791.9 700.0,1052.9 232.0,1052.9 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Cr04 → At02 | Ref: Carub.0004s0001.1.v1.1 - Carub.0004s3086.1.v1.1 | Query: AT2G20920.1.Araport11.447 - AT2G48140.1.Araport11.447 | Dir: + | Size: 2250 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,66.4 C700.0,66.4 700.0,64.0 1190.0,64.0 L1190.0,139.0 C700.0,139.0 700.0,181.5 232.0,181.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cr01 → At01 | Ref: Carub.0001s0124.1.v1.1 - Carub.0001s2372.1.v1.1 | Query: AT1G02230.1.Araport11.447 - AT1G24250.1.Araport11.447 | Dir: + | Size: 1845 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1910.0 C700.0,1910.0 700.0,1197.1 1190.0,1197.1 L1190.0,1261.4 C700.0,1261.4 700.0,2025.2 232.0,2025.2 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cr08 → At05 | Ref: Carub.0008s0737.1.v1.1 - Carub.0008s2682.1.v1.1 | Query: AT5G47830.1.Araport11.447 - AT5G65925.1.Araport11.447 | Dir: + | Size: 1486 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1184.4 C700.0,1184.4 700.0,524.9 1190.0,524.9 L1190.0,583.0 C700.0,583.0 700.0,1275.8 232.0,1275.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Cr05 → At03 | Ref: Carub.0005s1277.1.v1.1 - Carub.0005s3015.1.v1.1 | Query: AT3G46500.5.Araport11.447 - AT3G63540.1.Araport11.447 | Dir: + | Size: 1381 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1346.4 C700.0,1346.4 700.0,1046.8 1190.0,1046.8 L1190.0,1106.6 C700.0,1106.6 700.0,1438.6 232.0,1438.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At05 | Ref: Carub.0006s0816.1.v1.1 - Carub.0006s2464.1.v1.1 | Query: AT5G09750.1.Araport11.447 - AT5G27080.1.Araport11.447 | Dir: + | Size: 1365 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,602.4 C700.0,602.4 700.0,371.3 1190.0,371.3 L1190.0,422.1 C700.0,422.1 700.0,684.1 232.0,684.1 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cr03 → At03 | Ref: Carub.0003s0119.1.v1.1 - Carub.0003s1724.1.v1.1 | Query: AT3G02080.1.Araport11.447 - AT3G17280.2.Araport11.447 | Dir: + | Size: 1322 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,445.9 C700.0,445.9 700.0,281.3 1190.0,281.3 L1190.0,336.1 C700.0,336.1 700.0,563.0 232.0,563.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cr02 → At01 | Ref: Carub.0002s0971.1.v1.1 - Carub.0002s2658.1.v1.1 | Query: AT1G64740.1.Araport11.447 - AT1G79720.1.Araport11.447 | Dir: + | Size: 1248 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,193.0 C700.0,193.0 700.0,147.2 1190.0,147.2 L1190.0,246.5 C700.0,246.5 700.0,332.4 232.0,332.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cr01 → At01 | Ref: Carub.0001s2582.1.v1.1 - Carub.0001s4353.1.v1.1 | Query: AT1G27290.1.Araport11.447 - AT1G54290.1.Araport11.447 | Dir: + | Size: 1189 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1628.4 C700.0,1628.4 700.0,922.4 1190.0,922.4 L1190.0,954.0 C700.0,954.0 700.0,1679.9 232.0,1679.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cr07 → At04 | Ref: Carub.0007s2070.1.v1.1 - Carub.0007s1078.1.v1.1 | Query: AT4G20740.1.Araport11.447 - AT4G29730.1.Araport11.447 | Dir: - | Size: 793 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1680.2 C700.0,1680.2 700.0,888.7 1190.0,888.7 L1190.0,921.5 C700.0,921.5 700.0,1741.0 232.0,1741.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cr07 → At04 | Ref: Carub.0007s3020.1.v1.1 - Carub.0007s2071.1.v1.1 | Query: AT4G12640.1.Araport11.447 - AT4G20460.1.Araport11.447 | Dir: - | Size: 690 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1587.1 C700.0,1587.1 700.0,954.4 1190.0,954.4 L1190.0,979.9 C700.0,979.9 700.0,1628.0 232.0,1628.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cr07 → At04 | Ref: Carub.0007s1076.1.v1.1 - Carub.0007s0345.1.v1.1 | Query: AT4G29890.1.Araport11.447 - AT4G36870.2.Araport11.447 | Dir: - | Size: 610 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1308.6 C700.0,1308.6 700.0,1022.5 1190.0,1022.5 L1190.0,1046.5 C700.0,1046.5 700.0,1346.3 232.0,1346.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At05 | Ref: Carub.0006s0086.1.v1.1 - Carub.0006s0815.1.v1.1 | Query: AT5G02010.1.Araport11.447 - AT5G09650.1.Araport11.447 | Dir: + | Size: 583 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,682.8 C700.0,682.8 700.0,422.1 1190.0,422.1 L1190.0,447.6 C700.0,447.6 700.0,725.6 232.0,725.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cr03 → At03 | Ref: Carub.0003s1701.1.v1.1 - Carub.0003s2446.1.v1.1 | Query: AT3G17300.1.Araport11.447 - AT3G24060.1.Araport11.447 | Dir: + | Size: 577 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,368.2 C700.0,368.2 700.0,253.6 1190.0,253.6 L1190.0,281.3 C700.0,281.3 700.0,421.0 232.0,421.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cr02 → At01 | Ref: Carub.0002s0803.1.v1.1 - Carub.0002s0001.1.v1.1 | Query: AT1G56210.1.Araport11.447 - AT1G64720.1.Araport11.447 | Dir: - | Size: 490 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,750.6 C700.0,750.6 700.0,650.6 1190.0,650.6 L1190.0,693.6 C700.0,693.6 700.0,811.0 232.0,811.0 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cr03 → At02 | Ref: Carub.0003s2746.1.v1.1 - Carub.0003s3557.1.v1.1 | Query: AT2G10940.1.Araport11.447 - AT2G20900.1.Araport11.447 | Dir: + | Size: 484 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1844.1 C700.0,1844.1 700.0,1173.8 1190.0,1173.8 L1190.0,1196.9 C700.0,1196.9 700.0,1906.4 232.0,1906.4 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cr08 → At05 | Ref: Carub.0008s0723.1.v1.1 - Carub.0008s0001.1.v1.1 | Query: AT5G42120.1.Araport11.447 - AT5G47780.1.Araport11.447 | Dir: - | Size: 468 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1099.3 C700.0,1099.3 700.0,453.0 1190.0,453.0 L1190.0,483.5 C700.0,483.5 700.0,1150.1 232.0,1150.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Cr05 → At03 | Ref: Carub.0005s0325.1.v1.1 - Carub.0005s0873.1.v1.1 | Query: AT3G25540.1.Araport11.447 - AT3G30842.1.Araport11.447 | Dir: + | Size: 333 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1459.5 C700.0,1459.5 700.0,850.9 1190.0,850.9 L1190.0,888.7 C700.0,888.7 700.0,1510.6 232.0,1510.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At04 | Ref: Carub.0006s2627.1.v1.1 - Carub.0006s3195.1.v1.1 | Query: AT4G06536.1.Araport11.447 - AT4G12620.1.Araport11.447 | Dir: + | Size: 313 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1785.2 C700.0,1785.2 700.0,1159.8 1190.0,1159.8 L1190.0,1173.7 C700.0,1173.7 700.0,1815.0 232.0,1815.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cr07 → At05 | Ref: Carub.0007s3776.1.v1.1 - Carub.0007s3323.1.v1.1 | Query: AT5G38310.1.Araport11.447 - AT5G42100.1.Araport11.447 | Dir: - | Size: 292 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1081.2 C700.0,1081.2 700.0,611.7 1190.0,611.7 L1190.0,623.2 C700.0,623.2 700.0,1099.2 232.0,1099.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Cr05 → At02 | Ref: Carub.0005s0004.1.v1.1 - Carub.0005s0324.1.v1.1 | Query: AT2G01060.1.Araport11.447 - AT2G04038.1.Araport11.447 | Dir: + | Size: 208 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1519.0 C700.0,1519.0 700.0,825.2 1190.0,825.2 L1190.0,834.8 C700.0,834.8 700.0,1533.5 232.0,1533.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At04 | Ref: Carub.0006s3581.1.v1.1 - Carub.0006s3337.1.v1.1 | Query: AT4G01380.1.Araport11.447 - AT4G03630.1.Araport11.447 | Dir: - | Size: 198 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1152.1 C700.0,1152.1 700.0,503.2 1190.0,503.2 L1190.0,524.9 C700.0,524.9 700.0,1181.2 232.0,1181.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Cr05 → At03 | Ref: Carub.0005s0880.1.v1.1 - Carub.0005s1228.1.v1.1 | Query: AT3G42660.1.Araport11.447 - AT3G46490.1.Araport11.447 | Dir: + | Size: 197 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,181.4 C700.0,181.4 700.0,139.1 1190.0,139.1 L1190.0,147.2 C700.0,147.2 700.0,192.9 232.0,192.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cr01 → At01 | Ref: Carub.0001s2581.1.v1.1 - Carub.0001s2371.1.v1.1 | Query: AT1G24260.2.Araport11.447 - AT1G27280.1.Araport11.447 | Dir: - | Size: 168 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1569.0 C700.0,1569.0 700.0,984.6 1190.0,984.6 L1190.0,991.0 C700.0,991.0 700.0,1579.5 232.0,1579.5 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cr07 → At04 | Ref: Carub.0007s0001.1.v1.1 - Carub.0007s0209.1.v1.1 | Query: AT4G38120.3.Araport11.447 - AT4G40100.1.Araport11.447 | Dir: + | Size: 167 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2025.2 C700.0,2025.2 700.0,1261.4 1190.0,1261.4 L1190.0,1267.0 C700.0,1267.0 700.0,2033.9 232.0,2033.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cr08 → At05 | Ref: Carub.0008s2860.1.v1.1 - Carub.0008s2683.1.v1.1 | Query: AT5G65930.3.Araport11.447 - AT5G67640.1.Araport11.447 | Dir: - | Size: 157 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,563.1 C700.0,563.1 700.0,336.1 1190.0,336.1 L1190.0,339.9 C700.0,339.9 700.0,569.0 232.0,569.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cr02 → At01 | Ref: Carub.0002s2777.1.v1.1 - Carub.0002s2659.1.v1.1 | Query: AT1G79730.1.Araport11.447 - AT1G80950.1.Araport11.447 | Dir: - | Size: 101 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,597.1 C700.0,597.1 700.0,368.0 1190.0,368.0 L1190.0,371.3 C700.0,371.3 700.0,602.3 232.0,602.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cr03 → At03 | Ref: Carub.0003s0118.1.v1.1 - Carub.0003s0001.1.v1.1 | Query: AT3G01015.1.Araport11.447 - AT3G02070.1.Araport11.447 | Dir: - | Size: 99 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1510.9 C700.0,1510.9 700.0,836.3 1190.0,836.3 L1190.0,845.6 C700.0,845.6 700.0,1519.3 232.0,1519.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At04 | Ref: Carub.0006s3202.1.v1.1 - Carub.0006s3342.1.v1.1 | Query: AT4G03820.4.Araport11.447 - AT4G05497.1.Araport11.447 | Dir: + | Size: 99 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,332.4 C700.0,332.4 700.0,249.1 1190.0,249.1 L1190.0,253.5 C700.0,253.5 700.0,340.0 232.0,340.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cr01 → At01 | Ref: Carub.0001s4354.1.v1.1 - Carub.0001s4489.1.v1.1 | Query: AT1G55070.1.Araport11.447 - AT1G56180.1.Araport11.447 | Dir: + | Size: 95 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,60.2 C700.0,60.2 700.0,60.0 1190.0,60.0 L1190.0,63.9 C700.0,63.9 700.0,66.3 232.0,66.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Cr01 → At01 | Ref: Carub.0001s0122.1.v1.1 - Carub.0001s0007.1.v1.1 | Query: AT1G01010.1.Araport11.447 - AT1G02205.3.Araport11.447 | Dir: - | Size: 94 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,726.4 C700.0,726.4 700.0,448.7 1190.0,448.7 L1190.0,453.0 C700.0,453.0 700.0,734.4 232.0,734.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cr03 → At03 | Ref: Carub.0003s2462.1.v1.1 - Carub.0003s2585.1.v1.1 | Query: AT3G24290.1.Araport11.447 - AT3G25530.1.Araport11.447 | Dir: + | Size: 82 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1579.6 C700.0,1579.6 700.0,981.3 1190.0,981.3 L1190.0,984.6 C700.0,984.6 700.0,1584.7 232.0,1584.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cr07 → At04 | Ref: Carub.0007s0304.1.v1.1 - Carub.0007s0211.1.v1.1 | Query: AT4G37250.1.Araport11.447 - AT4G38100.1.Araport11.447 | Dir: - | Size: 74 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1774.7 C700.0,1774.7 700.0,1151.9 1190.0,1151.9 L1190.0,1157.9 C700.0,1157.9 700.0,1783.4 232.0,1783.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cr07 → At05 | Ref: Carub.0007s3198.1.v1.1 - Carub.0007s3314.1.v1.1 | Query: AT5G36740.5.Araport11.447 - AT5G37930.1.Araport11.447 | Dir: + | Size: 71 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1304.1 C700.0,1304.1 700.0,1019.1 1190.0,1019.1 L1190.0,1021.9 C700.0,1021.9 700.0,1308.5 232.0,1308.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At05 | Ref: Carub.0006s0085.1.v1.1 - Carub.0006s0001.1.v1.1 | Query: AT5G01030.2.Araport11.447 - AT5G01820.1.Araport11.447 | Dir: - | Size: 70 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1753.4 C700.0,1753.4 700.0,1130.0 1190.0,1130.0 L1190.0,1150.4 C700.0,1150.4 700.0,1774.2 232.0,1774.2 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cr07 → At05 | Ref: Carub.0007s3051.1.v1.1 - Carub.0007s3192.1.v1.1 | Query: AT5G32440.3.Araport11.447 - AT5G36260.1.Araport11.447 | Dir: + | Size: 63 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1438.6 C700.0,1438.6 700.0,1106.7 1190.0,1106.7 L1190.0,1110.8 C700.0,1110.8 700.0,1443.9 232.0,1443.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At05 | Ref: Carub.0006s2539.1.v1.1 - Carub.0006s2462.1.v1.1 | Query: AT5G27110.1.Araport11.447 - AT5G27950.1.Araport11.447 | Dir: - | Size: 60 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1536.5 C700.0,1536.5 700.0,820.1 1190.0,820.1 L1190.0,823.1 C700.0,823.1 700.0,1540.6 232.0,1540.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At04 | Ref: Carub.0006s3720.1.v1.1 - Carub.0006s3643.1.v1.1 | Query: AT4G00026.1.Araport11.447 - AT4G00770.1.Araport11.447 | Dir: - | Size: 59 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,734.4 C700.0,734.4 700.0,623.5 1190.0,623.5 L1190.0,628.8 C700.0,628.8 700.0,739.5 232.0,739.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cr03 → At02 | Ref: Carub.0003s2587.1.v1.1 - Carub.0003s2673.1.v1.1 | Query: AT2G04080.1.Araport11.447 - AT2G05310.1.Araport11.447 | Dir: + | Size: 54 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1533.5 C700.0,1533.5 700.0,823.1 1190.0,823.1 L1190.0,825.2 C700.0,825.2 700.0,1536.5 232.0,1536.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At04 | Ref: Carub.0006s3583.1.v1.1 - Carub.0006s3642.1.v1.1 | Query: AT4G00800.1.Araport11.447 - AT4G01380.1.Araport11.447 | Dir: + | Size: 49 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,421.2 C700.0,421.2 700.0,246.8 1190.0,246.8 L1190.0,249.0 C700.0,249.0 700.0,442.5 232.0,442.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Cr02 → At01 | Ref: Carub.0002s0958.1.v1.1 - Carub.0002s0804.1.v1.1 | Query: AT1G54385.1.Araport11.447 - AT1G55040.1.Araport11.447 | Dir: - | Size: 46 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1584.7 C700.0,1584.7 700.0,979.9 1190.0,979.9 L1190.0,981.2 C700.0,981.2 700.0,1586.9 232.0,1586.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Cr07 → At04 | Ref: Carub.0007s0305.1.v1.1 - Carub.0007s0343.1.v1.1 | Query: AT4G36880.1.Araport11.447 - AT4G37240.1.Araport11.447 | Dir: + | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1442.4 C700.0,1442.4 700.0,1110.7 1190.0,1110.7 L1190.0,1120.4 C700.0,1120.4 700.0,1457.8 232.0,1457.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At05 | Ref: Carub.0006s2523.1.v1.1 - Carub.0006s2618.1.v1.1 | Query: AT5G27944.1.Araport11.447 - AT5G29000.2.Araport11.447 | Dir: + | Size: 35 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,740.8 C700.0,740.8 700.0,630.0 1190.0,630.0 L1190.0,637.9 C700.0,637.9 700.0,747.3 232.0,747.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cr03 → At02 | Ref: Carub.0003s2687.1.v1.1 - Carub.0003s2739.1.v1.1 | Query: AT2G05590.2.Araport11.447 - AT2G07050.1.Araport11.447 | Dir: + | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,724.0 C700.0,724.0 700.0,447.2 1190.0,447.2 L1190.0,448.6 C700.0,448.6 700.0,726.3 232.0,726.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Cr03 → At03 | Ref: Carub.0003s2460.1.v1.1 - Carub.0003s2421.1.v1.1 | Query: AT3G23920.1.Araport11.447 - AT3G24255.7.Araport11.447 | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1510.4 C700.0,1510.4 700.0,845.8 1190.0,845.8 L1190.0,847.5 C700.0,847.5 700.0,1510.9 232.0,1510.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Cr06 → At04 | Ref: Carub.0006s3200.1.v1.1 - Carub.0006s3190.1.v1.1 | Query: AT4G05520.1.Araport11.447 - AT4G05630.1.Araport11.447 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1908.8 C700.0,1908.8 700.0,1197.0 1190.0,1197.0 L1190.0,1197.2 C700.0,1197.2 700.0,1910.0 232.0,1910.0 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Cr08 → At05 | Ref: Carub.0008s0738.1.v1.1 - Carub.0008s0730.1.v1.1 | Query: AT5G47820.1.Araport11.447 - AT5G47870.1.Araport11.447 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+</g>
+<g id="refChrs">
+<rect x="210" y="60" width="22" height="280" rx="5" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="1"/>
+<rect x="211" y="60.2" width="20" height="6.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="67.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="211" y="66.4" width="20" height="115.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="124.0" x2="226" y2="124.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr01)" opacity="0.8"/>
+<text x="205" y="128.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="211" y="181.4" width="20" height="11.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="187.2" x2="216" y2="187.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr01)" opacity="0.8"/>
+<text x="205" y="191.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="211" y="193.0" width="20" height="139.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="262.7" x2="226" y2="262.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr01)" opacity="0.8"/>
+<text x="205" y="266.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="211" y="332.4" width="20" height="7.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="340.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<text x="205" y="55" text-anchor="end" fill="#FFD700" font-size="12" font-weight="700" letter-spacing="0.5">Cr01</text>
+<circle cx="221.0" cy="261.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="265.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="368" width="22" height="201" rx="5" fill="#E63946" opacity="0.15" stroke="#E63946" stroke-width="1"/>
+<rect x="211" y="368.2" width="20" height="52.9" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="394.6" x2="216" y2="394.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr02)" opacity="0.8"/>
+<text x="205" y="398.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="211" y="421.2" width="20" height="21.3" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="431.8" x2="216" y2="431.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr02)" opacity="0.8"/>
+<text x="205" y="435.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="211" y="445.9" width="20" height="117.1" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="504.4" x2="226" y2="504.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr02)" opacity="0.8"/>
+<text x="205" y="508.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="211" y="563.1" width="20" height="5.9" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="570.0" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">4</text>
+<text x="205" y="363" text-anchor="end" fill="#E63946" font-size="12" font-weight="700" letter-spacing="0.5">Cr02</text>
+<circle cx="221.0" cy="445.5" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="449.5" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="597" width="22" height="214" rx="5" fill="#1A237E" opacity="0.15" stroke="#1A237E" stroke-width="1"/>
+<rect x="211" y="597.1" width="20" height="5.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="603.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="211" y="602.4" width="20" height="81.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="643.2" x2="226" y2="643.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr03)" opacity="0.8"/>
+<text x="205" y="647.2" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="211" y="682.8" width="20" height="42.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="704.2" x2="226" y2="704.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr03)" opacity="0.8"/>
+<text x="205" y="708.2" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="211" y="724.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="730.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="211" y="726.4" width="20" height="7.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="734.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="211" y="734.4" width="20" height="5.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="741.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="211" y="740.8" width="20" height="6.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="748.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="211" y="750.6" width="20" height="60.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="780.8" x2="226" y2="780.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr03)" opacity="0.8"/>
+<text x="205" y="784.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<text x="205" y="592" text-anchor="end" fill="#1A237E" font-size="12" font-weight="700" letter-spacing="0.5">Cr03</text>
+<circle cx="221.0" cy="735.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="739.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="839" width="22" height="214" rx="5" fill="#9C27B0" opacity="0.15" stroke="#9C27B0" stroke-width="1"/>
+<rect x="211" y="839.1" width="20" height="213.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="946.0" x2="226" y2="946.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr04)" opacity="0.8"/>
+<text x="205" y="950.0" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<text x="205" y="834" text-anchor="end" fill="#9C27B0" font-size="12" font-weight="700" letter-spacing="0.5">Cr04</text>
+<circle cx="221.0" cy="900.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="904.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1081" width="22" height="195" rx="5" fill="#E06D10" opacity="0.15" stroke="#E06D10" stroke-width="1"/>
+<rect x="211" y="1081.2" width="20" height="18.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1090.2" x2="226" y2="1090.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr05)" opacity="0.8"/>
+<text x="205" y="1094.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1099.3" width="20" height="50.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1124.7" x2="226" y2="1124.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr05)" opacity="0.8"/>
+<text x="205" y="1128.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1152.1" width="20" height="29.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1166.7" x2="226" y2="1166.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr05)" opacity="0.8"/>
+<text x="205" y="1170.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1184.4" width="20" height="91.5" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1230.1" x2="226" y2="1230.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr05)" opacity="0.8"/>
+<text x="205" y="1234.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<text x="205" y="1076" text-anchor="end" fill="#E06D10" font-size="12" font-weight="700" letter-spacing="0.5">Cr05</text>
+<circle cx="221.0" cy="1169.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1173.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1304" width="22" height="237" rx="5" fill="#43A047" opacity="0.15" stroke="#43A047" stroke-width="1"/>
+<rect x="211" y="1304.1" width="20" height="4.5" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1310.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1308.6" width="20" height="37.7" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1327.5" x2="226" y2="1327.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr06)" opacity="0.8"/>
+<text x="205" y="1331.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1346.4" width="20" height="92.3" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1392.5" x2="226" y2="1392.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr06)" opacity="0.8"/>
+<text x="205" y="1396.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1438.6" width="20" height="5.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1445.2" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1442.4" width="20" height="15.4" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1450.1" x2="226" y2="1450.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr06)" opacity="0.8"/>
+<text x="205" y="1454.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1459.5" width="20" height="51.2" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1485.0" x2="226" y2="1485.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr06)" opacity="0.8"/>
+<text x="205" y="1489.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1510.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1516.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1510.9" width="20" height="8.4" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1519.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1519.0" width="20" height="14.5" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1526.3" x2="216" y2="1526.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr06)" opacity="0.8"/>
+<text x="205" y="1530.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1533.5" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1539.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1536.5" width="20" height="4.1" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1542.6" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">11</text>
+<text x="205" y="1299" text-anchor="end" fill="#43A047" font-size="12" font-weight="700" letter-spacing="0.5">Cr06</text>
+<circle cx="221.0" cy="1459.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1463.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1569" width="22" height="247" rx="5" fill="#3498DB" opacity="0.15" stroke="#3498DB" stroke-width="1"/>
+<rect x="211" y="1569.0" width="20" height="10.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1574.3" x2="226" y2="1574.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr07)" opacity="0.8"/>
+<text x="205" y="1578.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1579.6" width="20" height="5.1" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1586.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1584.7" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1590.7" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1587.1" width="20" height="41.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1607.5" x2="216" y2="1607.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr07)" opacity="0.8"/>
+<text x="205" y="1611.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1628.4" width="20" height="51.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1654.1" x2="216" y2="1654.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr07)" opacity="0.8"/>
+<text x="205" y="1658.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1680.2" width="20" height="60.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1710.6" x2="216" y2="1710.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr07)" opacity="0.8"/>
+<text x="205" y="1714.6" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1753.4" width="20" height="20.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1763.8" x2="226" y2="1763.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr07)" opacity="0.8"/>
+<text x="205" y="1767.8" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1774.7" width="20" height="8.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1783.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1785.2" width="20" height="29.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1800.1" x2="216" y2="1800.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr07)" opacity="0.8"/>
+<text x="205" y="1804.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<text x="205" y="1564" text-anchor="end" fill="#3498DB" font-size="12" font-weight="700" letter-spacing="0.5">Cr07</text>
+<circle cx="221.0" cy="1784.4" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1788.4" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1844" width="22" height="190" rx="5" fill="#FFA07A" opacity="0.15" stroke="#FFA07A" stroke-width="1"/>
+<rect x="211" y="1844.1" width="20" height="62.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1875.2" x2="216" y2="1875.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr08)" opacity="0.8"/>
+<text x="205" y="1879.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1908.8" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1914.8" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1910.0" width="20" height="115.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1967.6" x2="226" y2="1967.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr08)" opacity="0.8"/>
+<text x="205" y="1971.6" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2025.2" width="20" height="8.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2033.6" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<text x="205" y="1839" text-anchor="end" fill="#FFA07A" font-size="12" font-weight="700" letter-spacing="0.5">Cr08</text>
+<circle cx="221.0" cy="1906.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1910.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+</g>
+<g id="queryChrs">
+<rect x="1190" y="60" width="22" height="280" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="60.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="66.0" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="64.0" width="20" height="75.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="101.5" x2="1206" y2="101.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr01)" opacity="0.8"/>
+<text x="1217" y="105.5" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="139.1" width="20" height="8.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="147.1" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="147.2" width="20" height="99.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="196.9" x2="1206" y2="196.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr01)" opacity="0.8"/>
+<text x="1217" y="200.9" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="246.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="252.8" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="249.1" width="20" height="4.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="255.3" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="253.6" width="20" height="27.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="267.4" x2="1196" y2="267.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr02)" opacity="0.8"/>
+<text x="1217" y="271.4" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="281.3" width="20" height="54.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="308.7" x2="1206" y2="308.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr02)" opacity="0.8"/>
+<text x="1217" y="312.7" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="336.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="342.1" fill="#E63946" font-size="10" font-weight="500">4</text>
+<text x="1217" y="55" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">At01</text>
+<rect x="1190" y="368" width="22" height="215" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="368.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="374.0" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="371.3" width="20" height="50.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="396.7" x2="1206" y2="396.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr03)" opacity="0.8"/>
+<text x="1217" y="400.7" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="422.1" width="20" height="25.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="434.9" x2="1206" y2="434.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr03)" opacity="0.8"/>
+<text x="1217" y="438.9" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="447.2" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="453.2" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="448.7" width="20" height="4.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="454.8" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="453.0" width="20" height="30.5" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="468.2" x2="1206" y2="468.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr05)" opacity="0.8"/>
+<text x="1217" y="472.2" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="503.2" width="20" height="21.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="514.0" x2="1206" y2="514.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr05)" opacity="0.8"/>
+<text x="1217" y="518.0" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="524.9" width="20" height="58.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="554.0" x2="1206" y2="554.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr05)" opacity="0.8"/>
+<text x="1217" y="558.0" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<text x="1217" y="363" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">At03</text>
+<rect x="1190" y="611" width="22" height="181" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="611.7" width="20" height="11.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="617.5" x2="1206" y2="617.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr05)" opacity="0.8"/>
+<text x="1217" y="621.5" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="623.5" width="20" height="5.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="630.1" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="630.0" width="20" height="7.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="638.0" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="650.6" width="20" height="43.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="672.1" x2="1206" y2="672.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr03)" opacity="0.8"/>
+<text x="1217" y="676.1" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="693.7" width="20" height="98.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="742.8" x2="1206" y2="742.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr04)" opacity="0.8"/>
+<text x="1217" y="746.8" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<text x="1217" y="606" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">At02</text>
+<rect x="1190" y="820" width="22" height="171" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="820.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="826.1" fill="#43A047" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="823.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="829.1" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="825.2" width="20" height="9.6" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="834.0" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="836.3" width="20" height="9.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="844.9" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="845.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="851.8" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="850.9" width="20" height="37.7" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="869.8" x2="1206" y2="869.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr06)" opacity="0.8"/>
+<text x="1217" y="873.8" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="888.7" width="20" height="32.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="905.1" x2="1196" y2="905.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr07)" opacity="0.8"/>
+<text x="1217" y="909.1" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="922.4" width="20" height="31.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="938.2" x2="1196" y2="938.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr07)" opacity="0.8"/>
+<text x="1217" y="942.2" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="954.4" width="20" height="25.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="967.1" x2="1196" y2="967.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr07)" opacity="0.8"/>
+<text x="1217" y="971.1" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="979.9" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="985.9" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="981.3" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="987.3" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="984.6" width="20" height="6.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="991.8" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<text x="1217" y="815" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">At04</text>
+<rect x="1190" y="1019" width="22" height="248" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1019.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1025.1" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1022.5" width="20" height="24.0" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="1034.5" x2="1206" y2="1034.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr06)" opacity="0.8"/>
+<text x="1217" y="1038.5" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1046.8" width="20" height="59.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="1076.7" x2="1206" y2="1076.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr06)" opacity="0.8"/>
+<text x="1217" y="1080.7" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1106.7" width="20" height="4.1" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1112.8" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1110.7" width="20" height="9.6" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1119.5" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1130.0" width="20" height="20.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1140.2" x2="1206" y2="1140.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr07)" opacity="0.8"/>
+<text x="1217" y="1144.2" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1151.9" width="20" height="5.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1158.9" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1159.8" width="20" height="14.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="1166.7" x2="1196" y2="1166.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr07)" opacity="0.8"/>
+<text x="1217" y="1170.7" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1173.8" width="20" height="23.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1185.3" x2="1196" y2="1185.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Cr08)" opacity="0.8"/>
+<text x="1217" y="1189.3" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1197.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1203.0" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1197.1" width="20" height="64.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1229.3" x2="1206" y2="1229.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Cr08)" opacity="0.8"/>
+<text x="1217" y="1233.3" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1261.4" width="20" height="5.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1268.2" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<text x="1217" y="1014" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">At05</text>
+</g>
+</svg>
+</div>
+
+<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#FFD700"></div><span>Cr01</span></div><div class="legend-item"><div class="legend-dot" style="background:#E63946"></div><span>Cr02</span></div><div class="legend-item"><div class="legend-dot" style="background:#1A237E"></div><span>Cr03</span></div><div class="legend-item"><div class="legend-dot" style="background:#9C27B0"></div><span>Cr04</span></div><div class="legend-item"><div class="legend-dot" style="background:#E06D10"></div><span>Cr05</span></div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div><span>Cr06</span></div><div class="legend-item"><div class="legend-dot" style="background:#3498DB"></div><span>Cr07</span></div><div class="legend-item"><div class="legend-dot" style="background:#FFA07A"></div><span>Cr08</span></div></div>
+<div class="stats-bar"><span><b>46</b> synteny fragments</span><span><b>8</b> ref chromosomes</span><span><b>5</b> query chromosomes</span><span><b>26</b> forward &nbsp;|&nbsp; <b>20</b> reverse</span><span>max size <b>2250</b> genes</span></div>
+<div id="tooltip"></div>
+
+<script>
+function showTip(e, el) {
+  const parts = el.dataset.tip.split(' | ');
+  const tip = document.getElementById('tooltip');
+  tip.innerHTML = parts.map((p,i) => i===0
+    ? `<div style="color:#0ea5e9;font-weight:700;margin-bottom:5px">${p}</div>`
+    : `<div>${p}</div>`
+  ).join('');
+  tip.style.left = (e.clientX + 14) + 'px';
+  tip.style.top  = (e.clientY - 10) + 'px';
+  tip.classList.add('show');
+}
+function hideTip() { document.getElementById('tooltip').classList.remove('show'); }
+</script>
+</body>
+</html>

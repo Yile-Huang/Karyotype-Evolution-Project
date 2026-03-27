@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synteny — Rc_2_Gt.blast.icl.block.corr.csv-r-r.reform.Claude_filtered.txt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0a0e1a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; min-height:100vh; }
+  .canvas-container { padding:20px 32px; overflow-x:auto; }
+  svg { display:block; max-width:100%; }
+  .legend {
+    padding:10px 32px 16px; display:flex; gap:18px; flex-wrap:wrap;
+    border-top:1px solid #1e2d45;
+  }
+  .legend-item { display:flex; align-items:center; gap:7px; font-size:11px; color:#64748b; }
+  .legend-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0; }
+  .stats-bar {
+    padding:10px 32px 18px; display:flex; gap:28px; font-size:10px; color:#64748b; flex-wrap:wrap;
+  }
+  .stats-bar b { color:#0ea5e9; margin-right:3px; }
+  #tooltip {
+    position:fixed; background:#1e2d45; border:1px solid #38bdf8; border-radius:6px;
+    padding:10px 14px; font-size:11px; line-height:1.8; color:#e2e8f0;
+    pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:1000;
+    max-width:340px;
+  }
+  #tooltip.show { opacity:1; }
+</style>
+</head>
+<body>
+
+<div class="canvas-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2338" width="1400" height="2338" style="background:#0a0e1a;font-family:'JetBrains Mono',monospace">
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="arr_Chr01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFD700"/></marker>
+<marker id="arr_rev_Chr01" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFD700"/></marker>
+<marker id="arr_Chr02" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E63946"/></marker>
+<marker id="arr_rev_Chr02" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E63946"/></marker>
+<marker id="arr_Chr03" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1A237E"/></marker>
+<marker id="arr_rev_Chr03" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#1A237E"/></marker>
+<marker id="arr_Chr04" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9C27B0"/></marker>
+<marker id="arr_rev_Chr04" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9C27B0"/></marker>
+<marker id="arr_Chr05" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E06D10"/></marker>
+<marker id="arr_rev_Chr05" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E06D10"/></marker>
+<marker id="arr_Chr06" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#43A047"/></marker>
+<marker id="arr_rev_Chr06" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#43A047"/></marker>
+<marker id="arr_Chr07" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#3498DB"/></marker>
+<marker id="arr_rev_Chr07" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#3498DB"/></marker>
+<marker id="arr_Chr08" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFA07A"/></marker>
+<marker id="arr_rev_Chr08" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFA07A"/></marker>
+<marker id="arr_Chr09" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#72d1b9"/></marker>
+<marker id="arr_rev_Chr09" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#72d1b9"/></marker>
+</defs>
+<g id="ribbons" opacity="0.35">
+<path d="M232.0,2112.6 C700.0,2112.6 700.0,1500.2 1190.0,1500.2 L1190.0,1581.7 C700.0,1581.7 700.0,2249.7 232.0,2249.7 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g5373.t1 - Gtr09g3391.t1 | Query: mRNA:RC2G0000200 - mRNA:RC2G0259100 | Dir: - | Size: 1153 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1709.0 C700.0,1709.0 700.0,1409.2 1190.0,1409.2 L1190.0,1455.0 C700.0,1455.0 700.0,1790.1 232.0,1790.1 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26874.t1 - Gtr07g28062.t1 | Query: mRNA:RC1G0353400 - mRNA:RC1G0523300 | Dir: + | Size: 697 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,375.0 C700.0,375.0 700.0,322.2 1190.0,322.2 L1190.0,358.2 C700.0,358.2 700.0,393.2 232.0,393.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr01g24926.t1 - Gtr01g24055.t1 | Query: mRNA:RC5G0067200 - mRNA:RC5G0195500 | Dir: - | Size: 480 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,799.9 C700.0,799.9 700.0,747.1 1190.0,747.1 L1190.0,775.6 C700.0,775.6 700.0,843.1 232.0,843.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g13605.t1 - Gtr04g12953.t1 | Query: mRNA:RC4G0285700 - mRNA:RC4G0377300 | Dir: - | Size: 429 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1091.5 C700.0,1091.5 700.0,942.4 1190.0,942.4 L1190.0,966.1 C700.0,966.1 700.0,1163.4 232.0,1163.4 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7062.t1 - Gtr05g6215.t1 | Query: mRNA:RC3G0241100 - mRNA:RC3G0330300 | Dir: - | Size: 409 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,293.5 C700.0,293.5 700.0,186.4 1190.0,186.4 L1190.0,223.5 C700.0,223.5 700.0,340.0 232.0,340.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g23008.t1 - Gtr01g23720.t1 | Query: mRNA:RC6G0292300 - mRNA:RC6G0393400 | Dir: + | Size: 401 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1881.3 C700.0,1881.3 700.0,261.6 1190.0,261.6 L1190.0,277.0 C700.0,277.0 700.0,1929.0 232.0,1929.0 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g19869.t1 - Gtr08g19157.t1 | Query: mRNA:RC6G0535100 - mRNA:RC6G0600300 | Dir: - | Size: 374 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1363.8 C700.0,1363.8 700.0,1034.9 1190.0,1034.9 L1190.0,1055.1 C700.0,1055.1 700.0,1400.7 232.0,1400.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g1494.t1 - Gtr06g920.t1 | Query: mRNA:RC7G0087100 - mRNA:RC7G0160300 | Dir: - | Size: 365 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,764.5 C700.0,764.5 700.0,776.4 1190.0,776.4 L1190.0,792.4 C700.0,792.4 700.0,791.0 232.0,791.0 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g12298.t1 - Gtr04g12792.t1 | Query: mRNA:RC4G0381200 - mRNA:RC4G0441600 | Dir: + | Size: 348 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,518.4 C700.0,518.4 700.0,1700.0 1190.0,1700.0 L1190.0,1724.7 C700.0,1724.7 700.0,563.2 232.0,563.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g9713.t1 - Gtr03g9104.t1 | Query: mRNA:RC2G0533000 - mRNA:RC2G0618900 | Dir: - | Size: 324 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1051.3 C700.0,1051.3 700.0,971.0 1190.0,971.0 L1190.0,986.7 C700.0,986.7 700.0,1084.1 232.0,1084.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g6104.t1 - Gtr05g5547.t1 | Query: mRNA:RC3G0346400 - mRNA:RC3G0420300 | Dir: - | Size: 320 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1336.8 C700.0,1336.8 700.0,1021.2 1190.0,1021.2 L1190.0,1034.9 C700.0,1034.9 700.0,1361.3 232.0,1361.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g889.t1 - Gtr06g425.t1 | Query: mRNA:RC7G0028600 - mRNA:RC7G0086800 | Dir: - | Size: 297 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1789.0 C700.0,1789.0 700.0,1455.7 1190.0,1455.7 L1190.0,1468.1 C700.0,1468.1 700.0,1809.3 232.0,1809.3 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g28041.t1 - Gtr07g28411.t1 | Query: mRNA:RC1G0525700 - mRNA:RC1G0578400 | Dir: + | Size: 231 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,886.1 C700.0,886.1 700.0,626.7 1190.0,626.7 L1190.0,665.5 C700.0,665.5 700.0,936.9 232.0,936.9 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14106.t1 - Gtr04g14554.t1 | Query: mRNA:RC4G0036000 - mRNA:RC4G0118700 | Dir: + | Size: 230 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,395.8 C700.0,395.8 700.0,307.1 1190.0,307.1 L1190.0,316.1 C700.0,316.1 700.0,401.6 232.0,401.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr01g25361.t1 - Gtr01g25063.t1 | Query: mRNA:RC5G0000100 - mRNA:RC5G0040600 | Dir: - | Size: 167 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,491.3 C700.0,491.3 700.0,1736.7 1190.0,1736.7 L1190.0,1743.9 C700.0,1743.9 700.0,503.0 232.0,503.0 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g8811.t1 - Gtr03g8569.t2 | Query: mRNA:RC2G0660900 - mRNA:RC2G0693600 | Dir: - | Size: 166 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,438.5 C700.0,438.5 700.0,520.8 1190.0,520.8 L1190.0,540.6 C700.0,540.6 700.0,444.5 232.0,444.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17552.t2 - Gtr02g17254.t1 | Query: mRNA:RC5G0560700 - mRNA:RC5G0615700 | Dir: - | Size: 164 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,627.5 C700.0,627.5 700.0,1659.3 1190.0,1659.3 L1190.0,1680.9 C700.0,1680.9 700.0,659.9 232.0,659.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g10454.t1 - Gtr03g10793.t1 | Query: mRNA:RC2G0421700 - mRNA:RC2G0479100 | Dir: + | Size: 159 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,451.8 C700.0,451.8 700.0,546.8 1190.0,546.8 L1190.0,563.9 C700.0,563.9 700.0,458.5 232.0,458.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17925.t1 - Gtr02g18235.t1 | Query: mRNA:RC5G0629200 - mRNA:RC5G0679000 | Dir: + | Size: 150 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1848.1 C700.0,1848.1 700.0,254.6 1190.0,254.6 L1190.0,260.9 C700.0,260.9 700.0,1861.5 232.0,1861.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g18843.t1 - Gtr08g18621.t1 | Query: mRNA:RC6G0503900 - mRNA:RC6G0531900 | Dir: - | Size: 143 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1252.2 C700.0,1252.2 700.0,913.4 1190.0,913.4 L1190.0,928.3 C700.0,928.3 700.0,1274.3 232.0,1274.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7841.t1 - Gtr05g8114.t1 | Query: mRNA:RC3G0160500 - mRNA:RC3G0203600 | Dir: + | Size: 139 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1323.9 C700.0,1323.9 700.0,1015.3 1190.0,1015.3 L1190.0,1021.2 C700.0,1021.2 700.0,1337.1 232.0,1337.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g198.t1 - Gtr06g439.t1 | Query: mRNA:RC7G0000400 - mRNA:RC7G0028800 | Dir: + | Size: 137 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1971.0 C700.0,1971.0 700.0,1206.9 1190.0,1206.9 L1190.0,1229.2 C700.0,1229.2 700.0,1997.5 232.0,1997.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr07 | Ref: Gtr08g20599.t1 - Gtr08g20309.t1 | Query: mRNA:RC7G0524700 - mRNA:RC7G0570400 | Dir: - | Size: 136 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,401.7 C700.0,401.7 700.0,375.3 1190.0,375.3 L1190.0,390.4 C700.0,390.4 700.0,407.7 232.0,407.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g15719.t1 - Gtr02g15975.t1 | Query: mRNA:RC5G0248500 - mRNA:RC5G0290500 | Dir: + | Size: 131 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1163.6 C700.0,1163.6 700.0,928.4 1190.0,928.4 L1190.0,938.7 C700.0,938.7 700.0,1199.3 232.0,1199.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7064.t1 - Gtr05g7309.t1 | Query: mRNA:RC3G0203700 - mRNA:RC3G0232100 | Dir: + | Size: 126 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1434.5 C700.0,1434.5 700.0,1065.5 1190.0,1065.5 L1190.0,1074.4 C700.0,1074.4 700.0,1458.5 232.0,1458.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g1849.t1 - Gtr06g2062.t1 | Query: mRNA:RC7G0190300 - mRNA:RC7G0217600 | Dir: + | Size: 113 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1809.4 C700.0,1809.4 700.0,1468.7 1190.0,1468.7 L1190.0,1471.8 C700.0,1471.8 700.0,1819.8 232.0,1819.8 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g28413.t1 - Gtr07g28593.t1 | Query: mRNA:RC1G0581800 - mRNA:RC1G0599600 | Dir: + | Size: 111 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,368.0 C700.0,368.0 700.0,362.4 1190.0,362.4 L1190.0,375.1 C700.0,375.1 700.0,372.7 232.0,372.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr01g23948.t1 - Gtr01g23722.t1 | Query: mRNA:RC5G0206900 - mRNA:RC5G0247500 | Dir: - | Size: 110 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,276.8 C700.0,276.8 700.0,66.1 1190.0,66.1 L1190.0,83.7 C700.0,83.7 700.0,293.4 232.0,293.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g23007.t1 - Gtr01g22797.t1 | Query: mRNA:RC6G0018800 - mRNA:RC6G0067400 | Dir: - | Size: 110 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,747.2 C700.0,747.2 700.0,802.4 1190.0,802.4 L1190.0,806.6 C700.0,806.6 700.0,755.2 232.0,755.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g12116.t1 - Gtr04g11966.t1 | Query: mRNA:RC4G0482500 - mRNA:RC4G0501300 | Dir: - | Size: 109 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1667.9 C700.0,1667.9 700.0,1385.1 1190.0,1385.1 L1190.0,1397.7 C700.0,1397.7 700.0,1694.8 232.0,1694.8 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26456.t1 - Gtr07g26700.t1 | Query: mRNA:RC1G0282700 - mRNA:RC1G0314500 | Dir: + | Size: 106 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1231.5 C700.0,1231.5 700.0,901.5 1190.0,901.5 L1190.0,912.4 C700.0,912.4 700.0,1252.3 232.0,1252.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7610.t1 - Gtr05g7842.t1 | Query: mRNA:RC3G0125900 - mRNA:RC3G0155500 | Dir: + | Size: 105 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,844.3 C700.0,844.3 700.0,729.4 1190.0,729.4 L1190.0,743.3 C700.0,743.3 700.0,854.6 232.0,854.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g13752.t1 - Gtr04g13610.t1 | Query: mRNA:RC4G0241200 - mRNA:RC4G0274700 | Dir: - | Size: 102 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,446.1 C700.0,446.1 700.0,498.6 1190.0,498.6 L1190.0,513.3 C700.0,513.3 700.0,450.4 232.0,450.4 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17845.t1 - Gtr02g17649.t1 | Query: mRNA:RC5G0512200 - mRNA:RC5G0542100 | Dir: - | Size: 99 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1400.9 C700.0,1400.9 700.0,1055.2 1190.0,1055.2 L1190.0,1062.5 C700.0,1062.5 700.0,1413.7 232.0,1413.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g1495.t1 - Gtr06g1660.t1 | Query: mRNA:RC7G0160600 - mRNA:RC7G0181700 | Dir: + | Size: 96 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1951.0 C700.0,1951.0 700.0,250.1 1190.0,250.1 L1190.0,254.5 C700.0,254.5 700.0,1968.1 232.0,1968.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g20131.t1 - Gtr08g20287.t1 | Query: mRNA:RC6G0487300 - mRNA:RC6G0503500 | Dir: + | Size: 94 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,393.1 C700.0,393.1 700.0,315.1 1190.0,315.1 L1190.0,321.1 C700.0,321.1 700.0,395.6 232.0,395.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr01g25050.t1 - Gtr01g24924.t1 | Query: mRNA:RC5G0036400 - mRNA:RC5G0063100 | Dir: - | Size: 90 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,791.1 C700.0,791.1 700.0,798.6 1190.0,798.6 L1190.0,802.3 C700.0,802.3 700.0,797.7 232.0,797.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g12920.t1 - Gtr04g12794.t1 | Query: mRNA:RC4G0466600 - mRNA:RC4G0482400 | Dir: - | Size: 88 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,409.9 C700.0,409.9 700.0,400.6 1190.0,400.6 L1190.0,409.6 C700.0,409.6 700.0,413.5 232.0,413.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16077.t1 - Gtr02g16232.t1 | Query: mRNA:RC5G0316700 - mRNA:RC5G0336400 | Dir: + | Size: 87 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,577.7 C700.0,577.7 700.0,1691.1 1190.0,1691.1 L1190.0,1699.0 C700.0,1699.0 700.0,589.7 232.0,589.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g10036.t1 - Gtr03g9882.t1 | Query: mRNA:RC2G0506100 - mRNA:RC2G0530600 | Dir: - | Size: 85 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,511.8 C700.0,511.8 700.0,1726.5 1190.0,1726.5 L1190.0,1731.2 C700.0,1731.2 700.0,518.3 232.0,518.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g9104.t1 - Gtr03g8986.t1 | Query: mRNA:RC2G0622300 - mRNA:RC2G0639000 | Dir: - | Size: 81 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,859.3 C700.0,859.3 700.0,719.8 1190.0,719.8 L1190.0,729.2 C700.0,729.2 700.0,870.5 232.0,870.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g13945.t1 - Gtr04g13818.t1 | Query: mRNA:RC4G0219700 - mRNA:RC4G0240700 | Dir: - | Size: 79 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1941.2 C700.0,1941.2 700.0,241.7 1190.0,241.7 L1190.0,245.7 C700.0,245.7 700.0,1950.9 232.0,1950.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g20130.t1 - Gtr08g20005.t1 | Query: mRNA:RC6G0455300 - mRNA:RC6G0468700 | Dir: - | Size: 78 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,413.6 C700.0,413.6 700.0,412.3 1190.0,412.3 L1190.0,421.4 C700.0,421.4 700.0,416.8 232.0,416.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16243.t1 - Gtr02g16388.t1 | Query: mRNA:RC5G0341500 - mRNA:RC5G0364500 | Dir: + | Size: 77 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,207.4 C700.0,207.4 700.0,116.8 1190.0,116.8 L1190.0,134.1 C700.0,134.1 700.0,236.3 232.0,236.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g22363.t1 - Gtr01g22137.t1 | Query: mRNA:RC6G0165000 - mRNA:RC6G0198100 | Dir: - | Size: 75 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,755.6 C700.0,755.6 700.0,795.5 1190.0,795.5 L1190.0,798.5 C700.0,798.5 700.0,760.8 232.0,760.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g12125.t1 - Gtr04g12226.t1 | Query: mRNA:RC4G0452900 - mRNA:RC4G0466400 | Dir: + | Size: 72 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,99.4 C700.0,99.4 700.0,162.3 1190.0,162.3 L1190.0,174.5 C700.0,174.5 700.0,131.8 232.0,131.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g21780.t1 - Gtr01g21538.t1 | Query: mRNA:RC6G0246600 - mRNA:RC6G0270200 | Dir: - | Size: 72 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,709.1 C700.0,709.1 700.0,877.0 1190.0,877.0 L1190.0,887.7 C700.0,887.7 700.0,716.2 232.0,716.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr03 | Ref: Gtr03g11496.t1 - Gtr03g11620.t1 | Query: mRNA:RC3G0071600 - mRNA:RC3G0093500 | Dir: + | Size: 71 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,245.7 C700.0,245.7 700.0,98.1 1190.0,98.1 L1190.0,108.5 C700.0,108.5 700.0,262.5 232.0,262.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g22635.t1 - Gtr01g22443.t1 | Query: mRNA:RC6G0108500 - mRNA:RC6G0137500 | Dir: - | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,504.6 C700.0,504.6 700.0,1731.3 1190.0,1731.3 L1190.0,1736.7 C700.0,1736.7 700.0,510.3 232.0,510.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g8948.t1 - Gtr03g8839.t1 | Query: mRNA:RC2G0639400 - mRNA:RC2G0660900 | Dir: - | Size: 68 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1518.4 C700.0,1518.4 700.0,1108.4 1190.0,1108.4 L1190.0,1120.5 C700.0,1120.5 700.0,1532.3 232.0,1532.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g2595.t1 - Gtr06g2749.t1 | Query: mRNA:RC7G0313700 - mRNA:RC7G0342400 | Dir: + | Size: 68 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2022.0 C700.0,2022.0 700.0,1139.8 1190.0,1139.8 L1190.0,1153.5 C700.0,1153.5 700.0,2034.4 232.0,2034.4 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr07 | Ref: Gtr08g21122.t1 - Gtr08g20916.t1 | Query: mRNA:RC7G0386100 - mRNA:RC7G0409600 | Dir: - | Size: 65 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1463.3 C700.0,1463.3 700.0,1079.4 1190.0,1079.4 L1190.0,1086.5 C700.0,1086.5 700.0,1481.0 232.0,1481.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g2257.t1 - Gtr06g2110.t1 | Query: mRNA:RC7G0233400 - mRNA:RC7G0253700 | Dir: - | Size: 64 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,593.0 C700.0,593.0 700.0,1685.9 1190.0,1685.9 L1190.0,1690.9 C700.0,1690.9 700.0,600.2 232.0,600.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g10083.t1 - Gtr03g10189.t1 | Query: mRNA:RC2G0489900 - mRNA:RC2G0505900 | Dir: + | Size: 59 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1085.1 C700.0,1085.1 700.0,967.1 1190.0,967.1 L1190.0,969.1 C700.0,969.1 700.0,1089.1 232.0,1089.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g6180.t1 - Gtr05g6109.t1 | Query: mRNA:RC3G0334500 - mRNA:RC3G0342800 | Dir: - | Size: 54 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,761.0 C700.0,761.0 700.0,792.5 1190.0,792.5 L1190.0,795.1 C700.0,795.1 700.0,764.5 232.0,764.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g12297.t1 - Gtr04g12229.t1 | Query: mRNA:RC4G0441900 - mRNA:RC4G0450800 | Dir: - | Size: 51 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,460.2 C700.0,460.2 700.0,583.7 1190.0,583.7 L1190.0,586.9 C700.0,586.9 700.0,463.0 232.0,463.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g18313.t1 - Gtr02g18418.t1 | Query: mRNA:RC5G0729700 - mRNA:RC5G0741900 | Dir: + | Size: 51 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1872.8 C700.0,1872.8 700.0,239.9 1190.0,239.9 L1190.0,241.6 C700.0,241.6 700.0,1878.9 232.0,1878.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g19128.t1 - Gtr08g19042.t1 | Query: mRNA:RC6G0448000 - mRNA:RC6G0455000 | Dir: - | Size: 51 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1415.4 C700.0,1415.4 700.0,1058.1 1190.0,1058.1 L1190.0,1065.4 C700.0,1065.4 700.0,1432.6 232.0,1432.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g1677.t1 - Gtr06g1824.t1 | Query: mRNA:RC7G0170900 - mRNA:RC7G0190100 | Dir: + | Size: 51 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,71.3 C700.0,71.3 700.0,175.5 1190.0,175.5 L1190.0,185.3 C700.0,185.3 700.0,99.4 232.0,99.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g21538.t1 - Gtr01g21343.t1 | Query: mRNA:RC6G0272900 - mRNA:RC6G0290600 | Dir: - | Size: 49 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1641.1 C700.0,1641.1 700.0,1363.4 1190.0,1363.4 L1190.0,1372.6 C700.0,1372.6 700.0,1651.8 232.0,1651.8 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26242.t1 - Gtr07g26333.t1 | Query: mRNA:RC1G0231500 - mRNA:RC1G0253100 | Dir: + | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,675.8 C700.0,675.8 700.0,1639.9 1190.0,1639.9 L1190.0,1651.2 C700.0,1651.2 700.0,683.4 232.0,683.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g11101.t1 - Gtr03g11007.t1 | Query: mRNA:RC2G0381800 - mRNA:RC2G0406300 | Dir: - | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1531.2 C700.0,1531.2 700.0,1121.4 1190.0,1121.4 L1190.0,1128.9 C700.0,1128.9 700.0,1539.2 232.0,1539.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g2742.t1 - Gtr06g2850.t1 | Query: mRNA:RC7G0344700 - mRNA:RC7G0362800 | Dir: + | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,419.2 C700.0,419.2 700.0,455.6 1190.0,455.6 L1190.0,466.3 C700.0,466.3 700.0,421.8 232.0,421.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16520.t1 - Gtr02g16642.t1 | Query: mRNA:RC5G0435000 - mRNA:RC5G0455600 | Dir: + | Size: 46 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2094.8 C700.0,2094.8 700.0,1584.6 1190.0,1584.6 L1190.0,1590.7 C700.0,1590.7 700.0,2107.7 232.0,2107.7 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g3354.t1 - Gtr09g3271.t1 | Query: mRNA:RC2G0268000 - mRNA:RC2G0282500 | Dir: - | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1280.7 C700.0,1280.7 700.0,847.2 1190.0,847.2 L1190.0,856.2 C700.0,856.2 700.0,1287.3 232.0,1287.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g8198.t1 - Gtr05g8294.t1 | Query: mRNA:RC3G0016200 - mRNA:RC3G0028300 | Dir: + | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1274.9 C700.0,1274.9 700.0,938.7 1190.0,938.7 L1190.0,942.3 C700.0,942.3 700.0,1280.7 232.0,1280.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g8197.t1 - Gtr05g8118.t1 | Query: mRNA:RC3G0232200 - mRNA:RC3G0241000 | Dir: - | Size: 44 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,871.0 C700.0,871.0 700.0,617.3 1190.0,617.3 L1190.0,624.2 C700.0,624.2 700.0,879.7 232.0,879.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g13952.t1 - Gtr04g14052.t1 | Query: mRNA:RC4G0009700 - mRNA:RC4G0029800 | Dir: + | Size: 44 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1579.6 C700.0,1579.6 700.0,1274.2 1190.0,1274.2 L1190.0,1280.9 C700.0,1280.9 700.0,1586.9 232.0,1586.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25511.t1 - Gtr07g25604.t1 | Query: mRNA:RC1G0030100 - mRNA:RC1G0047600 | Dir: + | Size: 43 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,444.6 C700.0,444.6 700.0,513.4 1190.0,513.4 L1190.0,520.2 C700.0,520.2 700.0,445.9 232.0,445.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17556.t1 - Gtr02g17633.t1 | Query: mRNA:RC5G0542400 - mRNA:RC5G0558600 | Dir: + | Size: 43 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,261.6 C700.0,261.6 700.0,88.6 1190.0,88.6 L1190.0,96.3 C700.0,96.3 700.0,270.5 232.0,270.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g22721.t1 - Gtr01g22626.t1 | Query: mRNA:RC6G0081900 - mRNA:RC6G0101800 | Dir: - | Size: 42 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1698.3 C700.0,1698.3 700.0,1401.7 1190.0,1401.7 L1190.0,1406.4 C700.0,1406.4 700.0,1708.4 232.0,1708.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26756.t1 - Gtr07g26862.t1 | Query: mRNA:RC1G0326200 - mRNA:RC1G0343800 | Dir: + | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1617.1 C700.0,1617.1 700.0,1323.5 1190.0,1323.5 L1190.0,1334.2 C700.0,1334.2 700.0,1627.3 232.0,1627.3 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25948.t1 - Gtr07g26085.t1 | Query: mRNA:RC1G0144700 - mRNA:RC1G0161500 | Dir: + | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,670.9 C700.0,670.9 700.0,1652.8 1190.0,1652.8 L1190.0,1657.5 C700.0,1657.5 700.0,675.8 232.0,675.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g10942.t1 - Gtr03g11006.t1 | Query: mRNA:RC2G0409000 - mRNA:RC2G0418900 | Dir: + | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1929.2 C700.0,1929.2 700.0,277.1 1190.0,277.1 L1190.0,278.9 C700.0,278.9 700.0,1935.2 232.0,1935.2 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g19871.t1 - Gtr08g19942.t1 | Query: mRNA:RC6G0600400 - mRNA:RC6G0607200 | Dir: + | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,458.6 C700.0,458.6 700.0,576.0 1190.0,576.0 L1190.0,581.1 C700.0,581.1 700.0,460.2 232.0,460.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g18243.t1 - Gtr02g18312.t1 | Query: mRNA:RC5G0707800 - mRNA:RC5G0722700 | Dir: + | Size: 39 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,178.7 C700.0,178.7 700.0,134.4 1190.0,134.4 L1190.0,142.9 C700.0,142.9 700.0,200.6 232.0,200.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g21984.t1 - Gtr01g22092.t1 | Query: mRNA:RC6G0198900 - mRNA:RC6G0216900 | Dir: + | Size: 39 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,407.7 C700.0,407.7 700.0,391.8 1190.0,391.8 L1190.0,397.7 C700.0,397.7 700.0,409.9 232.0,409.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g15976.t1 - Gtr02g16075.t1 | Query: mRNA:RC5G0294800 - mRNA:RC5G0310900 | Dir: + | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1481.3 C700.0,1481.3 700.0,1087.1 1190.0,1087.1 L1190.0,1091.7 C700.0,1091.7 700.0,1491.1 232.0,1491.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g2258.t1 - Gtr06g2345.t1 | Query: mRNA:RC7G0256100 - mRNA:RC7G0268100 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1491.7 C700.0,1491.7 700.0,1093.2 1190.0,1093.2 L1190.0,1099.0 C700.0,1099.0 700.0,1499.1 232.0,1499.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g2351.t1 - Gtr06g2421.t1 | Query: mRNA:RC7G0271400 - mRNA:RC7G0287200 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2000.6 C700.0,2000.6 700.0,1189.9 1190.0,1189.9 L1190.0,1199.4 C700.0,1199.4 700.0,2009.7 232.0,2009.7 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr07 | Ref: Gtr08g20728.t1 - Gtr08g20630.t1 | Query: mRNA:RC7G0489000 - mRNA:RC7G0507500 | Dir: - | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,422.2 C700.0,422.2 700.0,469.3 1190.0,469.3 L1190.0,475.8 C700.0,475.8 700.0,424.3 232.0,424.3 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16663.t1 - Gtr02g16736.t1 | Query: mRNA:RC5G0459600 - mRNA:RC5G0468700 | Dir: + | Size: 35 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,702.5 C700.0,702.5 700.0,858.6 1190.0,858.6 L1190.0,867.8 C700.0,867.8 700.0,707.4 232.0,707.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr03 | Ref: Gtr03g11479.t1 - Gtr03g11396.t1 | Query: mRNA:RC3G0034500 - mRNA:RC3G0051800 | Dir: - | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,855.4 C700.0,855.4 700.0,743.4 1190.0,743.4 L1190.0,747.1 C700.0,747.1 700.0,858.5 232.0,858.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g13809.t1 - Gtr04g13757.t1 | Query: mRNA:RC4G0274900 - mRNA:RC4G0285500 | Dir: - | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1862.2 C700.0,1862.2 700.0,245.9 1190.0,245.9 L1190.0,247.0 C700.0,247.0 700.0,1864.5 232.0,1864.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g18857.t1 - Gtr08g18908.t1 | Query: mRNA:RC6G0469300 - mRNA:RC6G0474800 | Dir: + | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,416.8 C700.0,416.8 700.0,429.7 1190.0,429.7 L1190.0,434.6 C700.0,434.6 700.0,418.6 232.0,418.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16389.t1 - Gtr02g16478.t1 | Query: mRNA:RC5G0379800 - mRNA:RC5G0394900 | Dir: + | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1654.7 C700.0,1654.7 700.0,1374.4 1190.0,1374.4 L1190.0,1382.2 C700.0,1382.2 700.0,1661.9 232.0,1661.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26430.t1 - Gtr07g26347.t1 | Query: mRNA:RC1G0259600 - mRNA:RC1G0276000 | Dir: - | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2084.3 C700.0,2084.3 700.0,1595.6 1190.0,1595.6 L1190.0,1605.4 C700.0,1605.4 700.0,2094.7 232.0,2094.7 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g3175.t1 - Gtr09g3270.t1 | Query: mRNA:RC2G0293200 - mRNA:RC2G0312200 | Dir: + | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,433.8 C700.0,433.8 700.0,483.1 1190.0,483.1 L1190.0,489.4 C700.0,489.4 700.0,435.7 232.0,435.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17138.t1 - Gtr02g17075.t1 | Query: mRNA:RC5G0481000 - mRNA:RC5G0492900 | Dir: - | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,606.9 C700.0,606.9 700.0,1682.8 1190.0,1682.8 L1190.0,1685.7 C700.0,1685.7 700.0,611.8 232.0,611.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g10289.t1 - Gtr03g10238.t2 | Query: mRNA:RC2G0483100 - mRNA:RC2G0489700 | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1511.0 C700.0,1511.0 700.0,1099.1 1190.0,1099.1 L1190.0,1103.1 C700.0,1103.1 700.0,1516.9 232.0,1516.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g2515.t1 - Gtr06g2582.t1 | Query: mRNA:RC7G0288100 - mRNA:RC7G0297300 | Dir: + | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,689.0 C700.0,689.0 700.0,1619.7 1190.0,1619.7 L1190.0,1625.1 C700.0,1625.1 700.0,694.4 232.0,694.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g11268.t1 - Gtr03g11180.t1 | Query: mRNA:RC2G0336800 - mRNA:RC2G0345900 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,427.4 C700.0,427.4 700.0,444.8 1190.0,444.8 L1190.0,452.3 C700.0,452.3 700.0,429.0 232.0,429.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16872.t2 - Gtr02g16810.t1 | Query: mRNA:RC5G0418100 - mRNA:RC5G0430700 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1937.1 C700.0,1937.1 700.0,238.6 1190.0,238.6 L1190.0,239.9 C700.0,239.9 700.0,1941.2 232.0,1941.2 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g20005.t1 - Gtr08g19957.t1 | Query: mRNA:RC6G0443200 - mRNA:RC6G0447800 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1865.3 C700.0,1865.3 700.0,248.5 1190.0,248.5 L1190.0,249.9 C700.0,249.9 700.0,1870.7 232.0,1870.7 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g18927.t1 - Gtr08g19007.t1 | Query: mRNA:RC6G0480700 - mRNA:RC6G0487000 | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,991.5 C700.0,991.5 700.0,695.2 1190.0,695.2 L1190.0,704.0 C700.0,704.0 700.0,997.2 232.0,997.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14994.t1 - Gtr04g14938.t1 | Query: mRNA:RC4G0165300 - mRNA:RC4G0185800 | Dir: - | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1695.2 C700.0,1695.2 700.0,1397.9 1190.0,1397.9 L1190.0,1401.2 C700.0,1401.2 700.0,1698.1 232.0,1698.1 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26754.t1 - Gtr07g26708.t1 | Query: mRNA:RC1G0315100 - mRNA:RC1G0324000 | Dir: - | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,430.4 C700.0,430.4 700.0,423.7 1190.0,423.7 L1190.0,427.9 C700.0,427.9 700.0,431.6 232.0,431.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16951.t1 - Gtr02g16995.t1 | Query: mRNA:RC5G0368300 - mRNA:RC5G0376900 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1629.6 C700.0,1629.6 700.0,1338.4 1190.0,1338.4 L1190.0,1344.5 C700.0,1344.5 700.0,1635.0 232.0,1635.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26111.t1 - Gtr07g26166.t1 | Query: mRNA:RC1G0172100 - mRNA:RC1G0192700 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1090.0 C700.0,1090.0 700.0,965.6 1190.0,965.6 L1190.0,966.9 C700.0,966.9 700.0,1092.4 232.0,1092.4 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g6190.t1 - Gtr05g6231.t1 | Query: mRNA:RC3G0327900 - mRNA:RC3G0333500 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,61.2 C700.0,61.2 700.0,60.8 1190.0,60.8 L1190.0,62.3 C700.0,62.3 700.0,69.6 232.0,69.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g21270.t1 - Gtr01g21326.t1 | Query: mRNA:RC6G0001000 - mRNA:RC6G0005500 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,949.8 C700.0,949.8 700.0,669.4 1190.0,669.4 L1190.0,675.6 C700.0,675.6 700.0,958.7 232.0,958.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14700.t1 - Gtr04g14645.t1 | Query: mRNA:RC4G0124700 - mRNA:RC4G0133000 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1458.4 C700.0,1458.4 700.0,1075.3 1190.0,1075.3 L1190.0,1077.7 C700.0,1077.7 700.0,1462.4 232.0,1462.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g2061.t1 - Gtr06g2105.t1 | Query: mRNA:RC7G0221300 - mRNA:RC7G0228600 | Dir: + | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2014.0 C700.0,2014.0 700.0,1164.0 1190.0,1164.0 L1190.0,1169.9 C700.0,1169.9 700.0,2019.0 232.0,2019.0 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr07 | Ref: Gtr08g20874.t1 - Gtr08g20792.t1 | Query: mRNA:RC7G0431900 - mRNA:RC7G0441200 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1575.0 C700.0,1575.0 700.0,1268.4 1190.0,1268.4 L1190.0,1272.9 C700.0,1272.9 700.0,1579.5 232.0,1579.5 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25450.t2 - Gtr07g25510.t1 | Query: mRNA:RC1G0018300 - mRNA:RC1G0026600 | Dir: + | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1203.0 C700.0,1203.0 700.0,1611.7 1190.0,1611.7 L1190.0,1619.0 C700.0,1619.0 700.0,1215.8 232.0,1215.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr02 | Ref: Gtr05g7458.t1 - Gtr05g7343.t1 | Query: mRNA:RC2G0325000 - mRNA:RC2G0336200 | Dir: - | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1587.0 C700.0,1587.0 700.0,1281.8 1190.0,1281.8 L1190.0,1284.5 C700.0,1284.5 700.0,1591.2 232.0,1591.2 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25607.t1 - Gtr07g25667.t1 | Query: mRNA:RC1G0050300 - mRNA:RC1G0056600 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2035.0 C700.0,2035.0 700.0,1130.4 1190.0,1130.4 L1190.0,1138.3 C700.0,1138.3 700.0,2037.5 232.0,2037.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr07 | Ref: Gtr08g21174.t1 - Gtr08g21130.t1 | Query: mRNA:RC7G0367300 - mRNA:RC7G0382500 | Dir: - | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1216.7 C700.0,1216.7 700.0,891.6 1190.0,891.6 L1190.0,895.5 C700.0,895.5 700.0,1220.7 232.0,1220.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7512.t1 - Gtr05g7468.t1 | Query: mRNA:RC3G0101500 - mRNA:RC3G0111500 | Dir: - | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,450.8 C700.0,450.8 700.0,540.8 1190.0,540.8 L1190.0,542.2 C700.0,542.2 700.0,451.5 232.0,451.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17899.t1 - Gtr02g17860.t1 | Query: mRNA:RC5G0616100 - mRNA:RC5G0619200 | Dir: - | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,67.4 C700.0,67.4 700.0,63.1 1190.0,63.1 L1190.0,66.1 C700.0,66.1 700.0,73.8 232.0,73.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g21309.t1 - Gtr01g21365.t1 | Query: mRNA:RC6G0009000 - mRNA:RC6G0018700 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1636.0 C700.0,1636.0 700.0,1358.5 1190.0,1358.5 L1190.0,1362.1 C700.0,1362.1 700.0,1639.2 232.0,1639.2 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26184.t1 - Gtr07g26217.t1 | Query: mRNA:RC1G0220400 - mRNA:RC1G0228400 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,999.7 C700.0,999.7 700.0,707.8 1190.0,707.8 L1190.0,712.4 C700.0,712.4 700.0,1006.3 232.0,1006.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g15014.t1 - Gtr04g15057.t1 | Query: mRNA:RC4G0194600 - mRNA:RC4G0203600 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,374.2 C700.0,374.2 700.0,358.2 1190.0,358.2 L1190.0,360.0 C700.0,360.0 700.0,374.9 232.0,374.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr01g24014.t1 - Gtr01g24049.t1 | Query: mRNA:RC5G0195600 - mRNA:RC5G0201500 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1861.2 C700.0,1861.2 700.0,254.6 1190.0,254.6 L1190.0,255.1 C700.0,255.1 700.0,1862.3 232.0,1862.3 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g18839.t1 - Gtr08g18858.t1 | Query: mRNA:RC6G0503600 - mRNA:RC6G0506000 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1871.1 C700.0,1871.1 700.0,247.5 1190.0,247.5 L1190.0,248.8 C700.0,248.8 700.0,1872.8 232.0,1872.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g19015.t1 - Gtr08g19042.t1 | Query: mRNA:RC6G0476700 - mRNA:RC6G0482100 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1571.9 C700.0,1571.9 700.0,1266.1 1190.0,1266.1 L1190.0,1266.7 C700.0,1266.7 700.0,1573.1 232.0,1573.1 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25433.t1 - Gtr07g25411.t1 | Query: mRNA:RC1G0010300 - mRNA:RC1G0012500 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1287.7 C700.0,1287.7 700.0,836.2 1190.0,836.2 L1190.0,840.3 C700.0,840.3 700.0,1291.9 232.0,1291.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g8366.t1 - Gtr05g8299.t1 | Query: mRNA:RC3G0000800 - mRNA:RC3G0006800 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,799.3 C700.0,799.3 700.0,775.3 1190.0,775.3 L1190.0,775.8 C700.0,775.8 700.0,800.5 232.0,800.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g12945.t1 - Gtr04g12965.t1 | Query: mRNA:RC4G0376400 - mRNA:RC4G0378900 | Dir: + | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,270.9 C700.0,270.9 700.0,83.8 1190.0,83.8 L1190.0,85.5 C700.0,85.5 700.0,272.3 232.0,272.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g22745.t1 - Gtr01g22723.t1 | Query: mRNA:RC6G0068200 - mRNA:RC6G0073900 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,241.5 C700.0,241.5 700.0,113.4 1190.0,113.4 L1190.0,115.5 C700.0,115.5 700.0,245.7 232.0,245.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g22443.t1 - Gtr01g22397.t1 | Query: mRNA:RC6G0157600 - mRNA:RC6G0162500 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1864.6 C700.0,1864.6 700.0,248.3 1190.0,248.3 L1190.0,249.0 C700.0,249.0 700.0,1865.6 232.0,1865.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g18937.t1 - Gtr08g18911.t1 | Query: mRNA:RC6G0479800 - mRNA:RC6G0482700 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1601.4 C700.0,1601.4 700.0,1305.7 1190.0,1305.7 L1190.0,1311.8 C700.0,1311.8 700.0,1604.7 232.0,1604.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25779.t1 - Gtr07g25809.t1 | Query: mRNA:RC1G0105400 - mRNA:RC1G0117200 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,685.0 C700.0,685.0 700.0,1637.1 1190.0,1637.1 L1190.0,1641.1 C700.0,1641.1 700.0,687.8 232.0,687.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g11120.t1 - Gtr03g11159.t1 | Query: mRNA:RC2G0375800 - mRNA:RC2G0383600 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,716.2 C700.0,716.2 700.0,873.0 1190.0,873.0 L1190.0,875.3 C700.0,875.3 700.0,718.8 232.0,718.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr03 | Ref: Gtr03g11620.t1 - Gtr03g11658.t1 | Query: mRNA:RC3G0060300 - mRNA:RC3G0067800 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1506.4 C700.0,1506.4 700.0,1103.3 1190.0,1103.3 L1190.0,1105.3 C700.0,1105.3 700.0,1509.0 232.0,1509.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g2509.t1 - Gtr06g2489.t1 | Query: mRNA:RC7G0297500 - mRNA:RC7G0301600 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1609.0 C700.0,1609.0 700.0,1318.8 1190.0,1318.8 L1190.0,1323.2 C700.0,1323.2 700.0,1612.9 232.0,1612.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25861.t1 - Gtr07g25912.t1 | Query: mRNA:RC1G0134400 - mRNA:RC1G0144200 | Dir: + | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1007.4 C700.0,1007.4 700.0,717.5 1190.0,717.5 L1190.0,719.5 C700.0,719.5 700.0,1011.1 232.0,1011.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g15064.t1 - Gtr04g15089.t1 | Query: mRNA:RC4G0215600 - mRNA:RC4G0219300 | Dir: + | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,435.8 C700.0,435.8 700.0,492.6 1190.0,492.6 L1190.0,494.7 C700.0,494.7 700.0,436.5 232.0,436.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17174.t1 - Gtr02g17140.t1 | Query: mRNA:RC5G0499700 - mRNA:RC5G0504000 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,429.0 C700.0,429.0 700.0,439.5 1190.0,439.5 L1190.0,443.1 C700.0,443.1 700.0,430.1 232.0,430.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16927.t1 - Gtr02g16872.t2 | Query: mRNA:RC5G0405800 - mRNA:RC5G0413900 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,274.4 C700.0,274.4 700.0,86.0 1190.0,86.0 L1190.0,87.2 C700.0,87.2 700.0,277.0 232.0,277.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g22771.t1 - Gtr01g22799.t1 | Query: mRNA:RC6G0074500 - mRNA:RC6G0077800 | Dir: + | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1569.4 C700.0,1569.4 700.0,1261.8 1190.0,1261.8 L1190.0,1262.7 C700.0,1262.7 700.0,1570.9 232.0,1570.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25376.t1 - Gtr07g25401.t1 | Query: mRNA:RC1G0001800 - mRNA:RC1G0004600 | Dir: + | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1665.1 C700.0,1665.1 700.0,1383.1 1190.0,1383.1 L1190.0,1385.6 C700.0,1385.6 700.0,1669.4 232.0,1669.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26468.t1 - Gtr07g26444.t1 | Query: mRNA:RC1G0277900 - mRNA:RC1G0283600 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2066.2 C700.0,2066.2 700.0,1590.8 1190.0,1590.8 L1190.0,1593.1 C700.0,1593.1 700.0,2070.1 232.0,2070.1 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g3060.t1 - Gtr09g3029.t1 | Query: mRNA:RC2G0282900 - mRNA:RC2G0287800 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,695.9 C700.0,695.9 700.0,867.8 1190.0,867.8 L1190.0,872.0 C700.0,872.0 700.0,700.8 232.0,700.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr03 | Ref: Gtr03g11371.t1 - Gtr03g11294.t1 | Query: mRNA:RC3G0051900 - mRNA:RC3G0058900 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1531.1 C700.0,1531.1 700.0,1119.4 1190.0,1119.4 L1190.0,1121.5 C700.0,1121.5 700.0,1533.5 232.0,1533.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → Chr07 | Ref: Gtr06g2761.t1 - Gtr06g2741.t1 | Query: mRNA:RC7G0340800 - mRNA:RC7G0344800 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1590.0 C700.0,1590.0 700.0,1285.8 1190.0,1285.8 L1190.0,1289.3 C700.0,1289.3 700.0,1591.6 232.0,1591.6 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25647.t1 - Gtr07g25672.t1 | Query: mRNA:RC1G0061100 - mRNA:RC1G0069500 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,988.9 C700.0,988.9 700.0,705.1 1190.0,705.1 L1190.0,708.5 C700.0,708.5 700.0,991.4 232.0,991.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14937.t1 - Gtr04g14906.t1 | Query: mRNA:RC4G0189000 - mRNA:RC4G0196200 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,436.4 C700.0,436.4 700.0,489.7 1190.0,489.7 L1190.0,491.8 C700.0,491.8 700.0,436.9 232.0,436.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17192.t1 - Gtr02g17168.t1 | Query: mRNA:RC5G0493300 - mRNA:RC5G0497500 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1968.2 C700.0,1968.2 700.0,237.3 1190.0,237.3 L1190.0,238.5 C700.0,238.5 700.0,1971.3 232.0,1971.3 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g20313.t1 - Gtr08g20288.t1 | Query: mRNA:RC6G0438900 - mRNA:RC6G0442700 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2110.2 C700.0,2110.2 700.0,1581.1 1190.0,1581.1 L1190.0,1582.5 C700.0,1582.5 700.0,2113.0 232.0,2113.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g3375.t1 - Gtr09g3396.t1 | Query: mRNA:RC2G0257500 - mRNA:RC2G0261400 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,978.8 C700.0,978.8 700.0,683.7 1190.0,683.7 L1190.0,688.2 C700.0,688.2 700.0,982.2 232.0,982.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14864.t1 - Gtr04g14836.t1 | Query: mRNA:RC4G0146000 - mRNA:RC4G0154300 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,425.3 C700.0,425.3 700.0,452.4 1190.0,452.4 L1190.0,454.6 C700.0,454.6 700.0,426.3 232.0,426.3 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16757.t1 - Gtr02g16786.t1 | Query: mRNA:RC5G0430800 - mRNA:RC5G0434000 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,136.0 C700.0,136.0 700.0,155.7 1190.0,155.7 L1190.0,158.1 C700.0,158.1 700.0,147.7 232.0,147.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g21843.t2 - Gtr01g21792.t1 | Query: mRNA:RC6G0236500 - mRNA:RC6G0240200 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1879.5 C700.0,1879.5 700.0,261.1 1190.0,261.1 L1190.0,261.6 C700.0,261.6 700.0,1881.2 232.0,1881.2 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g19136.t1 - Gtr08g19156.t1 | Query: mRNA:RC6G0533100 - mRNA:RC6G0534900 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1996.7 C700.0,1996.7 700.0,1201.3 1190.0,1201.3 L1190.0,1203.6 C700.0,1203.6 700.0,2000.6 232.0,2000.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr07 | Ref: Gtr08g20631.t1 - Gtr08g20584.t1 | Query: mRNA:RC7G0511800 - mRNA:RC7G0517800 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,797.9 C700.0,797.9 700.0,795.1 1190.0,795.1 L1190.0,795.4 C700.0,795.4 700.0,798.8 232.0,798.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g12921.t1 - Gtr04g12935.t1 | Query: mRNA:RC4G0450900 - mRNA:RC4G0452600 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,438.2 C700.0,438.2 700.0,542.2 1190.0,542.2 L1190.0,544.3 C700.0,544.3 700.0,438.5 232.0,438.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17236.t1 - Gtr02g17251.t1 | Query: mRNA:RC5G0619300 - mRNA:RC5G0623400 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,272.9 C700.0,272.9 700.0,87.5 1190.0,87.5 L1190.0,88.2 C700.0,88.2 700.0,274.4 232.0,274.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g22748.t1 - Gtr01g22771.t1 | Query: mRNA:RC6G0078600 - mRNA:RC6G0080900 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,260.4 C700.0,260.4 700.0,97.0 1190.0,97.0 L1190.0,98.2 C700.0,98.2 700.0,262.5 232.0,262.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g22614.t1 - Gtr01g22635.t1 | Query: mRNA:RC6G0106200 - mRNA:RC6G0108800 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,134.9 C700.0,134.9 700.0,157.2 1190.0,157.2 L1190.0,160.9 C700.0,160.9 700.0,141.8 232.0,141.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g21786.t1 - Gtr01g21817.t1 | Query: mRNA:RC6G0239400 - mRNA:RC6G0244800 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1594.5 C700.0,1594.5 700.0,1299.6 1190.0,1299.6 L1190.0,1302.4 C700.0,1302.4 700.0,1597.7 232.0,1597.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25745.t1 - Gtr07g25708.t1 | Query: mRNA:RC1G0095400 - mRNA:RC1G0100300 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1225.7 C700.0,1225.7 700.0,896.3 1190.0,896.3 L1190.0,898.9 C700.0,898.9 700.0,1227.8 232.0,1227.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7577.t1 - Gtr05g7554.t1 | Query: mRNA:RC3G0112500 - mRNA:RC3G0118900 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,964.1 C700.0,964.1 700.0,675.5 1190.0,675.5 L1190.0,679.5 C700.0,679.5 700.0,968.2 232.0,968.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14722.t1 - Gtr04g14750.t1 | Query: mRNA:RC4G0132900 - mRNA:RC4G0138700 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,451.5 C700.0,451.5 700.0,544.4 1190.0,544.4 L1190.0,545.6 C700.0,545.6 700.0,451.8 232.0,451.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17903.t1 - Gtr02g17920.t1 | Query: mRNA:RC5G0623500 - mRNA:RC5G0626200 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,883.4 C700.0,883.4 700.0,624.2 1190.0,624.2 L1190.0,625.6 C700.0,625.6 700.0,886.1 232.0,886.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14085.t1 - Gtr04g14106.t1 | Query: mRNA:RC4G0029700 - mRNA:RC4G0032500 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,166.5 C700.0,166.5 700.0,149.0 1190.0,149.0 L1190.0,151.9 C700.0,151.9 700.0,173.7 232.0,173.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g21935.t2 - Gtr01g21966.t1 | Query: mRNA:RC6G0227400 - mRNA:RC6G0230900 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1662.3 C700.0,1662.3 700.0,1382.3 1190.0,1382.3 L1190.0,1383.3 C700.0,1383.3 700.0,1668.8 232.0,1668.8 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26431.t1 - Gtr07g26465.t1 | Query: mRNA:RC1G0276200 - mRNA:RC1G0278200 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1640.1 C700.0,1640.1 700.0,1351.2 1190.0,1351.2 L1190.0,1355.6 C700.0,1355.6 700.0,1640.9 232.0,1640.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26240.t1 - Gtr07g26227.t1 | Query: mRNA:RC1G0205700 - mRNA:RC1G0214400 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2082.2 C700.0,2082.2 700.0,1634.5 1190.0,1634.5 L1190.0,1636.4 C700.0,1636.4 700.0,2084.3 232.0,2084.3 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g3174.t1 - Gtr09g3149.t1 | Query: mRNA:RC2G0370300 - mRNA:RC2G0374400 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1199.6 C700.0,1199.6 700.0,843.1 1190.0,843.1 L1190.0,847.0 C700.0,847.0 700.0,1202.5 232.0,1202.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7337.t1 - Gtr05g7313.t1 | Query: mRNA:RC3G0010200 - mRNA:RC3G0016100 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,984.3 C700.0,984.3 700.0,692.6 1190.0,692.6 L1190.0,694.8 C700.0,694.8 700.0,988.1 232.0,988.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14905.t2 - Gtr04g14882.t1 | Query: mRNA:RC4G0161900 - mRNA:RC4G0164900 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,432.7 C700.0,432.7 700.0,478.4 1190.0,478.4 L1190.0,478.8 C700.0,478.8 700.0,433.2 232.0,433.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17042.t1 - Gtr02g17055.t1 | Query: mRNA:RC5G0472100 - mRNA:RC5G0473300 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,432.8 C700.0,432.8 700.0,476.8 1190.0,476.8 L1190.0,478.5 C700.0,478.5 700.0,434.0 232.0,434.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17084.t1 - Gtr02g17042.t1 | Query: mRNA:RC5G0469200 - mRNA:RC5G0472500 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,244.4 C700.0,244.4 700.0,109.2 1190.0,109.2 L1190.0,111.4 C700.0,111.4 700.0,246.3 232.0,246.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g22451.t1 - Gtr01g22433.t1 | Query: mRNA:RC6G0140600 - mRNA:RC6G0148600 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2013.7 C700.0,2013.7 700.0,1168.8 1190.0,1168.8 L1190.0,1172.0 C700.0,1172.0 700.0,2014.7 232.0,2014.7 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr07 | Ref: Gtr08g20787.t1 - Gtr08g20805.t1 | Query: mRNA:RC7G0439300 - mRNA:RC7G0444400 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1708.5 C700.0,1708.5 700.0,1407.4 1190.0,1407.4 L1190.0,1408.4 C700.0,1408.4 700.0,1709.0 232.0,1709.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26865.t1 - Gtr07g26875.t1 | Query: mRNA:RC1G0347400 - mRNA:RC1G0350700 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2076.9 C700.0,2076.9 700.0,1631.7 1190.0,1631.7 L1190.0,1632.5 C700.0,1632.5 700.0,2078.8 232.0,2078.8 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g3102.t1 - Gtr09g3115.t1 | Query: mRNA:RC2G0360500 - mRNA:RC2G0362700 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2078.3 C700.0,2078.3 700.0,1629.7 1190.0,1629.7 L1190.0,1632.7 C700.0,1632.7 700.0,2079.9 232.0,2079.9 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g3125.t1 - Gtr09g3112.t1 | Query: mRNA:RC2G0356000 - mRNA:RC2G0363300 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1201.1 C700.0,1201.1 700.0,842.2 1190.0,842.2 L1190.0,844.2 C700.0,844.2 700.0,1202.7 232.0,1202.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7326.t1 - Gtr05g7339.t1 | Query: mRNA:RC3G0008800 - mRNA:RC3G0012300 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1225.9 C700.0,1225.9 700.0,898.3 1190.0,898.3 L1190.0,899.6 C700.0,899.6 700.0,1230.3 232.0,1230.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7559.t1 - Gtr05g7600.t1 | Query: mRNA:RC3G0117200 - mRNA:RC3G0121100 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,936.9 C700.0,936.9 700.0,680.5 1190.0,680.5 L1190.0,681.7 C700.0,681.7 700.0,939.5 232.0,939.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14554.t1 - Gtr04g14568.t1 | Query: mRNA:RC4G0140300 - mRNA:RC4G0143100 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,798.8 C700.0,798.8 700.0,775.8 1190.0,775.8 L1190.0,776.1 C700.0,776.1 700.0,800.5 232.0,800.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g12965.t1 - Gtr04g12935.t1 | Query: mRNA:RC4G0378800 - mRNA:RC4G0379800 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,159.8 C700.0,159.8 700.0,153.2 1190.0,153.2 L1190.0,154.8 C700.0,154.8 700.0,164.0 232.0,164.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → Chr06 | Ref: Gtr01g21894.t1 - Gtr01g21919.t1 | Query: mRNA:RC6G0231900 - mRNA:RC6G0234400 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2020.1 C700.0,2020.1 700.0,1158.6 1190.0,1158.6 L1190.0,1160.2 C700.0,1160.2 700.0,2020.9 232.0,2020.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr07 | Ref: Gtr08g20900.t1 - Gtr08g20883.t1 | Query: mRNA:RC7G0421700 - mRNA:RC7G0424800 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1627.9 C700.0,1627.9 700.0,1335.8 1190.0,1335.8 L1190.0,1337.3 C700.0,1337.3 700.0,1629.1 232.0,1629.1 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g26092.t1 - Gtr07g26102.t1 | Query: mRNA:RC1G0165300 - mRNA:RC1G0168500 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1598.1 C700.0,1598.1 700.0,1296.1 1190.0,1296.1 L1190.0,1297.4 C700.0,1297.4 700.0,1600.1 232.0,1600.1 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25769.t1 - Gtr07g25751.t1 | Query: mRNA:RC1G0087600 - mRNA:RC1G0090300 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1612.6 C700.0,1612.6 700.0,1322.2 1190.0,1322.2 L1190.0,1323.3 C700.0,1323.3 700.0,1615.3 232.0,1615.3 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25931.t1 - Gtr07g25908.t1 | Query: mRNA:RC1G0142000 - mRNA:RC1G0144500 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2073.9 C700.0,2073.9 700.0,1605.9 1190.0,1605.9 L1190.0,1609.0 C700.0,1609.0 700.0,2075.6 232.0,2075.6 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g3083.t1 - Gtr09g3096.t1 | Query: mRNA:RC2G0313100 - mRNA:RC2G0317800 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,426.8 C700.0,426.8 700.0,467.9 1190.0,467.9 L1190.0,468.5 C700.0,468.5 700.0,427.2 232.0,427.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16807.t1 - Gtr02g16799.t1 | Query: mRNA:RC5G0457600 - mRNA:RC5G0458500 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1592.7 C700.0,1592.7 700.0,1294.9 1190.0,1294.9 L1190.0,1296.2 C700.0,1296.2 700.0,1593.4 232.0,1593.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25687.t1 - Gtr07g25694.t1 | Query: mRNA:RC1G0085200 - mRNA:RC1G0087800 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1591.5 C700.0,1591.5 700.0,1291.9 1190.0,1291.9 L1190.0,1293.6 C700.0,1293.6 700.0,1592.5 232.0,1592.5 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → Chr01 | Ref: Gtr07g25672.t1 - Gtr07g25685.t1 | Query: mRNA:RC1G0076800 - mRNA:RC1G0079900 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,625.2 C700.0,625.2 700.0,1681.0 1190.0,1681.0 L1190.0,1681.7 C700.0,1681.7 700.0,626.6 232.0,626.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr02 | Ref: Gtr03g10432.t1 - Gtr03g10445.t1 | Query: mRNA:RC2G0479300 - mRNA:RC2G0480500 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2107.5 C700.0,2107.5 700.0,1582.5 1190.0,1582.5 L1190.0,1583.4 C700.0,1583.4 700.0,2108.0 232.0,2108.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → Chr02 | Ref: Gtr09g3358.t1 - Gtr09g3351.t1 | Query: mRNA:RC2G0261600 - mRNA:RC2G0264600 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,718.6 C700.0,718.6 700.0,875.3 1190.0,875.3 L1190.0,875.6 C700.0,875.6 700.0,718.9 232.0,718.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → Chr03 | Ref: Gtr03g11661.t1 - Gtr03g11655.t1 | Query: mRNA:RC3G0067600 - mRNA:RC3G0068200 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1225.0 C700.0,1225.0 700.0,895.7 1190.0,895.7 L1190.0,896.6 C700.0,896.6 700.0,1227.3 232.0,1227.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → Chr03 | Ref: Gtr05g7549.t1 - Gtr05g7571.t1 | Query: mRNA:RC3G0111800 - mRNA:RC3G0113000 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,977.2 C700.0,977.2 700.0,682.8 1190.0,682.8 L1190.0,684.9 C700.0,684.9 700.0,981.1 232.0,981.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g14824.t1 - Gtr04g14857.t1 | Query: mRNA:RC4G0144300 - mRNA:RC4G0147800 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,755.2 C700.0,755.2 700.0,776.2 1190.0,776.2 L1190.0,776.4 C700.0,776.4 700.0,755.6 232.0,755.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → Chr04 | Ref: Gtr04g12124.t1 - Gtr04g12117.t1 | Query: mRNA:RC4G0380400 - mRNA:RC4G0381100 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,418.9 C700.0,418.9 700.0,481.0 1190.0,481.0 L1190.0,481.4 C700.0,481.4 700.0,419.2 232.0,419.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g16508.t1 - Gtr02g16519.t1 | Query: mRNA:RC5G0477900 - mRNA:RC5G0479000 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,374.0 C700.0,374.0 700.0,361.3 1190.0,361.3 L1190.0,361.7 C700.0,361.7 700.0,374.1 232.0,374.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr01g24011.t1 - Gtr01g24005.t1 | Query: mRNA:RC5G0205100 - mRNA:RC5G0206300 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,437.0 C700.0,437.0 700.0,495.2 1190.0,495.2 L1190.0,495.9 C700.0,495.9 700.0,437.2 232.0,437.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → Chr05 | Ref: Gtr02g17200.t2 - Gtr02g17194.t1 | Query: mRNA:RC5G0505000 - mRNA:RC5G0506700 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1878.9 C700.0,1878.9 700.0,143.2 1190.0,143.2 L1190.0,144.3 C700.0,144.3 700.0,1880.3 232.0,1880.3 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → Chr06 | Ref: Gtr08g19129.t1 - Gtr08g19141.t1 | Query: mRNA:RC6G0217600 - mRNA:RC6G0219200 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+</g>
+<g id="refChrs">
+<rect x="210" y="60" width="22" height="280" rx="5" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="1"/>
+<rect x="211" y="61.2" width="20" height="8.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="69.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="211" y="67.4" width="20" height="6.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="74.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="211" y="71.3" width="20" height="28.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="85.3" x2="216" y2="85.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="89.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="211" y="99.4" width="20" height="32.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="115.6" x2="216" y2="115.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="119.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="211" y="134.9" width="20" height="6.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="142.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="211" y="136.0" width="20" height="11.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="141.8" x2="216" y2="141.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="145.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="211" y="159.8" width="20" height="4.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="165.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="211" y="166.5" width="20" height="7.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="174.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="211" y="178.7" width="20" height="22.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="189.7" x2="226" y2="189.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr01)" opacity="0.8"/>
+<text x="205" y="193.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="211" y="207.4" width="20" height="28.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="221.8" x2="216" y2="221.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="225.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="211" y="241.5" width="20" height="4.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="247.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="211" y="244.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="250.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="211" y="245.7" width="20" height="16.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="254.1" x2="216" y2="254.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="258.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="211" y="260.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="266.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="211" y="261.6" width="20" height="8.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="270.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="211" y="270.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="276.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="211" y="272.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="278.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="211" y="274.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="280.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="211" y="276.8" width="20" height="16.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="285.1" x2="216" y2="285.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="289.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<rect x="211" y="293.5" width="20" height="46.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="316.7" x2="226" y2="316.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr01)" opacity="0.8"/>
+<text x="205" y="320.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">20</text>
+<text x="205" y="55" text-anchor="end" fill="#FFD700" font-size="12" font-weight="700" letter-spacing="0.5">Chr01</text>
+<circle cx="221.0" cy="123.7" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="127.7" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="368" width="22" height="95" rx="5" fill="#E63946" opacity="0.15" stroke="#E63946" stroke-width="1"/>
+<rect x="211" y="368.0" width="20" height="4.6" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="374.3" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="211" y="374.0" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="380.0" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="211" y="374.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="380.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="211" y="375.0" width="20" height="18.2" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="384.1" x2="216" y2="384.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="205" y="388.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="211" y="393.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="399.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="211" y="395.8" width="20" height="5.8" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="402.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="211" y="401.7" width="20" height="6.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="408.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="211" y="407.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="413.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="211" y="409.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="415.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="211" y="413.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="419.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="211" y="416.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="422.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="211" y="418.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="424.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="211" y="419.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="425.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="211" y="422.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="428.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">14</text>
+<rect x="211" y="425.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="431.3" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">15</text>
+<rect x="211" y="426.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="432.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">16</text>
+<rect x="211" y="427.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="433.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">17</text>
+<rect x="211" y="429.0" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="435.0" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">18</text>
+<rect x="211" y="430.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="436.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">19</text>
+<rect x="211" y="432.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="438.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">20</text>
+<rect x="211" y="432.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="438.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">21</text>
+<rect x="211" y="433.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="439.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">22</text>
+<rect x="211" y="435.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="441.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">23</text>
+<rect x="211" y="436.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="442.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">24</text>
+<rect x="211" y="437.0" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="443.0" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">25</text>
+<rect x="211" y="438.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="444.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">26</text>
+<rect x="211" y="438.5" width="20" height="6.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="445.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">27</text>
+<rect x="211" y="444.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="450.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">28</text>
+<rect x="211" y="446.1" width="20" height="4.3" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="452.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">29</text>
+<rect x="211" y="450.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="456.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">30</text>
+<rect x="211" y="451.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="457.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">31</text>
+<rect x="211" y="451.8" width="20" height="6.7" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="459.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">32</text>
+<rect x="211" y="458.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="464.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">33</text>
+<rect x="211" y="460.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="466.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">34</text>
+<text x="205" y="363" text-anchor="end" fill="#E63946" font-size="12" font-weight="700" letter-spacing="0.5">Chr02</text>
+<rect x="210" y="491" width="22" height="228" rx="5" fill="#1A237E" opacity="0.15" stroke="#1A237E" stroke-width="1"/>
+<rect x="211" y="491.3" width="20" height="11.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="497.1" x2="216" y2="497.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="205" y="501.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="211" y="504.6" width="20" height="5.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="511.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="211" y="511.8" width="20" height="6.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="519.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="211" y="518.4" width="20" height="44.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="540.8" x2="216" y2="540.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="205" y="544.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="211" y="577.7" width="20" height="12.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="583.7" x2="216" y2="583.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="205" y="587.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="211" y="593.0" width="20" height="7.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="600.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="211" y="606.9" width="20" height="4.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="613.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="211" y="625.2" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="631.2" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="211" y="627.5" width="20" height="32.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="643.7" x2="226" y2="643.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr03)" opacity="0.8"/>
+<text x="205" y="647.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="211" y="670.9" width="20" height="4.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="677.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="211" y="675.8" width="20" height="7.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="683.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="211" y="685.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="691.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="211" y="689.0" width="20" height="5.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="695.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<rect x="211" y="695.9" width="20" height="5.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="702.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">14</text>
+<rect x="211" y="702.5" width="20" height="4.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="708.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">15</text>
+<rect x="211" y="709.1" width="20" height="7.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="716.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">16</text>
+<rect x="211" y="716.2" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="722.2" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">17</text>
+<rect x="211" y="718.6" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="724.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">18</text>
+<text x="205" y="486" text-anchor="end" fill="#1A237E" font-size="12" font-weight="700" letter-spacing="0.5">Chr03</text>
+<circle cx="221.0" cy="612.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="616.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="747" width="22" height="276" rx="5" fill="#9C27B0" opacity="0.15" stroke="#9C27B0" stroke-width="1"/>
+<rect x="211" y="747.2" width="20" height="8.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="755.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="211" y="755.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="761.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="211" y="755.6" width="20" height="5.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="762.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="211" y="761.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="767.0" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="211" y="764.5" width="20" height="26.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="777.8" x2="226" y2="777.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="205" y="781.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="211" y="791.1" width="20" height="6.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="798.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="211" y="797.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="803.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="211" y="798.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="804.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<rect x="211" y="799.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="805.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="211" y="799.9" width="20" height="43.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="821.5" x2="216" y2="821.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="205" y="825.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="211" y="844.3" width="20" height="10.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="849.4" x2="216" y2="849.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="205" y="853.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="211" y="855.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="861.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="211" y="859.3" width="20" height="11.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="864.9" x2="216" y2="864.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="205" y="868.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="211" y="871.0" width="20" height="8.7" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="879.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="211" y="883.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="889.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="211" y="886.1" width="20" height="50.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="911.5" x2="226" y2="911.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="205" y="915.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="211" y="936.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="942.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<rect x="211" y="949.8" width="20" height="8.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="958.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">18</text>
+<rect x="211" y="964.1" width="20" height="4.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="970.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">19</text>
+<rect x="211" y="977.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="983.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">20</text>
+<rect x="211" y="978.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="984.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">21</text>
+<rect x="211" y="984.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="990.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">22</text>
+<rect x="211" y="988.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="994.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">23</text>
+<rect x="211" y="991.5" width="20" height="5.7" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="998.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">24</text>
+<rect x="211" y="999.7" width="20" height="6.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1007.0" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">25</text>
+<rect x="211" y="1007.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1013.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">26</text>
+<text x="205" y="742" text-anchor="end" fill="#9C27B0" font-size="12" font-weight="700" letter-spacing="0.5">Chr04</text>
+<circle cx="221.0" cy="956.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="960.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1051" width="22" height="242" rx="5" fill="#E06D10" opacity="0.15" stroke="#E06D10" stroke-width="1"/>
+<rect x="211" y="1051.3" width="20" height="32.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1067.7" x2="216" y2="1067.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr05)" opacity="0.8"/>
+<text x="205" y="1071.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1085.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1091.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1090.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1096.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1091.5" width="20" height="71.9" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1127.5" x2="216" y2="1127.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr05)" opacity="0.8"/>
+<text x="205" y="1131.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1163.6" width="20" height="35.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1181.4" x2="226" y2="1181.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="205" y="1185.4" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1199.6" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1205.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1201.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1207.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1203.0" width="20" height="12.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1209.4" x2="216" y2="1209.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr05)" opacity="0.8"/>
+<text x="205" y="1213.4" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1216.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1222.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1225.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1231.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1225.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1231.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1225.9" width="20" height="4.4" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1232.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1231.5" width="20" height="20.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1241.9" x2="226" y2="1241.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="205" y="1245.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1252.2" width="20" height="22.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1263.3" x2="226" y2="1263.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="205" y="1267.3" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1274.9" width="20" height="5.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1281.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1280.7" width="20" height="6.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1288.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1287.7" width="20" height="4.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1293.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">17</text>
+<text x="205" y="1046" text-anchor="end" fill="#E06D10" font-size="12" font-weight="700" letter-spacing="0.5">Chr05</text>
+<circle cx="221.0" cy="1147.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1151.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1321" width="22" height="219" rx="5" fill="#43A047" opacity="0.15" stroke="#43A047" stroke-width="1"/>
+<rect x="211" y="1323.9" width="20" height="13.3" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1330.5" x2="226" y2="1330.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1334.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1336.8" width="20" height="24.5" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1349.1" x2="216" y2="1349.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr06)" opacity="0.8"/>
+<text x="205" y="1353.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1363.8" width="20" height="36.9" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1382.3" x2="216" y2="1382.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr06)" opacity="0.8"/>
+<text x="205" y="1386.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1400.9" width="20" height="12.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1407.3" x2="226" y2="1407.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1411.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1415.4" width="20" height="17.1" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1424.0" x2="226" y2="1424.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1428.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1434.5" width="20" height="23.9" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1446.5" x2="226" y2="1446.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1450.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1458.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1464.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1463.3" width="20" height="17.7" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1472.1" x2="216" y2="1472.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr06)" opacity="0.8"/>
+<text x="205" y="1476.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1481.3" width="20" height="9.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1490.2" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1491.7" width="20" height="7.4" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1499.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1506.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1512.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1511.0" width="20" height="5.9" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1518.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1518.4" width="20" height="14.0" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1525.4" x2="226" y2="1525.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1529.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1531.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1537.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1531.2" width="20" height="8.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1539.2" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">15</text>
+<text x="205" y="1316" text-anchor="end" fill="#43A047" font-size="12" font-weight="700" letter-spacing="0.5">Chr06</text>
+<circle cx="221.0" cy="1410.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1414.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1568" width="22" height="252" rx="5" fill="#3498DB" opacity="0.15" stroke="#3498DB" stroke-width="1"/>
+<rect x="211" y="1569.4" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1575.4" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1571.9" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1577.9" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1575.0" width="20" height="4.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1581.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1579.6" width="20" height="7.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1587.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1587.0" width="20" height="4.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1593.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1590.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1596.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1591.5" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1597.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1592.7" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1598.7" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1594.5" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1600.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1598.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1604.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1601.4" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1607.4" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1609.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1615.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1612.6" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1618.6" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1617.1" width="20" height="10.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1622.2" x2="226" y2="1622.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1626.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1627.9" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1633.9" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1629.6" width="20" height="5.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1636.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1636.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1642.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">17</text>
+<rect x="211" y="1640.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1646.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1641.1" width="20" height="10.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1646.4" x2="226" y2="1646.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1650.4" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">19</text>
+<rect x="211" y="1654.7" width="20" height="7.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1662.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">20</text>
+<rect x="211" y="1662.3" width="20" height="6.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1669.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">21</text>
+<rect x="211" y="1665.1" width="20" height="4.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1671.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">22</text>
+<rect x="211" y="1667.9" width="20" height="26.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1681.3" x2="226" y2="1681.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1685.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">23</text>
+<rect x="211" y="1695.2" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1701.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">24</text>
+<rect x="211" y="1698.3" width="20" height="10.1" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1703.3" x2="226" y2="1703.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1707.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">25</text>
+<rect x="211" y="1708.5" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1714.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">26</text>
+<rect x="211" y="1709.0" width="20" height="81.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1749.5" x2="226" y2="1749.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1753.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">27</text>
+<rect x="211" y="1789.0" width="20" height="20.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1799.2" x2="226" y2="1799.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1803.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">28</text>
+<rect x="211" y="1809.4" width="20" height="10.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1814.6" x2="226" y2="1814.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1818.6" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">29</text>
+<text x="205" y="1563" text-anchor="end" fill="#3498DB" font-size="12" font-weight="700" letter-spacing="0.5">Chr07</text>
+<circle cx="221.0" cy="1684.0" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1688.0" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1848" width="22" height="190" rx="5" fill="#FFA07A" opacity="0.15" stroke="#FFA07A" stroke-width="1"/>
+<rect x="211" y="1848.1" width="20" height="13.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1854.8" x2="216" y2="1854.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="205" y="1858.8" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1861.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1867.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1862.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1868.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1864.6" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1870.6" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1865.3" width="20" height="5.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1872.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1871.1" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1877.1" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1872.8" width="20" height="6.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1879.9" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1878.9" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1884.9" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1879.5" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1885.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1881.3" width="20" height="47.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1905.2" x2="216" y2="1905.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="205" y="1909.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1929.2" width="20" height="6.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1936.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1937.1" width="20" height="4.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1943.1" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1941.2" width="20" height="9.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1950.1" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1951.0" width="20" height="17.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1959.6" x2="226" y2="1959.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr08)" opacity="0.8"/>
+<text x="205" y="1963.6" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1968.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1974.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1971.0" width="20" height="26.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1984.2" x2="216" y2="1984.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="205" y="1988.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1996.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2002.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">17</text>
+<rect x="211" y="2000.6" width="20" height="9.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2009.1" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">18</text>
+<rect x="211" y="2013.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2019.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">19</text>
+<rect x="211" y="2014.0" width="20" height="5.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2020.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">20</text>
+<rect x="211" y="2020.1" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2026.1" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">21</text>
+<rect x="211" y="2022.0" width="20" height="12.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="2028.2" x2="216" y2="2028.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="205" y="2032.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">22</text>
+<rect x="211" y="2035.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2041.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">23</text>
+<text x="205" y="1843" text-anchor="end" fill="#FFA07A" font-size="12" font-weight="700" letter-spacing="0.5">Chr08</text>
+<circle cx="221.0" cy="2003.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2007.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2066" width="22" height="184" rx="5" fill="#72d1b9" opacity="0.15" stroke="#72d1b9" stroke-width="1"/>
+<rect x="211" y="2066.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2072.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2073.9" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2079.9" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2076.9" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2082.9" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2078.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2084.3" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2082.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2088.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2084.3" width="20" height="10.3" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="214" y1="2089.5" x2="226" y2="2089.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr09)" opacity="0.8"/>
+<text x="205" y="2093.5" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2094.8" width="20" height="12.9" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2101.3" x2="216" y2="2101.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="205" y="2105.3" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2107.5" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2113.5" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2110.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2116.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2112.6" width="20" height="137.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2181.1" x2="216" y2="2181.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="205" y="2185.1" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">10</text>
+<text x="205" y="2061" text-anchor="end" fill="#72d1b9" font-size="12" font-weight="700" letter-spacing="0.5">Chr09</text>
+<circle cx="221.0" cy="2128.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2132.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+</g>
+<g id="queryChrs">
+<rect x="1190" y="60" width="22" height="219" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="60.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="66.8" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="63.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="69.1" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="66.1" width="20" height="17.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="74.9" x2="1196" y2="74.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="1217" y="78.9" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="83.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="89.8" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="86.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="92.0" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="87.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="93.5" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="88.6" width="20" height="7.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="96.4" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="97.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="103.0" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="98.1" width="20" height="10.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="103.3" x2="1196" y2="103.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="1217" y="107.3" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="109.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="115.2" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="113.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="119.4" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="116.8" width="20" height="17.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="125.5" x2="1196" y2="125.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="1217" y="129.5" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="134.4" width="20" height="8.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="142.7" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="143.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="149.2" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="149.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="155.0" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="153.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="159.2" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="155.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="161.7" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="157.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="163.2" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="162.3" width="20" height="12.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="168.4" x2="1196" y2="168.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="1217" y="172.4" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="175.5" width="20" height="9.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="184.4" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="186.4" width="20" height="37.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="204.9" x2="1206" y2="204.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr01)" opacity="0.8"/>
+<text x="1217" y="208.9" fill="#FFD700" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="237.3" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="243.3" fill="#FFA07A" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="238.6" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="244.6" fill="#FFA07A" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="239.9" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="245.9" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="241.7" width="20" height="4.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="247.7" fill="#FFA07A" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="245.9" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="251.9" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="247.5" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="253.5" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="248.3" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="254.3" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="248.5" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="254.5" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="250.1" width="20" height="4.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="256.3" fill="#FFA07A" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="254.6" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="260.6" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="254.6" width="20" height="6.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="261.7" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="261.1" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="267.1" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="261.6" width="20" height="15.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="269.3" x2="1196" y2="269.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="1217" y="273.3" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="277.1" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="283.1" fill="#FFA07A" font-size="10" font-weight="500">11</text>
+<text x="1217" y="55" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Chr06</text>
+<rect x="1190" y="307" width="22" height="280" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="307.1" width="20" height="9.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="315.6" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="315.1" width="20" height="6.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="322.1" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="322.2" width="20" height="36.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="340.2" x2="1196" y2="340.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="1217" y="344.2" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="358.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="364.2" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="361.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="367.3" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="362.4" width="20" height="12.8" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="368.7" x2="1196" y2="368.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="1217" y="372.7" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="375.3" width="20" height="15.2" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="382.9" x2="1206" y2="382.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr02)" opacity="0.8"/>
+<text x="1217" y="386.9" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="391.8" width="20" height="5.9" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="398.8" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="400.6" width="20" height="9.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="409.1" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="412.3" width="20" height="9.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="420.9" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="423.7" width="20" height="4.3" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="429.8" fill="#E63946" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="429.7" width="20" height="4.9" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="436.2" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="439.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="445.5" fill="#E63946" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="444.8" width="20" height="7.5" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="452.6" fill="#E63946" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="452.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="458.4" fill="#E63946" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="455.6" width="20" height="10.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="461.0" x2="1206" y2="461.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr02)" opacity="0.8"/>
+<text x="1217" y="465.0" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="467.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="473.9" fill="#E63946" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="469.3" width="20" height="6.5" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="476.6" fill="#E63946" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="476.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="482.8" fill="#E63946" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="478.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="484.4" fill="#E63946" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="481.0" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="487.0" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="483.1" width="20" height="6.3" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="490.2" fill="#E63946" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="489.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="495.7" fill="#E63946" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="492.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="498.6" fill="#E63946" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="495.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="501.2" fill="#E63946" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="498.6" width="20" height="14.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="506.0" x2="1196" y2="506.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="1217" y="510.0" fill="#E63946" font-size="10" font-weight="500">29</text>
+<rect x="1191" y="513.4" width="20" height="6.8" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="520.8" fill="#E63946" font-size="10" font-weight="500">28</text>
+<rect x="1191" y="520.8" width="20" height="19.8" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="530.7" x2="1196" y2="530.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="1217" y="534.7" fill="#E63946" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="540.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="546.8" fill="#E63946" font-size="10" font-weight="500">30</text>
+<rect x="1191" y="542.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="548.2" fill="#E63946" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="544.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="550.4" fill="#E63946" font-size="10" font-weight="500">31</text>
+<rect x="1191" y="546.8" width="20" height="17.1" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="555.4" x2="1206" y2="555.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr02)" opacity="0.8"/>
+<text x="1217" y="559.4" fill="#E63946" font-size="10" font-weight="500">32</text>
+<rect x="1191" y="576.0" width="20" height="5.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="582.5" fill="#E63946" font-size="10" font-weight="500">33</text>
+<rect x="1191" y="583.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="589.7" fill="#E63946" font-size="10" font-weight="500">34</text>
+<text x="1217" y="302" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Chr05</text>
+<rect x="1190" y="615" width="22" height="192" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="617.3" width="20" height="6.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="624.8" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="624.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="630.2" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="626.7" width="20" height="38.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="646.1" x2="1206" y2="646.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="1217" y="650.1" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="669.4" width="20" height="6.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="676.5" fill="#9C27B0" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="675.5" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="681.5" fill="#9C27B0" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="680.5" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="686.5" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="682.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="688.8" fill="#9C27B0" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="683.7" width="20" height="4.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="690.0" fill="#9C27B0" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="692.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="698.6" fill="#9C27B0" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="695.2" width="20" height="8.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="703.6" fill="#9C27B0" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="705.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="711.1" fill="#9C27B0" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="707.8" width="20" height="4.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="714.1" fill="#9C27B0" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="717.5" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="723.5" fill="#9C27B0" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="719.8" width="20" height="9.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="728.5" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="729.4" width="20" height="13.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="736.4" x2="1196" y2="736.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="1217" y="740.4" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="743.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="749.4" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="747.1" width="20" height="28.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="761.3" x2="1196" y2="761.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="1217" y="765.3" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="775.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="781.3" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="775.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="781.8" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="776.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="782.2" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="776.4" width="20" height="16.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="784.4" x2="1206" y2="784.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="1217" y="788.4" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="792.5" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="798.5" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="795.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="801.1" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="795.5" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="801.5" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="798.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="804.6" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="802.4" width="20" height="4.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="808.5" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<text x="1217" y="610" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Chr04</text>
+<rect x="1190" y="835" width="22" height="152" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="836.2" width="20" height="4.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="842.3" fill="#E06D10" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="842.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="848.2" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="843.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="849.1" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="847.2" width="20" height="9.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="855.7" fill="#E06D10" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="858.6" width="20" height="9.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="867.2" fill="#1A237E" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="867.8" width="20" height="4.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="873.9" fill="#1A237E" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="873.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="879.0" fill="#1A237E" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="875.3" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="881.3" fill="#1A237E" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="877.0" width="20" height="10.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="882.3" x2="1206" y2="882.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr03)" opacity="0.8"/>
+<text x="1217" y="886.3" fill="#1A237E" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="891.6" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="897.6" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="895.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="901.7" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="896.3" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="902.3" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="898.3" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="904.3" fill="#E06D10" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="901.5" width="20" height="10.9" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="906.9" x2="1206" y2="906.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="1217" y="910.9" fill="#E06D10" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="913.4" width="20" height="14.9" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="920.8" x2="1206" y2="920.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="1217" y="924.8" fill="#E06D10" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="928.4" width="20" height="10.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="933.6" x2="1206" y2="933.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="1217" y="937.6" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="938.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="944.7" fill="#E06D10" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="942.4" width="20" height="23.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="954.2" x2="1196" y2="954.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr05)" opacity="0.8"/>
+<text x="1217" y="958.2" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="965.6" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="971.6" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="967.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="973.1" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="971.0" width="20" height="15.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="978.8" x2="1196" y2="978.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr05)" opacity="0.8"/>
+<text x="1217" y="982.8" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<text x="1217" y="830" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Chr03</text>
+<rect x="1190" y="1015" width="22" height="218" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1015.3" width="20" height="5.9" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1022.2" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1021.2" width="20" height="13.7" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="1028.0" x2="1196" y2="1028.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr06)" opacity="0.8"/>
+<text x="1217" y="1032.0" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1034.9" width="20" height="20.3" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="1045.0" x2="1196" y2="1045.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr06)" opacity="0.8"/>
+<text x="1217" y="1049.0" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1055.2" width="20" height="7.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1062.9" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1058.1" width="20" height="7.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1065.7" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1065.5" width="20" height="8.9" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1073.9" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1075.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1081.3" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1079.4" width="20" height="7.1" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1087.0" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1087.1" width="20" height="4.5" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1093.4" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1093.2" width="20" height="5.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1100.1" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1099.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1105.1" fill="#43A047" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1103.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1109.3" fill="#43A047" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1108.4" width="20" height="12.1" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="1114.5" x2="1206" y2="1114.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="1217" y="1118.5" fill="#43A047" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1119.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1125.4" fill="#43A047" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1121.4" width="20" height="7.5" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1129.2" fill="#43A047" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1130.4" width="20" height="7.9" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1138.4" fill="#FFA07A" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="1139.8" width="20" height="13.6" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1146.6" x2="1196" y2="1146.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="1217" y="1150.6" fill="#FFA07A" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="1158.6" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1164.6" fill="#FFA07A" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="1164.0" width="20" height="5.9" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1171.0" fill="#FFA07A" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="1168.8" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1174.8" fill="#FFA07A" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="1189.9" width="20" height="9.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1198.6" fill="#FFA07A" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="1201.3" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1207.3" fill="#FFA07A" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1206.9" width="20" height="22.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1218.1" x2="1196" y2="1218.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="1217" y="1222.1" fill="#FFA07A" font-size="10" font-weight="500">16</text>
+<text x="1217" y="1010" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Chr07</text>
+<rect x="1190" y="1261" width="22" height="211" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1261.8" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1267.8" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1266.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1272.1" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1268.4" width="20" height="4.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1274.6" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1274.2" width="20" height="6.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1281.6" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1281.8" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1287.8" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1285.8" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1291.8" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1291.9" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1297.9" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1294.9" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1300.9" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1296.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1302.1" fill="#3498DB" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1299.6" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1305.6" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1305.7" width="20" height="6.1" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1312.8" fill="#3498DB" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1318.8" width="20" height="4.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1325.0" fill="#3498DB" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1322.2" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1328.2" fill="#3498DB" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1323.5" width="20" height="10.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1328.8" x2="1206" y2="1328.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="1217" y="1332.8" fill="#3498DB" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1335.8" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1341.8" fill="#3498DB" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1338.4" width="20" height="6.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1345.5" fill="#3498DB" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1351.2" width="20" height="4.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1357.4" fill="#3498DB" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="1358.5" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1364.5" fill="#3498DB" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1363.4" width="20" height="9.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1372.0" fill="#3498DB" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="1374.4" width="20" height="7.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1382.3" fill="#3498DB" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="1382.3" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1388.3" fill="#3498DB" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="1383.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1389.1" fill="#3498DB" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="1385.1" width="20" height="12.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1391.4" x2="1206" y2="1391.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="1217" y="1395.4" fill="#3498DB" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="1397.9" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1403.9" fill="#3498DB" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="1401.7" width="20" height="4.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1408.0" fill="#3498DB" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="1407.4" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1413.4" fill="#3498DB" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="1409.2" width="20" height="45.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1432.1" x2="1206" y2="1432.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="1217" y="1436.1" fill="#3498DB" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="1455.7" width="20" height="12.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1461.9" x2="1206" y2="1461.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="1217" y="1465.9" fill="#3498DB" font-size="10" font-weight="500">28</text>
+<rect x="1191" y="1468.7" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1474.7" fill="#3498DB" font-size="10" font-weight="500">29</text>
+<text x="1217" y="1256" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Chr01</text>
+<rect x="1190" y="1500" width="22" height="244" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1500.2" width="20" height="81.5" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="1540.9" x2="1196" y2="1540.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="1217" y="1544.9" fill="#72d1b9" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1581.1" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1587.1" fill="#72d1b9" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1582.5" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1588.5" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1584.6" width="20" height="6.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1591.6" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1590.8" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1596.8" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1595.6" width="20" height="9.8" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1604.5" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1605.9" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1611.9" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1611.7" width="20" height="7.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1619.3" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1619.7" width="20" height="5.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1626.4" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1629.7" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1635.7" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1631.7" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1637.7" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1634.5" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1640.5" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1637.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1643.1" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1639.9" width="20" height="11.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="1645.6" x2="1196" y2="1645.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="1217" y="1649.6" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1652.8" width="20" height="4.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1659.1" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1659.3" width="20" height="21.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="1670.1" x2="1206" y2="1670.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr03)" opacity="0.8"/>
+<text x="1217" y="1674.1" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1681.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1687.0" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1682.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1688.8" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1685.9" width="20" height="5.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1692.4" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1691.1" width="20" height="8.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1699.0" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1700.0" width="20" height="24.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="1712.4" x2="1196" y2="1712.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="1217" y="1716.4" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1726.5" width="20" height="4.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1732.8" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1731.3" width="20" height="5.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1738.0" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1736.7" width="20" height="7.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1744.3" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1495" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Chr02</text>
+</g>
+</svg>
+</div>
+
+<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#FFD700"></div><span>Chr01</span></div><div class="legend-item"><div class="legend-dot" style="background:#E63946"></div><span>Chr02</span></div><div class="legend-item"><div class="legend-dot" style="background:#1A237E"></div><span>Chr03</span></div><div class="legend-item"><div class="legend-dot" style="background:#9C27B0"></div><span>Chr04</span></div><div class="legend-item"><div class="legend-dot" style="background:#E06D10"></div><span>Chr05</span></div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div><span>Chr06</span></div><div class="legend-item"><div class="legend-dot" style="background:#3498DB"></div><span>Chr07</span></div><div class="legend-item"><div class="legend-dot" style="background:#FFA07A"></div><span>Chr08</span></div><div class="legend-item"><div class="legend-dot" style="background:#72d1b9"></div><span>Chr09</span></div></div>
+<div class="stats-bar"><span><b>192</b> synteny fragments</span><span><b>9</b> ref chromosomes</span><span><b>7</b> query chromosomes</span><span><b>99</b> forward &nbsp;|&nbsp; <b>93</b> reverse</span><span>max size <b>1153</b> genes</span></div>
+<div id="tooltip"></div>
+
+<script>
+function showTip(e, el) {
+  const parts = el.dataset.tip.split(' | ');
+  const tip = document.getElementById('tooltip');
+  tip.innerHTML = parts.map((p,i) => i===0
+    ? `<div style="color:#0ea5e9;font-weight:700;margin-bottom:5px">${p}</div>`
+    : `<div>${p}</div>`
+  ).join('');
+  tip.style.left = (e.clientX + 14) + 'px';
+  tip.style.top  = (e.clientY - 10) + 'px';
+  tip.classList.add('show');
+}
+function hideTip() { document.getElementById('tooltip').classList.remove('show'); }
+</script>
+</body>
+</html>

@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synteny — Al_2_Os.blast.icl.block.corr.csv-r-r.reform.Claude_filtered.txt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0a0e1a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; min-height:100vh; }
+  .canvas-container { padding:20px 32px; overflow-x:auto; }
+  svg { display:block; max-width:100%; }
+  .legend {
+    padding:10px 32px 16px; display:flex; gap:18px; flex-wrap:wrap;
+    border-top:1px solid #1e2d45;
+  }
+  .legend-item { display:flex; align-items:center; gap:7px; font-size:11px; color:#64748b; }
+  .legend-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0; }
+  .stats-bar {
+    padding:10px 32px 18px; display:flex; gap:28px; font-size:10px; color:#64748b; flex-wrap:wrap;
+  }
+  .stats-bar b { color:#0ea5e9; margin-right:3px; }
+  #tooltip {
+    position:fixed; background:#1e2d45; border:1px solid #38bdf8; border-radius:6px;
+    padding:10px 14px; font-size:11px; line-height:1.8; color:#e2e8f0;
+    pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:1000;
+    max-width:340px;
+  }
+  #tooltip.show { opacity:1; }
+</style>
+</head>
+<body>
+
+<div class="canvas-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2866" width="1400" height="2866" style="background:#0a0e1a;font-family:'JetBrains Mono',monospace">
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="arr_Os01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFD700"/></marker>
+<marker id="arr_rev_Os01" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFD700"/></marker>
+<marker id="arr_Os02" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E63946"/></marker>
+<marker id="arr_rev_Os02" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E63946"/></marker>
+<marker id="arr_Os03" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1A237E"/></marker>
+<marker id="arr_rev_Os03" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#1A237E"/></marker>
+<marker id="arr_Os04" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9C27B0"/></marker>
+<marker id="arr_rev_Os04" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9C27B0"/></marker>
+<marker id="arr_Os05" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E06D10"/></marker>
+<marker id="arr_rev_Os05" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E06D10"/></marker>
+<marker id="arr_Os06" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#43A047"/></marker>
+<marker id="arr_rev_Os06" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#43A047"/></marker>
+<marker id="arr_Os07" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#3498DB"/></marker>
+<marker id="arr_rev_Os07" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#3498DB"/></marker>
+<marker id="arr_Os08" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFA07A"/></marker>
+<marker id="arr_rev_Os08" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFA07A"/></marker>
+<marker id="arr_Os09" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#72d1b9"/></marker>
+<marker id="arr_rev_Os09" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#72d1b9"/></marker>
+<marker id="arr_Os10" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#0055a6"/></marker>
+<marker id="arr_rev_Os10" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#0055a6"/></marker>
+<marker id="arr_Os11" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#e3b58f"/></marker>
+<marker id="arr_rev_Os11" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#e3b58f"/></marker>
+<marker id="arr_Os12" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#f0c9a7"/></marker>
+<marker id="arr_rev_Os12" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#f0c9a7"/></marker>
+</defs>
+<g id="ribbons" opacity="0.35">
+<path d="M232.0,673.9 C700.0,673.9 700.0,834.1 1190.0,834.1 L1190.0,875.7 C700.0,875.7 700.0,736.9 232.0,736.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al03 | Ref: LOC_Os03g29614.1.MSUv7.0 - LOC_Os03g13170.1.MSUv7.0 | Query: AL3G03580.t1 - AL3G04671.t1 | Dir: - | Size: 633 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2123.4 C700.0,2123.4 700.0,639.7 1190.0,639.7 L1190.0,673.2 C700.0,673.2 700.0,2177.1 232.0,2177.1 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Al03 | Ref: LOC_Os09g39580.1.MSUv7.0 - LOC_Os09g24200.1.MSUv7.0 | Query: AL3G00090.t1 - AL3G01538.t1 | Dir: - | Size: 584 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,774.0 C700.0,774.0 700.0,991.3 1190.0,991.3 L1190.0,1020.8 C700.0,1020.8 700.0,837.8 232.0,837.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al07 | Ref: LOC_Os03g57040.1.MSUv7.0 - LOC_Os03g40670.1.MSUv7.0 | Query: AL7G02378.t1 - AL7G03601.t1 | Dir: - | Size: 574 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1712.2 C700.0,1712.2 700.0,1236.8 1190.0,1236.8 L1190.0,1299.8 C700.0,1299.8 700.0,1773.9 232.0,1773.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g45360.1.MSUv7.0 - LOC_Os07g29770.1.MSUv7.0 | Query: AL4G02585.t1 - AL4G03783.t1 | Dir: - | Size: 485 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,214.1 C700.0,214.1 700.0,131.1 1190.0,131.1 L1190.0,168.5 C700.0,168.5 700.0,256.8 232.0,256.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g52880.1.MSUv7.0 - LOC_Os01g41990.1.MSUv7.0 | Query: AL1G03018.t1 - AL1G03742.t1 | Dir: - | Size: 427 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1061.2 C700.0,1061.2 700.0,1198.2 1190.0,1198.2 L1190.0,1218.4 C700.0,1218.4 700.0,1091.8 232.0,1091.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g52390.1.MSUv7.0 - LOC_Os04g44560.1.MSUv7.0 | Query: AL4G00889.t1 - AL4G01834.t1 | Dir: - | Size: 332 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1312.7 C700.0,1312.7 700.0,1743.6 1190.0,1743.6 L1190.0,1759.8 C700.0,1759.8 700.0,1339.7 232.0,1339.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g51830.1.MSUv7.0 - LOC_Os05g43930.1.MSUv7.0 | Query: AL2G05086.t1 - AL2G05972.t1 | Dir: - | Size: 321 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,549.4 C700.0,549.4 700.0,491.0 1190.0,491.0 L1190.0,546.3 C700.0,546.3 700.0,576.4 232.0,576.4 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g52780.1.MSUv7.0 - LOC_Os02g46100.1.MSUv7.0 | Query: AL6G02516.t1 - AL6G03103.t1 | Dir: - | Size: 321 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1025.8 C700.0,1025.8 700.0,1426.7 1190.0,1426.7 L1190.0,1454.1 C700.0,1454.1 700.0,1053.5 232.0,1053.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g34530.1.MSUv7.0 - LOC_Os04g42570.1.MSUv7.0 | Query: AL4G04982.t1 - AL4G05789.t1 | Dir: + | Size: 304 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,647.9 C700.0,647.9 700.0,877.4 1190.0,877.4 L1190.0,890.3 C700.0,890.3 700.0,670.8 232.0,670.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al03 | Ref: LOC_Os03g12510.1.MSUv7.0 - LOC_Os03g06139.1.MSUv7.0 | Query: AL3G04727.t1 - AL3G05315.t1 | Dir: - | Size: 301 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1398.9 C700.0,1398.9 700.0,1806.6 1190.0,1806.6 L1190.0,1821.6 C700.0,1821.6 700.0,1429.8 232.0,1429.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g09210.1.MSUv7.0 - LOC_Os06g16430.1.MSUv7.0 | Query: AL5G00916.t1 - AL5G01421.t1 | Dir: + | Size: 229 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,269.9 C700.0,269.9 700.0,113.0 1190.0,113.0 L1190.0,122.0 C700.0,122.0 700.0,288.7 232.0,288.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g56310.1.MSUv7.0 - LOC_Os01g61080.1.MSUv7.0 | Query: AL1G02390.t1 - AL1G02750.t1 | Dir: + | Size: 214 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1282.9 C700.0,1282.9 700.0,1723.2 1190.0,1723.2 L1190.0,1735.4 C700.0,1735.4 700.0,1304.2 232.0,1304.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g41390.1.MSUv7.0 - LOC_Os05g35260.1.MSUv7.0 | Query: AL2G04421.t1 - AL2G04836.t1 | Dir: - | Size: 212 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2336.0 C700.0,2336.0 700.0,1684.3 1190.0,1684.3 L1190.0,1704.9 C700.0,1704.9 700.0,2355.2 232.0,2355.2 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Al02 | Ref: LOC_Os10g37260.1.MSUv7.0 - LOC_Os10g42510.1.MSUv7.0 | Query: AL2G03536.t1 - AL2G03907.t1 | Dir: + | Size: 205 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1256.9 C700.0,1256.9 700.0,1708.4 1190.0,1708.4 L1190.0,1723.2 C700.0,1723.2 700.0,1282.9 232.0,1282.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g35240.1.MSUv7.0 - LOC_Os05g28830.1.MSUv7.0 | Query: AL2G03999.t1 - AL2G04419.t1 | Dir: - | Size: 199 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1987.6 C700.0,1987.6 700.0,1838.3 1190.0,1838.3 L1190.0,1854.3 C700.0,1854.3 700.0,2002.8 232.0,2002.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g41270.1.MSUv7.0 - LOC_Os08g45240.2.MSUv7.0 | Query: AL5G01860.t1 - AL5G02204.t1 | Dir: + | Size: 194 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2743.1 C700.0,2743.1 700.0,798.8 1190.0,798.8 L1190.0,833.9 C700.0,833.9 700.0,2770.4 232.0,2770.4 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Al03 | Ref: LOC_Os12g36100.1.MSUv7.0 - LOC_Os12g42400.1.MSUv7.0 | Query: AL3G03008.t1 - AL3G03577.t1 | Dir: + | Size: 189 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,838.0 C700.0,838.0 700.0,980.7 1190.0,980.7 L1190.0,990.1 C700.0,990.1 700.0,852.6 232.0,852.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al07 | Ref: LOC_Os03g61290.1.MSUv7.0 - LOC_Os03g57070.2.MSUv7.0 | Query: AL7G01794.t1 - AL7G02302.t1 | Dir: - | Size: 187 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2600.0 C700.0,2600.0 700.0,702.2 1190.0,702.2 L1190.0,731.7 C700.0,731.7 700.0,2625.4 232.0,2625.4 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Al03 | Ref: LOC_Os12g01010.1.MSUv7.0 - LOC_Os12g07780.1.MSUv7.0 | Query: AL3G02179.t1 - AL3G02646.t1 | Dir: + | Size: 182 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,582.1 C700.0,582.1 700.0,588.9 1190.0,588.9 L1190.0,605.4 C700.0,605.4 700.0,597.6 232.0,597.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g54130.1.MSUv7.0 - LOC_Os02g58110.1.MSUv7.0 | Query: AL6G04511.t1 - AL6G05308.t1 | Dir: + | Size: 180 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,522.9 C700.0,522.9 700.0,553.0 1190.0,553.0 L1190.0,565.0 C700.0,565.0 700.0,539.2 232.0,539.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g39710.1.MSUv7.0 - LOC_Os02g43940.1.MSUv7.0 | Query: AL6G03229.t1 - AL6G03538.t1 | Dir: + | Size: 173 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1945.3 C700.0,1945.3 700.0,1854.5 1190.0,1854.5 L1190.0,1898.8 C700.0,1898.8 700.0,1976.8 232.0,1976.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g38590.1.MSUv7.0 - LOC_Os08g31560.1.MSUv7.0 | Query: AL5G02206.t1 - AL5G02594.t1 | Dir: - | Size: 172 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,90.2 C700.0,90.2 700.0,288.7 1190.0,288.7 L1190.0,298.8 C700.0,298.8 700.0,106.1 232.0,106.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g09246.1.MSUv7.0 - LOC_Os01g12870.1.MSUv7.0 | Query: AL1G04495.t1 - AL1G04800.t1 | Dir: + | Size: 162 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,293.0 C700.0,293.0 700.0,106.4 1190.0,106.4 L1190.0,113.0 C700.0,113.0 700.0,305.6 232.0,305.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g65400.1.MSUv7.0 - LOC_Os01g62210.1.MSUv7.0 | Query: AL1G02124.t1 - AL1G02387.t1 | Dir: - | Size: 155 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2401.0 C700.0,2401.0 700.0,1027.6 1190.0,1027.6 L1190.0,1041.1 C700.0,1041.1 700.0,2431.8 232.0,2431.8 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g12810.1.MSUv7.0 - LOC_Os11g05520.1.MSUv7.0 | Query: AL7G03784.t1 - AL7G04142.t1 | Dir: - | Size: 147 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,256.9 C700.0,256.9 700.0,123.0 1190.0,123.0 L1190.0,131.0 C700.0,131.0 700.0,268.8 232.0,268.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g52920.1.MSUv7.0 - LOC_Os01g56030.1.MSUv7.0 | Query: AL1G02778.t1 - AL1G03015.t1 | Dir: + | Size: 144 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1007.4 C700.0,1007.4 700.0,1410.6 1190.0,1410.6 L1190.0,1425.4 C700.0,1425.4 700.0,1026.0 232.0,1026.0 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g30240.1.MSUv7.0 - LOC_Os04g34580.1.MSUv7.0 | Query: AL4G04676.t1 - AL4G04962.t1 | Dir: + | Size: 140 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,409.3 C700.0,409.3 700.0,439.8 1190.0,439.8 L1190.0,467.5 C700.0,467.5 700.0,435.0 232.0,435.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g12290.1.MSUv7.0 - LOC_Os02g17920.1.MSUv7.0 | Query: AL6G02101.t1 - AL6G02424.t1 | Dir: + | Size: 130 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,638.6 C700.0,638.6 700.0,891.4 1190.0,891.4 L1190.0,900.4 C700.0,900.4 700.0,648.1 232.0,648.1 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al03 | Ref: LOC_Os03g06200.1.MSUv7.0 - LOC_Os03g03680.1.MSUv7.0 | Query: AL3G05376.t1 - AL3G05749.t1 | Dir: - | Size: 129 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,396.3 C700.0,396.3 700.0,419.7 1190.0,419.7 L1190.0,440.7 C700.0,440.7 700.0,408.1 232.0,408.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g08270.1.MSUv7.0 - LOC_Os02g11980.1.MSUv7.0 | Query: AL6G01765.t1 - AL6G02111.t1 | Dir: + | Size: 126 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,79.7 C700.0,79.7 700.0,298.9 1190.0,298.9 L1190.0,308.2 C700.0,308.2 700.0,89.9 232.0,89.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g09200.1.MSUv7.0 - LOC_Os01g06454.1.MSUv7.0 | Query: AL1G04803.t1 - AL1G05128.t1 | Dir: - | Size: 122 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1552.2 C700.0,1552.2 700.0,963.5 1190.0,963.5 L1190.0,972.8 C700.0,972.8 700.0,1563.5 232.0,1563.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al07 | Ref: LOC_Os06g46670.2.MSUv7.0 - LOC_Os06g49740.1.MSUv7.0 | Query: AL7G00948.t1 - AL7G01329.t1 | Dir: + | Size: 122 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1097.7 C700.0,1097.7 700.0,1184.4 1190.0,1184.4 L1190.0,1190.8 C700.0,1190.8 700.0,1110.1 232.0,1110.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g56990.1.MSUv7.0 - LOC_Os04g53780.1.MSUv7.0 | Query: AL4G00109.t1 - AL4G00443.t1 | Dir: - | Size: 121 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1515.5 C700.0,1515.5 700.0,2024.9 1190.0,2024.9 L1190.0,2032.1 C700.0,2032.1 700.0,1532.2 232.0,1532.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g38294.1.MSUv7.0 - LOC_Os06g42030.1.MSUv7.0 | Query: AL5G03776.t1 - AL5G04029.t1 | Dir: + | Size: 116 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1819.2 C700.0,1819.2 700.0,1994.9 1190.0,1994.9 L1190.0,2008.6 C700.0,2008.6 700.0,1830.3 232.0,1830.3 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g03682.1.MSUv7.0 - LOC_Os08g01030.1.MSUv7.0 | Query: AL5G03141.t1 - AL5G03392.t1 | Dir: - | Size: 116 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,628.9 C700.0,628.9 700.0,901.8 1190.0,901.8 L1190.0,908.9 C700.0,908.9 700.0,638.2 232.0,638.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al03 | Ref: LOC_Os03g03600.1.MSUv7.0 - LOC_Os03g01210.1.MSUv7.0 | Query: AL3G05824.t1 - AL3G06209.t1 | Dir: - | Size: 114 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2320.0 C700.0,2320.0 700.0,1645.2 1190.0,1645.2 L1190.0,1680.2 C700.0,1680.2 700.0,2332.9 232.0,2332.9 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Al02 | Ref: LOC_Os10g33290.1.MSUv7.0 - LOC_Os10g36420.1.MSUv7.0 | Query: AL2G03229.t1 - AL2G03473.t1 | Dir: + | Size: 103 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,105.8 C700.0,105.8 700.0,274.9 1190.0,274.9 L1190.0,288.4 C700.0,288.4 700.0,116.3 232.0,116.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g15490.1.MSUv7.0 - LOC_Os01g12790.1.MSUv7.0 | Query: AL1G04280.t1 - AL1G04491.t1 | Dir: - | Size: 102 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,315.2 C700.0,315.2 700.0,96.0 1190.0,96.0 L1190.0,106.0 C700.0,106.0 700.0,325.1 232.0,325.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g70770.1.MSUv7.0 - LOC_Os01g67860.1.MSUv7.0 | Query: AL1G01696.t1 - AL1G02099.t1 | Dir: - | Size: 102 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1389.3 C700.0,1389.3 700.0,1801.1 1190.0,1801.1 L1190.0,1806.6 C700.0,1806.6 700.0,1397.9 232.0,1397.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g06720.1.MSUv7.0 - LOC_Os06g08890.1.MSUv7.0 | Query: AL5G00677.t1 - AL5G00920.t1 | Dir: + | Size: 102 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2098.7 C700.0,2098.7 700.0,675.4 1190.0,675.4 L1190.0,683.8 C700.0,683.8 700.0,2116.9 232.0,2116.9 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Al03 | Ref: LOC_Os09g22040.1.MSUv7.0 - LOC_Os09g17146.1.MSUv7.0 | Query: AL3G01575.t1 - AL3G01811.t1 | Dir: - | Size: 94 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1612.0 C700.0,1612.0 700.0,1369.8 1190.0,1369.8 L1190.0,1385.7 C700.0,1385.7 700.0,1625.9 232.0,1625.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g08180.1.MSUv7.0 - LOC_Os07g04530.1.MSUv7.0 | Query: AL4G04056.t1 - AL4G04262.t1 | Dir: - | Size: 91 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1836.9 C700.0,1836.9 700.0,1950.7 1190.0,1950.7 L1190.0,1984.3 C700.0,1984.3 700.0,1849.5 232.0,1849.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g05290.1.MSUv7.0 - LOC_Os08g08230.1.MSUv7.0 | Query: AL5G02756.t1 - AL5G02968.t1 | Dir: + | Size: 90 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,305.7 C700.0,305.7 700.0,60.2 1190.0,60.2 L1190.0,66.4 C700.0,66.4 700.0,313.4 232.0,313.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g65410.1.MSUv7.0 - LOC_Os01g67420.1.MSUv7.0 | Query: AL1G00008.t1 - AL1G00305.t1 | Dir: + | Size: 89 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1777.1 C700.0,1777.1 700.0,1226.2 1190.0,1226.2 L1190.0,1236.2 C700.0,1236.2 700.0,1782.6 232.0,1782.6 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g47490.1.MSUv7.0 - LOC_Os07g46160.1.MSUv7.0 | Query: AL4G02200.t1 - AL4G02572.t1 | Dir: - | Size: 89 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,853.0 C700.0,853.0 700.0,972.9 1190.0,972.9 L1190.0,979.8 C700.0,979.8 700.0,861.6 232.0,861.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al07 | Ref: LOC_Os03g64070.1.MSUv7.0 - LOC_Os03g61470.1.MSUv7.0 | Query: AL7G01331.t1 - AL7G01738.t1 | Dir: - | Size: 87 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1374.4 C700.0,1374.4 700.0,1793.2 1190.0,1793.2 L1190.0,1798.9 C700.0,1798.9 700.0,1383.5 232.0,1383.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g02430.1.MSUv7.0 - LOC_Os06g05080.1.MSUv7.0 | Query: AL5G00263.t1 - AL5G00549.t1 | Dir: + | Size: 83 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1976.8 C700.0,1976.8 700.0,1830.2 1190.0,1830.2 L1190.0,1835.7 C700.0,1835.7 700.0,1984.6 232.0,1984.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g38600.1.MSUv7.0 - LOC_Os08g40450.1.MSUv7.0 | Query: AL5G01671.t1 - AL5G01796.t1 | Dir: + | Size: 78 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1161.0 C700.0,1161.0 700.0,1540.0 1190.0,1540.0 L1190.0,1548.3 C700.0,1548.3 700.0,1167.9 232.0,1167.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g06150.1.MSUv7.0 - LOC_Os05g04380.1.MSUv7.0 | Query: AL2G02311.t1 - AL2G02566.t1 | Dir: - | Size: 74 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1501.5 C700.0,1501.5 700.0,2019.8 1190.0,2019.8 L1190.0,2024.7 C700.0,2024.7 700.0,1513.2 232.0,1513.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g35160.1.MSUv7.0 - LOC_Os06g37660.1.MSUv7.0 | Query: AL5G03632.t1 - AL5G03769.t1 | Dir: + | Size: 74 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,539.4 C700.0,539.4 700.0,546.5 1190.0,546.5 L1190.0,552.2 C700.0,552.2 700.0,545.8 232.0,545.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g45320.1.MSUv7.0 - LOC_Os02g43970.1.MSUv7.0 | Query: AL6G03104.t1 - AL6G03215.t1 | Dir: - | Size: 70 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2032.9 C700.0,2032.9 700.0,691.9 1190.0,691.9 L1190.0,702.1 C700.0,702.1 700.0,2060.3 232.0,2060.3 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Al03 | Ref: LOC_Os09g08670.1.MSUv7.0 - LOC_Os09g01360.1.MSUv7.0 | Query: AL3G02003.t1 - AL3G02174.t1 | Dir: - | Size: 67 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1432.6 C700.0,1432.6 700.0,1821.8 1190.0,1821.8 L1190.0,1825.2 C700.0,1825.2 700.0,1449.6 232.0,1449.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g16980.2.MSUv7.0 - LOC_Os06g21600.1.MSUv7.0 | Query: AL5G01422.t1 - AL5G01545.t1 | Dir: + | Size: 65 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,500.9 C700.0,500.9 700.0,574.1 1190.0,574.1 L1190.0,578.0 C700.0,578.0 700.0,507.5 232.0,507.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g35970.1.MSUv7.0 - LOC_Os02g34410.1.MSUv7.0 | Query: AL6G03900.t1 - AL6G04077.t1 | Dir: - | Size: 64 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1168.5 C700.0,1168.5 700.0,1549.2 1190.0,1549.2 L1190.0,1557.4 C700.0,1557.4 700.0,1175.5 232.0,1175.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g06260.1.MSUv7.0 - LOC_Os05g07900.2.MSUv7.0 | Query: AL2G02588.t1 - AL2G02740.t1 | Dir: + | Size: 60 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1183.1 C700.0,1183.1 700.0,1566.3 1190.0,1566.3 L1190.0,1572.3 C700.0,1572.3 700.0,1196.5 232.0,1196.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g13580.1.MSUv7.0 - LOC_Os05g09640.1.MSUv7.0 | Query: AL2G02889.t1 - AL2G02990.t1 | Dir: - | Size: 59 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1787.0 C700.0,1787.0 700.0,1221.8 1190.0,1221.8 L1190.0,1226.1 C700.0,1226.1 700.0,1790.8 232.0,1790.8 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g48560.1.MSUv7.0 - LOC_Os07g49530.1.MSUv7.0 | Query: AL4G01986.t1 - AL4G02190.t1 | Dir: + | Size: 58 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1053.5 C700.0,1053.5 700.0,1218.5 1190.0,1218.5 L1190.0,1221.6 C700.0,1221.6 700.0,1058.2 232.0,1058.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g43800.1.MSUv7.0 - LOC_Os04g42580.1.MSUv7.0 | Query: AL4G01838.t1 - AL4G01972.t1 | Dir: - | Size: 56 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,375.7 C700.0,375.7 700.0,384.3 1190.0,384.3 L1190.0,389.3 C700.0,389.3 700.0,380.4 232.0,380.4 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g03050.2.MSUv7.0 - LOC_Os02g04340.1.MSUv7.0 | Query: AL6G00733.t1 - AL6G00946.t1 | Dir: + | Size: 55 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,119.1 C700.0,119.1 700.0,257.4 1190.0,257.4 L1190.0,272.3 C700.0,272.3 700.0,127.1 232.0,127.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g18440.1.MSUv7.0 - LOC_Os01g16170.1.MSUv7.0 | Query: AL1G04064.t1 - AL1G04216.t1 | Dir: - | Size: 53 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1538.5 C700.0,1538.5 700.0,952.5 1190.0,952.5 L1190.0,956.3 C700.0,956.3 700.0,1544.8 232.0,1544.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al07 | Ref: LOC_Os06g44970.1.MSUv7.0 - LOC_Os06g43590.2.MSUv7.0 | Query: AL7G00441.t1 - AL7G00623.t1 | Dir: - | Size: 53 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,390.6 C700.0,390.6 700.0,410.5 1190.0,410.5 L1190.0,418.7 C700.0,418.7 700.0,395.1 232.0,395.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g06930.1.MSUv7.0 - LOC_Os02g08010.1.MSUv7.0 | Query: AL6G01541.t1 - AL6G01746.t1 | Dir: + | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,382.2 C700.0,382.2 700.0,396.7 1190.0,396.7 L1190.0,404.0 C700.0,404.0 700.0,388.2 232.0,388.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g04800.1.MSUv7.0 - LOC_Os02g06260.1.MSUv7.0 | Query: AL6G01158.t1 - AL6G01358.t1 | Dir: + | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,69.1 C700.0,69.1 700.0,324.9 1190.0,324.9 L1190.0,331.2 C700.0,331.2 700.0,73.6 232.0,73.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g03490.1.MSUv7.0 - LOC_Os01g04660.1.MSUv7.0 | Query: AL1G05758.t1 - AL1G06037.t1 | Dir: + | Size: 47 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2081.6 C700.0,2081.6 700.0,681.8 1190.0,681.8 L1190.0,686.9 C700.0,686.9 700.0,2097.7 232.0,2097.7 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Al03 | Ref: LOC_Os09g16950.1.MSUv7.0 - LOC_Os09g13575.1.MSUv7.0 | Query: AL3G01763.t1 - AL3G01867.t1 | Dir: - | Size: 47 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2388.6 C700.0,2388.6 700.0,1041.1 1190.0,1041.1 L1190.0,1044.5 C700.0,1044.5 700.0,2395.8 232.0,2395.8 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g02070.1.MSUv7.0 - LOC_Os11g04104.3.MSUv7.0 | Query: AL7G04140.t1 - AL7G04248.t1 | Dir: + | Size: 46 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,331.0 C700.0,331.0 700.0,71.8 1190.0,71.8 L1190.0,75.5 C700.0,75.5 700.0,334.1 232.0,334.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g72240.1.MSUv7.0 - LOC_Os01g73000.2.MSUv7.0 | Query: AL1G00533.t1 - AL1G00730.t1 | Dir: + | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2546.0 C700.0,2546.0 700.0,1138.0 1190.0,1138.0 L1190.0,1142.6 C700.0,1142.6 700.0,2556.2 232.0,2556.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g41640.1.MSUv7.0 - LOC_Os11g43970.1.MSUv7.0 | Query: AL7G04895.t1 - AL7G05011.t1 | Dir: + | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1545.0 C700.0,1545.0 700.0,947.0 1190.0,947.0 L1190.0,950.9 C700.0,950.9 700.0,1548.8 232.0,1548.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al07 | Ref: LOC_Os06g45940.1.MSUv7.0 - LOC_Os06g45000.1.MSUv7.0 | Query: AL7G00176.t1 - AL7G00370.t1 | Dir: - | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1097.7 C700.0,1097.7 700.0,1190.7 1190.0,1190.7 L1190.0,1192.3 C700.0,1192.3 700.0,1101.3 232.0,1101.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g53770.1.MSUv7.0 - LOC_Os04g54830.1.MSUv7.0 | Query: AL4G00434.t1 - AL4G00572.t1 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,509.5 C700.0,509.5 700.0,571.9 1190.0,571.9 L1190.0,574.0 C700.0,574.0 700.0,513.0 232.0,513.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g37160.1.MSUv7.0 - LOC_Os02g36320.1.MSUv7.0 | Query: AL6G03798.t1 - AL6G03897.t1 | Dir: - | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2565.4 C700.0,2565.4 700.0,1145.4 1190.0,1145.4 L1190.0,1148.1 C700.0,1148.1 700.0,2571.9 232.0,2571.9 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g46230.1.MSUv7.0 - LOC_Os11g48090.5.MSUv7.0 | Query: AL7G05060.t1 - AL7G05149.t1 | Dir: + | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,966.4 C700.0,966.4 700.0,1398.6 1190.0,1398.6 L1190.0,1405.7 C700.0,1405.7 700.0,983.3 232.0,983.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g20810.1.MSUv7.0 - LOC_Os04g24850.1.MSUv7.0 | Query: AL4G04479.t1 - AL4G04575.t1 | Dir: + | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1493.1 C700.0,1493.1 700.0,2015.6 1190.0,2015.6 L1190.0,2020.0 C700.0,2020.0 700.0,1502.8 232.0,1502.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g35520.1.MSUv7.0 - LOC_Os06g32960.1.MSUv7.0 | Query: AL5G03533.t1 - AL5G03644.t1 | Dir: - | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,576.4 C700.0,576.4 700.0,579.8 1190.0,579.8 L1190.0,583.4 C700.0,583.4 700.0,578.8 232.0,578.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g52800.1.MSUv7.0 - LOC_Os02g53340.2.MSUv7.0 | Query: AL6G04172.t1 - AL6G04292.t1 | Dir: + | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,494.0 C700.0,494.0 700.0,578.1 1190.0,578.1 L1190.0,579.6 C700.0,579.6 700.0,498.3 232.0,498.3 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g33860.1.MSUv7.0 - LOC_Os02g32860.1.MSUv7.0 | Query: AL6G04081.t1 - AL6G04165.t1 | Dir: - | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1177.6 C700.0,1177.6 700.0,1557.7 1190.0,1557.7 L1190.0,1560.6 C700.0,1560.6 700.0,1182.8 232.0,1182.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g08430.1.MSUv7.0 - LOC_Os05g09550.1.MSUv7.0 | Query: AL2G02746.t1 - AL2G02816.t1 | Dir: + | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2734.1 C700.0,2734.1 700.0,789.3 1190.0,789.3 L1190.0,798.6 C700.0,798.6 700.0,2740.4 232.0,2740.4 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Al03 | Ref: LOC_Os12g34220.1.MSUv7.0 - LOC_Os12g35710.1.MSUv7.0 | Query: AL3G02899.t1 - AL3G03006.t1 | Dir: + | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,670.8 C700.0,670.8 700.0,875.7 1190.0,875.7 L1190.0,877.4 C700.0,877.4 700.0,673.8 232.0,673.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al03 | Ref: LOC_Os03g12530.1.MSUv7.0 - LOC_Os03g13140.1.MSUv7.0 | Query: AL3G04672.t1 - AL3G04727.t1 | Dir: + | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2063.3 C700.0,2063.3 700.0,688.3 1190.0,688.3 L1190.0,691.1 C700.0,691.1 700.0,2072.4 232.0,2072.4 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Al03 | Ref: LOC_Os09g11520.1.MSUv7.0 - LOC_Os09g09360.1.MSUv7.0 | Query: AL3G01900.t1 - AL3G01991.t1 | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,311.9 C700.0,311.9 700.0,66.3 1190.0,66.3 L1190.0,68.1 C700.0,68.1 700.0,314.9 232.0,314.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g67040.1.MSUv7.0 - LOC_Os01g67770.1.MSUv7.0 | Query: AL1G00301.t1 - AL1G00373.t1 | Dir: + | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1369.9 C700.0,1369.9 700.0,1789.3 1190.0,1789.3 L1190.0,1791.3 C700.0,1791.3 700.0,1372.8 232.0,1372.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g02019.1.MSUv7.0 - LOC_Os06g01170.1.MSUv7.0 | Query: AL5G00036.t1 - AL5G00163.t1 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,519.6 C700.0,519.6 700.0,565.3 1190.0,565.3 L1190.0,567.7 C700.0,567.7 700.0,523.5 232.0,523.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g38840.1.MSUv7.0 - LOC_Os02g39870.1.MSUv7.0 | Query: AL6G03544.t1 - AL6G03626.t1 | Dir: + | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1548.4 C700.0,1548.4 700.0,941.6 1190.0,941.6 L1190.0,946.6 C700.0,946.6 700.0,1552.7 232.0,1552.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al07 | Ref: LOC_Os06g46799.1.MSUv7.0 - LOC_Os06g45850.1.MSUv7.0 | Query: AL7G00012.t1 - AL7G00160.t1 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,388.3 C700.0,388.3 700.0,406.0 1190.0,406.0 L1190.0,409.0 C700.0,409.0 700.0,390.5 232.0,390.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g06300.1.MSUv7.0 - LOC_Os02g06910.1.MSUv7.0 | Query: AL6G01418.t1 - AL6G01516.t1 | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1567.9 C700.0,1567.9 700.0,958.9 1190.0,958.9 L1190.0,963.3 C700.0,963.3 700.0,1570.5 232.0,1570.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al07 | Ref: LOC_Os06g50840.1.MSUv7.0 - LOC_Os06g51460.1.MSUv7.0 | Query: AL7G00781.t1 - AL7G00943.t1 | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1307.6 C700.0,1307.6 700.0,1739.7 1190.0,1739.7 L1190.0,1743.0 C700.0,1743.0 700.0,1312.7 232.0,1312.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g43940.1.MSUv7.0 - LOC_Os05g42330.1.MSUv7.0 | Query: AL2G04956.t1 - AL2G05070.t1 | Dir: - | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1089.3 C700.0,1089.3 700.0,1196.6 1190.0,1196.6 L1190.0,1198.8 C700.0,1198.8 700.0,1092.7 232.0,1092.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g52600.1.MSUv7.0 - LOC_Os04g51830.1.MSUv7.0 | Query: AL4G00786.t1 - AL4G00917.t1 | Dir: - | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,209.4 C700.0,209.4 700.0,172.3 1190.0,172.3 L1190.0,180.5 C700.0,180.5 700.0,213.8 232.0,213.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g40840.1.MSUv7.0 - LOC_Os01g41900.1.MSUv7.0 | Query: AL1G03760.t1 - AL1G03806.t1 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2333.1 C700.0,2333.1 700.0,1680.5 1190.0,1680.5 L1190.0,1684.2 C700.0,1684.2 700.0,2335.8 232.0,2335.8 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Al02 | Ref: LOC_Os10g37240.4.MSUv7.0 - LOC_Os10g36470.2.MSUv7.0 | Query: AL2G03476.t1 - AL2G03534.t1 | Dir: - | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2118.2 C700.0,2118.2 700.0,673.2 1190.0,673.2 L1190.0,675.5 C700.0,675.5 700.0,2122.3 232.0,2122.3 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Al03 | Ref: LOC_Os09g23820.1.MSUv7.0 - LOC_Os09g22440.1.MSUv7.0 | Query: AL3G01539.t1 - AL3G01582.t1 | Dir: - | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1091.8 C700.0,1091.8 700.0,1194.3 1190.0,1194.3 L1190.0,1196.7 C700.0,1196.7 700.0,1094.2 232.0,1094.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g52900.1.MSUv7.0 - LOC_Os04g52390.1.MSUv7.0 | Query: AL4G00681.t1 - AL4G00792.t1 | Dir: - | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1985.0 C700.0,1985.0 700.0,1835.7 1190.0,1835.7 L1190.0,1837.7 C700.0,1837.7 700.0,1987.1 232.0,1987.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g41110.1.MSUv7.0 - LOC_Os08g40530.1.MSUv7.0 | Query: AL5G01797.t1 - AL5G01847.t1 | Dir: - | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,116.4 C700.0,116.4 700.0,272.4 1190.0,272.4 L1190.0,274.8 C700.0,274.8 700.0,119.0 232.0,119.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g15520.1.MSUv7.0 - LOC_Os01g16152.1.MSUv7.0 | Query: AL1G04220.t1 - AL1G04278.t1 | Dir: + | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,334.2 C700.0,334.2 700.0,76.4 1190.0,76.4 L1190.0,79.0 C700.0,79.0 700.0,336.6 232.0,336.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g73040.1.MSUv7.0 - LOC_Os01g73790.1.MSUv7.0 | Query: AL1G00755.t1 - AL1G00900.t1 | Dir: + | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1474.0 C700.0,1474.0 700.0,1826.1 1190.0,1826.1 L1190.0,1829.2 C700.0,1829.2 700.0,1482.9 232.0,1482.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g30480.1.MSUv7.0 - LOC_Os06g28550.1.MSUv7.0 | Query: AL5G01568.t1 - AL5G01639.t1 | Dir: - | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2559.0 C700.0,2559.0 700.0,1142.6 1190.0,1142.6 L1190.0,1145.3 C700.0,1145.3 700.0,2563.3 232.0,2563.3 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g44660.1.MSUv7.0 - LOC_Os11g45740.1.MSUv7.0 | Query: AL7G05013.t1 - AL7G05058.t1 | Dir: + | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2355.3 C700.0,2355.3 700.0,1707.5 1190.0,1707.5 L1190.0,1708.4 C700.0,1708.4 700.0,2356.9 232.0,2356.9 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Os10 → Al02 | Ref: LOC_Os10g43075.1.MSUv7.0 - LOC_Os10g42540.1.MSUv7.0 | Query: AL2G03953.t1 - AL2G03997.t1 | Dir: - | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1304.2 C700.0,1304.2 700.0,1735.4 1190.0,1735.4 L1190.0,1739.0 C700.0,1739.0 700.0,1306.7 232.0,1306.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g41400.1.MSUv7.0 - LOC_Os05g42130.1.MSUv7.0 | Query: AL2G04839.t1 - AL2G04933.t1 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1158.1 C700.0,1158.1 700.0,1535.5 1190.0,1535.5 L1190.0,1537.8 C700.0,1537.8 700.0,1161.3 232.0,1161.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g03640.1.MSUv7.0 - LOC_Os05g04470.1.MSUv7.0 | Query: AL2G02148.t1 - AL2G02256.t1 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,579.7 C700.0,579.7 700.0,583.9 1190.0,583.9 L1190.0,586.2 C700.0,586.2 700.0,582.0 232.0,582.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g53620.1.MSUv7.0 - LOC_Os02g54110.1.MSUv7.0 | Query: AL6G04307.t1 - AL6G04406.t1 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,513.9 C700.0,513.9 700.0,568.8 1190.0,568.8 L1190.0,570.7 C700.0,570.7 700.0,517.5 232.0,517.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g38300.2.MSUv7.0 - LOC_Os02g37420.1.MSUv7.0 | Query: AL6G03648.t1 - AL6G03724.t1 | Dir: - | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1832.0 C700.0,1832.0 700.0,1991.8 1190.0,1991.8 L1190.0,1994.8 C700.0,1994.8 700.0,1834.7 232.0,1834.7 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g04840.1.MSUv7.0 - LOC_Os08g04120.1.MSUv7.0 | Query: AL5G03084.t1 - AL5G03137.t1 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,374.8 C700.0,374.8 700.0,373.6 1190.0,373.6 L1190.0,375.3 C700.0,375.3 700.0,375.7 232.0,375.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g03050.2.MSUv7.0 - LOC_Os02g02780.1.MSUv7.0 | Query: AL6G00273.t1 - AL6G00343.t1 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,373.1 C700.0,373.1 700.0,377.7 1190.0,377.7 L1190.0,379.6 C700.0,379.6 700.0,374.2 232.0,374.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g02620.1.MSUv7.0 - LOC_Os02g02370.1.MSUv7.0 | Query: AL6G00454.t1 - AL6G00555.t1 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1852.1 C700.0,1852.1 700.0,1984.7 1190.0,1984.7 L1190.0,1988.6 C700.0,1988.6 700.0,1855.1 232.0,1855.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g08830.1.MSUv7.0 - LOC_Os08g09640.1.MSUv7.0 | Query: AL5G02973.t1 - AL5G03016.t1 | Dir: + | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,313.8 C700.0,313.8 700.0,83.0 1190.0,83.0 L1190.0,84.1 C700.0,84.1 700.0,316.0 232.0,316.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g68060.1.MSUv7.0 - LOC_Os01g67480.1.MSUv7.0 | Query: AL1G01107.t1 - AL1G01145.t1 | Dir: - | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,324.2 C700.0,324.2 700.0,93.4 1190.0,93.4 L1190.0,96.1 C700.0,96.1 700.0,325.8 232.0,325.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g70970.1.MSUv7.0 - LOC_Os01g70490.1.MSUv7.0 | Query: AL1G01547.t1 - AL1G01700.t1 | Dir: - | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,637.6 C700.0,637.6 700.0,900.2 1190.0,900.2 L1190.0,901.4 C700.0,901.4 700.0,640.1 232.0,640.1 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al03 | Ref: LOC_Os03g04120.1.MSUv7.0 - LOC_Os03g03450.1.MSUv7.0 | Query: AL3G05735.t1 - AL3G05802.t1 | Dir: - | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,369.3 C700.0,369.3 700.0,370.6 1190.0,370.6 L1190.0,373.0 C700.0,373.0 700.0,372.1 232.0,372.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g01360.1.MSUv7.0 - LOC_Os02g02140.1.MSUv7.0 | Query: AL6G00127.t1 - AL6G00243.t1 | Dir: + | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1159.0 C700.0,1159.0 700.0,1537.4 1190.0,1537.4 L1190.0,1538.9 C700.0,1538.9 700.0,1161.4 232.0,1161.4 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g04500.1.MSUv7.0 - LOC_Os05g03820.1.MSUv7.0 | Query: AL2G02233.t1 - AL2G02297.t1 | Dir: - | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1599.3 C700.0,1599.3 700.0,1394.8 1190.0,1394.8 L1190.0,1399.3 C700.0,1399.3 700.0,1601.3 232.0,1601.3 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g01090.1.MSUv7.0 - LOC_Os07g01560.1.MSUv7.0 | Query: AL4G04422.t1 - AL4G04487.t1 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1453.8 C700.0,1453.8 700.0,2011.7 1190.0,2011.7 L1190.0,2014.4 C700.0,2014.4 700.0,1458.4 232.0,1458.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g23684.1.MSUv7.0 - LOC_Os06g22550.1.MSUv7.0 | Query: AL5G03439.t1 - AL5G03510.t1 | Dir: - | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2532.7 C700.0,2532.7 700.0,1133.1 1190.0,1133.1 L1190.0,1136.3 C700.0,1136.3 700.0,2539.1 232.0,2539.1 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g38650.1.MSUv7.0 - LOC_Os11g40080.1.MSUv7.0 | Query: AL7G04799.t1 - AL7G04860.t1 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2453.4 C700.0,2453.4 700.0,1021.3 1190.0,1021.3 L1190.0,1022.8 C700.0,1022.8 700.0,2462.2 232.0,2462.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g20689.1.MSUv7.0 - LOC_Os11g18730.1.MSUv7.0 | Query: AL7G03618.t1 - AL7G03651.t1 | Dir: - | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,64.7 C700.0,64.7 700.0,319.0 1190.0,319.0 L1190.0,320.4 C700.0,320.4 700.0,67.0 232.0,67.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g02320.1.MSUv7.0 - LOC_Os01g02930.1.MSUv7.0 | Query: AL1G05592.t1 - AL1G05657.t1 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1306.1 C700.0,1306.1 700.0,1738.5 1190.0,1738.5 L1190.0,1739.3 C700.0,1739.3 700.0,1307.3 232.0,1307.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g42280.1.MSUv7.0 - LOC_Os05g41900.1.MSUv7.0 | Query: AL2G04913.t1 - AL2G04954.t1 | Dir: - | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2625.6 C700.0,2625.6 700.0,732.0 1190.0,732.0 L1190.0,743.6 C700.0,743.6 700.0,2632.5 232.0,2632.5 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Al03 | Ref: LOC_Os12g09570.2.MSUv7.0 - LOC_Os12g07810.1.MSUv7.0 | Query: AL3G02647.t1 - AL3G02702.t1 | Dir: - | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1627.1 C700.0,1627.1 700.0,1346.9 1190.0,1346.9 L1190.0,1366.4 C700.0,1366.4 700.0,1632.2 232.0,1632.2 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g09670.1.MSUv7.0 - LOC_Os07g08440.1.MSUv7.0 | Query: AL4G03958.t1 - AL4G04031.t1 | Dir: - | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1536.4 C700.0,1536.4 700.0,956.4 1190.0,956.4 L1190.0,957.3 C700.0,957.3 700.0,1538.4 232.0,1538.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al07 | Ref: LOC_Os06g43090.1.MSUv7.0 - LOC_Os06g43570.1.MSUv7.0 | Query: AL7G00629.t1 - AL7G00670.t1 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2725.6 C700.0,2725.6 700.0,780.8 1190.0,780.8 L1190.0,789.3 C700.0,789.3 700.0,2729.9 232.0,2729.9 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Os12 → Al03 | Ref: LOC_Os12g32180.1.MSUv7.0 - LOC_Os12g33220.1.MSUv7.0 | Query: AL3G02839.t1 - AL3G02899.t1 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1625.0 C700.0,1625.0 700.0,1366.9 1190.0,1366.9 L1190.0,1372.8 C700.0,1372.8 700.0,1627.0 232.0,1627.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g07974.1.MSUv7.0 - LOC_Os07g08430.1.MSUv7.0 | Query: AL4G04033.t1 - AL4G04073.t1 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1384.4 C700.0,1384.4 700.0,1799.3 1190.0,1799.3 L1190.0,1800.4 C700.0,1800.4 700.0,1386.1 232.0,1386.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g05284.1.MSUv7.0 - LOC_Os06g05800.1.MSUv7.0 | Query: AL5G00574.t1 - AL5G00635.t1 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,62.7 C700.0,62.7 700.0,312.7 1190.0,312.7 L1190.0,314.9 C700.0,314.9 700.0,64.5 232.0,64.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g01790.1.MSUv7.0 - LOC_Os01g02250.1.MSUv7.0 | Query: AL1G05301.t1 - AL1G05396.t1 | Dir: + | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1223.0 C700.0,1223.0 700.0,1574.0 1190.0,1574.0 L1190.0,1589.7 C700.0,1589.7 700.0,1234.2 232.0,1234.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g19954.1.MSUv7.0 - LOC_Os05g23420.1.MSUv7.0 | Query: AL2G02995.t1 - AL2G03055.t1 | Dir: + | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,637.4 C700.0,637.4 700.0,901.4 1190.0,901.4 L1190.0,901.9 C700.0,901.9 700.0,638.5 232.0,638.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al03 | Ref: LOC_Os03g03410.1.MSUv7.0 - LOC_Os03g03670.1.MSUv7.0 | Query: AL3G05798.t1 - AL3G05829.t1 | Dir: + | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1386.0 C700.0,1386.0 700.0,1799.9 1190.0,1799.9 L1190.0,1800.4 C700.0,1800.4 700.0,1387.7 232.0,1387.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g06250.2.MSUv7.0 - LOC_Os06g05790.1.MSUv7.0 | Query: AL5G00614.t1 - AL5G00636.t1 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,647.1 C700.0,647.1 700.0,890.9 1190.0,890.9 L1190.0,891.4 C700.0,891.4 700.0,648.1 232.0,648.1 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al03 | Ref: LOC_Os03g05900.1.MSUv7.0 - LOC_Os03g06200.1.MSUv7.0 | Query: AL3G05347.t1 - AL3G05376.t1 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2075.7 C700.0,2075.7 700.0,687.0 1190.0,687.0 L1190.0,687.9 C700.0,687.9 700.0,2078.2 232.0,2078.2 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Al03 | Ref: LOC_Os09g12790.1.MSUv7.0 - LOC_Os09g12230.1.MSUv7.0 | Query: AL3G01873.t1 - AL3G01898.t1 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1092.8 C700.0,1092.8 700.0,1193.9 1190.0,1193.9 L1190.0,1194.7 C700.0,1194.7 700.0,1095.5 232.0,1095.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g52606.1.MSUv7.0 - LOC_Os04g53230.1.MSUv7.0 | Query: AL4G00663.t1 - AL4G00697.t1 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1093.8 C700.0,1093.8 700.0,1192.7 1190.0,1192.7 L1190.0,1193.9 C700.0,1193.9 700.0,1096.2 232.0,1096.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g53410.1.MSUv7.0 - LOC_Os04g52800.1.MSUv7.0 | Query: AL4G00603.t1 - AL4G00668.t1 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1599.9 C700.0,1599.9 700.0,1390.8 1190.0,1390.8 L1190.0,1395.7 C700.0,1395.7 700.0,1604.4 232.0,1604.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g02440.1.MSUv7.0 - LOC_Os07g01240.2.MSUv7.0 | Query: AL4G04377.t1 - AL4G04436.t1 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1383.0 C700.0,1383.0 700.0,1798.5 1190.0,1798.5 L1190.0,1799.3 C700.0,1799.3 700.0,1384.3 232.0,1384.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g05260.1.MSUv7.0 - LOC_Os06g04910.1.MSUv7.0 | Query: AL5G00529.t1 - AL5G00573.t1 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2441.5 C700.0,2441.5 700.0,1023.0 1190.0,1023.0 L1190.0,1025.2 C700.0,1025.2 700.0,2444.9 232.0,2444.9 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g16770.1.MSUv7.0 - LOC_Os11g15460.1.MSUv7.0 | Query: AL7G03660.t1 - AL7G03694.t1 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2528.1 C700.0,2528.1 700.0,1130.6 1190.0,1130.6 L1190.0,1133.5 C700.0,1133.5 700.0,2531.0 232.0,2531.0 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g37640.1.MSUv7.0 - LOC_Os11g38260.1.MSUv7.0 | Query: AL7G04766.t1 - AL7G04803.t1 | Dir: + | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2394.4 C700.0,2394.4 700.0,1044.2 1190.0,1044.2 L1190.0,1044.9 C700.0,1044.9 700.0,2396.0 232.0,2396.0 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g04190.1.MSUv7.0 - LOC_Os11g03730.2.MSUv7.0 | Query: AL7G04243.t1 - AL7G04266.t1 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,338.7 C700.0,338.7 700.0,79.1 1190.0,79.1 L1190.0,80.7 C700.0,80.7 700.0,339.7 232.0,339.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g74620.1.MSUv7.0 - LOC_Os01g74320.1.MSUv7.0 | Query: AL1G00910.t1 - AL1G01017.t1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1387.8 C700.0,1387.8 700.0,1800.4 1190.0,1800.4 L1190.0,1801.1 C700.0,1801.1 700.0,1388.9 232.0,1388.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g06560.1.MSUv7.0 - LOC_Os06g06280.1.MSUv7.0 | Query: AL5G00642.t1 - AL5G00674.t1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,374.6 C700.0,374.6 700.0,375.4 1190.0,375.4 L1190.0,376.8 C700.0,376.8 700.0,375.2 232.0,375.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g02890.1.MSUv7.0 - LOC_Os02g02710.1.MSUv7.0 | Query: AL6G00347.t1 - AL6G00417.t1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2435.0 C700.0,2435.0 700.0,1025.2 1190.0,1025.2 L1190.0,1026.6 C700.0,1026.6 700.0,2437.6 232.0,2437.6 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g14544.6.MSUv7.0 - LOC_Os11g13990.1.MSUv7.0 | Query: AL7G03694.t1 - AL7G03731.t1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,329.0 C700.0,329.0 700.0,315.1 1190.0,315.1 L1190.0,315.7 C700.0,315.7 700.0,330.9 232.0,330.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g72200.1.MSUv7.0 - LOC_Os01g71740.1.MSUv7.0 | Query: AL1G05402.t1 - AL1G05436.t1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1254.2 C700.0,1254.2 700.0,1705.8 1190.0,1705.8 L1190.0,1706.7 C700.0,1706.7 700.0,1255.7 232.0,1255.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g28180.1.MSUv7.0 - LOC_Os05g28530.1.MSUv7.0 | Query: AL2G03919.t1 - AL2G03943.t1 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1154.8 C700.0,1154.8 700.0,1528.2 1190.0,1528.2 L1190.0,1530.4 C700.0,1530.4 700.0,1156.3 232.0,1156.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g02890.1.MSUv7.0 - LOC_Os05g03190.1.MSUv7.0 | Query: AL2G01855.t1 - AL2G01955.t1 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1198.3 C700.0,1198.3 700.0,1562.8 1190.0,1562.8 L1190.0,1566.2 C700.0,1566.2 700.0,1204.5 232.0,1204.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g15510.1.MSUv7.0 - LOC_Os05g14010.1.MSUv7.0 | Query: AL2G02837.t1 - AL2G02887.t1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1563.6 C700.0,1563.6 700.0,2035.3 1190.0,2035.3 L1190.0,2035.9 C700.0,2035.9 700.0,1564.7 232.0,1564.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g49760.1.MSUv7.0 - LOC_Os06g50000.1.MSUv7.0 | Query: AL5G04162.t1 - AL5G04213.t1 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1564.7 C700.0,1564.7 700.0,2033.5 1190.0,2033.5 L1190.0,2033.9 C700.0,2033.9 700.0,1565.4 232.0,1565.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g50170.1.MSUv7.0 - LOC_Os06g49970.2.MSUv7.0 | Query: AL5G04070.t1 - AL5G04093.t1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,852.7 C700.0,852.7 700.0,979.7 1190.0,979.7 L1190.0,980.1 C700.0,980.1 700.0,853.5 232.0,853.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al07 | Ref: LOC_Os03g61330.1.MSUv7.0 - LOC_Os03g61640.1.MSUv7.0 | Query: AL7G01732.t1 - AL7G01755.t1 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1149.0 C700.0,1149.0 700.0,1515.5 1190.0,1515.5 L1190.0,1517.0 C700.0,1517.0 700.0,1149.8 232.0,1149.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g01210.2.MSUv7.0 - LOC_Os05g01470.1.MSUv7.0 | Query: AL2G01269.t1 - AL2G01329.t1 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,997.1 C700.0,997.1 700.0,1406.7 1190.0,1406.7 L1190.0,1409.6 C700.0,1409.6 700.0,999.7 232.0,999.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g27850.1.MSUv7.0 - LOC_Os04g28460.1.MSUv7.0 | Query: AL4G04594.t1 - AL4G04656.t1 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1533.8 C700.0,1533.8 700.0,2032.5 1190.0,2032.5 L1190.0,2033.2 C700.0,2033.2 700.0,1536.3 232.0,1536.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g42430.1.MSUv7.0 - LOC_Os06g43044.1.MSUv7.0 | Query: AL5G04036.t1 - AL5G04065.t1 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1858.0 C700.0,1858.0 700.0,1988.9 1190.0,1988.9 L1190.0,1990.0 C700.0,1990.0 700.0,1859.6 232.0,1859.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g10320.1.MSUv7.0 - LOC_Os08g10649.1.MSUv7.0 | Query: AL5G03021.t1 - AL5G03049.t1 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,517.3 C700.0,517.3 700.0,568.6 1190.0,568.6 L1190.0,569.5 C700.0,569.5 700.0,519.5 232.0,519.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g38230.1.MSUv7.0 - LOC_Os02g38820.1.MSUv7.0 | Query: AL6G03642.t1 - AL6G03666.t1 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,380.7 C700.0,380.7 700.0,394.6 1190.0,394.6 L1190.0,396.4 C700.0,396.4 700.0,382.3 232.0,382.3 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g04460.1.MSUv7.0 - LOC_Os02g04800.1.MSUv7.0 | Query: AL6G01066.t1 - AL6G01122.t1 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,598.1 C700.0,598.1 700.0,605.7 1190.0,605.7 L1190.0,607.3 C700.0,607.3 700.0,599.0 232.0,599.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g58530.1.MSUv7.0 - LOC_Os02g58220.1.MSUv7.0 | Query: AL6G05322.t1 - AL6G05371.t1 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,337.4 C700.0,337.4 700.0,68.6 1190.0,68.6 L1190.0,69.8 C700.0,69.8 700.0,338.6 232.0,338.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g74020.1.MSUv7.0 - LOC_Os01g74310.1.MSUv7.0 | Query: AL1G00396.t1 - AL1G00453.t1 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2386.3 C700.0,2386.3 700.0,1148.3 1190.0,1148.3 L1190.0,1149.4 C700.0,1149.4 700.0,2388.1 232.0,2388.1 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g01875.1.MSUv7.0 - LOC_Os11g01330.1.MSUv7.0 | Query: AL7G05162.t1 - AL7G05204.t1 | Dir: - | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,74.3 C700.0,74.3 700.0,332.7 1190.0,332.7 L1190.0,333.5 C700.0,333.5 700.0,75.2 232.0,75.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g04800.1.MSUv7.0 - LOC_Os01g04990.1.MSUv7.0 | Query: AL1G06105.t1 - AL1G06140.t1 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1151.7 C700.0,1151.7 700.0,1523.3 1190.0,1523.3 L1190.0,1524.6 C700.0,1524.6 700.0,1153.0 232.0,1153.0 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g02390.1.MSUv7.0 - LOC_Os05g02020.1.MSUv7.0 | Query: AL2G01637.t1 - AL2G01685.t1 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1866.5 C700.0,1866.5 700.0,1990.1 1190.0,1990.1 L1190.0,1991.8 C700.0,1991.8 700.0,1868.6 232.0,1868.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Os08 → Al05 | Ref: LOC_Os08g12430.1.MSUv7.0 - LOC_Os08g12890.1.MSUv7.0 | Query: AL5G03052.t1 - AL5G03083.t1 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,396.2 C700.0,396.2 700.0,418.9 1190.0,418.9 L1190.0,419.8 C700.0,419.8 700.0,396.7 232.0,396.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g08364.1.MSUv7.0 - LOC_Os02g08230.1.MSUv7.0 | Query: AL6G01747.t1 - AL6G01768.t1 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,434.8 C700.0,434.8 700.0,462.1 1190.0,462.1 L1190.0,469.0 C700.0,469.0 700.0,437.5 232.0,437.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g18480.1.MSUv7.0 - LOC_Os02g17870.1.MSUv7.0 | Query: AL6G02402.t1 - AL6G02430.t1 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1543.7 C700.0,1543.7 700.0,950.7 1190.0,950.7 L1190.0,952.0 C700.0,952.0 700.0,1546.1 232.0,1546.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al07 | Ref: LOC_Os06g45340.1.MSUv7.0 - LOC_Os06g44750.1.MSUv7.0 | Query: AL7G00364.t1 - AL7G00423.t1 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,62.0 C700.0,62.0 700.0,310.4 1190.0,310.4 L1190.0,311.8 C700.0,311.8 700.0,62.7 232.0,62.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g01610.1.MSUv7.0 - LOC_Os01g01780.1.MSUv7.0 | Query: AL1G05238.t1 - AL1G05276.t1 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1153.4 C700.0,1153.4 700.0,1526.8 1190.0,1526.8 L1190.0,1527.5 C700.0,1527.5 700.0,1154.0 232.0,1154.0 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g02450.1.MSUv7.0 - LOC_Os05g02650.1.MSUv7.0 | Query: AL2G01790.t1 - AL2G01827.t1 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1157.0 C700.0,1157.0 700.0,1531.8 1190.0,1531.8 L1190.0,1533.2 C700.0,1533.2 700.0,1158.7 232.0,1158.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g03390.2.MSUv7.0 - LOC_Os05g03760.1.MSUv7.0 | Query: AL2G02019.t1 - AL2G02085.t1 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1252.3 C700.0,1252.3 700.0,1705.9 1190.0,1705.9 L1190.0,1707.4 C700.0,1707.4 700.0,1254.4 232.0,1254.4 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g28210.1.MSUv7.0 - LOC_Os05g27790.1.MSUv7.0 | Query: AL2G03926.t1 - AL2G03952.t1 | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1150.3 C700.0,1150.3 700.0,1518.8 1190.0,1518.8 L1190.0,1519.6 C700.0,1519.6 700.0,1151.1 232.0,1151.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g01790.1.MSUv7.0 - LOC_Os05g01590.1.MSUv7.0 | Query: AL2G01391.t1 - AL2G01443.t1 | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1470.6 C700.0,1470.6 700.0,1829.3 1190.0,1829.3 L1190.0,1830.0 C700.0,1830.0 700.0,1472.3 232.0,1472.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g27770.1.MSUv7.0 - LOC_Os06g28124.1.MSUv7.0 | Query: AL5G01640.t1 - AL5G01665.t1 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2396.7 C700.0,2396.7 700.0,1045.4 1190.0,1045.4 L1190.0,1046.1 C700.0,1046.1 700.0,2398.8 232.0,2398.8 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g04370.1.MSUv7.0 - LOC_Os11g04990.1.MSUv7.0 | Query: AL7G04270.t1 - AL7G04288.t1 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,268.8 C700.0,268.8 700.0,122.3 1190.0,122.3 L1190.0,122.8 C700.0,122.8 700.0,269.9 232.0,269.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g56050.1.MSUv7.0 - LOC_Os01g56300.1.MSUv7.0 | Query: AL1G02761.t1 - AL1G02775.t1 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,76.6 C700.0,76.6 700.0,336.8 1190.0,336.8 L1190.0,337.3 C700.0,337.3 700.0,78.0 232.0,78.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g05440.1.MSUv7.0 - LOC_Os01g05810.1.MSUv7.0 | Query: AL1G06231.t1 - AL1G06259.t1 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,60.2 C700.0,60.2 700.0,337.7 1190.0,337.7 L1190.0,339.4 C700.0,339.4 700.0,61.6 232.0,61.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g01470.1.MSUv7.0 - LOC_Os01g01070.1.MSUv7.0 | Query: AL1G06282.t1 - AL1G06363.t1 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1151.7 C700.0,1151.7 700.0,1524.6 1190.0,1524.6 L1190.0,1525.1 C700.0,1525.1 700.0,1152.7 232.0,1152.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g02020.1.MSUv7.0 - LOC_Os05g02260.1.MSUv7.0 | Query: AL2G01685.t1 - AL2G01711.t1 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1154.2 C700.0,1154.2 700.0,1527.6 1190.0,1527.6 L1190.0,1528.6 C700.0,1528.6 700.0,1155.1 232.0,1155.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g02980.1.MSUv7.0 - LOC_Os05g02690.1.MSUv7.0 | Query: AL2G01829.t1 - AL2G01874.t1 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1218.5 C700.0,1218.5 700.0,1560.8 1190.0,1560.8 L1190.0,1563.8 C700.0,1563.8 700.0,1222.8 232.0,1222.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g19910.1.MSUv7.0 - LOC_Os05g18850.1.MSUv7.0 | Query: AL2G02819.t1 - AL2G02852.t1 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1149.7 C700.0,1149.7 700.0,1520.0 1190.0,1520.0 L1190.0,1520.7 C700.0,1520.7 700.0,1150.3 232.0,1150.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g01590.1.MSUv7.0 - LOC_Os05g01460.1.MSUv7.0 | Query: AL2G01467.t1 - AL2G01512.t1 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,903.0 C700.0,903.0 700.0,1182.0 1190.0,1182.0 L1190.0,1182.9 C700.0,1182.9 700.0,908.5 232.0,908.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g04020.1.MSUv7.0 - LOC_Os04g05400.1.MSUv7.0 | Query: AL4G00002.t1 - AL4G00043.t1 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1451.0 C700.0,1451.0 700.0,1825.4 1190.0,1825.4 L1190.0,1826.0 C700.0,1826.0 700.0,1453.3 232.0,1453.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g21950.1.MSUv7.0 - LOC_Os06g22440.1.MSUv7.0 | Query: AL5G01549.t1 - AL5G01567.t1 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,578.7 C700.0,578.7 700.0,588.1 1190.0,588.1 L1190.0,588.8 C700.0,588.8 700.0,580.2 232.0,580.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g53320.1.MSUv7.0 - LOC_Os02g53700.3.MSUv7.0 | Query: AL6G04480.t1 - AL6G04508.t1 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2538.7 C700.0,2538.7 700.0,1135.8 1190.0,1135.8 L1190.0,1136.7 C700.0,1136.7 700.0,2539.5 232.0,2539.5 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g40210.1.MSUv7.0 - LOC_Os11g39990.1.MSUv7.0 | Query: AL7G04850.t1 - AL7G04866.t1 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1564.4 C700.0,1564.4 700.0,957.7 1190.0,957.7 L1190.0,958.4 C700.0,958.4 700.0,1566.2 232.0,1566.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al07 | Ref: LOC_Os06g49930.1.MSUv7.0 - LOC_Os06g50380.2.MSUv7.0 | Query: AL7G00701.t1 - AL7G00752.t1 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,331.0 C700.0,331.0 700.0,70.3 1190.0,70.3 L1190.0,71.9 C700.0,71.9 700.0,331.3 232.0,331.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g72320.1.MSUv7.0 - LOC_Os01g72230.1.MSUv7.0 | Query: AL1G00474.t1 - AL1G00537.t1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,77.3 C700.0,77.3 700.0,311.0 1190.0,311.0 L1190.0,312.7 C700.0,312.7 700.0,78.2 232.0,78.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g05900.1.MSUv7.0 - LOC_Os01g05600.1.MSUv7.0 | Query: AL1G05258.t1 - AL1G05300.t1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1484.3 C700.0,1484.3 700.0,2014.1 1190.0,2014.1 L1190.0,2015.4 C700.0,2015.4 700.0,1486.1 232.0,1486.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g30750.1.MSUv7.0 - LOC_Os06g31190.1.MSUv7.0 | Query: AL5G03505.t1 - AL5G03530.t1 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1460.0 C700.0,1460.0 700.0,2008.7 1190.0,2008.7 L1190.0,2011.4 C700.0,2011.4 700.0,1468.7 232.0,1468.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g24070.1.MSUv7.0 - LOC_Os06g26340.1.MSUv7.0 | Query: AL5G03394.t1 - AL5G03432.t1 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1373.0 C700.0,1373.0 700.0,1791.6 1190.0,1791.6 L1190.0,1792.9 C700.0,1792.9 700.0,1373.5 232.0,1373.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al05 | Ref: LOC_Os06g02220.1.MSUv7.0 - LOC_Os06g02100.1.MSUv7.0 | Query: AL5G00179.t1 - AL5G00235.t1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,368.1 C700.0,368.1 700.0,380.6 1190.0,380.6 L1190.0,381.9 C700.0,381.9 700.0,369.1 232.0,369.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g01020.1.MSUv7.0 - LOC_Os02g01280.1.MSUv7.0 | Query: AL6G00605.t1 - AL6G00659.t1 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2434.1 C700.0,2434.1 700.0,1027.2 1190.0,1027.2 L1190.0,1027.5 C700.0,1027.5 700.0,2434.9 232.0,2434.9 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g13820.1.MSUv7.0 - LOC_Os11g13980.1.MSUv7.0 | Query: AL7G03770.t1 - AL7G03780.t1 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2539.5 C700.0,2539.5 700.0,1135.8 1190.0,1135.8 L1190.0,1137.4 C700.0,1137.4 700.0,2541.2 232.0,2541.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g40210.1.MSUv7.0 - LOC_Os11g40610.1.MSUv7.0 | Query: AL7G04850.t1 - AL7G04883.t1 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,326.2 C700.0,326.2 700.0,91.5 1190.0,91.5 L1190.0,91.8 C700.0,91.8 700.0,326.7 232.0,326.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g71090.1.MSUv7.0 - LOC_Os01g71230.1.MSUv7.0 | Query: AL1G01429.t1 - AL1G01438.t1 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,73.9 C700.0,73.9 700.0,333.6 1190.0,333.6 L1190.0,334.5 C700.0,334.5 700.0,75.5 232.0,75.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g04750.1.MSUv7.0 - LOC_Os01g05090.1.MSUv7.0 | Query: AL1G06146.t1 - AL1G06182.t1 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,73.6 C700.0,73.6 700.0,333.5 1190.0,333.5 L1190.0,334.2 C700.0,334.2 700.0,75.2 232.0,75.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g04990.1.MSUv7.0 - LOC_Os01g04660.1.MSUv7.0 | Query: AL1G06140.t1 - AL1G06164.t1 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2176.9 C700.0,2176.9 700.0,639.3 1190.0,639.3 L1190.0,639.7 C700.0,639.7 700.0,2177.2 232.0,2177.2 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Os09 → Al03 | Ref: LOC_Os09g39500.1.MSUv7.0 - LOC_Os09g39590.1.MSUv7.0 | Query: AL3G00069.t1 - AL3G00094.t1 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1095.7 C700.0,1095.7 700.0,1192.3 1190.0,1192.3 L1190.0,1192.7 C700.0,1192.7 700.0,1096.2 232.0,1096.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g53260.1.MSUv7.0 - LOC_Os04g53410.1.MSUv7.0 | Query: AL4G00574.t1 - AL4G00603.t1 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,985.7 C700.0,985.7 700.0,1405.7 1190.0,1405.7 L1190.0,1406.2 C700.0,1406.2 700.0,986.6 232.0,986.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g25360.1.MSUv7.0 - LOC_Os04g25570.1.MSUv7.0 | Query: AL4G04574.t1 - AL4G04586.t1 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,372.2 C700.0,372.2 700.0,369.0 1190.0,369.0 L1190.0,369.4 C700.0,369.4 700.0,373.1 232.0,373.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g02360.1.MSUv7.0 - LOC_Os02g02170.1.MSUv7.0 | Query: AL6G00039.t1 - AL6G00072.t1 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2399.5 C700.0,2399.5 700.0,1149.5 1190.0,1149.5 L1190.0,1149.8 C700.0,1149.8 700.0,2400.9 232.0,2400.9 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Os11 → Al07 | Ref: LOC_Os11g05480.1.MSUv7.0 - LOC_Os11g05120.1.MSUv7.0 | Query: AL7G05210.t1 - AL7G05222.t1 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,208.4 C700.0,208.4 700.0,185.6 1190.0,185.6 L1190.0,191.2 C700.0,191.2 700.0,208.8 232.0,208.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g40610.1.MSUv7.0 - LOC_Os01g40690.1.MSUv7.0 | Query: AL1G03825.t1 - AL1G03841.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,327.2 C700.0,327.2 700.0,90.2 1190.0,90.2 L1190.0,90.5 C700.0,90.5 700.0,327.7 232.0,327.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g71310.1.MSUv7.0 - LOC_Os01g71410.1.MSUv7.0 | Query: AL1G01381.t1 - AL1G01388.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,195.6 C700.0,195.6 700.0,214.3 1190.0,214.3 L1190.0,218.0 C700.0,218.0 700.0,197.1 232.0,197.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g37490.1.MSUv7.0 - LOC_Os01g37842.1.MSUv7.0 | Query: AL1G03915.t1 - AL1G03930.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,130.1 C700.0,130.1 700.0,251.2 1190.0,251.2 L1190.0,256.3 C700.0,256.3 700.0,132.6 232.0,132.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g19170.1.MSUv7.0 - LOC_Os01g19760.1.MSUv7.0 | Query: AL1G04043.t1 - AL1G04059.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,206.4 C700.0,206.4 700.0,189.4 1190.0,189.4 L1190.0,206.9 C700.0,206.9 700.0,208.3 232.0,208.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Os01 → Al01 | Ref: LOC_Os01g40094.1.MSUv7.0 - LOC_Os01g40570.1.MSUv7.0 | Query: AL1G03836.t1 - AL1G03896.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1160.9 C700.0,1160.9 700.0,1548.2 1190.0,1548.2 L1190.0,1548.5 C700.0,1548.5 700.0,1162.2 232.0,1162.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g04380.1.MSUv7.0 - LOC_Os05g04660.1.MSUv7.0 | Query: AL2G02562.t1 - AL2G02578.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1152.8 C700.0,1152.8 700.0,1505.8 1190.0,1505.8 L1190.0,1506.1 C700.0,1506.1 700.0,1153.1 232.0,1153.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Os05 → Al02 | Ref: LOC_Os05g02410.1.MSUv7.0 - LOC_Os05g02300.1.MSUv7.0 | Query: AL2G00935.t1 - AL2G00950.t1 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,993.2 C700.0,993.2 700.0,1406.4 1190.0,1406.4 L1190.0,1406.7 C700.0,1406.7 700.0,994.2 232.0,994.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g26834.1.MSUv7.0 - LOC_Os04g27060.1.MSUv7.0 | Query: AL4G04587.t1 - AL4G04593.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,926.7 C700.0,926.7 700.0,1183.0 1190.0,1183.0 L1190.0,1183.5 C700.0,1183.5 700.0,928.4 232.0,928.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Os04 → Al04 | Ref: LOC_Os04g10680.5.MSUv7.0 - LOC_Os04g10240.1.MSUv7.0 | Query: AL4G00047.t1 - AL4G00062.t1 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1706.7 C700.0,1706.7 700.0,1300.8 1190.0,1300.8 L1190.0,1303.0 C700.0,1303.0 700.0,1708.2 232.0,1708.2 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g28470.2.MSUv7.0 - LOC_Os07g28840.1.MSUv7.0 | Query: AL4G03786.t1 - AL4G03802.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1606.0 C700.0,1606.0 700.0,1389.1 1190.0,1389.1 L1190.0,1390.0 C700.0,1390.0 700.0,1606.7 232.0,1606.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g02890.1.MSUv7.0 - LOC_Os07g03110.1.MSUv7.0 | Query: AL4G04343.t1 - AL4G04355.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1705.8 C700.0,1705.8 700.0,1300.8 1190.0,1300.8 L1190.0,1306.2 C700.0,1306.2 700.0,1706.7 232.0,1706.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Os07 → Al04 | Ref: LOC_Os07g28470.2.MSUv7.0 - LOC_Os07g28280.1.MSUv7.0 | Query: AL4G03786.t1 - AL4G03815.t1 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,548.6 C700.0,548.6 700.0,552.4 1190.0,552.4 L1190.0,552.9 C700.0,552.9 700.0,549.0 232.0,549.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Os02 → Al06 | Ref: LOC_Os02g46030.1.MSUv7.0 - LOC_Os02g45900.1.MSUv7.0 | Query: AL6G03216.t1 - AL6G03226.t1 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,737.4 C700.0,737.4 700.0,1067.7 1190.0,1067.7 L1190.0,1073.0 C700.0,1073.0 700.0,741.1 232.0,741.1 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Os03 → Al07 | Ref: LOC_Os03g29750.1.MSUv7.0 - LOC_Os03g30740.1.MSUv7.0 | Query: AL7G04547.t1 - AL7G04573.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1548.2 C700.0,1548.2 700.0,946.5 1190.0,946.5 L1190.0,946.8 C700.0,946.8 700.0,1548.9 232.0,1548.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Os06 → Al07 | Ref: LOC_Os06g45830.1.MSUv7.0 - LOC_Os06g45940.1.MSUv7.0 | Query: AL7G00156.t1 - AL7G00173.t1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+</g>
+<g id="refChrs">
+<rect x="210" y="60" width="22" height="280" rx="5" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="1"/>
+<rect x="211" y="60.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="66.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="211" y="62.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="68.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="211" y="62.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="68.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="211" y="64.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="70.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="211" y="69.1" width="20" height="4.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="75.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="211" y="73.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="79.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="211" y="73.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="79.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="211" y="74.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="80.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="211" y="76.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="82.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="211" y="77.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="83.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="211" y="79.7" width="20" height="10.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="84.8" x2="216" y2="84.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="205" y="88.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="211" y="90.2" width="20" height="15.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="98.2" x2="226" y2="98.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="205" y="102.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="211" y="105.8" width="20" height="10.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="111.1" x2="216" y2="111.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="205" y="115.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="211" y="116.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="122.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="211" y="119.1" width="20" height="7.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="127.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="211" y="130.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="136.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="211" y="195.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="201.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="211" y="206.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="212.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="211" y="208.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="214.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<rect x="211" y="209.4" width="20" height="4.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="215.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">20</text>
+<rect x="211" y="214.1" width="20" height="42.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="235.4" x2="216" y2="235.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="205" y="239.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">21</text>
+<rect x="211" y="256.9" width="20" height="11.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="262.8" x2="226" y2="262.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="205" y="266.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">22</text>
+<rect x="211" y="268.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="274.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">23</text>
+<rect x="211" y="269.9" width="20" height="18.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="279.3" x2="226" y2="279.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="205" y="283.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">24</text>
+<rect x="211" y="293.0" width="20" height="12.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="299.3" x2="216" y2="299.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="205" y="303.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">25</text>
+<rect x="211" y="305.7" width="20" height="7.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="313.5" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">26</text>
+<rect x="211" y="311.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="317.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">27</text>
+<rect x="211" y="313.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="319.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">28</text>
+<rect x="211" y="315.2" width="20" height="9.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="324.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">29</text>
+<rect x="211" y="324.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="330.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">30</text>
+<rect x="211" y="326.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="332.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">31</text>
+<rect x="211" y="327.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="333.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">32</text>
+<rect x="211" y="329.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="335.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">33</text>
+<rect x="211" y="331.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="337.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">34</text>
+<rect x="211" y="331.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="337.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">35</text>
+<rect x="211" y="334.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="340.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">36</text>
+<rect x="211" y="337.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="343.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">37</text>
+<rect x="211" y="338.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="344.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">38</text>
+<text x="205" y="55" text-anchor="end" fill="#FFD700" font-size="12" font-weight="700" letter-spacing="0.5">Os01</text>
+<circle cx="221.0" cy="168.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="172.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="368" width="22" height="232" rx="5" fill="#E63946" opacity="0.15" stroke="#E63946" stroke-width="1"/>
+<rect x="211" y="368.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="374.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="211" y="369.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="375.3" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="211" y="372.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="378.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="211" y="373.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="379.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="211" y="374.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="380.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="211" y="374.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="380.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="211" y="375.7" width="20" height="4.6" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="382.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="211" y="380.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="386.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="211" y="382.2" width="20" height="6.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="389.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="211" y="388.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="394.3" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="211" y="390.6" width="20" height="4.5" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="396.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="211" y="396.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="402.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="211" y="396.3" width="20" height="11.8" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="402.2" x2="226" y2="402.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="205" y="406.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="211" y="409.3" width="20" height="25.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="422.2" x2="226" y2="422.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="205" y="426.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">14</text>
+<rect x="211" y="434.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="440.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">15</text>
+<rect x="211" y="494.0" width="20" height="4.3" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="500.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">16</text>
+<rect x="211" y="500.9" width="20" height="6.6" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="508.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">17</text>
+<rect x="211" y="509.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="515.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">18</text>
+<rect x="211" y="513.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="519.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">19</text>
+<rect x="211" y="517.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="523.3" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">20</text>
+<rect x="211" y="519.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="525.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">21</text>
+<rect x="211" y="522.9" width="20" height="16.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="531.1" x2="226" y2="531.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="205" y="535.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">22</text>
+<rect x="211" y="539.4" width="20" height="6.4" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="546.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">23</text>
+<rect x="211" y="548.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="554.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">24</text>
+<rect x="211" y="549.4" width="20" height="27.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="562.9" x2="216" y2="562.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os02)" opacity="0.8"/>
+<text x="205" y="566.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">25</text>
+<rect x="211" y="576.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="582.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">26</text>
+<rect x="211" y="578.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="584.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">27</text>
+<rect x="211" y="579.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="585.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">28</text>
+<rect x="211" y="582.1" width="20" height="15.5" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="589.9" x2="226" y2="589.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="205" y="593.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">29</text>
+<rect x="211" y="598.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="604.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">30</text>
+<text x="205" y="363" text-anchor="end" fill="#E63946" font-size="12" font-weight="700" letter-spacing="0.5">Os02</text>
+<circle cx="221.0" cy="456.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="460.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="628" width="22" height="235" rx="5" fill="#1A237E" opacity="0.15" stroke="#1A237E" stroke-width="1"/>
+<rect x="211" y="628.9" width="20" height="9.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="637.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="211" y="637.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="643.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="211" y="637.6" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="643.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="211" y="638.6" width="20" height="9.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="647.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="211" y="647.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="653.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="211" y="647.9" width="20" height="22.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="659.3" x2="216" y2="659.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="205" y="663.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="211" y="670.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="676.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="211" y="673.9" width="20" height="63.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="705.4" x2="216" y2="705.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="205" y="709.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="211" y="737.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="743.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="211" y="774.0" width="20" height="63.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="805.9" x2="216" y2="805.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="205" y="809.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="211" y="838.0" width="20" height="14.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="845.3" x2="216" y2="845.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="205" y="849.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="211" y="852.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="858.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="211" y="853.0" width="20" height="8.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="861.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<text x="205" y="623" text-anchor="end" fill="#1A237E" font-size="12" font-weight="700" letter-spacing="0.5">Os03</text>
+<circle cx="221.0" cy="754.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="758.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="891" width="22" height="229" rx="5" fill="#9C27B0" opacity="0.15" stroke="#9C27B0" stroke-width="1"/>
+<rect x="211" y="903.0" width="20" height="5.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="909.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="211" y="926.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="932.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="211" y="966.4" width="20" height="17.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="974.8" x2="226" y2="974.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os04)" opacity="0.8"/>
+<text x="205" y="978.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="211" y="985.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="991.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="211" y="993.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="999.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="211" y="997.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1003.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1007.4" width="20" height="18.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="1016.7" x2="226" y2="1016.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os04)" opacity="0.8"/>
+<text x="205" y="1020.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1025.8" width="20" height="27.7" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="1039.6" x2="226" y2="1039.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os04)" opacity="0.8"/>
+<text x="205" y="1043.6" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1053.5" width="20" height="4.7" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1059.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1061.2" width="20" height="30.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="1076.5" x2="216" y2="1076.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os04)" opacity="0.8"/>
+<text x="205" y="1080.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1089.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1095.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1091.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1097.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1092.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1098.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1093.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1099.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1095.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1101.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1097.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1103.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1097.7" width="20" height="12.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="1103.9" x2="216" y2="1103.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os04)" opacity="0.8"/>
+<text x="205" y="1107.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<text x="205" y="886" text-anchor="end" fill="#9C27B0" font-size="12" font-weight="700" letter-spacing="0.5">Os04</text>
+<circle cx="221.0" cy="954.4" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="958.4" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1148" width="22" height="193" rx="5" fill="#E06D10" opacity="0.15" stroke="#E06D10" stroke-width="1"/>
+<rect x="211" y="1149.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1155.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1149.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1155.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1150.3" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1156.3" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1151.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1157.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1151.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1157.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1152.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1158.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1153.4" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1159.4" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1154.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1160.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1154.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1160.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1157.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1163.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1158.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1164.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1159.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1165.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1160.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1166.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1161.0" width="20" height="6.9" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1168.4" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1168.5" width="20" height="7.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1176.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1177.6" width="20" height="5.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1184.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1183.1" width="20" height="13.4" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1189.8" x2="216" y2="1189.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="205" y="1193.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">17</text>
+<rect x="211" y="1198.3" width="20" height="6.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1205.4" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1218.5" width="20" height="4.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1224.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">19</text>
+<rect x="211" y="1223.0" width="20" height="11.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1228.6" x2="226" y2="1228.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os05)" opacity="0.8"/>
+<text x="205" y="1232.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">20</text>
+<rect x="211" y="1252.3" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1258.3" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">21</text>
+<rect x="211" y="1254.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1260.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">22</text>
+<rect x="211" y="1256.9" width="20" height="26.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1269.9" x2="216" y2="1269.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="205" y="1273.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">23</text>
+<rect x="211" y="1282.9" width="20" height="21.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1293.5" x2="216" y2="1293.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="205" y="1297.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">24</text>
+<rect x="211" y="1304.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1310.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">25</text>
+<rect x="211" y="1306.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1312.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">26</text>
+<rect x="211" y="1307.6" width="20" height="5.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1314.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">27</text>
+<rect x="211" y="1312.7" width="20" height="27.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1326.2" x2="216" y2="1326.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="205" y="1330.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">28</text>
+<text x="205" y="1143" text-anchor="end" fill="#E06D10" font-size="12" font-weight="700" letter-spacing="0.5">Os05</text>
+<circle cx="221.0" cy="1228.7" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1232.7" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1369" width="22" height="202" rx="5" fill="#43A047" opacity="0.15" stroke="#43A047" stroke-width="1"/>
+<rect x="211" y="1369.9" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1375.9" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1373.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1379.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1374.4" width="20" height="9.1" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1383.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1383.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1389.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1384.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1390.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1386.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1392.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1387.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1393.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1389.3" width="20" height="8.6" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1397.6" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1398.9" width="20" height="30.9" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1414.4" x2="226" y2="1414.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os06)" opacity="0.8"/>
+<text x="205" y="1418.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1432.6" width="20" height="16.9" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1441.1" x2="226" y2="1441.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os06)" opacity="0.8"/>
+<text x="205" y="1445.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1451.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1457.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1453.8" width="20" height="4.7" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1460.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1460.0" width="20" height="8.7" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1468.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1470.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1476.6" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1474.0" width="20" height="8.9" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1482.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1484.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1490.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1493.1" width="20" height="9.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1502.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">17</text>
+<rect x="211" y="1501.5" width="20" height="11.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1507.3" x2="226" y2="1507.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os06)" opacity="0.8"/>
+<text x="205" y="1511.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1515.5" width="20" height="16.7" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1523.8" x2="226" y2="1523.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os06)" opacity="0.8"/>
+<text x="205" y="1527.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">19</text>
+<rect x="211" y="1533.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1539.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">20</text>
+<rect x="211" y="1536.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1542.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">21</text>
+<rect x="211" y="1538.5" width="20" height="6.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1545.7" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">22</text>
+<rect x="211" y="1543.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1549.7" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">23</text>
+<rect x="211" y="1545.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1551.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">24</text>
+<rect x="211" y="1548.2" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1554.2" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">25</text>
+<rect x="211" y="1548.4" width="20" height="4.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1554.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">26</text>
+<rect x="211" y="1552.2" width="20" height="11.3" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1557.9" x2="226" y2="1557.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os06)" opacity="0.8"/>
+<text x="205" y="1561.9" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">27</text>
+<rect x="211" y="1563.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1569.6" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">28</text>
+<rect x="211" y="1564.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1570.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">29</text>
+<rect x="211" y="1564.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1570.7" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">30</text>
+<rect x="211" y="1567.9" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1573.9" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">31</text>
+<text x="205" y="1364" text-anchor="end" fill="#43A047" font-size="12" font-weight="700" letter-spacing="0.5">Os06</text>
+<circle cx="221.0" cy="1469.0" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1473.0" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1599" width="22" height="192" rx="5" fill="#3498DB" opacity="0.15" stroke="#3498DB" stroke-width="1"/>
+<rect x="211" y="1599.3" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1605.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1599.9" width="20" height="4.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1606.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1606.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1612.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1612.0" width="20" height="13.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1618.9" x2="216" y2="1618.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os07)" opacity="0.8"/>
+<text x="205" y="1622.9" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1625.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1631.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1627.1" width="20" height="5.1" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1633.6" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1705.8" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1711.8" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1706.7" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1712.7" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1712.2" width="20" height="61.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1743.1" x2="216" y2="1743.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os07)" opacity="0.8"/>
+<text x="205" y="1747.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1777.1" width="20" height="5.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1783.8" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1787.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1793.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">11</text>
+<text x="205" y="1594" text-anchor="end" fill="#3498DB" font-size="12" font-weight="700" letter-spacing="0.5">Os07</text>
+<circle cx="221.0" cy="1678.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1682.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1819" width="22" height="184" rx="5" fill="#FFA07A" opacity="0.15" stroke="#FFA07A" stroke-width="1"/>
+<rect x="211" y="1819.2" width="20" height="11.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1824.7" x2="216" y2="1824.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os08)" opacity="0.8"/>
+<text x="205" y="1828.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1832.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1838.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1836.9" width="20" height="12.6" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1843.2" x2="226" y2="1843.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os08)" opacity="0.8"/>
+<text x="205" y="1847.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1852.1" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1858.1" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1858.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1864.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1866.5" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1872.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1945.3" width="20" height="31.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1961.1" x2="216" y2="1961.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os08)" opacity="0.8"/>
+<text x="205" y="1965.1" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1976.8" width="20" height="7.8" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1984.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1985.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1991.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1987.6" width="20" height="15.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1995.2" x2="226" y2="1995.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os08)" opacity="0.8"/>
+<text x="205" y="1999.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<text x="205" y="1814" text-anchor="end" fill="#FFA07A" font-size="12" font-weight="700" letter-spacing="0.5">Os08</text>
+<circle cx="221.0" cy="1902.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1906.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2031" width="22" height="148" rx="5" fill="#72d1b9" opacity="0.15" stroke="#72d1b9" stroke-width="1"/>
+<rect x="211" y="2032.9" width="20" height="27.4" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2046.6" x2="216" y2="2046.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os09)" opacity="0.8"/>
+<text x="205" y="2050.6" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2063.3" width="20" height="9.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2071.8" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2075.7" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2081.7" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2081.6" width="20" height="16.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2089.6" x2="216" y2="2089.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os09)" opacity="0.8"/>
+<text x="205" y="2093.6" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2098.7" width="20" height="18.2" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2107.8" x2="216" y2="2107.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os09)" opacity="0.8"/>
+<text x="205" y="2111.8" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2118.2" width="20" height="4.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2124.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2123.4" width="20" height="53.7" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2150.2" x2="216" y2="2150.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os09)" opacity="0.8"/>
+<text x="205" y="2154.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2176.9" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2182.9" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<text x="205" y="2026" text-anchor="end" fill="#72d1b9" font-size="12" font-weight="700" letter-spacing="0.5">Os09</text>
+<circle cx="221.0" cy="2049.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2053.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2207" width="22" height="150" rx="5" fill="#0055a6" opacity="0.15" stroke="#0055a6" stroke-width="1"/>
+<rect x="211" y="2320.0" width="20" height="12.9" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="214" y1="2326.4" x2="226" y2="2326.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os10)" opacity="0.8"/>
+<text x="205" y="2330.4" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2333.1" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2339.1" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2336.0" width="20" height="19.3" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="214" y1="2345.6" x2="226" y2="2345.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os10)" opacity="0.8"/>
+<text x="205" y="2349.6" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2355.3" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2361.3" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<text x="205" y="2202" text-anchor="end" fill="#0055a6" font-size="12" font-weight="700" letter-spacing="0.5">Os10</text>
+<circle cx="221.0" cy="2259.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2263.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2385" width="22" height="187" rx="5" fill="#e3b58f" opacity="0.15" stroke="#e3b58f" stroke-width="1"/>
+<rect x="211" y="2386.3" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2392.3" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2388.6" width="20" height="7.1" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2396.2" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2394.4" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2400.4" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2396.7" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2402.7" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2399.5" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2405.5" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2401.0" width="20" height="30.7" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="228" y1="2416.4" x2="216" y2="2416.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os11)" opacity="0.8"/>
+<text x="205" y="2420.4" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2434.1" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2440.1" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2435.0" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2441.0" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2441.5" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2447.5" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2453.4" width="20" height="8.8" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2461.8" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">10</text>
+<rect x="211" y="2528.1" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2534.1" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">11</text>
+<rect x="211" y="2532.7" width="20" height="6.3" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2539.9" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">12</text>
+<rect x="211" y="2538.7" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2544.7" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">13</text>
+<rect x="211" y="2539.5" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2545.5" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">14</text>
+<rect x="211" y="2546.0" width="20" height="10.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="214" y1="2551.1" x2="226" y2="2551.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os11)" opacity="0.8"/>
+<text x="205" y="2555.1" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">15</text>
+<rect x="211" y="2559.0" width="20" height="4.3" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2565.2" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">16</text>
+<rect x="211" y="2565.4" width="20" height="6.5" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2572.6" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">17</text>
+<text x="205" y="2380" text-anchor="end" fill="#e3b58f" font-size="12" font-weight="700" letter-spacing="0.5">Os11</text>
+<circle cx="221.0" cy="2463.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2467.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2600" width="22" height="178" rx="5" fill="#f0c9a7" opacity="0.15" stroke="#f0c9a7" stroke-width="1"/>
+<rect x="211" y="2600.0" width="20" height="25.4" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="214" y1="2612.7" x2="226" y2="2612.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os12)" opacity="0.8"/>
+<text x="205" y="2616.7" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2625.6" width="20" height="6.9" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2633.1" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2725.6" width="20" height="4.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2731.8" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2734.1" width="20" height="6.2" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2741.3" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2743.1" width="20" height="27.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="214" y1="2756.7" x2="226" y2="2756.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os12)" opacity="0.8"/>
+<text x="205" y="2760.7" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">5</text>
+<text x="205" y="2595" text-anchor="end" fill="#f0c9a7" font-size="12" font-weight="700" letter-spacing="0.5">Os12</text>
+<circle cx="221.0" cy="2678.0" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2682.0" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+</g>
+<g id="queryChrs">
+<rect x="1190" y="60" width="22" height="280" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="60.2" width="20" height="6.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="67.3" fill="#FFD700" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="66.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="72.3" fill="#FFD700" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="68.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="74.6" fill="#FFD700" font-size="10" font-weight="500">37</text>
+<rect x="1191" y="70.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="76.3" fill="#FFD700" font-size="10" font-weight="500">34</text>
+<rect x="1191" y="71.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="77.8" fill="#FFD700" font-size="10" font-weight="500">35</text>
+<rect x="1191" y="76.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="82.4" fill="#FFD700" font-size="10" font-weight="500">36</text>
+<rect x="1191" y="79.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="85.1" fill="#FFD700" font-size="10" font-weight="500">38</text>
+<rect x="1191" y="83.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="89.0" fill="#FFD700" font-size="10" font-weight="500">28</text>
+<rect x="1191" y="90.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="96.2" fill="#FFD700" font-size="10" font-weight="500">32</text>
+<rect x="1191" y="91.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="97.5" fill="#FFD700" font-size="10" font-weight="500">31</text>
+<rect x="1191" y="93.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="99.4" fill="#FFD700" font-size="10" font-weight="500">30</text>
+<rect x="1191" y="96.0" width="20" height="9.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="105.0" fill="#FFD700" font-size="10" font-weight="500">29</text>
+<rect x="1191" y="106.4" width="20" height="6.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="113.7" fill="#FFD700" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="113.0" width="20" height="9.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="121.5" fill="#FFD700" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="122.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="128.3" fill="#FFD700" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="123.0" width="20" height="8.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="131.0" fill="#FFD700" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="131.1" width="20" height="37.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="149.8" x2="1196" y2="149.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="1217" y="153.8" fill="#FFD700" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="172.3" width="20" height="8.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="180.4" fill="#FFD700" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="185.6" width="20" height="5.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="192.4" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="189.4" width="20" height="17.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="198.1" x2="1206" y2="198.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="1217" y="202.1" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="214.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="220.3" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="251.2" width="20" height="5.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="257.7" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="257.4" width="20" height="14.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="264.9" x2="1196" y2="264.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="1217" y="268.9" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="272.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="278.4" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="274.9" width="20" height="13.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="281.7" x2="1196" y2="281.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os01)" opacity="0.8"/>
+<text x="1217" y="285.7" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="288.7" width="20" height="10.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="293.7" x2="1206" y2="293.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os01)" opacity="0.8"/>
+<text x="1217" y="297.7" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="298.9" width="20" height="9.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="307.5" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="310.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="316.4" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="311.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="317.0" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="312.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="318.7" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="315.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="321.1" fill="#FFD700" font-size="10" font-weight="500">33</text>
+<rect x="1191" y="319.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="325.0" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="324.9" width="20" height="6.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="332.1" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="332.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="338.7" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="333.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="339.5" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="333.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="339.6" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="336.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="342.8" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="337.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="343.7" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<text x="1217" y="55" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Al01</text>
+<rect x="1190" y="368" width="22" height="241" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="369.0" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="375.0" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="370.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="376.6" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="373.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="379.6" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="375.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="381.4" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="377.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="383.7" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="380.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="386.6" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="384.3" width="20" height="4.9" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="390.8" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="394.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="400.6" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="396.7" width="20" height="7.3" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="404.3" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="406.0" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="412.0" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="410.5" width="20" height="8.2" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="418.6" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="418.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="424.9" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="419.7" width="20" height="21.1" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="430.2" x2="1206" y2="430.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="1217" y="434.2" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="439.8" width="20" height="27.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="453.7" x2="1206" y2="453.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="1217" y="457.7" fill="#E63946" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="462.1" width="20" height="6.9" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="469.5" fill="#E63946" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="491.0" width="20" height="55.3" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="518.7" x2="1196" y2="518.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os02)" opacity="0.8"/>
+<text x="1217" y="522.7" fill="#E63946" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="546.5" width="20" height="5.7" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="553.4" fill="#E63946" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="552.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="558.4" fill="#E63946" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="553.0" width="20" height="12.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="559.0" x2="1206" y2="559.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="1217" y="563.0" fill="#E63946" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="565.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="571.3" fill="#E63946" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="568.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="574.6" fill="#E63946" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="568.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="574.8" fill="#E63946" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="571.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="577.9" fill="#E63946" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="574.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="580.1" fill="#E63946" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="578.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="584.1" fill="#E63946" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="579.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="585.8" fill="#E63946" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="583.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="589.9" fill="#E63946" font-size="10" font-weight="500">28</text>
+<rect x="1191" y="588.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="594.1" fill="#E63946" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="588.9" width="20" height="16.5" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="597.2" x2="1206" y2="597.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os02)" opacity="0.8"/>
+<text x="1217" y="601.2" fill="#E63946" font-size="10" font-weight="500">29</text>
+<rect x="1191" y="605.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="611.7" fill="#E63946" font-size="10" font-weight="500">30</text>
+<text x="1217" y="363" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Al06</text>
+<rect x="1190" y="637" width="22" height="276" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="639.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="645.3" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="639.7" width="20" height="33.5" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="656.4" x2="1196" y2="656.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os09)" opacity="0.8"/>
+<text x="1217" y="660.4" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="673.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="679.2" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="675.4" width="20" height="8.4" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="683.6" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="681.8" width="20" height="5.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="688.3" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="687.0" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="693.0" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="688.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="694.3" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="691.9" width="20" height="10.3" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="697.0" x2="1196" y2="697.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os09)" opacity="0.8"/>
+<text x="1217" y="701.0" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="702.2" width="20" height="29.4" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1194" y1="717.0" x2="1206" y2="717.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os12)" opacity="0.8"/>
+<text x="1217" y="721.0" fill="#f0c9a7" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="732.0" width="20" height="11.6" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1208" y1="737.8" x2="1196" y2="737.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os12)" opacity="0.8"/>
+<text x="1217" y="741.8" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="780.8" width="20" height="8.5" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="789.0" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="789.3" width="20" height="9.4" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="797.9" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="798.8" width="20" height="35.1" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1194" y1="816.3" x2="1206" y2="816.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os12)" opacity="0.8"/>
+<text x="1217" y="820.3" fill="#f0c9a7" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="834.1" width="20" height="41.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="854.9" x2="1196" y2="854.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="1217" y="858.9" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="875.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="881.7" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="877.4" width="20" height="12.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="883.9" x2="1196" y2="883.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="1217" y="887.9" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="890.9" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="896.9" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="891.4" width="20" height="8.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="899.9" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="900.2" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="906.2" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="901.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="907.4" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="901.8" width="20" height="7.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="909.4" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<text x="1217" y="632" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Al03</text>
+<rect x="1190" y="941" width="22" height="213" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="941.6" width="20" height="4.9" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="948.1" fill="#43A047" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="946.5" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="952.5" fill="#43A047" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="947.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="953.0" fill="#43A047" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="950.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="956.7" fill="#43A047" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="952.5" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="958.5" fill="#43A047" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="956.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="962.4" fill="#43A047" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="957.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="963.7" fill="#43A047" font-size="10" font-weight="500">29</text>
+<rect x="1191" y="958.9" width="20" height="4.4" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="965.1" fill="#43A047" font-size="10" font-weight="500">31</text>
+<rect x="1191" y="963.5" width="20" height="9.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="972.1" fill="#43A047" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="972.9" width="20" height="6.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="980.3" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="979.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="985.7" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="980.7" width="20" height="9.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="989.4" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="991.3" width="20" height="29.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="1006.1" x2="1196" y2="1006.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os03)" opacity="0.8"/>
+<text x="1217" y="1010.1" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1021.3" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1027.3" fill="#e3b58f" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1023.0" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1029.0" fill="#e3b58f" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1025.2" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1031.2" fill="#e3b58f" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1027.2" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1033.2" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1027.6" width="20" height="13.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="1034.3" x2="1196" y2="1034.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os11)" opacity="0.8"/>
+<text x="1217" y="1038.3" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1041.1" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1047.1" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1044.2" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1050.2" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1045.4" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1051.4" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1067.7" width="20" height="5.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1074.3" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1130.6" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1136.6" fill="#e3b58f" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1133.1" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1139.1" fill="#e3b58f" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1135.8" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1141.8" fill="#e3b58f" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1135.8" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1141.8" fill="#e3b58f" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1138.0" width="20" height="4.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1144.3" fill="#e3b58f" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1142.6" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1148.6" fill="#e3b58f" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1145.4" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1151.4" fill="#e3b58f" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1148.3" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1154.3" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1149.5" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1155.5" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<text x="1217" y="936" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Al07</text>
+<rect x="1190" y="1182" width="22" height="274" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1182.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1188.0" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1183.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1189.0" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1184.4" width="20" height="6.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1191.6" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1190.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1196.7" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1192.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1198.3" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1192.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1198.7" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1193.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1199.9" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1194.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1200.3" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1196.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1202.6" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1198.2" width="20" height="20.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="1208.3" x2="1196" y2="1208.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os04)" opacity="0.8"/>
+<text x="1217" y="1212.3" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1218.5" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1224.5" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1221.8" width="20" height="4.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1228.0" fill="#3498DB" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1226.2" width="20" height="9.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1235.2" fill="#3498DB" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1236.8" width="20" height="63.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="1268.3" x2="1196" y2="1268.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os07)" opacity="0.8"/>
+<text x="1217" y="1272.3" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1300.8" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1306.8" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1300.8" width="20" height="5.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1307.5" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1346.9" width="20" height="19.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="1356.7" x2="1196" y2="1356.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os07)" opacity="0.8"/>
+<text x="1217" y="1360.7" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1366.9" width="20" height="5.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1373.8" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1369.8" width="20" height="15.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="1377.7" x2="1196" y2="1377.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os07)" opacity="0.8"/>
+<text x="1217" y="1381.7" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1389.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1395.1" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1390.8" width="20" height="4.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1397.3" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1394.8" width="20" height="4.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1401.1" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1398.6" width="20" height="7.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1406.2" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1405.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1411.7" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1406.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1412.4" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1406.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1412.7" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1410.6" width="20" height="14.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="1418.0" x2="1206" y2="1418.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os04)" opacity="0.8"/>
+<text x="1217" y="1422.0" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1426.7" width="20" height="27.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="1440.4" x2="1206" y2="1440.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os04)" opacity="0.8"/>
+<text x="1217" y="1444.4" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<text x="1217" y="1177" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Al04</text>
+<rect x="1190" y="1484" width="22" height="276" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1505.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1511.8" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1515.5" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1521.5" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1518.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1524.8" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1520.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1526.0" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1523.3" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1529.3" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1524.6" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1530.6" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1526.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1532.8" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1527.6" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1533.6" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1528.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1534.2" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1531.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1537.8" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1535.5" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1541.5" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1537.4" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1543.4" fill="#E06D10" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1540.0" width="20" height="8.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1548.1" fill="#E06D10" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1548.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1554.2" fill="#E06D10" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1549.2" width="20" height="8.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1557.3" fill="#E06D10" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1557.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1563.7" fill="#E06D10" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1560.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1566.8" fill="#E06D10" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="1562.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1568.8" fill="#E06D10" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="1566.3" width="20" height="6.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1573.3" fill="#E06D10" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1574.0" width="20" height="15.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="1581.8" x2="1206" y2="1581.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os05)" opacity="0.8"/>
+<text x="1217" y="1585.8" fill="#E06D10" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="1645.2" width="20" height="35.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="1662.7" x2="1206" y2="1662.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os10)" opacity="0.8"/>
+<text x="1217" y="1666.7" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1680.5" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1686.5" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1684.3" width="20" height="20.6" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="1694.6" x2="1206" y2="1694.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os10)" opacity="0.8"/>
+<text x="1217" y="1698.6" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1705.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1711.8" fill="#E06D10" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="1705.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1711.9" fill="#E06D10" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="1707.5" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1713.5" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1708.4" width="20" height="14.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1715.8" x2="1196" y2="1715.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="1217" y="1719.8" fill="#E06D10" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="1723.2" width="20" height="12.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1729.3" x2="1196" y2="1729.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="1217" y="1733.3" fill="#E06D10" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="1735.4" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1741.4" fill="#E06D10" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="1738.5" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1744.5" fill="#E06D10" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="1739.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1745.7" fill="#E06D10" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="1743.6" width="20" height="16.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1751.7" x2="1196" y2="1751.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os05)" opacity="0.8"/>
+<text x="1217" y="1755.7" fill="#E06D10" font-size="10" font-weight="500">28</text>
+<text x="1217" y="1479" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Al02</text>
+<rect x="1190" y="1788" width="22" height="248" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1789.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1795.3" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1791.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1797.6" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1793.2" width="20" height="5.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1800.0" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1798.5" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1804.5" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1799.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1805.3" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1799.9" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1805.9" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1800.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1806.4" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1801.1" width="20" height="5.5" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1807.9" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1806.6" width="20" height="15.0" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="1814.1" x2="1206" y2="1814.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os06)" opacity="0.8"/>
+<text x="1217" y="1818.1" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1821.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1827.8" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1825.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1831.4" fill="#43A047" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1826.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1832.1" fill="#43A047" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1829.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1835.3" fill="#43A047" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1830.2" width="20" height="5.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1837.0" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1835.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1841.7" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1838.3" width="20" height="16.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1846.3" x2="1206" y2="1846.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os08)" opacity="0.8"/>
+<text x="1217" y="1850.3" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1854.5" width="20" height="44.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1876.6" x2="1196" y2="1876.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os08)" opacity="0.8"/>
+<text x="1217" y="1880.6" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1950.7" width="20" height="33.6" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1967.5" x2="1206" y2="1967.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Os08)" opacity="0.8"/>
+<text x="1217" y="1971.5" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1984.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1990.7" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1988.9" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1994.9" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1990.1" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1996.1" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1991.8" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1997.8" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1994.9" width="20" height="13.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="2001.7" x2="1196" y2="2001.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Os08)" opacity="0.8"/>
+<text x="1217" y="2005.7" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="2008.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="2014.7" fill="#43A047" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="2011.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="2017.7" fill="#43A047" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="2014.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="2020.1" fill="#43A047" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="2015.6" width="20" height="4.4" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="2021.8" fill="#43A047" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="2019.8" width="20" height="4.9" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="2026.3" fill="#43A047" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="2024.9" width="20" height="7.2" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="2032.5" fill="#43A047" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="2032.5" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="2038.5" fill="#43A047" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="2033.5" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="2039.5" fill="#43A047" font-size="10" font-weight="500">30</text>
+<rect x="1191" y="2035.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="2041.3" fill="#43A047" font-size="10" font-weight="500">28</text>
+<text x="1217" y="1783" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Al05</text>
+</g>
+</svg>
+</div>
+
+<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#FFD700"></div><span>Os01</span></div><div class="legend-item"><div class="legend-dot" style="background:#E63946"></div><span>Os02</span></div><div class="legend-item"><div class="legend-dot" style="background:#1A237E"></div><span>Os03</span></div><div class="legend-item"><div class="legend-dot" style="background:#9C27B0"></div><span>Os04</span></div><div class="legend-item"><div class="legend-dot" style="background:#E06D10"></div><span>Os05</span></div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div><span>Os06</span></div><div class="legend-item"><div class="legend-dot" style="background:#3498DB"></div><span>Os07</span></div><div class="legend-item"><div class="legend-dot" style="background:#FFA07A"></div><span>Os08</span></div><div class="legend-item"><div class="legend-dot" style="background:#72d1b9"></div><span>Os09</span></div><div class="legend-item"><div class="legend-dot" style="background:#0055a6"></div><span>Os10</span></div><div class="legend-item"><div class="legend-dot" style="background:#e3b58f"></div><span>Os11</span></div><div class="legend-item"><div class="legend-dot" style="background:#f0c9a7"></div><span>Os12</span></div></div>
+<div class="stats-bar"><span><b>212</b> synteny fragments</span><span><b>12</b> ref chromosomes</span><span><b>7</b> query chromosomes</span><span><b>112</b> forward &nbsp;|&nbsp; <b>100</b> reverse</span><span>max size <b>633</b> genes</span></div>
+<div id="tooltip"></div>
+
+<script>
+function showTip(e, el) {
+  const parts = el.dataset.tip.split(' | ');
+  const tip = document.getElementById('tooltip');
+  tip.innerHTML = parts.map((p,i) => i===0
+    ? `<div style="color:#0ea5e9;font-weight:700;margin-bottom:5px">${p}</div>`
+    : `<div>${p}</div>`
+  ).join('');
+  tip.style.left = (e.clientX + 14) + 'px';
+  tip.style.top  = (e.clientY - 10) + 'px';
+  tip.classList.add('show');
+}
+function hideTip() { document.getElementById('tooltip').classList.remove('show'); }
+</script>
+</body>
+</html>

@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synteny — Fn_2_Gt.blast.icl.block.corr.csv-r-r.reform.Claude_filtered.txt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0a0e1a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; min-height:100vh; }
+  .canvas-container { padding:20px 32px; overflow-x:auto; }
+  svg { display:block; max-width:100%; }
+  .legend {
+    padding:10px 32px 16px; display:flex; gap:18px; flex-wrap:wrap;
+    border-top:1px solid #1e2d45;
+  }
+  .legend-item { display:flex; align-items:center; gap:7px; font-size:11px; color:#64748b; }
+  .legend-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0; }
+  .stats-bar {
+    padding:10px 32px 18px; display:flex; gap:28px; font-size:10px; color:#64748b; flex-wrap:wrap;
+  }
+  .stats-bar b { color:#0ea5e9; margin-right:3px; }
+  #tooltip {
+    position:fixed; background:#1e2d45; border:1px solid #38bdf8; border-radius:6px;
+    padding:10px 14px; font-size:11px; line-height:1.8; color:#e2e8f0;
+    pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:1000;
+    max-width:340px;
+  }
+  #tooltip.show { opacity:1; }
+</style>
+</head>
+<body>
+
+<div class="canvas-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2338" width="1400" height="2338" style="background:#0a0e1a;font-family:'JetBrains Mono',monospace">
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="arr_Chr01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFD700"/></marker>
+<marker id="arr_rev_Chr01" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFD700"/></marker>
+<marker id="arr_Chr02" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E63946"/></marker>
+<marker id="arr_rev_Chr02" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E63946"/></marker>
+<marker id="arr_Chr03" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1A237E"/></marker>
+<marker id="arr_rev_Chr03" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#1A237E"/></marker>
+<marker id="arr_Chr04" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9C27B0"/></marker>
+<marker id="arr_rev_Chr04" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9C27B0"/></marker>
+<marker id="arr_Chr05" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E06D10"/></marker>
+<marker id="arr_rev_Chr05" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E06D10"/></marker>
+<marker id="arr_Chr06" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#43A047"/></marker>
+<marker id="arr_rev_Chr06" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#43A047"/></marker>
+<marker id="arr_Chr07" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#3498DB"/></marker>
+<marker id="arr_rev_Chr07" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#3498DB"/></marker>
+<marker id="arr_Chr08" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFA07A"/></marker>
+<marker id="arr_rev_Chr08" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFA07A"/></marker>
+<marker id="arr_Chr09" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#72d1b9"/></marker>
+<marker id="arr_rev_Chr09" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#72d1b9"/></marker>
+</defs>
+<g id="ribbons" opacity="0.35">
+<path d="M232.0,2145.9 C700.0,2145.9 700.0,1563.7 1190.0,1563.7 L1190.0,1600.9 C700.0,1600.9 700.0,2215.1 232.0,2215.1 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g4686.t1 - Gtr09g3659.t1 | Query: maker-chr1-augustus-gene-50.1-mRNA-1 - maker-chr1-augustus-gene-122.75-mRNA-1 | Dir: - | Size: 585 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1742.7 C700.0,1742.7 700.0,1457.5 1190.0,1457.5 L1190.0,1492.0 C700.0,1492.0 700.0,1797.3 232.0,1797.3 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g27269.t1 - Gtr07g28181.t2 | Query: maker-chr7-augustus-gene-229.13-mRNA-1 - maker-chr7-augustus-gene-296.77-mRNA-1 | Dir: + | Size: 531 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2215.1 C700.0,2215.1 700.0,1546.0 1190.0,1546.0 L1190.0,1562.8 C700.0,1562.8 700.0,2239.7 232.0,2239.7 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g5169.t1 - Gtr09g4685.t1 | Query: maker-chr1-augustus-gene-15.186-mRNA-1 - maker-chr1-augustus-gene-48.151-mRNA-1 | Dir: - | Size: 271 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1881.2 C700.0,1881.2 700.0,224.2 1190.0,224.2 L1190.0,238.0 C700.0,238.0 700.0,1914.5 232.0,1914.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr2 | Ref: Gtr08g19157.t1 - Gtr08g19674.t1 | Query: maker-chr2-augustus-gene-65.131-mRNA-1 - maker-chr2-augustus-gene-39.125-mRNA-1 | Dir: + | Size: 259 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1848.1 C700.0,1848.1 700.0,245.3 1190.0,245.3 L1190.0,257.2 C700.0,257.2 700.0,1880.3 232.0,1880.3 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr2 | Ref: Gtr08g18621.t1 - Gtr08g19141.t1 | Query: maker-chr2-augustus-gene-24.19-mRNA-1 - maker-chr2-augustus-gene-2.67-mRNA-1 | Dir: + | Size: 258 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1236.4 C700.0,1236.4 700.0,654.3 1190.0,654.3 L1190.0,688.6 C700.0,688.6 700.0,1280.7 232.0,1280.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g8197.t1 - Gtr05g7664.t1 | Query: maker-chr6-augustus-gene-386.109-mRNA-1 - maker-chr6-augustus-gene-319.17-mRNA-1 | Dir: - | Size: 255 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1929.2 C700.0,1929.2 700.0,208.5 1190.0,208.5 L1190.0,224.2 C700.0,224.2 700.0,1969.8 232.0,1969.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr2 | Ref: Gtr08g20303.t1 - Gtr08g19871.t1 | Query: maker-chr2-augustus-gene-96.60-mRNA-1 - augustus_masked-chr2-processed-gene-65.14-mRNA-1 | Dir: - | Size: 245 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,382.2 C700.0,382.2 700.0,306.0 1190.0,306.0 L1190.0,320.0 C700.0,320.0 700.0,391.9 232.0,391.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr01g24391.t1 - Gtr01g24867.t1 | Query: maker-chr3-exonerate_protein2genome-gene-464.100-mRNA-1 - maker-chr3-augustus-gene-437.18-mRNA-1 | Dir: + | Size: 242 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,799.1 C700.0,799.1 700.0,1041.3 1190.0,1041.3 L1190.0,1056.9 C700.0,1056.9 700.0,824.5 232.0,824.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13342.t1 - Gtr04g12939.t1 | Query: maker-chr4-augustus-gene-108.4-mRNA-1 - augustus_masked-chr4-processed-gene-78.114-mRNA-1 | Dir: - | Size: 241 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1698.3 C700.0,1698.3 700.0,1433.2 1190.0,1433.2 L1190.0,1450.8 C700.0,1450.8 700.0,1735.6 232.0,1735.6 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26756.t1 - Gtr07g27184.t1 | Query: maker-chr7-augustus-gene-181.5-mRNA-1 - maker-chr7-augustus-gene-215.11-mRNA-1 | Dir: + | Size: 212 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1377.4 C700.0,1377.4 700.0,1155.3 1190.0,1155.3 L1190.0,1166.6 C700.0,1166.6 700.0,1400.8 232.0,1400.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g1149.t1 - Gtr06g1494.t1 | Query: augustus_masked-chr5-processed-gene-305.5-mRNA-1 - maker-chr5-augustus-gene-283.30-mRNA-1 | Dir: + | Size: 202 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1143.7 C700.0,1143.7 700.0,638.3 1190.0,638.3 L1190.0,654.3 C700.0,654.3 700.0,1199.3 232.0,1199.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g6868.t1 - Gtr05g7310.t1 | Query: maker-chr6-augustus-gene-417.5-mRNA-1 - maker-chr6-augustus-gene-386.108-mRNA-1 | Dir: + | Size: 200 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,891.0 C700.0,891.0 700.0,905.9 1190.0,905.9 L1190.0,929.4 C700.0,929.4 700.0,935.2 232.0,935.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14150.t1 - Gtr04g14542.t1 | Query: augustus_masked-chr4-processed-gene-372.15-mRNA-1 - maker-chr4-augustus-gene-326.45-mRNA-1 | Dir: + | Size: 186 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,409.2 C700.0,409.2 700.0,380.8 1190.0,380.8 L1190.0,397.3 C700.0,397.3 700.0,417.7 232.0,417.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g16043.t1 - Gtr02g16427.t1 | Query: maker-chr3-augustus-gene-319.1-mRNA-1 - augustus_masked-chr3-processed-gene-287.4-mRNA-1 | Dir: + | Size: 178 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1051.2 C700.0,1051.2 700.0,579.1 1190.0,579.1 L1190.0,591.1 C700.0,591.1 700.0,1071.3 232.0,1071.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g5547.t1 - Gtr05g5886.t1 | Query: maker-chr6-augustus-gene-532.35-mRNA-1 - augustus_masked-chr6-processed-gene-508.16-mRNA-1 | Dir: + | Size: 176 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,418.9 C700.0,418.9 700.0,401.7 1190.0,401.7 L1190.0,434.6 C700.0,434.6 700.0,431.6 232.0,431.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g16995.t1 - Gtr02g16506.t1 | Query: maker-chr3-exonerate_protein2genome-gene-278.112-mRNA-1 - maker-chr3-augustus-gene-214.5-mRNA-1 | Dir: - | Size: 175 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,764.5 C700.0,764.5 700.0,1057.2 1190.0,1057.2 L1190.0,1069.8 C700.0,1069.8 700.0,780.9 232.0,780.9 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g12298.t1 - Gtr04g12588.t1 | Query: maker-chr4-augustus-gene-77.184-mRNA-1 - maker-chr4-augustus-gene-53.0-mRNA-1 | Dir: + | Size: 175 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,520.9 C700.0,520.9 700.0,807.7 1190.0,807.7 L1190.0,818.8 C700.0,818.8 700.0,550.2 232.0,550.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g9546.t1 - Gtr03g9152.t1 | Query: maker-chr6-exonerate_protein2genome-gene-88.79-mRNA-1 - maker-chr6-augustus-gene-66.119-mRNA-1 | Dir: - | Size: 169 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1071.3 C700.0,1071.3 700.0,591.6 1190.0,591.6 L1190.0,606.9 C700.0,606.9 700.0,1089.1 232.0,1089.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g5886.t1 - Gtr05g6180.t1 | Query: maker-chr6-augustus-gene-507.40-mRNA-1 - maker-chr6-exonerate_protein2genome-gene-478.46-mRNA-1 | Dir: + | Size: 166 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1091.2 C700.0,1091.2 700.0,608.1 1190.0,608.1 L1190.0,621.8 C700.0,621.8 700.0,1118.0 232.0,1118.0 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g6213.t1 - Gtr05g6587.t1 | Query: maker-chr6-exonerate_protein2genome-gene-475.145-mRNA-1 - maker-chr6-augustus-gene-449.170-mRNA-1 | Dir: + | Size: 160 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1797.5 C700.0,1797.5 700.0,1494.8 1190.0,1494.8 L1190.0,1504.9 C700.0,1504.9 700.0,1811.0 232.0,1811.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g28188.t1 - Gtr07g28450.t1 | Query: maker-chr7-augustus-gene-301.3-mRNA-1 - maker-chr7-exonerate_protein2genome-gene-321.101-mRNA-1 | Dir: + | Size: 158 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,779.9 C700.0,779.9 700.0,1070.7 1190.0,1070.7 L1190.0,1077.8 C700.0,1077.8 700.0,791.0 232.0,791.0 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g12569.t1 - Gtr04g12792.t1 | Query: maker-chr4-augustus-gene-51.54-mRNA-1 - maker-chr4-augustus-gene-37.153-mRNA-1 | Dir: + | Size: 154 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1344.1 C700.0,1344.1 700.0,1172.9 1190.0,1172.9 L1190.0,1180.7 C700.0,1180.7 700.0,1359.1 232.0,1359.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g583.t1 - Gtr06g843.t1 | Query: maker-chr5-augustus-gene-270.35-mRNA-1 - maker-chr5-augustus-gene-255.84-mRNA-1 | Dir: + | Size: 153 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,320.9 C700.0,320.9 700.0,175.8 1190.0,175.8 L1190.0,189.8 C700.0,189.8 700.0,340.0 232.0,340.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g23436.t1 - Gtr01g23720.t1 | Query: augustus_masked-chr2-processed-gene-160.80-mRNA-1 - augustus_masked-chr2-processed-gene-132.44-mRNA-1 | Dir: + | Size: 149 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,394.4 C700.0,394.4 700.0,289.7 1190.0,289.7 L1190.0,298.7 C700.0,298.7 700.0,399.4 232.0,399.4 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr01g25252.t1 - Gtr01g24990.t1 | Query: maker-chr3-augustus-gene-496.116-mRNA-1 - maker-chr3-augustus-gene-479.0-mRNA-1 | Dir: - | Size: 143 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,828.3 C700.0,828.3 700.0,1023.5 1190.0,1023.5 L1190.0,1035.8 C700.0,1035.8 700.0,843.1 232.0,843.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13605.t1 - Gtr04g13391.t1 | Query: maker-chr4-augustus-gene-143.4-mRNA-1 - maker-chr4-augustus-gene-119.4-mRNA-1 | Dir: - | Size: 141 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2238.0 C700.0,2238.0 700.0,1538.1 1190.0,1538.1 L1190.0,1546.0 C700.0,1546.0 700.0,2249.7 232.0,2249.7 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g5373.t1 - Gtr09g5127.t1 | Query: maker-chr1-augustus-gene-0.14-mRNA-1 - maker-chr1-augustus-gene-15.185-mRNA-1 | Dir: - | Size: 137 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,300.4 C700.0,300.4 700.0,161.4 1190.0,161.4 L1190.0,170.5 C700.0,170.5 700.0,317.3 232.0,317.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g23096.t1 - Gtr01g23366.t1 | Query: augustus_masked-chr2-processed-gene-187.7-mRNA-1 - maker-chr2-augustus-gene-170.40-mRNA-1 | Dir: + | Size: 135 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1434.5 C700.0,1434.5 700.0,1127.3 1190.0,1127.3 L1190.0,1133.5 C700.0,1133.5 700.0,1462.3 232.0,1462.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2105.t1 - Gtr06g1849.t1 | Query: maker-chr5-augustus-gene-359.50-mRNA-1 - maker-chr5-augustus-gene-347.119-mRNA-1 | Dir: - | Size: 133 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1114.1 C700.0,1114.1 700.0,621.8 1190.0,621.8 L1190.0,630.0 C700.0,630.0 700.0,1134.5 232.0,1134.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g6533.t1 - Gtr05g6784.t1 | Query: maker-chr6-augustus-gene-449.176-mRNA-1 - maker-chr6-exonerate_protein2genome-gene-433.77-mRNA-1 | Dir: + | Size: 129 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,548.4 C700.0,548.4 700.0,798.9 1190.0,798.9 L1190.0,806.5 C700.0,806.5 700.0,566.1 232.0,566.1 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g9755.t1 - Gtr03g9527.t1 | Query: maker-chr6-augustus-gene-105.120-mRNA-1 - maker-chr6-augustus-gene-90.82-mRNA-1 | Dir: - | Size: 128 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1323.9 C700.0,1323.9 700.0,1184.4 1190.0,1184.4 L1190.0,1192.7 C700.0,1192.7 700.0,1336.6 232.0,1336.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g422.t1 - Gtr06g198.t1 | Query: augustus_masked-chr5-processed-gene-248.98-mRNA-1 - maker-chr5-augustus-gene-232.11-mRNA-1 | Dir: - | Size: 126 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1363.8 C700.0,1363.8 700.0,1144.5 1190.0,1144.5 L1190.0,1152.0 C700.0,1152.0 700.0,1375.8 232.0,1375.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g920.t1 - Gtr06g1128.t1 | Query: maker-chr5-augustus-gene-325.14-mRNA-1 - maker-chr5-augustus-gene-311.4-mRNA-1 | Dir: + | Size: 124 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,373.7 C700.0,373.7 700.0,330.3 1190.0,330.3 L1190.0,341.7 C700.0,341.7 700.0,379.9 232.0,379.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr01g24299.t1 - Gtr01g23994.t1 | Query: maker-chr3-exonerate_protein2genome-gene-417.11-mRNA-1 - maker-chr3-augustus-gene-395.8-mRNA-1 | Dir: - | Size: 118 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,578.0 C700.0,578.0 700.0,781.4 1190.0,781.4 L1190.0,790.4 C700.0,790.4 700.0,594.6 232.0,594.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10098.t1 - Gtr03g9888.t1 | Query: maker-chr6-augustus-gene-139.77-mRNA-1 - maker-chr6-exonerate_protein2genome-gene-121.70-mRNA-1 | Dir: - | Size: 117 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,446.1 C700.0,446.1 700.0,455.0 1190.0,455.0 L1190.0,472.3 C700.0,472.3 700.0,451.0 232.0,451.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17869.t1 - Gtr02g17649.t1 | Query: maker-chr3-exonerate_protein2genome-gene-175.5-mRNA-1 - augustus_masked-chr3-processed-gene-141.102-mRNA-1 | Dir: - | Size: 107 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,491.3 C700.0,491.3 700.0,846.7 1190.0,846.7 L1190.0,851.9 C700.0,851.9 700.0,499.4 232.0,499.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g8733.t1 - Gtr03g8569.t2 | Query: maker-chr6-augustus-gene-12.84-mRNA-1 - maker-chr6-augustus-gene-2.25-mRNA-1 | Dir: - | Size: 105 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,511.7 C700.0,511.7 700.0,821.4 1190.0,821.4 L1190.0,829.1 C700.0,829.1 700.0,520.9 232.0,520.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g9153.t1 - Gtr03g8983.t1 | Query: augustus_masked-chr6-processed-gene-61.21-mRNA-1 - maker-chr6-augustus-gene-46.36-mRNA-1 | Dir: - | Size: 105 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,368.5 C700.0,368.5 700.0,344.7 1190.0,344.7 L1190.0,354.8 C700.0,354.8 700.0,373.7 232.0,373.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr01g23993.t2 - Gtr01g23748.t1 | Query: maker-chr3-augustus-gene-389.101-mRNA-1 - maker-chr3-augustus-gene-370.2-mRNA-1 | Dir: - | Size: 104 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1913.3 C700.0,1913.3 700.0,238.0 1190.0,238.0 L1190.0,244.2 C700.0,244.2 700.0,1929.1 232.0,1929.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr2 | Ref: Gtr08g19652.t1 - Gtr08g19869.t1 | Query: maker-chr2-augustus-gene-39.134-mRNA-1 - maker-chr2-augustus-gene-26.29-mRNA-1 | Dir: + | Size: 103 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,274.0 C700.0,274.0 700.0,67.0 1190.0,67.0 L1190.0,77.6 C700.0,77.6 700.0,293.1 232.0,293.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g23001.t1 - Gtr01g22768.t1 | Query: augustus_masked-chr2-processed-gene-371.25-mRNA-1 - maker-chr2-augustus-gene-350.115-mRNA-1 | Dir: - | Size: 101 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,747.1 C700.0,747.1 700.0,1085.8 1190.0,1085.8 L1190.0,1091.2 C700.0,1091.2 700.0,755.2 232.0,755.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g11965.t1 - Gtr04g12116.t1 | Query: augustus_masked-chr4-processed-gene-21.120-mRNA-1 - augustus_masked-chr4-processed-gene-11.95-mRNA-1 | Dir: + | Size: 101 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,438.5 C700.0,438.5 700.0,490.4 1190.0,490.4 L1190.0,501.1 C700.0,501.1 700.0,442.2 232.0,442.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17423.t1 - Gtr02g17254.t1 | Query: maker-chr3-augustus-gene-106.99-mRNA-1 - maker-chr3-exonerate_protein2genome-gene-85.52-mRNA-1 | Dir: - | Size: 100 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2121.3 C700.0,2121.3 700.0,1602.0 1190.0,1602.0 L1190.0,1611.1 C700.0,1611.1 700.0,2148.4 232.0,2148.4 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3682.t1 - Gtr09g3449.t1 | Query: maker-chr1-augustus-gene-124.8-mRNA-1 - maker-chr1-augustus-gene-142.3-mRNA-1 | Dir: - | Size: 98 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1336.7 C700.0,1336.7 700.0,1166.6 1190.0,1166.6 L1190.0,1171.9 C700.0,1171.9 700.0,1344.0 232.0,1344.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g425.t1 - Gtr06g580.t1 | Query: augustus_masked-chr5-processed-gene-283.13-mRNA-1 - augustus_masked-chr5-processed-gene-272.18-mRNA-1 | Dir: + | Size: 96 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2020.1 C700.0,2020.1 700.0,1239.4 1190.0,1239.4 L1190.0,1257.7 C700.0,1257.7 700.0,2037.5 232.0,2037.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr5 | Ref: Gtr08g21174.t1 - Gtr08g20883.t1 | Query: maker-chr5-augustus-gene-141.109-mRNA-1 - maker-chr5-augustus-gene-105.32-mRNA-1 | Dir: - | Size: 93 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,637.1 C700.0,637.1 700.0,736.5 1190.0,736.5 L1190.0,747.3 C700.0,747.3 700.0,656.2 232.0,656.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10554.t1 - Gtr03g10758.t1 | Query: maker-chr6-augustus-gene-226.20-mRNA-1 - maker-chr6-augustus-gene-205.108-mRNA-1 | Dir: + | Size: 92 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,844.3 C700.0,844.3 700.0,1006.8 1190.0,1006.8 L1190.0,1021.1 C700.0,1021.1 700.0,854.6 232.0,854.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13752.t1 - Gtr04g13610.t1 | Query: maker-chr4-augustus-gene-175.59-mRNA-1 - maker-chr4-augustus-gene-148.68-mRNA-1 | Dir: - | Size: 91 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1974.0 C700.0,1974.0 700.0,1292.5 1190.0,1292.5 L1190.0,1302.9 C700.0,1302.9 700.0,1989.5 232.0,1989.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr5 | Ref: Gtr08g20512.t1 - Gtr08g20351.t1 | Query: augustus_masked-chr5-processed-gene-38.5-mRNA-1 - maker-chr5-augustus-gene-17.57-mRNA-1 | Dir: - | Size: 90 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,249.3 C700.0,249.3 700.0,82.5 1190.0,82.5 L1190.0,92.8 C700.0,92.8 700.0,269.9 232.0,269.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g22713.t1 - Gtr01g22495.t1 | Query: maker-chr2-augustus-gene-341.10-mRNA-1 - maker-chr2-augustus-gene-321.102-mRNA-1 | Dir: - | Size: 89 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,401.7 C700.0,401.7 700.0,357.8 1190.0,357.8 L1190.0,368.2 C700.0,368.2 700.0,405.9 232.0,405.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g15719.t1 - Gtr02g15892.t1 | Query: maker-chr3-exonerate_protein2genome-gene-364.0-mRNA-1 - maker-chr3-augustus-gene-344.7-mRNA-1 | Dir: + | Size: 89 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1810.6 C700.0,1810.6 700.0,1506.0 1190.0,1506.0 L1190.0,1510.0 C700.0,1510.0 700.0,1819.6 232.0,1819.6 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g28441.t1 - Gtr07g28588.t1 | Query: maker-chr7-augustus-gene-323.175-mRNA-1 - augustus_masked-chr7-processed-gene-330.10-mRNA-1 | Dir: + | Size: 89 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,594.8 C700.0,594.8 700.0,772.0 1190.0,772.0 L1190.0,779.4 C700.0,779.4 700.0,608.9 232.0,608.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10266.t1 - Gtr03g10101.t1 | Query: maker-chr6-augustus-gene-157.1-mRNA-1 - maker-chr6-augustus-gene-143.22-mRNA-1 | Dir: - | Size: 85 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,405.9 C700.0,405.9 700.0,369.0 1190.0,369.0 L1190.0,378.1 C700.0,378.1 700.0,409.2 232.0,409.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g15894.t1 - Gtr02g16042.t1 | Query: maker-chr3-augustus-gene-342.1-mRNA-1 - augustus_masked-chr3-processed-gene-324.77-mRNA-1 | Dir: + | Size: 84 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,93.3 C700.0,93.3 700.0,128.8 1190.0,128.8 L1190.0,145.5 C700.0,145.5 700.0,147.7 232.0,147.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g21843.t2 - Gtr01g21497.t1 | Query: maker-chr2-augustus-gene-251.81-mRNA-1 - maker-chr2-exonerate_protein2genome-gene-218.27-mRNA-1 | Dir: - | Size: 83 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,391.9 C700.0,391.9 700.0,300.6 1190.0,300.6 L1190.0,306.0 C700.0,306.0 700.0,394.6 232.0,394.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr01g24997.t2 - Gtr01g24868.t1 | Query: augustus_masked-chr3-processed-gene-475.128-mRNA-1 - maker-chr3-augustus-gene-464.7-mRNA-1 | Dir: - | Size: 83 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,791.1 C700.0,791.1 700.0,1091.2 1190.0,1091.2 L1190.0,1095.6 C700.0,1095.6 700.0,797.3 232.0,797.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g12794.t1 - Gtr04g12911.t1 | Query: maker-chr4-augustus-gene-11.5-mRNA-1 - maker-chr4-augustus-gene-2.128-mRNA-1 | Dir: + | Size: 83 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,612.3 C700.0,612.3 700.0,762.6 1190.0,762.6 L1190.0,769.0 C700.0,769.0 700.0,626.6 232.0,626.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10292.t1 - Gtr03g10445.t1 | Query: maker-chr6-augustus-gene-175.26-mRNA-1 - maker-chr6-augustus-gene-163.140-mRNA-1 | Dir: + | Size: 78 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1569.4 C700.0,1569.4 700.0,1346.2 1190.0,1346.2 L1190.0,1355.0 C700.0,1355.0 700.0,1586.4 232.0,1586.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g25376.t1 - Gtr07g25599.t1 | Query: maker-chr7-augustus-gene-12.4-mRNA-1 - augustus_masked-chr7-processed-gene-29.76-mRNA-1 | Dir: + | Size: 73 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1998.7 C700.0,1998.7 700.0,1271.5 1190.0,1271.5 L1190.0,1283.5 C700.0,1283.5 700.0,2014.1 232.0,2014.1 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr5 | Ref: Gtr08g20793.t1 - Gtr08g20612.t1 | Query: augustus_masked-chr5-processed-gene-78.75-mRNA-1 - maker-chr5-augustus-gene-55.1-mRNA-1 | Dir: - | Size: 70 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,451.6 C700.0,451.6 700.0,504.3 1190.0,504.3 L1190.0,511.0 C700.0,511.0 700.0,454.9 232.0,454.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17908.t1 - Gtr02g18070.t1 | Query: augustus_masked-chr3-processed-gene-79.56-mRNA-1 - maker-chr3-augustus-gene-66.2-mRNA-1 | Dir: + | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,432.3 C700.0,432.3 700.0,434.4 1190.0,434.4 L1190.0,453.1 C700.0,453.1 700.0,437.7 232.0,437.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17018.t1 - Gtr02g17223.t1 | Query: maker-chr3-augustus-gene-215.0-mRNA-1 - maker-chr3-augustus-gene-178.4-mRNA-1 | Dir: + | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1676.4 C700.0,1676.4 700.0,1418.8 1190.0,1418.8 L1190.0,1426.6 C700.0,1426.6 700.0,1692.0 232.0,1692.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26510.t1 - Gtr07g26666.t1 | Query: maker-chr7-augustus-gene-153.21-mRNA-1 - maker-chr7-augustus-gene-168.9-mRNA-1 | Dir: + | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,454.5 C700.0,454.5 700.0,513.5 1190.0,513.5 L1190.0,522.7 C700.0,522.7 700.0,458.0 232.0,458.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g18053.t1 - Gtr02g18200.t1 | Query: maker-chr3-augustus-gene-61.1-mRNA-1 - maker-chr3-augustus-gene-43.0-mRNA-1 | Dir: + | Size: 67 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1734.9 C700.0,1734.9 700.0,1453.0 1190.0,1453.0 L1190.0,1457.5 C700.0,1457.5 700.0,1743.6 232.0,1743.6 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g27168.t1 - Gtr07g27282.t1 | Query: maker-chr7-augustus-gene-220.23-mRNA-1 - maker-chr7-augustus-gene-228.93-mRNA-1 | Dir: + | Size: 66 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,873.9 C700.0,873.9 700.0,892.7 1190.0,892.7 L1190.0,902.5 C700.0,902.5 700.0,891.0 232.0,891.0 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13991.t1 - Gtr04g14150.t1 | Query: maker-chr4-augustus-gene-398.128-mRNA-1 - maker-chr4-exonerate_protein2genome-gene-379.12-mRNA-1 | Dir: + | Size: 65 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,755.6 C700.0,755.6 700.0,1081.2 1190.0,1081.2 L1190.0,1084.9 C700.0,1084.9 700.0,760.9 232.0,760.9 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g12125.t1 - Gtr04g12227.t1 | Query: maker-chr4-augustus-gene-31.204-mRNA-1 - augustus_masked-chr4-processed-gene-23.155-mRNA-1 | Dir: + | Size: 64 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,654.9 C700.0,654.9 700.0,747.4 1190.0,747.4 L1190.0,753.8 C700.0,753.8 700.0,665.4 232.0,665.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10740.t1 - Gtr03g10876.t1 | Query: maker-chr6-augustus-gene-205.114-mRNA-1 - maker-chr6-augustus-gene-192.62-mRNA-1 | Dir: + | Size: 64 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1400.9 C700.0,1400.9 700.0,1140.6 1190.0,1140.6 L1190.0,1144.5 C700.0,1144.5 700.0,1408.8 232.0,1408.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g1609.t1 - Gtr06g1495.t1 | Query: augustus_masked-chr5-processed-gene-333.4-mRNA-1 - maker-chr5-augustus-gene-326.29-mRNA-1 | Dir: - | Size: 63 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,627.5 C700.0,627.5 700.0,731.0 1190.0,731.0 L1190.0,736.1 C700.0,736.1 700.0,642.7 232.0,642.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10454.t1 - Gtr03g10611.t1 | Query: maker-chr6-exonerate_protein2genome-gene-237.43-mRNA-1 - augustus_masked-chr6-processed-gene-227.6-mRNA-1 | Dir: + | Size: 63 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1130.9 C700.0,1130.9 700.0,630.0 1190.0,630.0 L1190.0,633.2 C700.0,633.2 700.0,1143.7 232.0,1143.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g6746.t1 - Gtr05g6867.t1 | Query: maker-chr6-augustus-gene-433.107-mRNA-1 - maker-chr6-augustus-gene-427.0-mRNA-1 | Dir: + | Size: 63 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1481.3 C700.0,1481.3 700.0,1196.5 1190.0,1196.5 L1190.0,1204.7 C700.0,1204.7 700.0,1499.1 232.0,1499.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2258.t1 - Gtr06g2421.t1 | Query: maker-chr5-augustus-gene-224.77-mRNA-1 - maker-chr5-augustus-gene-208.110-mRNA-1 | Dir: + | Size: 62 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,399.5 C700.0,399.5 700.0,286.0 1190.0,286.0 L1190.0,289.6 C700.0,289.6 700.0,401.7 232.0,401.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr01g25253.t1 - Gtr01g25361.t1 | Query: maker-chr3-augustus-gene-502.22-mRNA-1 - augustus_masked-chr3-processed-gene-496.104-mRNA-1 | Dir: + | Size: 60 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,442.1 C700.0,442.1 700.0,483.4 1190.0,483.4 L1190.0,489.5 C700.0,489.5 700.0,444.5 232.0,444.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17552.t2 - Gtr02g17412.t2 | Query: maker-chr3-augustus-gene-119.9-mRNA-1 - maker-chr3-augustus-gene-108.109-mRNA-1 | Dir: - | Size: 60 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,572.4 C700.0,572.4 700.0,790.9 1190.0,790.9 L1190.0,795.1 C700.0,795.1 700.0,581.5 232.0,581.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g9923.t1 - Gtr03g9823.t1 | Query: maker-chr6-augustus-gene-120.25-mRNA-1 - augustus_masked-chr6-processed-gene-112.14-mRNA-1 | Dir: - | Size: 58 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,293.5 C700.0,293.5 700.0,155.6 1190.0,155.6 L1190.0,160.0 C700.0,160.0 700.0,302.6 232.0,302.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g23008.t1 - Gtr01g23122.t1 | Query: maker-chr2-augustus-gene-199.105-mRNA-1 - maker-chr2-augustus-gene-190.12-mRNA-1 | Dir: + | Size: 56 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,498.1 C700.0,498.1 700.0,842.1 1190.0,842.1 L1190.0,845.7 C700.0,845.7 700.0,503.0 232.0,503.0 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g8811.t1 - Gtr03g8703.t1 | Query: maker-chr6-augustus-gene-21.5-mRNA-1 - maker-chr6-augustus-gene-14.26-mRNA-1 | Dir: - | Size: 54 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1518.4 C700.0,1518.4 700.0,1216.0 1190.0,1216.0 L1190.0,1224.1 C700.0,1224.1 700.0,1529.8 232.0,1529.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2595.t1 - Gtr06g2727.t1 | Query: maker-chr5-augustus-gene-186.90-mRNA-1 - maker-chr5-augustus-gene-171.22-mRNA-1 | Dir: + | Size: 53 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,508.7 C700.0,508.7 700.0,829.1 1190.0,829.1 L1190.0,832.9 C700.0,832.9 700.0,512.4 232.0,512.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g8999.t1 - Gtr03g8920.t1 | Query: maker-chr6-augustus-gene-46.32-mRNA-1 - maker-chr6-augustus-gene-39.103-mRNA-1 | Dir: - | Size: 51 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,664.0 C700.0,664.0 700.0,753.9 1190.0,753.9 L1190.0,759.2 C700.0,759.2 700.0,669.8 232.0,669.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10853.t1 - Gtr03g10930.t1 | Query: maker-chr6-augustus-gene-192.65-mRNA-1 - maker-chr6-augustus-gene-182.4-mRNA-1 | Dir: + | Size: 50 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,219.7 C700.0,219.7 700.0,102.4 1190.0,102.4 L1190.0,111.7 C700.0,111.7 700.0,236.3 232.0,236.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g22363.t1 - Gtr01g22231.t1 | Query: maker-chr2-augustus-gene-302.40-mRNA-1 - maker-chr2-augustus-gene-284.16-mRNA-1 | Dir: - | Size: 49 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,241.5 C700.0,241.5 700.0,93.7 1190.0,93.7 L1190.0,99.7 C700.0,99.7 700.0,250.9 232.0,250.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g22506.t1 - Gtr01g22397.t1 | Query: maker-chr2-augustus-gene-319.5-mRNA-1 - maker-chr2-augustus-gene-308.45-mRNA-1 | Dir: - | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,761.0 C700.0,761.0 700.0,1078.0 1190.0,1078.0 L1190.0,1080.8 C700.0,1080.8 700.0,764.5 232.0,764.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g12297.t1 - Gtr04g12229.t1 | Query: maker-chr4-augustus-gene-37.150-mRNA-1 - maker-chr4-augustus-gene-31.213-mRNA-1 | Dir: - | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,823.6 C700.0,823.6 700.0,1036.0 1190.0,1036.0 L1190.0,1040.7 C700.0,1040.7 700.0,828.7 232.0,828.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13397.t1 - Gtr04g13323.t1 | Query: augustus_masked-chr4-processed-gene-119.74-mRNA-1 - augustus_masked-chr4-processed-gene-109.35-mRNA-1 | Dir: - | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2094.8 C700.0,2094.8 700.0,1617.0 1190.0,1617.0 L1190.0,1622.7 C700.0,1622.7 700.0,2108.0 232.0,2108.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3358.t1 - Gtr09g3271.t1 | Query: maker-chr1-augustus-gene-153.27-mRNA-1 - maker-chr1-augustus-gene-165.61-mRNA-1 | Dir: - | Size: 46 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1641.1 C700.0,1641.1 700.0,1403.4 1190.0,1403.4 L1190.0,1409.0 C700.0,1409.0 700.0,1653.7 232.0,1653.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26242.t1 - Gtr07g26345.t1 | Query: maker-chr7-augustus-gene-123.7-mRNA-1 - maker-chr7-augustus-gene-134.6-mRNA-1 | Dir: + | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,675.8 C700.0,675.8 700.0,717.3 1190.0,717.3 L1190.0,722.1 C700.0,722.1 700.0,683.2 232.0,683.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g11096.t1 - Gtr03g11007.t1 | Query: maker-chr6-augustus-gene-263.89-mRNA-1 - maker-chr6-augustus-gene-254.2-mRNA-1 | Dir: - | Size: 43 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1584.1 C700.0,1584.1 700.0,1355.1 1190.0,1355.1 L1190.0,1363.6 C700.0,1363.6 700.0,1593.4 232.0,1593.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g25566.t1 - Gtr07g25694.t1 | Query: maker-chr7-augustus-gene-29.63-mRNA-1 - maker-chr7-augustus-gene-46.65-mRNA-1 | Dir: + | Size: 43 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,379.8 C700.0,379.8 700.0,323.4 1190.0,323.4 L1190.0,327.3 C700.0,327.3 700.0,381.2 232.0,381.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr01g24350.t1 - Gtr01g24287.t1 | Query: maker-chr3-augustus-gene-431.111-mRNA-1 - augustus_masked-chr3-processed-gene-423.108-mRNA-1 | Dir: - | Size: 42 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,859.3 C700.0,859.3 700.0,1001.2 1190.0,1001.2 L1190.0,1006.7 C700.0,1006.7 700.0,867.4 232.0,867.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13901.t1 - Gtr04g13818.t1 | Query: maker-chr4-exonerate_protein2genome-gene-186.68-mRNA-1 - maker-chr4-augustus-gene-176.1-mRNA-1 | Dir: - | Size: 42 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1531.2 C700.0,1531.2 700.0,1231.9 1190.0,1231.9 L1190.0,1239.0 C700.0,1239.0 700.0,1539.0 232.0,1539.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2742.t1 - Gtr06g2848.t1 | Query: maker-chr5-augustus-gene-155.88-mRNA-1 - maker-chr5-augustus-gene-142.108-mRNA-1 | Dir: + | Size: 42 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1987.9 C700.0,1987.9 700.0,1286.8 1190.0,1286.8 L1190.0,1292.4 C700.0,1292.4 700.0,1997.6 232.0,1997.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr5 | Ref: Gtr08g20602.t1 - Gtr08g20491.t1 | Query: maker-chr5-augustus-gene-49.70-mRNA-1 - augustus_masked-chr5-processed-gene-38.6-mRNA-1 | Dir: - | Size: 42 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1406.3 C700.0,1406.3 700.0,1135.7 1190.0,1135.7 L1190.0,1140.0 C700.0,1140.0 700.0,1413.7 232.0,1413.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g1660.t1 - Gtr06g1576.t1 | Query: maker-chr5-augustus-gene-343.38-mRNA-1 - maker-chr5-augustus-gene-334.14-mRNA-1 | Dir: - | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,317.4 C700.0,317.4 700.0,171.7 1190.0,171.7 L1190.0,175.6 C700.0,175.6 700.0,322.1 232.0,322.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g23369.t1 - Gtr01g23456.t1 | Query: maker-chr2-augustus-gene-168.5-mRNA-1 - maker-chr2-augustus-gene-160.6-mRNA-1 | Dir: + | Size: 39 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,935.7 C700.0,935.7 700.0,930.4 1190.0,930.4 L1190.0,941.9 C700.0,941.9 700.0,945.8 232.0,945.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14622.t1 - Gtr04g14543.t1 | Query: maker-chr4-augustus-gene-324.25-mRNA-1 - maker-chr4-augustus-gene-302.0-mRNA-1 | Dir: - | Size: 39 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,709.0 C700.0,709.0 700.0,1650.5 1190.0,1650.5 L1190.0,1655.7 C700.0,1655.7 700.0,712.9 232.0,712.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr1 | Ref: Gtr03g11495.t1 - Gtr03g11559.t1 | Query: maker-chr1-augustus-gene-219.5-mRNA-1 - maker-chr1-exonerate_protein2genome-gene-229.4-mRNA-1 | Dir: + | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,178.7 C700.0,178.7 700.0,120.0 1190.0,120.0 L1190.0,125.6 C700.0,125.6 700.0,200.6 232.0,200.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g21984.t1 - Gtr01g22092.t1 | Query: maker-chr2-augustus-gene-268.16-mRNA-1 - maker-chr2-augustus-gene-257.1-mRNA-1 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,206.6 C700.0,206.6 700.0,111.8 1190.0,111.8 L1190.0,120.4 C700.0,120.4 700.0,222.7 232.0,222.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g22256.t2 - Gtr01g22134.t1 | Query: maker-chr2-augustus-gene-284.15-mRNA-1 - maker-chr2-exonerate_protein2genome-gene-267.30-mRNA-1 | Dir: - | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,444.7 C700.0,444.7 700.0,475.9 1190.0,475.9 L1190.0,479.1 C700.0,479.1 700.0,445.9 232.0,445.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17574.t1 - Gtr02g17633.t1 | Query: maker-chr3-exonerate_protein2genome-gene-134.47-mRNA-1 - maker-chr3-augustus-gene-128.6-mRNA-1 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,75.3 C700.0,75.3 700.0,148.1 1190.0,148.1 L1190.0,153.8 C700.0,153.8 700.0,91.9 232.0,91.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g21486.t1 - Gtr01g21379.t1 | Query: maker-chr2-exonerate_protein2genome-gene-213.55-mRNA-1 - augustus_masked-chr2-processed-gene-202.81-mRNA-1 | Dir: - | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1662.3 C700.0,1662.3 700.0,1414.0 1190.0,1414.0 L1190.0,1419.7 C700.0,1419.7 700.0,1681.5 232.0,1681.5 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26431.t1 - Gtr07g26549.t1 | Query: maker-chr7-exonerate_protein2genome-gene-144.11-mRNA-1 - maker-chr7-augustus-gene-155.66-mRNA-1 | Dir: + | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2084.3 C700.0,2084.3 700.0,1638.6 1190.0,1638.6 L1190.0,1646.5 C700.0,1646.5 700.0,2094.7 232.0,2094.7 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3175.t1 - Gtr09g3270.t1 | Query: augustus_masked-chr1-processed-gene-196.7-mRNA-1 - maker-chr1-augustus-gene-211.69-mRNA-1 | Dir: + | Size: 35 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1463.3 C700.0,1463.3 700.0,1192.7 1190.0,1192.7 L1190.0,1195.8 C700.0,1195.8 700.0,1471.6 232.0,1471.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2194.t1 - Gtr06g2110.t1 | Query: augustus_masked-chr5-processed-gene-232.114-mRNA-1 - maker-chr5-exonerate_protein2genome-gene-226.72-mRNA-1 | Dir: - | Size: 35 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,460.2 C700.0,460.2 700.0,537.3 1190.0,537.3 L1190.0,542.0 C700.0,542.0 700.0,462.8 232.0,462.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g18315.t1 - Gtr02g18414.t1 | Query: augustus_masked-chr3-processed-gene-15.66-mRNA-1 - maker-chr3-augustus-gene-6.0-mRNA-1 | Dir: + | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,988.9 C700.0,988.9 700.0,977.1 1190.0,977.1 L1190.0,981.7 C700.0,981.7 700.0,996.8 232.0,996.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14987.t1 - Gtr04g14906.t1 | Query: maker-chr4-exonerate_protein2genome-gene-233.29-mRNA-1 - maker-chr4-exonerate_est2genome-gene-224.0-mRNA-1 | Dir: - | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1372.8 C700.0,1372.8 700.0,1152.0 1190.0,1152.0 L1190.0,1154.4 C700.0,1154.4 700.0,1378.2 232.0,1378.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g1066.t1 - Gtr06g1161.t1 | Query: maker-chr5-augustus-gene-311.4-mRNA-1 - maker-chr5-augustus-gene-306.4-mRNA-1 | Dir: + | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,566.3 C700.0,566.3 700.0,796.5 1190.0,796.5 L1190.0,798.2 C700.0,798.2 700.0,569.3 232.0,569.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g9757.t1 - Gtr03g9803.t1 | Query: maker-chr6-exonerate_protein2genome-gene-109.74-mRNA-1 - maker-chr6-augustus-gene-106.24-mRNA-1 | Dir: + | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1614.9 C700.0,1614.9 700.0,1377.8 1190.0,1377.8 L1190.0,1383.0 C700.0,1383.0 700.0,1625.4 232.0,1625.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g25927.t1 - Gtr07g26061.t1 | Query: maker-chr7-augustus-gene-73.45-mRNA-1 - maker-chr7-augustus-gene-83.1-mRNA-1 | Dir: + | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,458.8 C700.0,458.8 700.0,530.0 1190.0,530.0 L1190.0,535.2 C700.0,535.2 700.0,460.2 232.0,460.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g18248.t1 - Gtr02g18316.t1 | Query: maker-chr3-augustus-gene-29.106-mRNA-1 - maker-chr3-augustus-gene-19.67-mRNA-1 | Dir: + | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1511.1 C700.0,1511.1 700.0,1205.0 1190.0,1205.0 L1190.0,1210.2 C700.0,1210.2 700.0,1516.9 232.0,1516.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2517.t1 - Gtr06g2582.t1 | Query: maker-chr5-augustus-gene-208.109-mRNA-1 - maker-chr5-exonerate_protein2genome-gene-198.11-mRNA-1 | Dir: + | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1417.9 C700.0,1417.9 700.0,1133.8 1190.0,1133.8 L1190.0,1136.4 C700.0,1136.4 700.0,1426.8 232.0,1426.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g1784.t1 - Gtr06g1697.t1 | Query: maker-chr5-augustus-gene-346.120-mRNA-1 - augustus_masked-chr5-processed-gene-341.16-mRNA-1 | Dir: - | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,505.5 C700.0,505.5 700.0,834.9 1190.0,834.9 L1190.0,837.1 C700.0,837.1 700.0,509.2 232.0,509.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g8928.t1 - Gtr03g8861.t1 | Query: maker-chr6-augustus-gene-35.4-mRNA-1 - augustus_masked-chr6-processed-gene-30.17-mRNA-1 | Dir: - | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,454.4 C700.0,454.4 700.0,511.1 1190.0,511.1 L1190.0,516.3 C700.0,516.3 700.0,456.6 232.0,456.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g18047.t1 - Gtr02g18135.t1 | Query: maker-chr3-augustus-gene-65.106-mRNA-1 - maker-chr3-augustus-gene-56.38-mRNA-1 | Dir: + | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,855.4 C700.0,855.4 700.0,1021.1 1190.0,1021.1 L1190.0,1023.4 C700.0,1023.4 700.0,858.5 232.0,858.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13809.t1 - Gtr04g13757.t1 | Query: maker-chr4-exonerate_protein2genome-gene-147.113-mRNA-1 - maker-chr4-augustus-gene-143.5-mRNA-1 | Dir: - | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2114.8 C700.0,2114.8 700.0,1611.3 1190.0,1611.3 L1190.0,1614.5 C700.0,1614.5 700.0,2123.5 232.0,2123.5 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3461.t1 - Gtr09g3404.t1 | Query: maker-chr1-exonerate_protein2genome-gene-142.67-mRNA-1 - maker-chr1-augustus-gene-149.15-mRNA-1 | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,461.5 C700.0,461.5 700.0,541.6 1190.0,541.6 L1190.0,544.9 C700.0,544.9 700.0,462.8 232.0,462.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g18418.t1 - Gtr02g18372.t1 | Query: maker-chr3-augustus-gene-6.2-mRNA-1 - maker-chr3-exonerate_protein2genome-gene-0.52-mRNA-1 | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1690.6 C700.0,1690.6 700.0,1427.1 1190.0,1427.1 L1190.0,1429.8 C700.0,1429.8 700.0,1694.8 232.0,1694.8 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26650.t1 - Gtr07g26700.t1 | Query: maker-chr7-augustus-gene-169.11-mRNA-1 - maker-chr7-augustus-gene-174.50-mRNA-1 | Dir: + | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,702.5 C700.0,702.5 700.0,1666.9 1190.0,1666.9 L1190.0,1672.6 C700.0,1672.6 700.0,707.4 232.0,707.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr1 | Ref: Gtr03g11479.t1 - Gtr03g11396.t1 | Query: maker-chr1-exonerate_est2genome-gene-251.97-mRNA-1 - maker-chr1-augustus-gene-262.52-mRNA-1 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1654.7 C700.0,1654.7 700.0,1408.9 1190.0,1408.9 L1190.0,1413.9 C700.0,1413.9 700.0,1661.9 232.0,1661.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26430.t1 - Gtr07g26347.t1 | Query: maker-chr7-augustus-gene-134.6-mRNA-1 - maker-chr7-augustus-gene-143.62-mRNA-1 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1971.0 C700.0,1971.0 700.0,1307.3 1190.0,1307.3 L1190.0,1310.1 C700.0,1310.1 700.0,1974.0 232.0,1974.0 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr5 | Ref: Gtr08g20309.t1 - Gtr08g20351.t1 | Query: augustus_masked-chr5-processed-gene-9.4-mRNA-1 - maker-chr5-augustus-gene-3.78-mRNA-1 | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,368.0 C700.0,368.0 700.0,354.8 1190.0,354.8 L1190.0,357.7 C700.0,357.7 700.0,369.0 232.0,369.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr01g23773.t1 - Gtr01g23722.t1 | Query: maker-chr3-augustus-gene-370.12-mRNA-1 - augustus_masked-chr3-processed-gene-364.115-mRNA-1 | Dir: - | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1359.0 C700.0,1359.0 700.0,1182.6 1190.0,1182.6 L1190.0,1183.6 C700.0,1183.6 700.0,1361.3 232.0,1361.3 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g840.t1 - Gtr06g889.t1 | Query: augustus_masked-chr5-processed-gene-251.24-mRNA-1 - maker-chr5-augustus-gene-249.108-mRNA-1 | Dir: + | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,670.9 C700.0,670.9 700.0,724.0 1190.0,724.0 L1190.0,727.3 C700.0,727.3 700.0,675.6 232.0,675.6 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10942.t1 - Gtr03g11002.t1 | Query: maker-chr6-augustus-gene-250.17-mRNA-1 - maker-chr6-augustus-gene-244.24-mRNA-1 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,689.4 C700.0,689.4 700.0,709.1 1190.0,709.1 L1190.0,711.6 C700.0,711.6 700.0,693.7 232.0,693.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g11257.t1 - Gtr03g11186.t1 | Query: maker-chr6-augustus-gene-279.5-mRNA-1 - maker-chr6-augustus-gene-274.4-mRNA-1 | Dir: - | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,712.9 C700.0,712.9 700.0,1659.6 1190.0,1659.6 L1190.0,1666.6 C700.0,1666.6 700.0,718.8 232.0,718.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr1 | Ref: Gtr03g11559.t1 - Gtr03g11656.t1 | Query: maker-chr1-exonerate_protein2genome-gene-236.36-mRNA-1 - augustus_masked-chr1-processed-gene-250.10-mRNA-1 | Dir: + | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,504.7 C700.0,504.7 700.0,837.5 1190.0,837.5 L1190.0,840.1 C700.0,840.1 700.0,507.5 232.0,507.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g8899.t1 - Gtr03g8841.t1 | Query: maker-chr6-augustus-gene-30.110-mRNA-1 - augustus_masked-chr6-processed-gene-25.147-mRNA-1 | Dir: - | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,270.8 C700.0,270.8 700.0,77.9 1190.0,77.9 L1190.0,79.7 C700.0,79.7 700.0,274.4 232.0,274.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g22723.t1 - Gtr01g22771.t1 | Query: maker-chr2-augustus-gene-350.120-mRNA-1 - augustus_masked-chr2-processed-gene-346.26-mRNA-1 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1472.8 C700.0,1472.8 700.0,1125.3 1190.0,1125.3 L1190.0,1126.5 C700.0,1126.5 700.0,1481.0 232.0,1481.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2197.t1 - Gtr06g2257.t1 | Query: maker-chr5-exonerate_protein2genome-gene-362.28-mRNA-1 - maker-chr5-augustus-gene-361.107-mRNA-1 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,607.8 C700.0,607.8 700.0,769.4 1190.0,769.4 L1190.0,772.0 C700.0,772.0 700.0,611.8 232.0,611.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10289.t1 - Gtr03g10251.t1 | Query: maker-chr6-exonerate_protein2genome-gene-162.28-mRNA-1 - maker-chr6-augustus-gene-157.2-mRNA-1 | Dir: - | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,870.6 C700.0,870.6 700.0,887.3 1190.0,887.3 L1190.0,892.2 C700.0,892.2 700.0,874.8 232.0,874.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13947.t1 - Gtr04g13999.t1 | Query: maker-chr4-augustus-gene-408.4-mRNA-1 - maker-chr4-augustus-gene-399.51-mRNA-1 | Dir: + | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1605.4 C700.0,1605.4 700.0,1374.0 1190.0,1374.0 L1190.0,1378.6 C700.0,1378.6 700.0,1614.9 232.0,1614.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g25819.t1 - Gtr07g25927.t1 | Query: augustus_masked-chr7-processed-gene-66.11-mRNA-1 - maker-chr7-augustus-gene-75.56-mRNA-1 | Dir: + | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1286.2 C700.0,1286.2 700.0,1704.5 1190.0,1704.5 L1190.0,1713.6 C700.0,1713.6 700.0,1292.5 232.0,1292.5 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr1 | Ref: Gtr05g8373.t1 - Gtr05g8276.t1 | Query: maker-chr1-augustus-gene-324.69-mRNA-1 - maker-chr1-augustus-gene-341.8-mRNA-1 | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,380.5 C700.0,380.5 700.0,320.1 1190.0,320.1 L1190.0,322.8 C700.0,322.8 700.0,382.2 232.0,382.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr01g24393.t1 - Gtr01g24326.t1 | Query: augustus_masked-chr3-processed-gene-437.32-mRNA-1 - augustus_masked-chr3-processed-gene-432.4-mRNA-1 | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1011.5 C700.0,1011.5 700.0,881.6 1190.0,881.6 L1190.0,885.7 C700.0,885.7 700.0,1021.3 232.0,1021.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g15163.t1 - Gtr04g15092.t1 | Query: augustus_masked-chr4-processed-gene-420.0-mRNA-1 - augustus_masked-chr4-processed-gene-412.8-mRNA-1 | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,867.2 C700.0,867.2 700.0,989.3 1190.0,989.3 L1190.0,999.7 C700.0,999.7 700.0,870.5 232.0,870.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13945.t1 - Gtr04g13896.t1 | Query: augustus_masked-chr4-processed-gene-210.37-mRNA-1 - maker-chr4-augustus-gene-189.77-mRNA-1 | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1090.2 C700.0,1090.2 700.0,607.4 1190.0,607.4 L1190.0,608.6 C700.0,608.6 700.0,1092.2 232.0,1092.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g6229.t1 - Gtr05g6193.t1 | Query: maker-chr6-augustus-gene-477.17-mRNA-1 - maker-chr6-augustus-gene-474.92-mRNA-1 | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1594.4 C700.0,1594.4 700.0,1363.6 1190.0,1363.6 L1190.0,1368.4 C700.0,1368.4 700.0,1600.6 232.0,1600.6 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g25772.t1 - Gtr07g25703.t1 | Query: maker-chr7-augustus-gene-46.65-mRNA-1 - maker-chr7-augustus-gene-55.25-mRNA-1 | Dir: - | Size: 23 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2014.3 C700.0,2014.3 700.0,1267.0 1190.0,1267.0 L1190.0,1271.1 C700.0,1271.1 700.0,2016.6 232.0,2016.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr5 | Ref: Gtr08g20796.t1 - Gtr08g20839.t1 | Query: maker-chr5-augustus-gene-87.56-mRNA-1 - maker-chr5-augustus-gene-79.91-mRNA-1 | Dir: + | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,61.2 C700.0,61.2 700.0,61.1 1190.0,61.1 L1190.0,64.0 C700.0,64.0 700.0,70.6 232.0,70.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g21270.t1 - Gtr01g21336.t1 | Query: maker-chr2-augustus-gene-383.34-mRNA-1 - maker-chr2-augustus-gene-377.11-mRNA-1 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1525.6 C700.0,1525.6 700.0,1224.8 1190.0,1224.8 L1190.0,1226.9 C700.0,1226.9 700.0,1530.0 232.0,1530.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2682.t1 - Gtr06g2731.t1 | Query: maker-chr5-augustus-gene-169.79-mRNA-1 - maker-chr5-exonerate_protein2genome-gene-165.90-mRNA-1 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,417.1 C700.0,417.1 700.0,397.4 1190.0,397.4 L1190.0,399.7 C700.0,399.7 700.0,418.2 232.0,418.2 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g16410.t1 - Gtr02g16461.t1 | Query: maker-chr3-augustus-gene-287.112-mRNA-1 - maker-chr3-augustus-gene-282.6-mRNA-1 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,450.8 C700.0,450.8 700.0,501.2 1190.0,501.2 L1190.0,502.2 C700.0,502.2 700.0,451.5 232.0,451.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17899.t1 - Gtr02g17860.t1 | Query: maker-chr3-augustus-gene-85.96-mRNA-1 - maker-chr3-augustus-gene-83.1-mRNA-1 | Dir: - | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,999.7 C700.0,999.7 700.0,981.1 1190.0,981.1 L1190.0,983.3 C700.0,983.3 700.0,1006.3 232.0,1006.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g15014.t1 - Gtr04g15057.t1 | Query: maker-chr4-augustus-gene-225.138-mRNA-1 - maker-chr4-augustus-gene-221.5-mRNA-1 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1601.4 C700.0,1601.4 700.0,1368.7 1190.0,1368.7 L1190.0,1374.3 C700.0,1374.3 700.0,1607.8 232.0,1607.8 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g25779.t1 - Gtr07g25845.t1 | Query: maker-chr7-augustus-gene-56.39-mRNA-1 - augustus_masked-chr7-processed-gene-66.6-mRNA-1 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1506.4 C700.0,1506.4 700.0,1208.8 1190.0,1208.8 L1190.0,1211.7 C700.0,1211.7 700.0,1512.1 232.0,1512.1 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2529.t1 - Gtr06g2489.t1 | Query: maker-chr5-exonerate_protein2genome-gene-200.23-mRNA-1 - maker-chr5-augustus-gene-195.4-mRNA-1 | Dir: - | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1216.7 C700.0,1216.7 700.0,700.8 1190.0,700.8 L1190.0,703.0 C700.0,703.0 700.0,1221.2 232.0,1221.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g7468.t1 - Gtr05g7516.t1 | Query: maker-chr6-augustus-gene-295.6-mRNA-1 - maker-chr6-augustus-gene-291.25-mRNA-1 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1695.7 C700.0,1695.7 700.0,1430.2 1190.0,1430.2 L1190.0,1431.5 C700.0,1431.5 700.0,1698.1 232.0,1698.1 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26754.t1 - Gtr07g26724.t1 | Query: maker-chr7-augustus-gene-175.111-mRNA-1 - maker-chr7-augustus-gene-178.59-mRNA-1 | Dir: - | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,444.6 C700.0,444.6 700.0,473.7 1190.0,473.7 L1190.0,475.7 C700.0,475.7 700.0,445.1 232.0,445.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17556.t1 - Gtr02g17588.t1 | Query: augustus_masked-chr3-processed-gene-138.16-mRNA-1 - augustus_masked-chr3-processed-gene-134.81-mRNA-1 | Dir: + | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,90.3 C700.0,90.3 700.0,144.9 1190.0,144.9 L1190.0,147.3 C700.0,147.3 700.0,101.7 232.0,101.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g21472.t1 - Gtr01g21559.t1 | Query: maker-chr2-augustus-gene-220.10-mRNA-1 - maker-chr2-augustus-gene-215.94-mRNA-1 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1636.0 C700.0,1636.0 700.0,1399.3 1190.0,1399.3 L1190.0,1402.1 C700.0,1402.1 700.0,1639.2 232.0,1639.2 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26184.t1 - Gtr07g26217.t1 | Query: maker-chr7-augustus-gene-115.101-mRNA-1 - maker-chr7-exonerate_protein2genome-gene-120.18-mRNA-1 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1627.2 C700.0,1627.2 700.0,1384.4 1190.0,1384.4 L1190.0,1386.9 C700.0,1386.9 700.0,1632.5 232.0,1632.5 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26084.t1 - Gtr07g26137.t1 | Query: maker-chr7-exonerate_protein2genome-gene-86.31-mRNA-1 - maker-chr7-augustus-gene-91.24-mRNA-1 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2080.8 C700.0,2080.8 700.0,1628.4 1190.0,1628.4 L1190.0,1631.6 C700.0,1631.6 700.0,2084.3 232.0,2084.3 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3174.t1 - Gtr09g3131.t2 | Query: maker-chr1-exonerate_protein2genome-gene-176.77-mRNA-1 - maker-chr1-augustus-gene-182.75-mRNA-1 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2016.9 C700.0,2016.9 700.0,1260.2 1190.0,1260.2 L1190.0,1263.0 C700.0,1263.0 700.0,2018.8 232.0,2018.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr5 | Ref: Gtr08g20870.t1 - Gtr08g20844.t1 | Query: maker-chr5-augustus-gene-100.8-mRNA-1 - maker-chr5-augustus-gene-95.3-mRNA-1 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1631.0 C700.0,1631.0 700.0,1388.4 1190.0,1388.4 L1190.0,1391.6 C700.0,1391.6 700.0,1635.0 232.0,1635.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26130.t1 - Gtr07g26166.t1 | Query: maker-chr7-augustus-gene-94.9-mRNA-1 - maker-chr7-augustus-gene-100.55-mRNA-1 | Dir: + | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2110.5 C700.0,2110.5 700.0,1614.7 1190.0,1614.7 L1190.0,1616.1 C700.0,1616.1 700.0,2115.7 232.0,2115.7 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3418.t1 - Gtr09g3378.t1 | Query: maker-chr1-augustus-gene-149.11-mRNA-1 - maker-chr1-augustus-gene-152.16-mRNA-1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1207.8 C700.0,1207.8 700.0,705.0 1190.0,705.0 L1190.0,707.9 C700.0,707.9 700.0,1215.8 232.0,1215.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g7458.t1 - Gtr05g7388.t1 | Query: maker-chr6-exonerate_protein2genome-gene-287.24-mRNA-1 - maker-chr6-augustus-gene-282.9-mRNA-1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1225.0 C700.0,1225.0 700.0,697.0 1190.0,697.0 L1190.0,700.8 C700.0,700.8 700.0,1230.3 232.0,1230.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g7600.t1 - Gtr05g7549.t1 | Query: maker-chr6-augustus-gene-303.17-mRNA-1 - maker-chr6-augustus-gene-295.9-mRNA-1 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2066.2 C700.0,2066.2 700.0,1622.8 1190.0,1622.8 L1190.0,1624.8 C700.0,1624.8 700.0,2070.1 232.0,2070.1 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3059.t1 - Gtr09g3029.t1 | Query: maker-chr1-augustus-gene-165.58-mRNA-1 - maker-chr1-augustus-gene-169.8-mRNA-1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1879.2 C700.0,1879.2 700.0,244.2 1190.0,244.2 L1190.0,245.0 C700.0,245.0 700.0,1881.2 232.0,1881.2 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr2 | Ref: Gtr08g19156.t1 - Gtr08g19132.t1 | Query: maker-chr2-augustus-gene-26.20-mRNA-1 - augustus_masked-chr2-processed-gene-25.61-mRNA-1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,973.6 C700.0,973.6 700.0,969.6 1190.0,969.6 L1190.0,971.9 C700.0,971.9 700.0,978.3 232.0,978.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14832.t1 - Gtr04g14789.t1 | Query: maker-chr4-augustus-gene-248.141-mRNA-1 - maker-chr4-augustus-gene-244.55-mRNA-1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1531.1 C700.0,1531.1 700.0,1228.7 1190.0,1228.7 L1190.0,1232.0 C700.0,1232.0 700.0,1533.5 232.0,1533.5 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g2761.t1 - Gtr06g2740.t1 | Query: maker-chr5-augustus-gene-162.39-mRNA-1 - maker-chr5-exonerate_protein2genome-gene-155.40-mRNA-1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,685.0 C700.0,685.0 700.0,715.2 1190.0,715.2 L1190.0,717.0 C700.0,717.0 700.0,687.5 232.0,687.5 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g11120.t1 - Gtr03g11155.t1 | Query: maker-chr6-augustus-gene-267.72-mRNA-1 - maker-chr6-augustus-gene-264.4-mRNA-1 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,504.6 C700.0,504.6 700.0,840.2 1190.0,840.2 L1190.0,841.9 C700.0,841.9 700.0,506.7 232.0,506.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g8880.t1 - Gtr03g8839.t1 | Query: maker-chr6-augustus-gene-25.0-mRNA-1 - augustus_masked-chr6-processed-gene-21.62-mRNA-1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1231.5 C700.0,1231.5 700.0,691.3 1190.0,691.3 L1190.0,695.7 C700.0,695.7 700.0,1237.4 232.0,1237.4 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g7671.t1 - Gtr05g7610.t1 | Query: maker-chr6-augustus-gene-314.33-mRNA-1 - augustus_masked-chr6-processed-gene-305.70-mRNA-1 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2110.2 C700.0,2110.2 700.0,1616.0 1190.0,1616.0 L1190.0,1617.0 C700.0,1617.0 700.0,2113.0 232.0,2113.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3375.t1 - Gtr09g3396.t1 | Query: maker-chr1-exonerate_est2genome-gene-152.5-mRNA-1 - maker-chr1-augustus-gene-153.14-mRNA-1 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,519.5 C700.0,519.5 700.0,819.9 1190.0,819.9 L1190.0,821.4 C700.0,821.4 700.0,520.9 232.0,520.9 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g9121.t1 - Gtr03g9153.t1 | Query: maker-chr6-augustus-gene-64.88-mRNA-1 - augustus_masked-chr6-processed-gene-61.21-mRNA-1 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1280.9 C700.0,1280.9 700.0,1684.1 1190.0,1684.1 L1190.0,1696.1 C700.0,1696.1 700.0,1283.0 232.0,1283.0 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr1 | Ref: Gtr05g8201.t1 - Gtr05g8232.t1 | Query: maker-chr1-augustus-gene-284.41-mRNA-1 - maker-chr1-augustus-gene-307.22-mRNA-1 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,268.0 C700.0,268.0 700.0,80.7 1190.0,80.7 L1190.0,82.7 C700.0,82.7 700.0,270.5 232.0,270.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g22694.t1 - Gtr01g22721.t1 | Query: augustus_masked-chr2-processed-gene-344.19-mRNA-1 - maker-chr2-augustus-gene-341.6-mRNA-1 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,548.4 C700.0,548.4 700.0,806.8 1190.0,806.8 L1190.0,808.0 C700.0,808.0 700.0,551.4 232.0,551.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g9527.t1 - Gtr03g9557.t1 | Query: maker-chr6-augustus-gene-89.10-mRNA-1 - maker-chr6-augustus-gene-87.4-mRNA-1 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,70.7 C700.0,70.7 700.0,66.2 1190.0,66.2 L1190.0,67.0 C700.0,67.0 700.0,73.8 232.0,73.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g21337.t1 - Gtr01g21365.t1 | Query: maker-chr2-augustus-gene-373.1-mRNA-1 - maker-chr2-augustus-gene-371.8-mRNA-1 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,451.5 C700.0,451.5 700.0,503.1 1190.0,503.1 L1190.0,503.9 C700.0,503.9 700.0,451.8 232.0,451.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17903.t1 - Gtr02g17920.t1 | Query: maker-chr3-augustus-gene-81.70-mRNA-1 - maker-chr3-augustus-gene-80.129-mRNA-1 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,438.2 C700.0,438.2 700.0,502.3 1190.0,502.3 L1190.0,503.1 C700.0,503.1 700.0,438.5 232.0,438.5 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Chr02 → chr3 | Ref: Gtr02g17241.t1 - Gtr02g17251.t1 | Query: augustus_masked-chr3-processed-gene-83.87-mRNA-1 - augustus_masked-chr3-processed-gene-81.66-mRNA-1 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,798.0 C700.0,798.0 700.0,1080.8 1190.0,1080.8 L1190.0,1081.2 C700.0,1081.2 700.0,798.8 232.0,798.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g12922.t1 - Gtr04g12935.t1 | Query: augustus_masked-chr4-processed-gene-31.24-mRNA-1 - maker-chr4-augustus-gene-31.205-mRNA-1 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,964.1 C700.0,964.1 700.0,966.7 1190.0,966.7 L1190.0,969.5 C700.0,969.5 700.0,968.2 232.0,968.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14722.t1 - Gtr04g14750.t1 | Query: maker-chr4-augustus-gene-254.18-mRNA-1 - maker-chr4-augustus-gene-248.143-mRNA-1 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,954.6 C700.0,954.6 700.0,953.4 1190.0,953.4 L1190.0,960.5 C700.0,960.5 700.0,963.9 232.0,963.9 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14678.t1 - Gtr04g14721.t1 | Query: maker-chr4-augustus-gene-279.3-mRNA-1 - maker-chr4-augustus-gene-266.2-mRNA-1 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,946.4 C700.0,946.4 700.0,944.1 1190.0,944.1 L1190.0,950.4 C700.0,950.4 700.0,953.4 232.0,953.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14666.t1 - Gtr04g14626.t1 | Query: maker-chr4-exonerate_protein2genome-gene-298.5-mRNA-1 - maker-chr4-augustus-gene-285.58-mRNA-1 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2014.0 C700.0,2014.0 700.0,1265.2 1190.0,1265.2 L1190.0,1267.4 C700.0,1267.4 700.0,2014.8 232.0,2014.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Chr08 → chr5 | Ref: Gtr08g20807.t1 - Gtr08g20792.t1 | Query: maker-chr5-augustus-gene-91.0-mRNA-1 - augustus_masked-chr5-processed-gene-87.0-mRNA-1 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1695.2 C700.0,1695.2 700.0,1431.1 1190.0,1431.1 L1190.0,1433.2 C700.0,1433.2 700.0,1698.7 232.0,1698.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26759.t1 - Gtr07g26708.t1 | Query: maker-chr7-augustus-gene-177.15-mRNA-1 - augustus_masked-chr7-processed-gene-181.71-mRNA-1 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2070.9 C700.0,2070.9 700.0,1648.4 1190.0,1648.4 L1190.0,1650.1 C700.0,1650.1 700.0,2075.6 232.0,2075.6 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3096.t1 - Gtr09g3066.t1 | Query: maker-chr1-augustus-gene-215.6-mRNA-1 - maker-chr1-augustus-gene-218.5-mRNA-1 | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,976.9 C700.0,976.9 700.0,970.3 1190.0,970.3 L1190.0,975.2 C700.0,975.2 700.0,984.8 232.0,984.8 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14820.t1 - Gtr04g14888.t1 | Query: maker-chr4-exonerate_protein2genome-gene-247.25-mRNA-1 - maker-chr4-augustus-gene-237.4-mRNA-1 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,668.0 C700.0,668.0 700.0,760.1 1190.0,760.1 L1190.0,761.7 C700.0,761.7 700.0,670.8 232.0,670.8 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Chr03 → chr6 | Ref: Gtr03g10908.t1 - Gtr03g10940.t1 | Query: maker-chr6-augustus-gene-180.18-mRNA-1 - maker-chr6-augustus-gene-177.0-mRNA-1 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1212.5 C700.0,1212.5 700.0,703.0 1190.0,703.0 L1190.0,703.8 C700.0,703.8 700.0,1215.8 232.0,1215.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g7430.t1 - Gtr05g7458.t1 | Query: maker-chr6-augustus-gene-291.24-mRNA-1 - maker-chr6-exonerate_protein2genome-gene-289.75-mRNA-1 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,866.4 C700.0,866.4 700.0,999.4 1190.0,999.4 L1190.0,1001.5 C700.0,1001.5 700.0,867.6 232.0,867.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g13885.t1 - Gtr04g13904.t1 | Query: maker-chr4-augustus-gene-190.37-mRNA-1 - maker-chr4-augustus-gene-186.0-mRNA-1 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1007.4 C700.0,1007.4 700.0,986.0 1190.0,986.0 L1190.0,987.1 C700.0,987.1 700.0,1010.2 232.0,1010.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g15084.t1 - Gtr04g15064.t1 | Query: maker-chr4-augustus-gene-216.10-mRNA-1 - maker-chr4-augustus-gene-214.133-mRNA-1 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,949.8 C700.0,949.8 700.0,957.3 1190.0,957.3 L1190.0,967.3 C700.0,967.3 700.0,958.1 232.0,958.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14698.t1 - Gtr04g14645.t1 | Query: maker-chr4-augustus-gene-272.50-mRNA-1 - maker-chr4-augustus-gene-252.1-mRNA-1 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1639.9 C700.0,1639.9 700.0,1394.9 1190.0,1394.9 L1190.0,1398.0 C700.0,1398.0 700.0,1640.9 232.0,1640.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Chr07 → chr7 | Ref: Gtr07g26240.t1 - Gtr07g26225.t1 | Query: augustus_masked-chr7-processed-gene-107.1-mRNA-1 - maker-chr7-augustus-gene-112.8-mRNA-1 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1201.0 C700.0,1201.0 700.0,1675.7 1190.0,1675.7 L1190.0,1679.9 C700.0,1679.9 700.0,1202.7 232.0,1202.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr1 | Ref: Gtr05g7325.t1 - Gtr05g7339.t1 | Query: maker-chr1-augustus-gene-268.0-mRNA-1 - maker-chr1-exonerate_est2genome-gene-276.37-mRNA-1 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1280.8 C700.0,1280.8 700.0,1681.0 1190.0,1681.0 L1190.0,1686.1 C700.0,1686.1 700.0,1281.3 232.0,1281.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr1 | Ref: Gtr05g8209.t1 - Gtr05g8198.t1 | Query: maker-chr1-augustus-gene-278.7-mRNA-1 - maker-chr1-augustus-gene-288.2-mRNA-1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2076.9 C700.0,2076.9 700.0,1627.1 1190.0,1627.1 L1190.0,1627.6 C700.0,1627.6 700.0,2078.8 232.0,2078.8 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3102.t1 - Gtr09g3115.t1 | Query: maker-chr1-augustus-gene-173.69-mRNA-1 - augustus_masked-chr1-processed-gene-174.110-mRNA-1 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,73.9 C700.0,73.9 700.0,154.2 1190.0,154.2 L1190.0,155.5 C700.0,155.5 700.0,78.3 232.0,78.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g21397.t1 - Gtr01g21366.t1 | Query: maker-chr2-augustus-gene-201.49-mRNA-1 - augustus_masked-chr2-processed-gene-199.88-mRNA-1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,164.0 C700.0,164.0 700.0,128.5 1190.0,128.5 L1190.0,129.5 C700.0,129.5 700.0,168.2 232.0,168.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Chr01 → chr2 | Ref: Gtr01g21948.t1 - Gtr01g21919.t1 | Query: maker-chr2-augustus-gene-252.2-mRNA-1 - maker-chr2-augustus-gene-250.61-mRNA-1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1007.4 C700.0,1007.4 700.0,987.0 1190.0,987.0 L1190.0,988.7 C700.0,988.7 700.0,1011.2 232.0,1011.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g15064.t1 - Gtr04g15090.t1 | Query: maker-chr4-augustus-gene-214.133-mRNA-1 - maker-chr4-augustus-gene-211.2-mRNA-1 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,797.3 C700.0,797.3 700.0,1084.9 1190.0,1084.9 L1190.0,1085.4 C700.0,1085.4 700.0,797.7 232.0,797.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g12920.t1 - Gtr04g12909.t1 | Query: maker-chr4-augustus-gene-23.11-mRNA-1 - augustus_masked-chr4-processed-gene-22.46-mRNA-1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,984.3 C700.0,984.3 700.0,973.9 1190.0,973.9 L1190.0,975.7 C700.0,975.7 700.0,986.6 232.0,986.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g14900.t1 - Gtr04g14882.t1 | Query: maker-chr4-exonerate_protein2genome-gene-240.11-mRNA-1 - maker-chr4-augustus-gene-236.76-mRNA-1 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2073.9 C700.0,2073.9 700.0,1646.6 1190.0,1646.6 L1190.0,1648.4 C700.0,1648.4 700.0,2075.6 232.0,2075.6 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3083.t1 - Gtr09g3096.t1 | Query: maker-chr1-augustus-gene-211.72-mRNA-1 - maker-chr1-augustus-gene-215.6-mRNA-1 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2078.3 C700.0,2078.3 700.0,1626.2 1190.0,1626.2 L1190.0,1627.7 C700.0,1627.7 700.0,2079.9 232.0,2079.9 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Chr09 → chr1 | Ref: Gtr09g3124.t1 - Gtr09g3112.t1 | Query: augustus_masked-chr1-processed-gene-172.152-mRNA-1 - maker-chr1-augustus-gene-174.14-mRNA-1 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,799.1 C700.0,799.1 700.0,1056.8 1190.0,1056.8 L1190.0,1057.0 C700.0,1057.0 700.0,800.5 232.0,800.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Chr04 → chr4 | Ref: Gtr04g12965.t1 - Gtr04g12938.t1 | Query: maker-chr4-augustus-gene-78.157-mRNA-1 - maker-chr4-augustus-gene-78.147-mRNA-1 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1236.2 C700.0,1236.2 700.0,690.7 1190.0,690.7 L1190.0,691.6 C700.0,691.6 700.0,1237.7 232.0,1237.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g7664.t1 - Gtr05g7675.t1 | Query: maker-chr6-augustus-gene-315.1-mRNA-1 - maker-chr6-augustus-gene-313.2-mRNA-1 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1363.4 C700.0,1363.4 700.0,1183.6 1190.0,1183.6 L1190.0,1184.4 C700.0,1184.4 700.0,1363.7 232.0,1363.7 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Chr06 → chr5 | Ref: Gtr06g914.t1 - Gtr06g919.t1 | Query: maker-chr5-augustus-gene-249.113-mRNA-1 - maker-chr5-augustus-gene-248.5-mRNA-1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1220.5 C700.0,1220.5 700.0,704.4 1190.0,704.4 L1190.0,704.9 C700.0,704.9 700.0,1221.3 232.0,1221.3 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Chr05 → chr6 | Ref: Gtr05g7508.t1 - Gtr05g7517.t1 | Query: maker-chr6-augustus-gene-288.18-mRNA-1 - maker-chr6-exonerate_protein2genome-gene-287.59-mRNA-1 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+</g>
+<g id="refChrs">
+<rect x="210" y="60" width="22" height="280" rx="5" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="1"/>
+<rect x="211" y="61.2" width="20" height="9.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="69.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="211" y="70.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="76.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="211" y="73.9" width="20" height="4.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="80.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="211" y="75.3" width="20" height="16.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="83.6" x2="216" y2="83.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="87.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="211" y="90.3" width="20" height="11.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="96.0" x2="226" y2="96.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr01)" opacity="0.8"/>
+<text x="205" y="100.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="211" y="93.3" width="20" height="54.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="120.5" x2="216" y2="120.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="124.5" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="211" y="164.0" width="20" height="4.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="170.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="211" y="178.7" width="20" height="22.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="189.7" x2="226" y2="189.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr01)" opacity="0.8"/>
+<text x="205" y="193.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="211" y="206.6" width="20" height="16.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="214.7" x2="216" y2="214.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="218.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="211" y="219.7" width="20" height="16.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="228.0" x2="216" y2="228.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="232.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="211" y="241.5" width="20" height="9.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="250.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="211" y="249.3" width="20" height="20.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="259.6" x2="216" y2="259.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="263.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="211" y="268.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="274.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="211" y="270.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="276.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="211" y="274.0" width="20" height="19.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="283.6" x2="216" y2="283.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="205" y="287.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="211" y="293.5" width="20" height="9.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="302.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="211" y="300.4" width="20" height="17.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="308.9" x2="226" y2="308.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr01)" opacity="0.8"/>
+<text x="205" y="312.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="211" y="317.4" width="20" height="4.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="323.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="211" y="320.9" width="20" height="19.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="330.4" x2="226" y2="330.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr01)" opacity="0.8"/>
+<text x="205" y="334.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<text x="205" y="55" text-anchor="end" fill="#FFD700" font-size="12" font-weight="700" letter-spacing="0.5">Chr01</text>
+<circle cx="221.0" cy="123.7" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="127.7" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="368" width="22" height="95" rx="5" fill="#E63946" opacity="0.15" stroke="#E63946" stroke-width="1"/>
+<rect x="211" y="368.0" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="374.0" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="211" y="368.5" width="20" height="5.2" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="375.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="211" y="373.7" width="20" height="6.2" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="380.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="211" y="379.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="385.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="211" y="380.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="386.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="211" y="382.2" width="20" height="9.7" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="391.0" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="211" y="391.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="397.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="211" y="394.4" width="20" height="5.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="400.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="211" y="399.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="405.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="211" y="401.7" width="20" height="4.2" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="407.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="211" y="405.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="411.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="211" y="409.2" width="20" height="8.5" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="417.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="211" y="417.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="423.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="211" y="418.9" width="20" height="12.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="425.2" x2="216" y2="425.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="205" y="429.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">14</text>
+<rect x="211" y="432.3" width="20" height="5.5" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="439.0" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">15</text>
+<rect x="211" y="438.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="444.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">16</text>
+<rect x="211" y="438.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="444.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">17</text>
+<rect x="211" y="442.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="448.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">18</text>
+<rect x="211" y="444.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="450.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">19</text>
+<rect x="211" y="444.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="450.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">20</text>
+<rect x="211" y="446.1" width="20" height="4.9" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="452.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">21</text>
+<rect x="211" y="450.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="456.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">22</text>
+<rect x="211" y="451.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="457.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">23</text>
+<rect x="211" y="451.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="457.6" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">24</text>
+<rect x="211" y="454.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="460.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">25</text>
+<rect x="211" y="454.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="460.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">26</text>
+<rect x="211" y="458.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="464.8" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">27</text>
+<rect x="211" y="460.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="466.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">28</text>
+<rect x="211" y="461.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="467.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">29</text>
+<text x="205" y="363" text-anchor="end" fill="#E63946" font-size="12" font-weight="700" letter-spacing="0.5">Chr02</text>
+<rect x="210" y="491" width="22" height="228" rx="5" fill="#1A237E" opacity="0.15" stroke="#1A237E" stroke-width="1"/>
+<rect x="211" y="491.3" width="20" height="8.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="499.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="211" y="498.1" width="20" height="4.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="504.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="211" y="504.6" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="510.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="211" y="504.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="510.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="211" y="505.5" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="511.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="211" y="508.7" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="514.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="211" y="511.7" width="20" height="9.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="520.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="211" y="519.5" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="525.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="211" y="520.9" width="20" height="29.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="535.5" x2="216" y2="535.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="205" y="539.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="211" y="548.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="554.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="211" y="548.4" width="20" height="17.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="557.2" x2="216" y2="557.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="205" y="561.2" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="211" y="566.3" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="572.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="211" y="572.4" width="20" height="9.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="580.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<rect x="211" y="578.0" width="20" height="16.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="586.3" x2="216" y2="586.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="205" y="590.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">14</text>
+<rect x="211" y="594.8" width="20" height="14.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="601.8" x2="216" y2="601.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="205" y="605.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">15</text>
+<rect x="211" y="607.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="613.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">16</text>
+<rect x="211" y="612.3" width="20" height="14.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="619.5" x2="226" y2="619.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr03)" opacity="0.8"/>
+<text x="205" y="623.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">17</text>
+<rect x="211" y="627.5" width="20" height="15.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="635.1" x2="226" y2="635.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr03)" opacity="0.8"/>
+<text x="205" y="639.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">18</text>
+<rect x="211" y="637.1" width="20" height="19.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="646.7" x2="226" y2="646.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr03)" opacity="0.8"/>
+<text x="205" y="650.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">19</text>
+<rect x="211" y="654.9" width="20" height="10.5" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="660.1" x2="226" y2="660.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr03)" opacity="0.8"/>
+<text x="205" y="664.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">20</text>
+<rect x="211" y="664.0" width="20" height="5.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="670.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">21</text>
+<rect x="211" y="668.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="674.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">22</text>
+<rect x="211" y="670.9" width="20" height="4.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="677.3" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">23</text>
+<rect x="211" y="675.8" width="20" height="7.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="683.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">24</text>
+<rect x="211" y="685.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="691.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">25</text>
+<rect x="211" y="689.4" width="20" height="4.3" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="695.6" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">26</text>
+<rect x="211" y="702.5" width="20" height="4.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="708.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">27</text>
+<rect x="211" y="709.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="715.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">28</text>
+<rect x="211" y="712.9" width="20" height="5.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="719.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">29</text>
+<text x="205" y="486" text-anchor="end" fill="#1A237E" font-size="12" font-weight="700" letter-spacing="0.5">Chr03</text>
+<circle cx="221.0" cy="612.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="616.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="747" width="22" height="276" rx="5" fill="#9C27B0" opacity="0.15" stroke="#9C27B0" stroke-width="1"/>
+<rect x="211" y="747.1" width="20" height="8.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="755.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="211" y="755.6" width="20" height="5.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="762.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="211" y="761.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="767.0" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="211" y="764.5" width="20" height="16.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="772.7" x2="226" y2="772.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="205" y="776.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="211" y="779.9" width="20" height="11.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="785.5" x2="226" y2="785.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="205" y="789.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="211" y="791.1" width="20" height="6.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="798.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="211" y="797.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="803.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="211" y="798.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="804.0" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<rect x="211" y="799.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="805.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="211" y="799.1" width="20" height="25.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="811.8" x2="216" y2="811.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="205" y="815.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="211" y="823.6" width="20" height="5.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="830.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="211" y="828.3" width="20" height="14.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="835.7" x2="216" y2="835.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="205" y="839.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="211" y="844.3" width="20" height="10.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="849.4" x2="216" y2="849.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="205" y="853.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="211" y="855.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="861.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="211" y="859.3" width="20" height="8.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="867.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="211" y="866.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="872.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="211" y="867.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="873.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<rect x="211" y="870.6" width="20" height="4.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="876.7" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">18</text>
+<rect x="211" y="873.9" width="20" height="17.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="882.5" x2="226" y2="882.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="205" y="886.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">19</text>
+<rect x="211" y="891.0" width="20" height="44.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="913.1" x2="226" y2="913.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="205" y="917.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">20</text>
+<rect x="211" y="935.7" width="20" height="10.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="940.8" x2="216" y2="940.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="205" y="944.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">21</text>
+<rect x="211" y="946.4" width="20" height="7.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="953.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">22</text>
+<rect x="211" y="949.8" width="20" height="8.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="958.0" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">23</text>
+<rect x="211" y="954.6" width="20" height="9.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="963.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">24</text>
+<rect x="211" y="964.1" width="20" height="4.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="970.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">25</text>
+<rect x="211" y="973.6" width="20" height="4.7" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="979.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">26</text>
+<rect x="211" y="976.9" width="20" height="7.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="984.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">27</text>
+<rect x="211" y="984.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="990.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">28</text>
+<rect x="211" y="988.9" width="20" height="7.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="996.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">29</text>
+<rect x="211" y="999.7" width="20" height="6.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1007.0" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">30</text>
+<rect x="211" y="1007.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1013.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">31</text>
+<rect x="211" y="1007.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1013.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">32</text>
+<rect x="211" y="1011.5" width="20" height="9.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1020.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">33</text>
+<text x="205" y="742" text-anchor="end" fill="#9C27B0" font-size="12" font-weight="700" letter-spacing="0.5">Chr04</text>
+<circle cx="221.0" cy="956.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="960.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1051" width="22" height="242" rx="5" fill="#E06D10" opacity="0.15" stroke="#E06D10" stroke-width="1"/>
+<rect x="211" y="1051.2" width="20" height="20.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1061.3" x2="226" y2="1061.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="205" y="1065.3" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1071.3" width="20" height="17.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1080.2" x2="226" y2="1080.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="205" y="1084.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1090.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1096.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1091.2" width="20" height="26.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1104.6" x2="226" y2="1104.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="205" y="1108.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1114.1" width="20" height="20.4" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1124.3" x2="226" y2="1124.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="205" y="1128.3" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1130.9" width="20" height="12.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1137.3" x2="226" y2="1137.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="205" y="1141.3" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1143.7" width="20" height="55.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1171.5" x2="226" y2="1171.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="205" y="1175.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1201.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1207.0" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1207.8" width="20" height="8.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1215.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1212.5" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1218.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1216.7" width="20" height="4.5" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1222.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1220.5" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1226.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1225.0" width="20" height="5.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1231.7" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1231.5" width="20" height="5.9" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1238.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1236.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1242.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1236.4" width="20" height="44.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1258.5" x2="216" y2="1258.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr05)" opacity="0.8"/>
+<text x="205" y="1262.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1280.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1286.8" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">17</text>
+<rect x="211" y="1280.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1286.9" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1286.2" width="20" height="6.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1293.3" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">19</text>
+<text x="205" y="1046" text-anchor="end" fill="#E06D10" font-size="12" font-weight="700" letter-spacing="0.5">Chr05</text>
+<circle cx="221.0" cy="1147.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1151.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1321" width="22" height="219" rx="5" fill="#43A047" opacity="0.15" stroke="#43A047" stroke-width="1"/>
+<rect x="211" y="1323.9" width="20" height="12.6" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1330.2" x2="216" y2="1330.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr06)" opacity="0.8"/>
+<text x="205" y="1334.2" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1336.7" width="20" height="7.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1344.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1344.1" width="20" height="14.9" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1351.6" x2="226" y2="1351.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1355.6" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1359.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1365.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1363.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1369.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1363.8" width="20" height="12.0" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1369.8" x2="226" y2="1369.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1373.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1372.8" width="20" height="5.4" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1379.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1377.4" width="20" height="23.4" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1389.1" x2="226" y2="1389.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1393.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1400.9" width="20" height="7.9" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1408.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1406.3" width="20" height="7.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1414.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1417.9" width="20" height="8.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1426.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1434.5" width="20" height="27.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1448.4" x2="216" y2="1448.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr06)" opacity="0.8"/>
+<text x="205" y="1452.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1463.3" width="20" height="8.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1471.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1472.8" width="20" height="8.2" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1480.9" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1481.3" width="20" height="17.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1490.2" x2="226" y2="1490.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1494.2" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1506.4" width="20" height="5.7" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1513.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1511.1" width="20" height="5.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1518.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">17</text>
+<rect x="211" y="1518.4" width="20" height="11.5" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="214" y1="1524.1" x2="226" y2="1524.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="205" y="1528.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1525.6" width="20" height="4.4" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1531.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">19</text>
+<rect x="211" y="1531.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1537.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">20</text>
+<rect x="211" y="1531.2" width="20" height="7.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1539.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">21</text>
+<text x="205" y="1316" text-anchor="end" fill="#43A047" font-size="12" font-weight="700" letter-spacing="0.5">Chr06</text>
+<circle cx="221.0" cy="1410.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1414.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1568" width="22" height="252" rx="5" fill="#3498DB" opacity="0.15" stroke="#3498DB" stroke-width="1"/>
+<rect x="211" y="1569.4" width="20" height="17.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1577.9" x2="226" y2="1577.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1581.9" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1584.1" width="20" height="9.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1592.7" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1594.4" width="20" height="6.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1601.5" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1601.4" width="20" height="6.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1608.6" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1605.4" width="20" height="9.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1614.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1614.9" width="20" height="10.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1620.1" x2="226" y2="1620.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1624.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1627.2" width="20" height="5.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1633.9" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1631.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1637.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1636.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1642.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1639.9" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1645.9" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1641.1" width="20" height="12.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1647.4" x2="226" y2="1647.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1651.4" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1654.7" width="20" height="7.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1662.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1662.3" width="20" height="19.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1671.9" x2="226" y2="1671.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1675.9" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1676.4" width="20" height="15.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1684.2" x2="226" y2="1684.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1688.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1690.6" width="20" height="4.1" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1696.7" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1695.2" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1701.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">16</text>
+<rect x="211" y="1695.7" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1701.7" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">17</text>
+<rect x="211" y="1698.3" width="20" height="37.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1717.0" x2="226" y2="1717.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1721.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1734.9" width="20" height="8.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1743.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">19</text>
+<rect x="211" y="1742.7" width="20" height="54.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1770.0" x2="226" y2="1770.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1774.0" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">20</text>
+<rect x="211" y="1797.5" width="20" height="13.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1804.3" x2="226" y2="1804.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="205" y="1808.3" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">21</text>
+<rect x="211" y="1810.6" width="20" height="9.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1819.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">22</text>
+<text x="205" y="1563" text-anchor="end" fill="#3498DB" font-size="12" font-weight="700" letter-spacing="0.5">Chr07</text>
+<circle cx="221.0" cy="1684.0" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1688.0" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1848" width="22" height="190" rx="5" fill="#FFA07A" opacity="0.15" stroke="#FFA07A" stroke-width="1"/>
+<rect x="211" y="1848.1" width="20" height="32.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1864.2" x2="226" y2="1864.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr08)" opacity="0.8"/>
+<text x="205" y="1868.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1879.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1885.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1881.2" width="20" height="33.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1897.9" x2="226" y2="1897.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr08)" opacity="0.8"/>
+<text x="205" y="1901.9" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1913.3" width="20" height="15.8" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1921.2" x2="226" y2="1921.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr08)" opacity="0.8"/>
+<text x="205" y="1925.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1929.2" width="20" height="40.6" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1949.5" x2="216" y2="1949.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="205" y="1953.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1971.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1977.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1974.0" width="20" height="15.6" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1981.7" x2="216" y2="1981.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="205" y="1985.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1987.9" width="20" height="9.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1996.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1998.7" width="20" height="15.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="2006.4" x2="216" y2="2006.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="205" y="2010.4" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2014.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2020.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<rect x="211" y="2014.3" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2020.3" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">11</text>
+<rect x="211" y="2016.9" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="2022.9" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">12</text>
+<rect x="211" y="2020.1" width="20" height="17.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="2028.8" x2="216" y2="2028.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="205" y="2032.8" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">13</text>
+<text x="205" y="1843" text-anchor="end" fill="#FFA07A" font-size="12" font-weight="700" letter-spacing="0.5">Chr08</text>
+<circle cx="221.0" cy="2003.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2007.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2066" width="22" height="184" rx="5" fill="#72d1b9" opacity="0.15" stroke="#72d1b9" stroke-width="1"/>
+<rect x="211" y="2066.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2072.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2070.9" width="20" height="4.7" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2077.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2073.9" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2079.9" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2076.9" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2082.9" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2078.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2084.3" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2080.8" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2086.8" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2084.3" width="20" height="10.3" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="214" y1="2089.5" x2="226" y2="2089.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr09)" opacity="0.8"/>
+<text x="205" y="2093.5" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2094.8" width="20" height="13.2" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2101.4" x2="216" y2="2101.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="205" y="2105.4" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2110.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2116.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2110.5" width="20" height="5.2" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2117.1" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">10</text>
+<rect x="211" y="2114.8" width="20" height="8.7" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="2123.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">11</text>
+<rect x="211" y="2121.3" width="20" height="27.2" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2134.9" x2="216" y2="2134.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="205" y="2138.9" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">12</text>
+<rect x="211" y="2145.9" width="20" height="69.2" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2180.5" x2="216" y2="2180.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="205" y="2184.5" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">13</text>
+<rect x="211" y="2215.1" width="20" height="24.6" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2227.4" x2="216" y2="2227.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="205" y="2231.4" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">14</text>
+<rect x="211" y="2238.0" width="20" height="11.7" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="2243.8" x2="216" y2="2243.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="205" y="2247.8" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">15</text>
+<text x="205" y="2061" text-anchor="end" fill="#72d1b9" font-size="12" font-weight="700" letter-spacing="0.5">Chr09</text>
+<circle cx="221.0" cy="2128.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2132.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+</g>
+<g id="queryChrs">
+<rect x="1190" y="60" width="22" height="198" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="61.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="67.1" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="66.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="72.2" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="67.0" width="20" height="10.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="72.3" x2="1196" y2="72.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="1217" y="76.3" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="77.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="83.9" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="80.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="86.7" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="82.5" width="20" height="10.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="87.7" x2="1196" y2="87.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="1217" y="91.7" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="93.7" width="20" height="6.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="100.7" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="102.4" width="20" height="9.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="111.0" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="111.8" width="20" height="8.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="120.1" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="120.0" width="20" height="5.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="126.8" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="128.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="134.5" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="128.8" width="20" height="16.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="137.2" x2="1196" y2="137.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr01)" opacity="0.8"/>
+<text x="1217" y="141.2" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="144.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="150.9" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="148.1" width="20" height="5.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="155.0" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="154.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="160.2" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="155.6" width="20" height="4.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="161.8" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="161.4" width="20" height="9.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="169.9" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="171.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="177.7" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="175.8" width="20" height="14.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="182.8" x2="1206" y2="182.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr01)" opacity="0.8"/>
+<text x="1217" y="186.8" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="208.5" width="20" height="15.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="216.3" x2="1196" y2="216.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="1217" y="220.3" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="224.2" width="20" height="13.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="231.1" x2="1206" y2="231.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr08)" opacity="0.8"/>
+<text x="1217" y="235.1" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="238.0" width="20" height="6.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="245.1" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="244.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="250.2" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="245.3" width="20" height="11.9" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="251.3" x2="1206" y2="251.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr08)" opacity="0.8"/>
+<text x="1217" y="255.3" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<text x="1217" y="55" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">chr2</text>
+<rect x="1190" y="286" width="22" height="259" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="286.0" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="292.0" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="289.7" width="20" height="9.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="298.2" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="300.6" width="20" height="5.4" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="307.3" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="306.0" width="20" height="14.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="313.0" x2="1206" y2="313.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr02)" opacity="0.8"/>
+<text x="1217" y="317.0" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="320.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="326.1" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="323.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="329.4" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="330.3" width="20" height="11.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="336.0" x2="1196" y2="336.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="1217" y="340.0" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="344.7" width="20" height="10.1" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="349.7" x2="1196" y2="349.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="1217" y="353.7" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="354.8" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="360.8" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="357.8" width="20" height="10.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="363.0" x2="1206" y2="363.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr02)" opacity="0.8"/>
+<text x="1217" y="367.0" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="369.0" width="20" height="9.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="377.6" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="380.8" width="20" height="16.5" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="389.0" x2="1206" y2="389.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr02)" opacity="0.8"/>
+<text x="1217" y="393.0" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="397.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="403.4" fill="#E63946" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="401.7" width="20" height="32.9" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="418.2" x2="1196" y2="418.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="1217" y="422.2" fill="#E63946" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="434.4" width="20" height="18.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="443.7" x2="1206" y2="443.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr02)" opacity="0.8"/>
+<text x="1217" y="447.7" fill="#E63946" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="455.0" width="20" height="17.3" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="463.6" x2="1196" y2="463.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="1217" y="467.6" fill="#E63946" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="473.7" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="479.7" fill="#E63946" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="475.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="481.9" fill="#E63946" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="483.4" width="20" height="6.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="490.4" fill="#E63946" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="490.4" width="20" height="10.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="495.8" x2="1196" y2="495.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr02)" opacity="0.8"/>
+<text x="1217" y="499.8" fill="#E63946" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="501.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="507.2" fill="#E63946" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="502.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="508.3" fill="#E63946" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="503.1" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="509.1" fill="#E63946" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="504.3" width="20" height="6.7" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="511.7" fill="#E63946" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="511.1" width="20" height="5.1" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="517.7" fill="#E63946" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="513.5" width="20" height="9.2" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="522.1" fill="#E63946" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="530.0" width="20" height="5.2" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="536.6" fill="#E63946" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="537.3" width="20" height="4.7" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="543.6" fill="#E63946" font-size="10" font-weight="500">28</text>
+<rect x="1191" y="541.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="547.6" fill="#E63946" font-size="10" font-weight="500">29</text>
+<text x="1217" y="281" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">chr3</text>
+<rect x="1190" y="573" width="22" height="280" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="579.1" width="20" height="12.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="585.1" x2="1206" y2="585.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="1217" y="589.1" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="591.6" width="20" height="15.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="599.2" x2="1206" y2="599.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="1217" y="603.2" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="607.4" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="613.4" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="608.1" width="20" height="13.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="614.9" x2="1206" y2="614.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="1217" y="618.9" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="621.8" width="20" height="8.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="629.9" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="630.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="636.0" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="638.3" width="20" height="16.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="646.3" x2="1206" y2="646.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="1217" y="650.3" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="654.3" width="20" height="34.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="671.4" x2="1196" y2="671.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr05)" opacity="0.8"/>
+<text x="1217" y="675.4" fill="#E06D10" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="690.7" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="696.7" fill="#E06D10" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="691.3" width="20" height="4.4" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="697.5" fill="#E06D10" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="697.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="703.0" fill="#E06D10" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="700.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="706.8" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="703.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="709.0" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="704.4" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="710.4" fill="#E06D10" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="705.0" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="711.0" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="709.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="715.1" fill="#1A237E" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="715.2" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="721.2" fill="#1A237E" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="717.3" width="20" height="4.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="723.7" fill="#1A237E" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="724.0" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="730.0" fill="#1A237E" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="731.0" width="20" height="5.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="737.5" fill="#1A237E" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="736.5" width="20" height="10.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1194" y1="741.9" x2="1206" y2="741.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr03)" opacity="0.8"/>
+<text x="1217" y="745.9" fill="#1A237E" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="747.4" width="20" height="6.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="754.6" fill="#1A237E" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="753.9" width="20" height="5.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="760.6" fill="#1A237E" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="760.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="766.1" fill="#1A237E" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="762.6" width="20" height="6.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="769.8" fill="#1A237E" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="769.4" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="775.4" fill="#1A237E" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="772.0" width="20" height="7.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="779.7" fill="#1A237E" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="781.4" width="20" height="9.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="789.9" fill="#1A237E" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="790.9" width="20" height="4.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="797.0" fill="#1A237E" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="796.5" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="802.5" fill="#1A237E" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="798.9" width="20" height="7.6" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="806.7" fill="#1A237E" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="806.8" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="812.8" fill="#1A237E" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="807.7" width="20" height="11.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="813.3" x2="1196" y2="813.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr03)" opacity="0.8"/>
+<text x="1217" y="817.3" fill="#1A237E" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="819.9" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="825.9" fill="#1A237E" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="821.4" width="20" height="7.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="829.2" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="829.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="835.1" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="834.9" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="840.9" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="837.5" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="843.5" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="840.2" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="846.2" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="842.1" width="20" height="4.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="848.1" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="846.7" width="20" height="5.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="853.3" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<text x="1217" y="568" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">chr6</text>
+<rect x="1190" y="881" width="22" height="216" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="881.6" width="20" height="4.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="887.6" fill="#9C27B0" font-size="10" font-weight="500">33</text>
+<rect x="1191" y="887.3" width="20" height="4.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="893.7" fill="#9C27B0" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="892.7" width="20" height="9.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="901.6" fill="#9C27B0" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="905.9" width="20" height="23.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="917.7" x2="1206" y2="917.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="1217" y="921.7" fill="#9C27B0" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="930.4" width="20" height="11.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="936.2" x2="1196" y2="936.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="1217" y="940.2" fill="#9C27B0" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="944.1" width="20" height="6.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="951.3" fill="#9C27B0" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="953.4" width="20" height="7.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="961.0" fill="#9C27B0" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="957.3" width="20" height="10.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="962.3" x2="1196" y2="962.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="1217" y="966.3" fill="#9C27B0" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="966.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="972.7" fill="#9C27B0" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="969.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="975.6" fill="#9C27B0" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="970.3" width="20" height="4.9" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="976.7" fill="#9C27B0" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="973.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="979.9" fill="#9C27B0" font-size="10" font-weight="500">28</text>
+<rect x="1191" y="977.1" width="20" height="4.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="983.4" fill="#9C27B0" font-size="10" font-weight="500">29</text>
+<rect x="1191" y="981.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="987.1" fill="#9C27B0" font-size="10" font-weight="500">30</text>
+<rect x="1191" y="986.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="992.0" fill="#9C27B0" font-size="10" font-weight="500">32</text>
+<rect x="1191" y="987.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="993.0" fill="#9C27B0" font-size="10" font-weight="500">31</text>
+<rect x="1191" y="989.3" width="20" height="10.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="994.5" x2="1196" y2="994.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="1217" y="998.5" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="999.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1005.4" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1001.2" width="20" height="5.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1008.0" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1006.8" width="20" height="14.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="1014.0" x2="1196" y2="1014.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="1217" y="1018.0" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1021.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1027.1" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1023.5" width="20" height="12.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="1029.7" x2="1196" y2="1029.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="1217" y="1033.7" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1036.0" width="20" height="4.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1042.3" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1041.3" width="20" height="15.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1208" y1="1049.1" x2="1196" y2="1049.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr04)" opacity="0.8"/>
+<text x="1217" y="1053.1" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1056.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1062.8" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1057.2" width="20" height="12.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="1063.5" x2="1206" y2="1063.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr04)" opacity="0.8"/>
+<text x="1217" y="1067.5" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1070.7" width="20" height="7.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1078.2" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1078.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1084.0" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1080.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1086.8" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1081.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1087.2" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1084.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1090.9" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1085.8" width="20" height="5.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1092.5" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1091.2" width="20" height="4.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="1097.4" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<text x="1217" y="876" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">chr4</text>
+<rect x="1190" y="1125" width="22" height="187" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1125.3" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1131.3" fill="#43A047" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1127.3" width="20" height="6.2" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1134.4" fill="#43A047" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1133.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1139.8" fill="#43A047" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1135.7" width="20" height="4.2" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1141.8" fill="#43A047" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1140.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1146.6" fill="#43A047" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1144.5" width="20" height="7.5" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1152.2" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1152.0" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1158.0" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1155.3" width="20" height="11.3" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1194" y1="1160.9" x2="1206" y2="1160.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr06)" opacity="0.8"/>
+<text x="1217" y="1164.9" fill="#43A047" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1166.6" width="20" height="5.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1173.2" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1172.9" width="20" height="7.9" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1180.8" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1182.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1188.6" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1183.6" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1189.6" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1184.4" width="20" height="8.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1192.5" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1192.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1198.7" fill="#43A047" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1196.5" width="20" height="8.2" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1204.6" fill="#43A047" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1205.0" width="20" height="5.2" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1211.6" fill="#43A047" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1208.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1214.8" fill="#43A047" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1216.0" width="20" height="8.2" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1224.1" fill="#43A047" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="1224.8" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1230.8" fill="#43A047" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="1228.7" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1234.7" fill="#43A047" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="1231.9" width="20" height="7.1" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1239.5" fill="#43A047" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="1239.4" width="20" height="18.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1248.5" x2="1196" y2="1248.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="1217" y="1252.5" fill="#FFA07A" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1260.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1266.2" fill="#FFA07A" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1265.2" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1271.2" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1267.0" width="20" height="4.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1273.1" fill="#FFA07A" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1271.5" width="20" height="12.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1277.5" x2="1196" y2="1277.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="1217" y="1281.5" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1286.8" width="20" height="5.6" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1293.6" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1292.5" width="20" height="10.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1297.7" x2="1196" y2="1297.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr08)" opacity="0.8"/>
+<text x="1217" y="1301.7" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1307.3" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1313.3" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<text x="1217" y="1120" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">chr5</text>
+<rect x="1190" y="1340" width="22" height="170" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1346.2" width="20" height="8.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1354.6" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1355.1" width="20" height="8.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1363.3" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1363.6" width="20" height="4.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1370.0" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1368.7" width="20" height="5.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1375.5" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1374.0" width="20" height="4.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1380.3" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1377.8" width="20" height="5.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1384.4" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1384.4" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1390.4" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1388.4" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1394.4" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1394.9" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1400.9" fill="#3498DB" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1399.3" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1405.3" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1403.4" width="20" height="5.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1410.2" fill="#3498DB" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1408.9" width="20" height="4.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1415.4" fill="#3498DB" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1414.0" width="20" height="5.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1420.9" fill="#3498DB" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1418.8" width="20" height="7.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1426.7" fill="#3498DB" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1427.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1433.1" fill="#3498DB" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1430.2" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1436.2" fill="#3498DB" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1431.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1437.1" fill="#3498DB" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1433.2" width="20" height="17.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1442.0" x2="1206" y2="1442.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="1217" y="1446.0" fill="#3498DB" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="1453.0" width="20" height="4.5" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1459.3" fill="#3498DB" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="1457.5" width="20" height="34.4" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1474.8" x2="1206" y2="1474.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="1217" y="1478.8" fill="#3498DB" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="1494.8" width="20" height="10.1" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1499.8" x2="1206" y2="1499.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr07)" opacity="0.8"/>
+<text x="1217" y="1503.8" fill="#3498DB" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="1506.0" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1512.0" fill="#3498DB" font-size="10" font-weight="500">22</text>
+<text x="1217" y="1335" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">chr7</text>
+<rect x="1190" y="1538" width="22" height="176" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1538.1" width="20" height="7.9" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1546.0" fill="#72d1b9" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1546.0" width="20" height="16.8" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="1554.4" x2="1196" y2="1554.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="1217" y="1558.4" fill="#72d1b9" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1563.7" width="20" height="37.2" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="1582.3" x2="1196" y2="1582.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Chr09)" opacity="0.8"/>
+<text x="1217" y="1586.3" fill="#72d1b9" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1602.0" width="20" height="9.1" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1610.5" fill="#72d1b9" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1611.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1617.3" fill="#72d1b9" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1614.7" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1620.7" fill="#72d1b9" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1616.0" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1622.0" fill="#72d1b9" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1617.0" width="20" height="5.7" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1623.8" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1622.8" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1628.8" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1626.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1632.2" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1627.1" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1633.1" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1628.4" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1634.4" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1638.6" width="20" height="7.9" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1646.6" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1646.6" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1652.6" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1648.4" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1654.4" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1650.5" width="20" height="5.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1657.1" fill="#1A237E" font-size="10" font-weight="500">28</text>
+<rect x="1191" y="1659.6" width="20" height="7.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1667.1" fill="#1A237E" font-size="10" font-weight="500">29</text>
+<rect x="1191" y="1666.9" width="20" height="5.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="1673.7" fill="#1A237E" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="1675.7" width="20" height="4.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1681.8" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1681.0" width="20" height="5.2" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1687.6" fill="#E06D10" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1684.1" width="20" height="12.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="1690.1" x2="1206" y2="1690.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Chr05)" opacity="0.8"/>
+<text x="1217" y="1694.1" fill="#E06D10" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="1704.5" width="20" height="9.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1713.0" fill="#E06D10" font-size="10" font-weight="500">19</text>
+<text x="1217" y="1533" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">chr1</text>
+</g>
+</svg>
+</div>
+
+<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#FFD700"></div><span>Chr01</span></div><div class="legend-item"><div class="legend-dot" style="background:#E63946"></div><span>Chr02</span></div><div class="legend-item"><div class="legend-dot" style="background:#1A237E"></div><span>Chr03</span></div><div class="legend-item"><div class="legend-dot" style="background:#9C27B0"></div><span>Chr04</span></div><div class="legend-item"><div class="legend-dot" style="background:#E06D10"></div><span>Chr05</span></div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div><span>Chr06</span></div><div class="legend-item"><div class="legend-dot" style="background:#3498DB"></div><span>Chr07</span></div><div class="legend-item"><div class="legend-dot" style="background:#FFA07A"></div><span>Chr08</span></div><div class="legend-item"><div class="legend-dot" style="background:#72d1b9"></div><span>Chr09</span></div></div>
+<div class="stats-bar"><span><b>200</b> synteny fragments</span><span><b>9</b> ref chromosomes</span><span><b>7</b> query chromosomes</span><span><b>105</b> forward &nbsp;|&nbsp; <b>95</b> reverse</span><span>max size <b>585</b> genes</span></div>
+<div id="tooltip"></div>
+
+<script>
+function showTip(e, el) {
+  const parts = el.dataset.tip.split(' | ');
+  const tip = document.getElementById('tooltip');
+  tip.innerHTML = parts.map((p,i) => i===0
+    ? `<div style="color:#0ea5e9;font-weight:700;margin-bottom:5px">${p}</div>`
+    : `<div>${p}</div>`
+  ).join('');
+  tip.style.left = (e.clientX + 14) + 'px';
+  tip.style.top  = (e.clientY - 10) + 'px';
+  tip.classList.add('show');
+}
+function hideTip() { document.getElementById('tooltip').classList.remove('show'); }
+</script>
+</body>
+</html>

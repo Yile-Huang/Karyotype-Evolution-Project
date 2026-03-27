@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synteny — Cn_2_Pd.blast.icl.block.corr.csv-r-r.reform.Claude_filtered.txt</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0a0e1a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; min-height:100vh; }
+  .canvas-container { padding:20px 32px; overflow-x:auto; }
+  svg { display:block; max-width:100%; }
+  .legend {
+    padding:10px 32px 16px; display:flex; gap:18px; flex-wrap:wrap;
+    border-top:1px solid #1e2d45;
+  }
+  .legend-item { display:flex; align-items:center; gap:7px; font-size:11px; color:#64748b; }
+  .legend-dot { width:11px; height:11px; border-radius:2px; flex-shrink:0; }
+  .stats-bar {
+    padding:10px 32px 18px; display:flex; gap:28px; font-size:10px; color:#64748b; flex-wrap:wrap;
+  }
+  .stats-bar b { color:#0ea5e9; margin-right:3px; }
+  #tooltip {
+    position:fixed; background:#1e2d45; border:1px solid #38bdf8; border-radius:6px;
+    padding:10px 14px; font-size:11px; line-height:1.8; color:#e2e8f0;
+    pointer-events:none; opacity:0; transition:opacity 0.15s; z-index:1000;
+    max-width:340px;
+  }
+  #tooltip.show { opacity:1; }
+</style>
+</head>
+<body>
+
+<div class="canvas-container">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 3261" width="1400" height="3261" style="background:#0a0e1a;font-family:'JetBrains Mono',monospace">
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="arr_Pd01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFD700"/></marker>
+<marker id="arr_rev_Pd01" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFD700"/></marker>
+<marker id="arr_Pd02" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E63946"/></marker>
+<marker id="arr_rev_Pd02" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E63946"/></marker>
+<marker id="arr_Pd03" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1A237E"/></marker>
+<marker id="arr_rev_Pd03" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#1A237E"/></marker>
+<marker id="arr_Pd04" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9C27B0"/></marker>
+<marker id="arr_rev_Pd04" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9C27B0"/></marker>
+<marker id="arr_Pd05" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#E06D10"/></marker>
+<marker id="arr_rev_Pd05" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#E06D10"/></marker>
+<marker id="arr_Pd06" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#43A047"/></marker>
+<marker id="arr_rev_Pd06" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#43A047"/></marker>
+<marker id="arr_Pd07" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#3498DB"/></marker>
+<marker id="arr_rev_Pd07" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#3498DB"/></marker>
+<marker id="arr_Pd08" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFA07A"/></marker>
+<marker id="arr_rev_Pd08" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#FFA07A"/></marker>
+<marker id="arr_Pd09" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#72d1b9"/></marker>
+<marker id="arr_rev_Pd09" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#72d1b9"/></marker>
+<marker id="arr_Pd10" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#0055a6"/></marker>
+<marker id="arr_rev_Pd10" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#0055a6"/></marker>
+<marker id="arr_Pd11" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#e3b58f"/></marker>
+<marker id="arr_rev_Pd11" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#e3b58f"/></marker>
+<marker id="arr_Pd12" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#f0c9a7"/></marker>
+<marker id="arr_rev_Pd12" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#f0c9a7"/></marker>
+<marker id="arr_Pd13" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#f5aa3e"/></marker>
+<marker id="arr_rev_Pd13" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#f5aa3e"/></marker>
+<marker id="arr_Pd14" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#7b0d1a"/></marker>
+<marker id="arr_rev_Pd14" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#7b0d1a"/></marker>
+<marker id="arr_Pd15" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#f2a69b"/></marker>
+<marker id="arr_rev_Pd15" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#f2a69b"/></marker>
+<marker id="arr_Pd16" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#9f4e9a"/></marker>
+<marker id="arr_rev_Pd16" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#9f4e9a"/></marker>
+<marker id="arr_Pd17" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#4ca3c7"/></marker>
+<marker id="arr_rev_Pd17" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#4ca3c7"/></marker>
+<marker id="arr_Pd18" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#b0d7e6"/></marker>
+<marker id="arr_rev_Pd18" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="6 0, 0 3, 6 6" fill="#b0d7e6"/></marker>
+</defs>
+<g id="ribbons" opacity="0.35">
+<path d="M232.0,691.9 C700.0,691.9 700.0,554.6 1190.0,554.6 L1190.0,612.6 C700.0,612.6 700.0,765.7 232.0,765.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pd03 → Cn04 | Ref: rna-XM_008787125.4 - rna-XM_039124670.1 | Query: rna-COCNU_HT001RO01_04T000130 - rna-COCNU_HT001RO01_04T007270 | Dir: - | Size: 461 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1369.2 C700.0,1369.2 700.0,1387.8 1190.0,1387.8 L1190.0,1416.7 C700.0,1416.7 700.0,1419.0 232.0,1419.0 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pd07 → Cn11 | Ref: rna-XM_039128203.1 - rna-XM_039127875.1 | Query: rna-COCNU_HT001RO01_11T007540 - rna-COCNU_HT001RO01_11T012800 | Dir: - | Size: 406 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1809.0 C700.0,1809.0 700.0,1685.8 1190.0,1685.8 L1190.0,1736.6 C700.0,1736.6 700.0,1882.2 232.0,1882.2 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_008795951.4 - rna-XM_008804032.4 | Query: rna-COCNU_HT001RO01_02T002100 - rna-COCNU_HT001RO01_02T008660 | Dir: - | Size: 358 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2303.6 C700.0,2303.6 700.0,2119.4 1190.0,2119.4 L1190.0,2146.0 C700.0,2146.0 700.0,2348.1 232.0,2348.1 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pd12 → Cn12 | Ref: rna-XM_008808513.4 - rna-XM_039132503.1 | Query: rna-COCNU_HT001RO01_12T003320 - rna-COCNU_HT001RO01_12T008110 | Dir: + | Size: 312 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2474.3 C700.0,2474.3 700.0,2243.6 1190.0,2243.6 L1190.0,2266.6 C700.0,2266.6 700.0,2513.3 232.0,2513.3 Z" fill="#f5aa3e" opacity="0.6" style="cursor:pointer" data-tip="Pd13 → Cn16 | Ref: rna-XM_008815153.4 - rna-XM_026801172.2 | Query: rna-COCNU_HT001RO01_16T004410 - rna-COCNU_HT001RO01_16T008640 | Dir: + | Size: 284 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2749.6 C700.0,2749.6 700.0,2383.1 1190.0,2383.1 L1190.0,2416.1 C700.0,2416.1 700.0,2806.9 232.0,2806.9 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pd15 → Cn13 | Ref: rna-XM_008789698.4 - rna-XM_008806876.4 | Query: rna-COCNU_HT001RO01_13T001120 - rna-COCNU_HT001RO01_13T005980 | Dir: - | Size: 278 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1593.4 C700.0,1593.4 700.0,1595.7 1190.0,1595.7 L1190.0,1623.2 C700.0,1623.2 700.0,1644.5 232.0,1644.5 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_008777435.4 - rna-XM_039129227.1 | Query: rna-COCNU_HT001RO01_03T009730 - rna-COCNU_HT001RO01_03T014290 | Dir: + | Size: 277 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3046.9 C700.0,3046.9 700.0,2657.1 1190.0,2657.1 L1190.0,2674.4 C700.0,2674.4 700.0,3077.9 232.0,3077.9 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pd17 → Cn09 | Ref: rna-XM_008783031.3 - rna-XM_008789161.3 | Query: rna-COCNU_HT001RO01_09T004990 - rna-COCNU_HT001RO01_09T008570 | Dir: + | Size: 252 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1205.3 C700.0,1205.3 700.0,1207.8 1190.0,1207.8 L1190.0,1250.0 C700.0,1250.0 700.0,1254.4 232.0,1254.4 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pd06 → Cn05 | Ref: rna-XM_026808104.2 - rna-XM_008786778.4 | Query: rna-COCNU_HT001RO01_05T005870 - rna-COCNU_HT001RO01_05T011040 | Dir: - | Size: 227 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,845.3 C700.0,845.3 700.0,767.3 1190.0,767.3 L1190.0,795.3 C700.0,795.3 700.0,915.3 232.0,915.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_008812162.4 - rna-XM_008792936.4 | Query: rna-COCNU_HT001RO01_06T004840 - rna-COCNU_HT001RO01_06T008680 | Dir: + | Size: 211 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,610.5 C700.0,610.5 700.0,689.2 1190.0,689.2 L1190.0,702.4 C700.0,702.4 700.0,633.3 232.0,633.3 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pd03 → Cn04 | Ref: rna-XM_017841582.3 - rna-XM_039124214.1 | Query: rna-COCNU_HT001RO01_04T012390 - rna-COCNU_HT001RO01_04T014940 | Dir: - | Size: 202 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1948.5 C700.0,1948.5 700.0,1775.1 1190.0,1775.1 L1190.0,1805.1 C700.0,1805.1 700.0,1999.1 232.0,1999.1 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pd10 → Cn02 | Ref: rna-XM_008809464.3 - rna-XM_039131000.1 | Query: rna-COCNU_HT001RO01_02T010790 - rna-COCNU_HT001RO01_02T014520 | Dir: + | Size: 200 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,400.8 C700.0,400.8 700.0,386.8 1190.0,386.8 L1190.0,414.1 C700.0,414.1 700.0,456.7 232.0,456.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_008776988.4 - rna-XM_008801299.4 | Query: rna-COCNU_HT001RO01_07T003120 - rna-COCNU_HT001RO01_07T007140 | Dir: + | Size: 195 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2542.1 C700.0,2542.1 700.0,2295.1 1190.0,2295.1 L1190.0,2309.0 C700.0,2309.0 700.0,2563.0 232.0,2563.0 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pd14 → Cn15 | Ref: rna-XM_008790141.3 - rna-XM_008783337.4 | Query: rna-COCNU_HT001RO01_15T000030 - rna-COCNU_HT001RO01_15T002790 | Dir: - | Size: 186 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,368.2 C700.0,368.2 700.0,368.4 1190.0,368.4 L1190.0,385.4 C700.0,385.4 700.0,402.6 232.0,402.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_008793281.4 - rna-XM_008790526.4 | Query: rna-COCNU_HT001RO01_07T000080 - rna-COCNU_HT001RO01_07T002960 | Dir: + | Size: 177 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,316.4 C700.0,316.4 700.0,320.9 1190.0,320.9 L1190.0,339.7 C700.0,339.7 700.0,339.6 232.0,339.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039133432.1 - rna-XM_008813429.1 | Query: rna-COCNU_HT001RO01_01T020490 - rna-COCNU_HT001RO01_01T022770 | Dir: + | Size: 159 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1082.6 C700.0,1082.6 700.0,979.0 1190.0,979.0 L1190.0,996.3 C700.0,996.3 700.0,1104.2 232.0,1104.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_008798647.4 - rna-XM_008785356.4 | Query: rna-COCNU_HT001RO01_10T004440 - rna-COCNU_HT001RO01_10T006680 | Dir: + | Size: 153 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2137.0 C700.0,2137.0 700.0,1913.9 1190.0,1913.9 L1190.0,1926.7 C700.0,1926.7 700.0,2159.5 232.0,2159.5 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn14 | Ref: rna-XM_008812437.4 - rna-XM_039132084.1 | Query: rna-COCNU_HT001RO01_14T002720 - rna-COCNU_HT001RO01_14T005020 | Dir: - | Size: 150 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2435.9 C700.0,2435.9 700.0,2221.1 1190.0,2221.1 L1190.0,2240.0 C700.0,2240.0 700.0,2469.4 232.0,2469.4 Z" fill="#f5aa3e" opacity="0.6" style="cursor:pointer" data-tip="Pd13 → Cn16 | Ref: rna-XM_008801662.3 - rna-XM_008791633.4 | Query: rna-COCNU_HT001RO01_16T001000 - rna-COCNU_HT001RO01_16T003620 | Dir: - | Size: 132 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2067.2 C700.0,2067.2 700.0,1904.7 1190.0,1904.7 L1190.0,1913.7 C700.0,1913.7 700.0,2084.5 232.0,2084.5 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn14 | Ref: rna-XM_008811740.3 - rna-XM_039131136.1 | Query: rna-COCNU_HT001RO01_14T001000 - rna-COCNU_HT001RO01_14T002690 | Dir: - | Size: 128 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3107.0 C700.0,3107.0 700.0,2839.5 1190.0,2839.5 L1190.0,2850.5 C700.0,2850.5 700.0,3123.7 232.0,3123.7 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pd18 → Cn08 | Ref: rna-XM_039115378.1 - rna-XM_008809173.4 | Query: rna-COCNU_HT001RO01_08T010230 - rna-COCNU_HT001RO01_08T012110 | Dir: - | Size: 116 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1066.5 C700.0,1066.5 700.0,967.7 1190.0,967.7 L1190.0,973.7 C700.0,973.7 700.0,1076.2 232.0,1076.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_039126966.1 - rna-XM_039126488.1 | Query: rna-COCNU_HT001RO01_10T002320 - rna-COCNU_HT001RO01_10T003680 | Dir: - | Size: 107 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3032.5 C700.0,3032.5 700.0,2674.6 1190.0,2674.6 L1190.0,2684.3 C700.0,2684.3 700.0,3046.5 232.0,3046.5 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pd17 → Cn09 | Ref: rna-XM_039115281.1 - rna-XM_008778122.4 | Query: rna-COCNU_HT001RO01_09T008600 - rna-COCNU_HT001RO01_09T010090 | Dir: + | Size: 105 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2163.0 C700.0,2163.0 700.0,1926.8 1190.0,1926.8 L1190.0,1946.0 C700.0,1946.0 700.0,2184.6 232.0,2184.6 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn14 | Ref: rna-XM_039132109.1 - rna-XM_039131785.1 | Query: rna-COCNU_HT001RO01_14T005030 - rna-COCNU_HT001RO01_14T006950 | Dir: + | Size: 101 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1645.2 C700.0,1645.2 700.0,1623.3 1190.0,1623.3 L1190.0,1635.7 C700.0,1635.7 700.0,1668.2 232.0,1668.2 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_039129338.1 - rna-XM_008795235.3 | Query: rna-COCNU_HT001RO01_03T014300 - rna-COCNU_HT001RO01_03T016040 | Dir: - | Size: 99 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1697.0 C700.0,1697.0 700.0,1548.2 1190.0,1548.2 L1190.0,1564.3 C700.0,1564.3 700.0,1709.4 232.0,1709.4 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_008788359.3 - rna-XM_008799171.4 | Query: rna-COCNU_HT001RO01_03T003850 - rna-COCNU_HT001RO01_03T005320 | Dir: - | Size: 90 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2990.7 C700.0,2990.7 700.0,2617.8 1190.0,2617.8 L1190.0,2644.7 C700.0,2644.7 700.0,3026.7 232.0,3026.7 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pd17 → Cn09 | Ref: rna-XM_008777177.3 - rna-XM_008790501.4 | Query: rna-COCNU_HT001RO01_09T001560 - rna-COCNU_HT001RO01_09T003450 | Dir: + | Size: 87 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,200.6 C700.0,200.6 700.0,124.1 1190.0,124.1 L1190.0,135.4 C700.0,135.4 700.0,221.4 232.0,221.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039129279.1 - rna-XM_008806030.4 | Query: rna-COCNU_HT001RO01_01T010050 - rna-COCNU_HT001RO01_01T011410 | Dir: + | Size: 82 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,465.1 C700.0,465.1 700.0,422.4 1190.0,422.4 L1190.0,434.1 C700.0,434.1 700.0,484.9 232.0,484.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_039123522.1 - rna-XM_008810230.4 | Query: rna-COCNU_HT001RO01_07T008110 - rna-COCNU_HT001RO01_07T009480 | Dir: - | Size: 82 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1450.9 C700.0,1450.9 700.0,1290.7 1190.0,1290.7 L1190.0,1320.0 C700.0,1320.0 700.0,1470.4 232.0,1470.4 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pd07 → Cn11 | Ref: rna-XM_039128341.1 - rna-XM_008792512.4 | Query: rna-COCNU_HT001RO01_11T001840 - rna-COCNU_HT001RO01_11T003630 | Dir: + | Size: 80 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1292.7 C700.0,1292.7 700.0,1126.5 1190.0,1126.5 L1190.0,1140.9 C700.0,1140.9 700.0,1312.0 232.0,1312.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pd06 → Cn05 | Ref: rna-XM_039127564.1 - rna-XM_008788968.4 | Query: rna-COCNU_HT001RO01_05T001630 - rna-COCNU_HT001RO01_05T003260 | Dir: - | Size: 76 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2567.3 C700.0,2567.3 700.0,2331.9 1190.0,2331.9 L1190.0,2348.9 C700.0,2348.9 700.0,2591.2 232.0,2591.2 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pd14 → Cn15 | Ref: rna-XM_008778025.4 - rna-XM_026810472.2 | Query: rna-COCNU_HT001RO01_15T004810 - rna-COCNU_HT001RO01_15T006460 | Dir: + | Size: 74 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1550.7 C700.0,1550.7 700.0,1567.4 1190.0,1567.4 L1190.0,1579.0 C700.0,1579.0 700.0,1571.3 232.0,1571.3 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_008780120.4 - rna-XM_008783653.4 | Query: rna-COCNU_HT001RO01_03T005630 - rna-COCNU_HT001RO01_03T007250 | Dir: + | Size: 72 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,490.7 C700.0,490.7 700.0,434.7 1190.0,434.7 L1190.0,455.2 C700.0,455.2 700.0,520.7 232.0,520.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_008806223.4 - rna-XM_039123956.1 | Query: rna-COCNU_HT001RO01_07T009550 - rna-COCNU_HT001RO01_07T011460 | Dir: + | Size: 72 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1360.1 C700.0,1360.1 700.0,1416.8 1190.0,1416.8 L1190.0,1422.0 C700.0,1422.0 700.0,1368.7 232.0,1368.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pd07 → Cn11 | Ref: rna-XM_039127800.1 - rna-XM_039128476.1 | Query: rna-COCNU_HT001RO01_11T012840 - rna-COCNU_HT001RO01_11T013720 | Dir: + | Size: 71 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,166.7 C700.0,166.7 700.0,100.9 1190.0,100.9 L1190.0,110.6 C700.0,110.6 700.0,186.5 232.0,186.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008800550.4 - rna-XM_008783577.4 | Query: rna-COCNU_HT001RO01_01T006810 - rna-COCNU_HT001RO01_01T008160 | Dir: + | Size: 70 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1057.3 C700.0,1057.3 700.0,955.5 1190.0,955.5 L1190.0,961.6 C700.0,961.6 700.0,1065.7 232.0,1065.7 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_008787102.4 - rna-XM_039126397.1 | Query: rna-COCNU_HT001RO01_10T000020 - rna-COCNU_HT001RO01_10T001040 | Dir: - | Size: 69 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2591.5 C700.0,2591.5 700.0,2309.1 1190.0,2309.1 L1190.0,2314.6 C700.0,2314.6 700.0,2602.1 232.0,2602.1 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pd14 → Cn15 | Ref: rna-XM_039133485.1 - rna-XM_039133544.1 | Query: rna-COCNU_HT001RO01_15T002810 - rna-COCNU_HT001RO01_15T003840 | Dir: + | Size: 67 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3136.7 C700.0,3136.7 700.0,2829.8 1190.0,2829.8 L1190.0,2835.0 C700.0,2835.0 700.0,3144.5 232.0,3144.5 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pd18 → Cn08 | Ref: rna-XM_017841135.3 - rna-XM_008813775.4 | Query: rna-COCNU_HT001RO01_08T008220 - rna-COCNU_HT001RO01_08T009220 | Dir: + | Size: 66 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1760.9 C700.0,1760.9 700.0,1858.5 1190.0,1858.5 L1190.0,1868.8 C700.0,1868.8 700.0,1772.6 232.0,1772.6 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_008778365.4 - rna-XM_039129788.1 | Query: rna-COCNU_HT001RO01_02T018520 - rna-COCNU_HT001RO01_02T019840 | Dir: - | Size: 65 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,74.5 C700.0,74.5 700.0,60.5 1190.0,60.5 L1190.0,67.9 C700.0,67.9 700.0,94.1 232.0,94.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008809719.2 - rna-XM_039124512.1 | Query: rna-COCNU_HT001RO01_01T000080 - rna-COCNU_HT001RO01_01T001490 | Dir: + | Size: 64 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,636.4 C700.0,636.4 700.0,682.2 1190.0,682.2 L1190.0,689.1 C700.0,689.1 700.0,648.4 232.0,648.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pd03 → Cn04 | Ref: rna-XM_008782933.3 - rna-XM_008815020.4 | Query: rna-COCNU_HT001RO01_04T011190 - rna-COCNU_HT001RO01_04T012380 | Dir: + | Size: 64 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,264.8 C700.0,264.8 700.0,294.3 1190.0,294.3 L1190.0,311.0 C700.0,311.0 700.0,277.4 232.0,277.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039129979.1 - rna-XM_039132016.1 | Query: rna-COCNU_HT001RO01_01T018160 - rna-COCNU_HT001RO01_01T019360 | Dir: + | Size: 63 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,923.4 C700.0,923.4 700.0,795.4 1190.0,795.4 L1190.0,801.9 C700.0,801.9 700.0,939.6 232.0,939.6 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_008792935.2 - rna-XM_039125774.1 | Query: rna-COCNU_HT001RO01_06T008700 - rna-COCNU_HT001RO01_06T009650 | Dir: - | Size: 61 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3125.9 C700.0,3125.9 700.0,2835.4 1190.0,2835.4 L1190.0,2840.2 C700.0,2840.2 700.0,3136.9 232.0,3136.9 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pd18 → Cn08 | Ref: rna-XM_008814392.3 - rna-XM_039115465.1 | Query: rna-COCNU_HT001RO01_08T009270 - rna-COCNU_HT001RO01_08T010340 | Dir: + | Size: 61 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2085.4 C700.0,2085.4 700.0,1898.3 1190.0,1898.3 L1190.0,1904.1 C700.0,1904.1 700.0,2092.5 232.0,2092.5 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn14 | Ref: rna-XM_008809775.4 - rna-XM_008811068.4 | Query: rna-COCNU_HT001RO01_14T000040 - rna-COCNU_HT001RO01_14T000970 | Dir: + | Size: 59 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3146.0 C700.0,3146.0 700.0,2820.8 1190.0,2820.8 L1190.0,2830.5 C700.0,2830.5 700.0,3160.0 232.0,3160.0 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pd18 → Cn08 | Ref: rna-XM_008804300.4 - rna-XM_039115505.1 | Query: rna-COCNU_HT001RO01_08T006770 - rna-COCNU_HT001RO01_08T008320 | Dir: - | Size: 58 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1050.2 C700.0,1050.2 700.0,964.1 1190.0,964.1 L1190.0,968.1 C700.0,968.1 700.0,1057.0 232.0,1057.0 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_039126328.1 - rna-XM_039126396.1 | Query: rna-COCNU_HT001RO01_10T001690 - rna-COCNU_HT001RO01_10T002410 | Dir: + | Size: 58 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1523.9 C700.0,1523.9 700.0,1635.9 1190.0,1635.9 L1190.0,1642.9 C700.0,1642.9 700.0,1532.3 232.0,1532.3 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_039128665.1 - rna-XM_039128737.1 | Query: rna-COCNU_HT001RO01_03T016050 - rna-COCNU_HT001RO01_03T017020 | Dir: + | Size: 56 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,548.5 C700.0,548.5 700.0,500.4 1190.0,500.4 L1190.0,518.8 C700.0,518.8 700.0,565.9 232.0,565.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_039123890.1 - rna-XM_008807999.4 | Query: rna-COCNU_HT001RO01_07T014400 - rna-COCNU_HT001RO01_07T015570 | Dir: - | Size: 54 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,129.5 C700.0,129.5 700.0,88.3 1190.0,88.3 L1190.0,93.0 C700.0,93.0 700.0,140.2 232.0,140.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_017842894.3 - rna-XM_039126085.1 | Query: rna-COCNU_HT001RO01_01T004750 - rna-COCNU_HT001RO01_01T005430 | Dir: - | Size: 52 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1535.6 C700.0,1535.6 700.0,1587.7 1190.0,1587.7 L1190.0,1591.3 C700.0,1591.3 700.0,1545.8 232.0,1545.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_039128818.1 - rna-XM_039128758.1 | Query: rna-COCNU_HT001RO01_03T008410 - rna-COCNU_HT001RO01_03T009020 | Dir: - | Size: 52 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1001.8 C700.0,1001.8 700.0,844.7 1190.0,844.7 L1190.0,853.3 C700.0,853.3 700.0,1021.1 232.0,1021.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039126276.1 - rna-XM_008809605.4 | Query: rna-COCNU_HT001RO01_06T015470 - rna-COCNU_HT001RO01_06T016490 | Dir: + | Size: 49 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,599.9 C700.0,599.9 700.0,702.5 1190.0,702.5 L1190.0,708.9 C700.0,708.9 700.0,608.1 232.0,608.1 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pd03 → Cn04 | Ref: rna-XM_008796825.4 - rna-XM_008813295.2 | Query: rna-COCNU_HT001RO01_04T014960 - rna-COCNU_HT001RO01_04T016100 | Dir: - | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2859.6 C700.0,2859.6 700.0,821.2 1190.0,821.2 L1190.0,827.1 C700.0,827.1 700.0,2868.6 232.0,2868.6 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_008800248.4 - rna-XM_008795786.4 | Query: rna-COCNU_HT001RO01_06T012600 - rna-COCNU_HT001RO01_06T013300 | Dir: - | Size: 48 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2112.4 C700.0,2112.4 700.0,2791.3 1190.0,2791.3 L1190.0,2796.2 C700.0,2796.2 700.0,2118.7 232.0,2118.7 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_039131456.1 - rna-XM_008781441.4 | Query: rna-COCNU_HT001RO01_08T003120 - rna-COCNU_HT001RO01_08T003970 | Dir: - | Size: 46 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,959.9 C700.0,959.9 700.0,811.8 1190.0,811.8 L1190.0,818.0 C700.0,818.0 700.0,973.7 232.0,973.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_008802953.4 - rna-XM_039126013.1 | Query: rna-COCNU_HT001RO01_06T011230 - rna-COCNU_HT001RO01_06T012100 | Dir: + | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2888.0 C700.0,2888.0 700.0,863.0 1190.0,863.0 L1190.0,882.6 C700.0,882.6 700.0,2898.2 232.0,2898.2 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_039114374.1 - rna-XM_008815604.4 | Query: rna-COCNU_HT001RO01_06T017320 - rna-COCNU_HT001RO01_06T018180 | Dir: - | Size: 45 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1883.0 C700.0,1883.0 700.0,1679.1 1190.0,1679.1 L1190.0,1683.7 C700.0,1683.7 700.0,1891.6 232.0,1891.6 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_017843436.3 - rna-XM_008795895.4 | Query: rna-COCNU_HT001RO01_02T001000 - rna-COCNU_HT001RO01_02T001780 | Dir: - | Size: 44 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1321.7 C700.0,1321.7 700.0,1116.1 1190.0,1116.1 L1190.0,1122.4 C700.0,1122.4 700.0,1331.6 232.0,1331.6 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pd06 → Cn05 | Ref: rna-XM_039127704.1 - rna-XM_008781323.4 | Query: rna-COCNU_HT001RO01_05T000020 - rna-COCNU_HT001RO01_05T000990 | Dir: - | Size: 44 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,833.0 C700.0,833.0 700.0,759.6 1190.0,759.6 L1190.0,765.3 C700.0,765.3 700.0,843.5 232.0,843.5 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039125235.1 - rna-XM_008806377.3 | Query: rna-COCNU_HT001RO01_06T003580 - rna-COCNU_HT001RO01_06T004530 | Dir: - | Size: 44 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1515.3 C700.0,1515.3 700.0,1591.6 1190.0,1591.6 L1190.0,1595.7 C700.0,1595.7 700.0,1522.8 232.0,1522.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_008799614.2 - rna-XM_008777453.4 | Query: rna-COCNU_HT001RO01_03T009050 - rna-COCNU_HT001RO01_03T009720 | Dir: + | Size: 43 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2911.4 C700.0,2911.4 700.0,892.7 1190.0,892.7 L1190.0,906.2 C700.0,906.2 700.0,2924.7 232.0,2924.7 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_039114461.1 - rna-XM_008789538.4 | Query: rna-COCNU_HT001RO01_06T018500 - rna-COCNU_HT001RO01_06T019320 | Dir: + | Size: 43 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,105.7 C700.0,105.7 700.0,71.4 1190.0,71.4 L1190.0,75.7 C700.0,75.7 700.0,115.4 232.0,115.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039115110.1 - rna-XM_008778309.3 | Query: rna-COCNU_HT001RO01_01T002190 - rna-COCNU_HT001RO01_01T002880 | Dir: + | Size: 42 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3161.0 C700.0,3161.0 700.0,2813.3 1190.0,2813.3 L1190.0,2819.7 C700.0,2819.7 700.0,3172.9 232.0,3172.9 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pd18 → Cn08 | Ref: rna-XM_008786268.4 - rna-XM_039115628.1 | Query: rna-COCNU_HT001RO01_08T005980 - rna-COCNU_HT001RO01_08T006740 | Dir: + | Size: 41 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,660.0 C700.0,660.0 700.0,650.2 1190.0,650.2 L1190.0,674.1 C700.0,674.1 700.0,675.4 232.0,675.4 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pd03 → Cn04 | Ref: rna-XM_039124638.1 - rna-XM_008786528.4 | Query: rna-COCNU_HT001RO01_04T008770 - rna-COCNU_HT001RO01_04T010250 | Dir: - | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,810.3 C700.0,810.3 700.0,749.1 1190.0,749.1 L1190.0,752.5 C700.0,752.5 700.0,818.7 232.0,818.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_008797211.4 - rna-XM_008799642.4 | Query: rna-COCNU_HT001RO01_06T001880 - rna-COCNU_HT001RO01_06T002380 | Dir: - | Size: 40 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1314.9 C700.0,1314.9 700.0,1122.4 1190.0,1122.4 L1190.0,1125.5 C700.0,1125.5 700.0,1320.2 232.0,1320.2 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pd06 → Cn05 | Ref: rna-XM_039127588.1 - rna-XM_039127635.1 | Query: rna-COCNU_HT001RO01_05T001000 - rna-COCNU_HT001RO01_05T001520 | Dir: + | Size: 39 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,311.7 C700.0,311.7 700.0,316.0 1190.0,316.0 L1190.0,320.5 C700.0,320.5 700.0,316.6 232.0,316.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039133445.1 - rna-XM_039133203.1 | Query: rna-COCNU_HT001RO01_01T019900 - rna-COCNU_HT001RO01_01T020440 | Dir: - | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,534.0 C700.0,534.0 700.0,461.5 1190.0,461.5 L1190.0,471.1 C700.0,471.1 700.0,542.8 232.0,542.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_008798572.3 - rna-XM_039123972.1 | Query: rna-COCNU_HT001RO01_07T012080 - rna-COCNU_HT001RO01_07T012830 | Dir: - | Size: 38 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2925.9 C700.0,2925.9 700.0,913.6 1190.0,913.6 L1190.0,926.8 C700.0,926.8 700.0,2937.8 232.0,2937.8 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_017842411.3 - rna-XM_039114632.1 | Query: rna-COCNU_HT001RO01_06T019830 - rna-COCNU_HT001RO01_06T020930 | Dir: + | Size: 37 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,915.8 C700.0,915.8 700.0,802.0 1190.0,802.0 L1190.0,805.8 C700.0,805.8 700.0,921.1 232.0,921.1 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_008815089.4 - rna-XM_008814421.4 | Query: rna-COCNU_HT001RO01_06T009660 - rna-COCNU_HT001RO01_06T010260 | Dir: + | Size: 36 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,457.0 C700.0,457.0 700.0,412.6 1190.0,412.6 L1190.0,417.2 C700.0,417.2 700.0,463.8 232.0,463.8 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_039122787.1 - rna-XM_039122238.1 | Query: rna-COCNU_HT001RO01_07T006980 - rna-COCNU_HT001RO01_07T007580 | Dir: - | Size: 35 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,158.5 C700.0,158.5 700.0,96.4 1190.0,96.4 L1190.0,98.6 C700.0,98.6 700.0,163.8 232.0,163.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008799344.4 - rna-XM_039127705.1 | Query: rna-COCNU_HT001RO01_01T005930 - rna-COCNU_HT001RO01_01T006350 | Dir: + | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2600.4 C700.0,2600.4 700.0,2313.3 1190.0,2313.3 L1190.0,2315.4 C700.0,2315.4 700.0,2604.4 232.0,2604.4 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pd14 → Cn15 | Ref: rna-XM_026803735.2 - rna-XM_026803746.2 | Query: rna-COCNU_HT001RO01_15T003640 - rna-COCNU_HT001RO01_15T004030 | Dir: - | Size: 34 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1077.3 C700.0,1077.3 700.0,973.8 1190.0,973.8 L1190.0,977.3 C700.0,977.3 700.0,1081.9 232.0,1081.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_039126554.1 - rna-XM_008798610.4 | Query: rna-COCNU_HT001RO01_10T003700 - rna-COCNU_HT001RO01_10T004160 | Dir: + | Size: 33 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,222.3 C700.0,222.3 700.0,150.0 1190.0,150.0 L1190.0,156.1 C700.0,156.1 700.0,234.0 232.0,234.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008777156.4 - rna-XM_039130286.1 | Query: rna-COCNU_HT001RO01_01T013040 - rna-COCNU_HT001RO01_01T013580 | Dir: - | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2297.0 C700.0,2297.0 700.0,2145.7 1190.0,2145.7 L1190.0,2149.8 C700.0,2149.8 700.0,2303.2 232.0,2303.2 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pd12 → Cn12 | Ref: rna-XM_008779387.4 - rna-XM_039132232.1 | Query: rna-COCNU_HT001RO01_12T008080 - rna-COCNU_HT001RO01_12T008640 | Dir: + | Size: 32 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,96.3 C700.0,96.3 700.0,76.0 1190.0,76.0 L1190.0,78.2 C700.0,78.2 700.0,103.7 232.0,103.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008804082.3 - rna-XM_039124637.1 | Query: rna-COCNU_HT001RO01_01T002910 - rna-COCNU_HT001RO01_01T003290 | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1505.6 C700.0,1505.6 700.0,1579.8 1190.0,1579.8 L1190.0,1583.3 C700.0,1583.3 700.0,1513.0 232.0,1513.0 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_008796971.3 - rna-XM_026809696.2 | Query: rna-COCNU_HT001RO01_03T007340 - rna-COCNU_HT001RO01_03T007850 | Dir: + | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,509.6 C700.0,509.6 700.0,450.7 1190.0,450.7 L1190.0,455.6 C700.0,455.6 700.0,523.1 232.0,523.1 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_039123681.1 - rna-XM_039123951.1 | Query: rna-COCNU_HT001RO01_07T011020 - rna-COCNU_HT001RO01_07T011490 | Dir: - | Size: 31 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,277.6 C700.0,277.6 700.0,159.2 1190.0,159.2 L1190.0,164.5 C700.0,164.5 700.0,284.4 232.0,284.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008790686.4 - rna-XM_039132025.1 | Query: rna-COCNU_HT001RO01_01T013800 - rna-COCNU_HT001RO01_01T014300 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1164.5 C700.0,1164.5 700.0,1073.9 1190.0,1073.9 L1190.0,1087.9 C700.0,1087.9 700.0,1175.9 232.0,1175.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_008804748.3 - rna-XM_039126886.1 | Query: rna-COCNU_HT001RO01_10T009810 - rna-COCNU_HT001RO01_10T010660 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2810.8 C700.0,2810.8 700.0,2379.7 1190.0,2379.7 L1190.0,2382.3 C700.0,2382.3 700.0,2816.7 232.0,2816.7 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pd15 → Cn13 | Ref: rna-XM_039134413.1 - rna-XM_039134442.1 | Query: rna-COCNU_HT001RO01_13T000410 - rna-COCNU_HT001RO01_13T000900 | Dir: + | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2231.3 C700.0,2231.3 700.0,1970.6 1190.0,1970.6 L1190.0,1996.7 C700.0,1996.7 700.0,2250.4 232.0,2250.4 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn14 | Ref: rna-XM_008815571.4 - rna-XM_039131931.1 | Query: rna-COCNU_HT001RO01_14T008190 - rna-COCNU_HT001RO01_14T009190 | Dir: - | Size: 30 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,146.9 C700.0,146.9 700.0,98.8 1190.0,98.8 L1190.0,103.3 C700.0,103.3 700.0,156.0 232.0,156.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039119274.1 - rna-XM_039127288.1 | Query: rna-COCNU_HT001RO01_01T006410 - rna-COCNU_HT001RO01_01T007100 | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,288.5 C700.0,288.5 700.0,244.9 1190.0,244.9 L1190.0,276.9 C700.0,276.9 700.0,297.3 232.0,297.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039132680.1 - rna-XM_008796867.4 | Query: rna-COCNU_HT001RO01_01T016500 - rna-COCNU_HT001RO01_01T017230 | Dir: - | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1573.3 C700.0,1573.3 700.0,1472.4 1190.0,1472.4 L1190.0,1495.7 C700.0,1495.7 700.0,1591.7 232.0,1591.7 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_039128914.1 - rna-XM_008814362.4 | Query: rna-COCNU_HT001RO01_03T001420 - rna-COCNU_HT001RO01_03T002220 | Dir: + | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2385.4 C700.0,2385.4 700.0,2101.1 1190.0,2101.1 L1190.0,2107.7 C700.0,2107.7 700.0,2393.1 232.0,2393.1 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pd12 → Cn12 | Ref: rna-XM_008799998.4 - rna-XM_039132620.1 | Query: rna-COCNU_HT001RO01_12T001240 - rna-COCNU_HT001RO01_12T001820 | Dir: - | Size: 29 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2871.8 C700.0,2871.8 700.0,839.5 1190.0,839.5 L1190.0,843.8 C700.0,843.8 700.0,2879.9 232.0,2879.9 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_008807757.4 - rna-XM_039114310.1 | Query: rna-COCNU_HT001RO01_06T014910 - rna-COCNU_HT001RO01_06T015400 | Dir: + | Size: 28 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,196.2 C700.0,196.2 700.0,115.9 1190.0,115.9 L1190.0,117.9 C700.0,117.9 700.0,200.1 232.0,200.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_026802465.2 - rna-XM_008782721.4 | Query: rna-COCNU_HT001RO01_01T008870 - rna-COCNU_HT001RO01_01T009210 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1684.7 C700.0,1684.7 700.0,1536.5 1190.0,1536.5 L1190.0,1547.2 C700.0,1547.2 700.0,1689.8 232.0,1689.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_008793631.4 - rna-XM_008793708.4 | Query: rna-COCNU_HT001RO01_03T003200 - rna-COCNU_HT001RO01_03T003770 | Dir: - | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1421.9 C700.0,1421.9 700.0,1362.9 1190.0,1362.9 L1190.0,1371.2 C700.0,1371.2 700.0,1435.6 232.0,1435.6 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pd07 → Cn11 | Ref: rna-XM_008777436.3 - rna-XM_039128281.1 | Query: rna-COCNU_HT001RO01_11T005120 - rna-COCNU_HT001RO01_11T005800 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2349.4 C700.0,2349.4 700.0,2115.6 1190.0,2115.6 L1190.0,2119.2 C700.0,2119.2 700.0,2352.3 232.0,2352.3 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pd12 → Cn12 | Ref: rna-XM_039132524.1 - rna-XM_039132684.1 | Query: rna-COCNU_HT001RO01_12T002810 - rna-COCNU_HT001RO01_12T003310 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2748.3 C700.0,2748.3 700.0,2414.2 1190.0,2414.2 L1190.0,2419.1 C700.0,2419.1 700.0,2752.2 232.0,2752.2 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pd15 → Cn13 | Ref: rna-XM_039134043.1 - rna-XM_008791879.4 | Query: rna-COCNU_HT001RO01_13T005710 - rna-COCNU_HT001RO01_13T006340 | Dir: + | Size: 27 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,798.6 C700.0,798.6 700.0,745.7 1190.0,745.7 L1190.0,748.9 C700.0,748.9 700.0,810.0 232.0,810.0 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039125297.1 - rna-XM_008799478.3 | Query: rna-COCNU_HT001RO01_06T001310 - rna-COCNU_HT001RO01_06T001830 | Dir: - | Size: 26 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2000.1 C700.0,2000.1 700.0,1820.7 1190.0,1820.7 L1190.0,1829.1 C700.0,1829.1 700.0,2022.8 232.0,2022.8 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pd10 → Cn02 | Ref: rna-XM_008778160.4 - rna-XM_008779508.4 | Query: rna-COCNU_HT001RO01_02T015460 - rna-COCNU_HT001RO01_02T015980 | Dir: - | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,996.6 C700.0,996.6 700.0,819.2 1190.0,819.2 L1190.0,821.1 C700.0,821.1 700.0,1001.0 232.0,1001.0 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039126061.1 - rna-XM_039126099.1 | Query: rna-COCNU_HT001RO01_06T012230 - rna-COCNU_HT001RO01_06T012560 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,400.2 C700.0,400.2 700.0,384.9 1190.0,384.9 L1190.0,387.1 C700.0,387.1 700.0,403.4 232.0,403.4 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_008790393.4 - rna-XM_008811218.4 | Query: rna-COCNU_HT001RO01_07T002850 - rna-COCNU_HT001RO01_07T003180 | Dir: - | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1104.3 C700.0,1104.3 700.0,1004.4 1190.0,1004.4 L1190.0,1017.2 C700.0,1017.2 700.0,1118.9 232.0,1118.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_008796027.4 - rna-XM_008807516.3 | Query: rna-COCNU_HT001RO01_10T007490 - rna-COCNU_HT001RO01_10T008150 | Dir: + | Size: 25 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,192.6 C700.0,192.6 700.0,110.6 1190.0,110.6 L1190.0,112.5 C700.0,112.5 700.0,195.7 232.0,195.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008783580.4 - rna-XM_039126039.1 | Query: rna-COCNU_HT001RO01_01T008180 - rna-COCNU_HT001RO01_01T008480 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,298.9 C700.0,298.9 700.0,310.3 1190.0,310.3 L1190.0,315.3 C700.0,315.3 700.0,303.6 232.0,303.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039132928.1 - rna-XM_039132769.1 | Query: rna-COCNU_HT001RO01_01T019290 - rna-COCNU_HT001RO01_01T019810 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1937.0 C700.0,1937.0 700.0,1771.8 1190.0,1771.8 L1190.0,1774.2 C700.0,1774.2 700.0,1939.3 232.0,1939.3 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pd10 → Cn02 | Ref: rna-XM_008785992.4 - rna-XM_008785953.4 | Query: rna-COCNU_HT001RO01_02T010400 - rna-COCNU_HT001RO01_02T010700 | Dir: + | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1945.7 C700.0,1945.7 700.0,1767.0 1190.0,1767.0 L1190.0,1770.1 C700.0,1770.1 700.0,1947.6 232.0,1947.6 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pd10 → Cn02 | Ref: rna-XM_008785773.3 - rna-XM_008785814.4 | Query: rna-COCNU_HT001RO01_02T009740 - rna-COCNU_HT001RO01_02T010290 | Dir: + | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2132.5 C700.0,2132.5 700.0,2788.5 1190.0,2788.5 L1190.0,2791.1 C700.0,2791.1 700.0,2135.2 232.0,2135.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_026803064.2 - rna-XM_039132080.1 | Query: rna-COCNU_HT001RO01_08T002680 - rna-COCNU_HT001RO01_08T003090 | Dir: + | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2200.2 C700.0,2200.2 700.0,1955.0 1190.0,1955.0 L1190.0,1967.9 C700.0,1967.9 700.0,2210.0 232.0,2210.0 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn14 | Ref: rna-XM_008805415.4 - rna-XM_008808258.3 | Query: rna-COCNU_HT001RO01_14T007530 - rna-COCNU_HT001RO01_14T008100 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2470.4 C700.0,2470.4 700.0,2240.1 1190.0,2240.1 L1190.0,2241.6 C700.0,2241.6 700.0,2472.8 232.0,2472.8 Z" fill="#f5aa3e" opacity="0.6" style="cursor:pointer" data-tip="Pd13 → Cn16 | Ref: rna-XM_008791625.4 - rna-XM_008792638.3 | Query: rna-COCNU_HT001RO01_16T003640 - rna-COCNU_HT001RO01_16T003970 | Dir: - | Size: 24 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1893.6 C700.0,1893.6 700.0,1673.2 1190.0,1673.2 L1190.0,1675.0 C700.0,1675.0 700.0,1896.8 232.0,1896.8 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_039130453.1 - rna-XM_008787852.4 | Query: rna-COCNU_HT001RO01_02T000310 - rna-COCNU_HT001RO01_02T000540 | Dir: + | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3028.9 C700.0,3028.9 700.0,2644.9 1190.0,2644.9 L1190.0,2647.1 C700.0,2647.1 700.0,3032.7 232.0,3032.7 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pd17 → Cn09 | Ref: rna-XM_008790462.4 - rna-XM_008780777.4 | Query: rna-COCNU_HT001RO01_09T003470 - rna-COCNU_HT001RO01_09T003750 | Dir: + | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2743.8 C700.0,2743.8 700.0,2419.7 1190.0,2419.7 L1190.0,2423.7 C700.0,2423.7 700.0,2748.1 232.0,2748.1 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pd15 → Cn13 | Ref: rna-XM_039134029.1 - rna-XM_008802426.4 | Query: rna-COCNU_HT001RO01_13T006360 - rna-COCNU_HT001RO01_13T006710 | Dir: + | Size: 22 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,307.2 C700.0,307.2 700.0,290.9 1190.0,290.9 L1190.0,299.9 C700.0,299.9 700.0,311.4 232.0,311.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039133061.1 - rna-XM_039133201.1 | Query: rna-COCNU_HT001RO01_01T017940 - rna-COCNU_HT001RO01_01T018390 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2850.4 C700.0,2850.4 700.0,827.1 1190.0,827.1 L1190.0,830.0 C700.0,830.0 700.0,2859.3 232.0,2859.3 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_008812802.4 - rna-XM_008812801.4 | Query: rna-COCNU_HT001RO01_06T013300 - rna-COCNU_HT001RO01_06T013730 | Dir: + | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2907.6 C700.0,2907.6 700.0,859.1 1190.0,859.1 L1190.0,862.2 C700.0,862.2 700.0,2910.4 232.0,2910.4 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_039114454.1 - rna-XM_039114439.1 | Query: rna-COCNU_HT001RO01_06T017030 - rna-COCNU_HT001RO01_06T017280 | Dir: - | Size: 21 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,252.1 C700.0,252.1 700.0,165.6 1190.0,165.6 L1190.0,180.1 C700.0,180.1 700.0,260.3 232.0,260.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008812470.3 - rna-XM_039131300.1 | Query: rna-COCNU_HT001RO01_01T014420 - rna-COCNU_HT001RO01_01T015070 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1750.0 C700.0,1750.0 700.0,1858.2 1190.0,1858.2 L1190.0,1860.7 C700.0,1860.7 700.0,1753.6 232.0,1753.6 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_008812898.4 - rna-XM_008803320.4 | Query: rna-COCNU_HT001RO01_02T018490 - rna-COCNU_HT001RO01_02T018800 | Dir: - | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2106.5 C700.0,2106.5 700.0,2796.9 1190.0,2796.9 L1190.0,2798.7 C700.0,2798.7 700.0,2112.0 232.0,2112.0 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_026806524.2 - rna-XM_008800916.4 | Query: rna-COCNU_HT001RO01_08T004050 - rna-COCNU_HT001RO01_08T004350 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3026.8 C700.0,3026.8 700.0,2647.9 1190.0,2647.9 L1190.0,2649.4 C700.0,2649.4 700.0,3028.7 232.0,3028.7 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pd17 → Cn09 | Ref: rna-XM_008790499.4 - rna-XM_008790464.4 | Query: rna-COCNU_HT001RO01_09T003920 - rna-COCNU_HT001RO01_09T004140 | Dir: + | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1435.2 C700.0,1435.2 700.0,1368.6 1190.0,1368.6 L1190.0,1371.4 C700.0,1371.4 700.0,1439.1 232.0,1439.1 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pd07 → Cn11 | Ref: rna-XM_039128465.1 - rna-XM_039128276.1 | Query: rna-COCNU_HT001RO01_11T005570 - rna-COCNU_HT001RO01_11T005810 | Dir: - | Size: 20 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1711.5 C700.0,1711.5 700.0,1451.1 1190.0,1451.1 L1190.0,1453.5 C700.0,1453.5 700.0,1713.8 232.0,1713.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_008791737.4 - rna-XM_008792345.4 | Query: rna-COCNU_HT001RO01_03T000010 - rna-COCNU_HT001RO01_03T000240 | Dir: + | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,940.3 C700.0,940.3 700.0,807.6 1190.0,807.6 L1190.0,810.2 C700.0,810.2 700.0,948.7 232.0,948.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039125876.1 - rna-XM_039125836.1 | Query: rna-COCNU_HT001RO01_06T010620 - rna-COCNU_HT001RO01_06T010910 | Dir: - | Size: 19 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,651.1 C700.0,651.1 700.0,676.1 1190.0,676.1 L1190.0,681.8 C700.0,681.8 700.0,657.2 232.0,657.2 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pd03 → Cn04 | Ref: rna-XM_008815496.4 - rna-XM_008782905.3 | Query: rna-COCNU_HT001RO01_04T010460 - rna-COCNU_HT001RO01_04T011100 | Dir: + | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,952.4 C700.0,952.4 700.0,810.1 1190.0,810.1 L1190.0,811.2 C700.0,811.2 700.0,955.4 232.0,955.4 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039125906.1 - rna-XM_026800846.2 | Query: rna-COCNU_HT001RO01_06T010900 - rna-COCNU_HT001RO01_06T011140 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,824.7 C700.0,824.7 700.0,763.3 1190.0,763.3 L1190.0,767.7 C700.0,767.7 700.0,831.2 232.0,831.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_008812260.3 - rna-XM_008801531.4 | Query: rna-COCNU_HT001RO01_06T004270 - rna-COCNU_HT001RO01_06T004910 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,488.3 C700.0,488.3 700.0,433.5 1190.0,433.5 L1190.0,437.2 C700.0,437.2 700.0,493.9 232.0,493.9 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_039123575.1 - rna-XM_039123940.1 | Query: rna-COCNU_HT001RO01_07T009410 - rna-COCNU_HT001RO01_07T009760 | Dir: - | Size: 18 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,141.9 C700.0,141.9 700.0,94.0 1190.0,94.0 L1190.0,96.0 C700.0,96.0 700.0,145.4 232.0,145.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039126651.1 - rna-XM_008799339.4 | Query: rna-COCNU_HT001RO01_01T005630 - rna-COCNU_HT001RO01_01T005890 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,120.6 C700.0,120.6 700.0,82.1 1190.0,82.1 L1190.0,84.4 C700.0,84.4 700.0,127.6 232.0,127.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008807190.4 - rna-XM_008791907.4 | Query: rna-COCNU_HT001RO01_01T003860 - rna-COCNU_HT001RO01_01T004160 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1270.2 C700.0,1270.2 700.0,1149.7 1190.0,1149.7 L1190.0,1175.3 C700.0,1175.3 700.0,1283.9 232.0,1283.9 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pd06 → Cn05 | Ref: rna-XM_008802395.4 - rna-XM_039127368.1 | Query: rna-COCNU_HT001RO01_05T003670 - rna-COCNU_HT001RO01_05T004620 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1117.1 C700.0,1117.1 700.0,1021.5 1190.0,1021.5 L1190.0,1047.4 C700.0,1047.4 700.0,1134.1 232.0,1134.1 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_008811683.3 - rna-XM_026801039.2 | Query: rna-COCNU_HT001RO01_10T008270 - rna-COCNU_HT001RO01_10T008970 | Dir: - | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2646.5 C700.0,2646.5 700.0,2327.5 1190.0,2327.5 L1190.0,2331.6 C700.0,2331.6 700.0,2653.4 232.0,2653.4 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pd14 → Cn15 | Ref: rna-XM_008796715.4 - rna-XM_008790673.4 | Query: rna-COCNU_HT001RO01_15T004460 - rna-COCNU_HT001RO01_15T004800 | Dir: + | Size: 17 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1716.0 C700.0,1716.0 700.0,1455.5 1190.0,1455.5 L1190.0,1460.9 C700.0,1460.9 700.0,1718.8 232.0,1718.8 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_039129560.1 - rna-XM_026809801.2 | Query: rna-COCNU_HT001RO01_03T000400 - rna-COCNU_HT001RO01_03T000800 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1543.4 C700.0,1543.4 700.0,1583.7 1190.0,1583.7 L1190.0,1587.6 C700.0,1587.6 700.0,1547.0 232.0,1547.0 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_008802824.3 - rna-XM_008801088.4 | Query: rna-COCNU_HT001RO01_03T007870 - rna-COCNU_HT001RO01_03T008390 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2880.2 C700.0,2880.2 700.0,908.1 1190.0,908.1 L1190.0,914.6 C700.0,914.6 700.0,2887.1 232.0,2887.1 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_008800665.4 - rna-XM_008810667.3 | Query: rna-COCNU_HT001RO01_06T019500 - rna-COCNU_HT001RO01_06T019940 | Dir: + | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2119.6 C700.0,2119.6 700.0,2783.4 1190.0,2783.4 L1190.0,2788.4 C700.0,2788.4 700.0,2125.2 232.0,2125.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_008791053.4 - rna-XM_008790978.4 | Query: rna-COCNU_HT001RO01_08T002150 - rna-COCNU_HT001RO01_08T002660 | Dir: + | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1419.1 C700.0,1419.1 700.0,1381.1 1190.0,1381.1 L1190.0,1382.7 C700.0,1382.7 700.0,1420.9 232.0,1420.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pd07 → Cn11 | Ref: rna-XM_039128213.1 - rna-XM_039128204.1 | Query: rna-COCNU_HT001RO01_11T006690 - rna-COCNU_HT001RO01_11T006880 | Dir: - | Size: 16 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,164.3 C700.0,164.3 700.0,93.1 1190.0,93.1 L1190.0,93.9 C700.0,93.9 700.0,166.5 232.0,166.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008810019.4 - rna-XM_008786586.4 | Query: rna-COCNU_HT001RO01_01T005440 - rna-COCNU_HT001RO01_01T005600 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,104.1 C700.0,104.1 700.0,71.2 1190.0,71.2 L1190.0,72.4 C700.0,72.4 700.0,106.4 232.0,106.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039125049.1 - rna-XM_039124968.1 | Query: rna-COCNU_HT001RO01_01T002160 - rna-COCNU_HT001RO01_01T002330 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1889.9 C700.0,1889.9 700.0,1677.3 1190.0,1677.3 L1190.0,1679.2 C700.0,1679.2 700.0,1892.0 232.0,1892.0 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_008795021.4 - rna-XM_008795048.3 | Query: rna-COCNU_HT001RO01_02T000790 - rna-COCNU_HT001RO01_02T001040 | Dir: + | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2095.8 C700.0,2095.8 700.0,2800.2 1190.0,2800.2 L1190.0,2801.1 C700.0,2801.1 700.0,2097.3 232.0,2097.3 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_039131337.1 - rna-XM_039131314.1 | Query: rna-COCNU_HT001RO01_08T004600 - rna-COCNU_HT001RO01_08T004760 | Dir: - | Size: 15 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2032.3 C700.0,2032.3 700.0,1809.2 1190.0,1809.2 L1190.0,1817.2 C700.0,1817.2 700.0,2038.5 232.0,2038.5 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pd10 → Cn02 | Ref: rna-XM_008791473.4 - rna-XM_039131054.1 | Query: rna-COCNU_HT001RO01_02T014850 - rna-COCNU_HT001RO01_02T015330 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2102.9 C700.0,2102.9 700.0,2795.6 1190.0,2795.6 L1190.0,2800.0 C700.0,2800.0 700.0,2109.0 232.0,2109.0 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_008790711.3 - rna-XM_039131360.1 | Query: rna-COCNU_HT001RO01_08T003860 - rna-COCNU_HT001RO01_08T004580 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1445.7 C700.0,1445.7 700.0,1357.2 1190.0,1357.2 L1190.0,1360.5 C700.0,1360.5 700.0,1450.7 232.0,1450.7 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pd07 → Cn11 | Ref: rna-XM_008777975.4 - rna-XM_008814641.4 | Query: rna-COCNU_HT001RO01_11T004760 - rna-COCNU_HT001RO01_11T004980 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1464.6 C700.0,1464.6 700.0,1318.9 1190.0,1318.9 L1190.0,1335.7 C700.0,1335.7 700.0,1470.9 232.0,1470.9 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pd07 → Cn11 | Ref: rna-XM_008792567.3 - rna-XM_039128388.1 | Query: rna-COCNU_HT001RO01_11T003580 - rna-COCNU_HT001RO01_11T004030 | Dir: - | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2352.4 C700.0,2352.4 700.0,2094.1 1190.0,2094.1 L1190.0,2100.1 C700.0,2100.1 700.0,2361.4 232.0,2361.4 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pd12 → Cn12 | Ref: rna-XM_039132553.1 - rna-XM_039132578.1 | Query: rna-COCNU_HT001RO01_12T000870 - rna-COCNU_HT001RO01_12T001180 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2817.2 C700.0,2817.2 700.0,2377.4 1190.0,2377.4 L1190.0,2379.8 C700.0,2379.8 700.0,2819.2 232.0,2819.2 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pd15 → Cn13 | Ref: rna-XM_008789730.4 - rna-XM_039134455.1 | Query: rna-COCNU_HT001RO01_13T000060 - rna-COCNU_HT001RO01_13T000430 | Dir: + | Size: 14 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,286.4 C700.0,286.4 700.0,285.8 1190.0,285.8 L1190.0,289.7 C700.0,289.7 700.0,288.5 232.0,288.5 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039132303.1 - rna-XM_008796867.4 | Query: rna-COCNU_HT001RO01_01T017670 - rna-COCNU_HT001RO01_01T017850 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1878.6 C700.0,1878.6 700.0,1684.1 1190.0,1684.1 L1190.0,1685.8 C700.0,1685.8 700.0,1882.2 232.0,1882.2 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_008798127.4 - rna-XM_008795951.4 | Query: rna-COCNU_HT001RO01_02T001860 - rna-COCNU_HT001RO01_02T002100 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1695.0 C700.0,1695.0 700.0,1461.6 1190.0,1461.6 L1190.0,1463.9 C700.0,1463.9 700.0,1696.9 232.0,1696.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_017843831.3 - rna-XM_039129447.1 | Query: rna-COCNU_HT001RO01_03T000830 - rna-COCNU_HT001RO01_03T000990 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1709.7 C700.0,1709.7 700.0,1453.4 1190.0,1453.4 L1190.0,1455.5 C700.0,1455.5 700.0,1713.6 232.0,1713.6 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_026804183.2 - rna-XM_039129515.1 | Query: rna-COCNU_HT001RO01_03T000230 - rna-COCNU_HT001RO01_03T000400 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2125.1 C700.0,2125.1 700.0,2786.3 1190.0,2786.3 L1190.0,2788.5 C700.0,2788.5 700.0,2129.3 232.0,2129.3 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_008786057.4 - rna-XM_039132071.1 | Query: rna-COCNU_HT001RO01_08T002450 - rna-COCNU_HT001RO01_08T002670 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2968.7 C700.0,2968.7 700.0,2606.0 1190.0,2606.0 L1190.0,2617.2 C700.0,2617.2 700.0,2979.2 232.0,2979.2 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pd17 → Cn09 | Ref: rna-XM_008814936.3 - rna-XM_008777176.3 | Query: rna-COCNU_HT001RO01_09T001090 - rna-COCNU_HT001RO01_09T001530 | Dir: - | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1174.1 C700.0,1174.1 700.0,1071.9 1190.0,1071.9 L1190.0,1073.9 C700.0,1073.9 700.0,1175.9 232.0,1175.9 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_017845082.3 - rna-XM_008804748.3 | Query: rna-COCNU_HT001RO01_10T009630 - rna-COCNU_HT001RO01_10T009800 | Dir: + | Size: 13 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,240.6 C700.0,240.6 700.0,147.3 1190.0,147.3 L1190.0,149.1 C700.0,149.1 700.0,242.8 232.0,242.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039130793.1 - rna-XM_008803972.3 | Query: rna-COCNU_HT001RO01_01T012850 - rna-COCNU_HT001RO01_01T012980 | Dir: - | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1895.2 C700.0,1895.2 700.0,1671.1 1190.0,1671.1 L1190.0,1674.3 C700.0,1674.3 700.0,1898.8 232.0,1898.8 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_008787169.4 - rna-XM_039130461.1 | Query: rna-COCNU_HT001RO01_02T000010 - rna-COCNU_HT001RO01_02T000450 | Dir: - | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2028.2 C700.0,2028.2 700.0,1808.0 1190.0,1808.0 L1190.0,1810.1 C700.0,1810.1 700.0,2035.8 232.0,2035.8 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pd10 → Cn02 | Ref: rna-XM_008812408.3 - rna-XM_008778481.3 | Query: rna-COCNU_HT001RO01_02T014690 - rna-COCNU_HT001RO01_02T014920 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,946.1 C700.0,946.1 700.0,807.2 1190.0,807.2 L1190.0,808.2 C700.0,808.2 700.0,948.7 232.0,948.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039125863.1 - rna-XM_039125876.1 | Query: rna-COCNU_HT001RO01_06T010540 - rna-COCNU_HT001RO01_06T010700 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2562.9 C700.0,2562.9 700.0,2295.0 1190.0,2295.0 L1190.0,2296.1 C700.0,2296.1 700.0,2565.4 232.0,2565.4 Z" fill="#7b0d1a" opacity="0.6" style="cursor:pointer" data-tip="Pd14 → Cn15 | Ref: rna-XM_039133330.1 - rna-XM_008777924.4 | Query: rna-COCNU_HT001RO01_15T000020 - rna-COCNU_HT001RO01_15T000180 | Dir: + | Size: 12 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,127.8 C700.0,127.8 700.0,87.1 1190.0,87.1 L1190.0,88.2 C700.0,88.2 700.0,129.2 232.0,129.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008791912.4 - rna-XM_039126070.1 | Query: rna-COCNU_HT001RO01_01T004600 - rna-COCNU_HT001RO01_01T004740 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,305.6 C700.0,305.6 700.0,282.3 1190.0,282.3 L1190.0,284.4 C700.0,284.4 700.0,307.1 232.0,307.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039132089.1 - rna-XM_017844892.3 | Query: rna-COCNU_HT001RO01_01T017460 - rna-COCNU_HT001RO01_01T017560 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,189.7 C700.0,189.7 700.0,114.4 1190.0,114.4 L1190.0,115.5 C700.0,115.5 700.0,191.1 232.0,191.1 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039128964.1 - rna-XM_008783856.4 | Query: rna-COCNU_HT001RO01_01T008750 - rna-COCNU_HT001RO01_01T008860 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,683.3 C700.0,683.3 700.0,616.9 1190.0,616.9 L1190.0,621.7 C700.0,621.7 700.0,693.7 232.0,693.7 Z" fill="#1A237E" opacity="0.6" style="cursor:pointer" data-tip="Pd03 → Cn04 | Ref: rna-XM_039124042.1 - rna-XM_039124028.1 | Query: rna-COCNU_HT001RO01_04T007500 - rna-COCNU_HT001RO01_04T007800 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1251.1 C700.0,1251.1 700.0,1203.2 1190.0,1203.2 L1190.0,1209.4 C700.0,1209.4 700.0,1255.0 232.0,1255.0 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pd06 → Cn05 | Ref: rna-XM_039127316.1 - rna-XM_026808110.2 | Query: rna-COCNU_HT001RO01_05T005560 - rna-COCNU_HT001RO01_05T005950 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2856.7 C700.0,2856.7 700.0,827.1 1190.0,827.1 L1190.0,830.4 C700.0,830.4 700.0,2862.9 232.0,2862.9 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_008781310.3 - rna-XM_008812361.3 | Query: rna-COCNU_HT001RO01_06T013300 - rna-COCNU_HT001RO01_06T013800 | Dir: - | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2978.8 C700.0,2978.8 700.0,2564.6 1190.0,2564.6 L1190.0,2579.6 C700.0,2579.6 700.0,2986.6 232.0,2986.6 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pd17 → Cn09 | Ref: rna-XM_039114700.1 - rna-XM_008780229.3 | Query: rna-COCNU_HT001RO01_09T000290 - rna-COCNU_HT001RO01_09T000720 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1441.4 C700.0,1441.4 700.0,1346.7 1190.0,1346.7 L1190.0,1352.5 C700.0,1352.5 700.0,1445.2 232.0,1445.2 Z" fill="#3498DB" opacity="0.6" style="cursor:pointer" data-tip="Pd07 → Cn11 | Ref: rna-XM_008807645.4 - rna-XM_026808469.2 | Query: rna-COCNU_HT001RO01_11T004230 - rna-COCNU_HT001RO01_11T004480 | Dir: + | Size: 11 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,288.1 C700.0,288.1 700.0,276.5 1190.0,276.5 L1190.0,280.5 C700.0,280.5 700.0,293.0 232.0,293.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008777499.4 - rna-XM_008796901.3 | Query: rna-COCNU_HT001RO01_01T017180 - rna-COCNU_HT001RO01_01T017400 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,116.8 C700.0,116.8 700.0,86.0 1190.0,86.0 L1190.0,86.6 C700.0,86.6 700.0,118.7 232.0,118.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008781553.4 - rna-XM_008781381.4 | Query: rna-COCNU_HT001RO01_01T004360 - rna-COCNU_HT001RO01_01T004510 | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,235.5 C700.0,235.5 700.0,184.2 1190.0,184.2 L1190.0,193.2 C700.0,193.2 700.0,239.4 232.0,239.4 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039128653.1 - rna-XM_039130584.1 | Query: rna-COCNU_HT001RO01_01T015270 - rna-COCNU_HT001RO01_01T015640 | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,796.0 C700.0,796.0 700.0,746.8 1190.0,746.8 L1190.0,749.0 C700.0,749.0 700.0,805.0 232.0,805.0 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039125240.1 - rna-XM_008779315.3 | Query: rna-COCNU_HT001RO01_06T001470 - rna-COCNU_HT001RO01_06T001850 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2905.5 C700.0,2905.5 700.0,856.6 1190.0,856.6 L1190.0,863.8 C700.0,863.8 700.0,2910.7 232.0,2910.7 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_039114417.1 - rna-XM_039114456.1 | Query: rna-COCNU_HT001RO01_06T016820 - rna-COCNU_HT001RO01_06T017380 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2095.8 C700.0,2095.8 700.0,2799.1 1190.0,2799.1 L1190.0,2803.7 C700.0,2803.7 700.0,2102.4 232.0,2102.4 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_008788851.4 - rna-XM_008788828.4 | Query: rna-COCNU_HT001RO01_08T004400 - rna-COCNU_HT001RO01_08T005030 | Dir: + | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2739.0 C700.0,2739.0 700.0,2430.3 1190.0,2430.3 L1190.0,2433.7 C700.0,2433.7 700.0,2740.9 232.0,2740.9 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pd15 → Cn13 | Ref: rna-XM_039134457.1 - rna-XM_008780352.4 | Query: rna-COCNU_HT001RO01_13T007230 - rna-COCNU_HT001RO01_13T007380 | Dir: - | Size: 10 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,243.0 C700.0,243.0 700.0,214.9 1190.0,214.9 L1190.0,228.8 C700.0,228.8 700.0,249.8 232.0,249.8 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039130799.1 - rna-XM_008807119.4 | Query: rna-COCNU_HT001RO01_01T016080 - rna-COCNU_HT001RO01_01T016290 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1899.3 C700.0,1899.3 700.0,1675.3 1190.0,1675.3 L1190.0,1676.2 C700.0,1676.2 700.0,1900.8 232.0,1900.8 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_008786695.4 - rna-XM_039130503.1 | Query: rna-COCNU_HT001RO01_02T000560 - rna-COCNU_HT001RO01_02T000650 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1257.0 C700.0,1257.0 700.0,1193.0 1190.0,1193.0 L1190.0,1197.7 C700.0,1197.7 700.0,1261.8 232.0,1261.8 Z" fill="#43A047" opacity="0.6" style="cursor:pointer" data-tip="Pd06 → Cn05 | Ref: rna-XM_008807623.3 - rna-XM_017840867.3 | Query: rna-COCNU_HT001RO01_05T005000 - rna-COCNU_HT001RO01_05T005250 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,821.6 C700.0,821.6 700.0,755.7 1190.0,755.7 L1190.0,757.2 C700.0,757.2 700.0,823.7 232.0,823.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_008812605.4 - rna-XM_026808617.2 | Query: rna-COCNU_HT001RO01_06T002880 - rna-COCNU_HT001RO01_06T003100 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,973.0 C700.0,973.0 700.0,817.3 1190.0,817.3 L1190.0,819.0 C700.0,819.0 700.0,975.3 232.0,975.3 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039126022.1 - rna-XM_008806079.4 | Query: rna-COCNU_HT001RO01_06T011970 - rna-COCNU_HT001RO01_06T012210 | Dir: - | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,3123.6 C700.0,3123.6 700.0,2835.2 1190.0,2835.2 L1190.0,2836.8 C700.0,2836.8 700.0,3125.5 232.0,3125.5 Z" fill="#b0d7e6" opacity="0.6" style="cursor:pointer" data-tip="Pd18 → Cn08 | Ref: rna-XM_008814016.4 - rna-XM_008814309.4 | Query: rna-COCNU_HT001RO01_08T009240 - rna-COCNU_HT001RO01_08T009540 | Dir: + | Size: 9 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,73.5 C700.0,73.5 700.0,60.1 1190.0,60.1 L1190.0,61.0 C700.0,61.0 700.0,77.0 232.0,77.0 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039123822.1 - rna-XM_008809716.4 | Query: rna-COCNU_HT001RO01_01T000030 - rna-COCNU_HT001RO01_01T000140 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,303.9 C700.0,303.9 700.0,282.3 1190.0,282.3 L1190.0,285.9 C700.0,285.9 700.0,305.7 232.0,305.7 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039132127.1 - rna-XM_039132959.1 | Query: rna-COCNU_HT001RO01_01T017460 - rna-COCNU_HT001RO01_01T017670 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1778.2 C700.0,1778.2 700.0,1746.6 1190.0,1746.6 L1190.0,1757.2 C700.0,1757.2 700.0,1792.8 232.0,1792.8 Z" fill="#72d1b9" opacity="0.6" style="cursor:pointer" data-tip="Pd09 → Cn02 | Ref: rna-XM_017840652.3 - rna-XM_008779812.4 | Query: rna-COCNU_HT001RO01_02T009180 - rna-COCNU_HT001RO01_02T009430 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1995.9 C700.0,1995.9 700.0,1804.5 1190.0,1804.5 L1190.0,1806.8 C700.0,1806.8 700.0,1999.1 232.0,1999.1 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pd10 → Cn02 | Ref: rna-XM_008812048.4 - rna-XM_008777404.4 | Query: rna-COCNU_HT001RO01_02T014490 - rna-COCNU_HT001RO01_02T014640 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1675.8 C700.0,1675.8 700.0,1524.4 1190.0,1524.4 L1190.0,1537.8 C700.0,1537.8 700.0,1682.9 232.0,1682.9 Z" fill="#FFA07A" opacity="0.6" style="cursor:pointer" data-tip="Pd08 → Cn03 | Ref: rna-XM_008814251.3 - rna-XM_008793620.4 | Query: rna-COCNU_HT001RO01_03T002870 - rna-COCNU_HT001RO01_03T003260 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,841.6 C700.0,841.6 700.0,759.4 1190.0,759.4 L1190.0,760.1 C700.0,760.1 700.0,844.2 232.0,844.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039125409.1 - rna-XM_039125425.1 | Query: rna-COCNU_HT001RO01_06T003560 - rna-COCNU_HT001RO01_06T003650 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,530.9 C700.0,530.9 700.0,454.4 1190.0,454.4 L1190.0,456.1 C700.0,456.1 700.0,533.6 232.0,533.6 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_008805809.4 - rna-XM_039123708.1 | Query: rna-COCNU_HT001RO01_07T011360 - rna-COCNU_HT001RO01_07T011530 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1082.2 C700.0,1082.2 700.0,978.8 1190.0,978.8 L1190.0,979.2 C700.0,979.2 700.0,1082.8 232.0,1082.8 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_039126969.1 - rna-XM_008798650.4 | Query: rna-COCNU_HT001RO01_10T004420 - rna-COCNU_HT001RO01_10T004490 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2805.9 C700.0,2805.9 700.0,2382.6 1190.0,2382.6 L1190.0,2383.1 C700.0,2383.1 700.0,2806.9 232.0,2806.9 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pd15 → Cn13 | Ref: rna-XM_039134383.1 - rna-XM_008789698.4 | Query: rna-COCNU_HT001RO01_13T001010 - rna-COCNU_HT001RO01_13T001120 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2807.2 C700.0,2807.2 700.0,2377.0 1190.0,2377.0 L1190.0,2378.2 C700.0,2378.2 700.0,2808.8 232.0,2808.8 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pd15 → Cn13 | Ref: rna-XM_008789706.3 - rna-XM_008789725.4 | Query: rna-COCNU_HT001RO01_13T000010 - rna-COCNU_HT001RO01_13T000210 | Dir: + | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2184.5 C700.0,2184.5 700.0,1942.7 1190.0,1942.7 L1190.0,1946.2 C700.0,1946.2 700.0,2190.8 232.0,2190.8 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn14 | Ref: rna-XM_039131808.1 - rna-XM_008799203.4 | Query: rna-COCNU_HT001RO01_14T006790 - rna-COCNU_HT001RO01_14T006970 | Dir: - | Size: 8 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,260.9 C700.0,260.9 700.0,164.7 1190.0,164.7 L1190.0,165.4 C700.0,165.4 700.0,263.9 232.0,263.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_039131310.1 - rna-XM_008795295.4 | Query: rna-COCNU_HT001RO01_01T014320 - rna-COCNU_HT001RO01_01T014400 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,262.8 C700.0,262.8 700.0,165.2 1190.0,165.2 L1190.0,167.3 C700.0,167.3 700.0,266.3 232.0,266.3 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008796732.4 - rna-XM_039131380.1 | Query: rna-COCNU_HT001RO01_01T014390 - rna-COCNU_HT001RO01_01T014510 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,286.6 C700.0,286.6 700.0,279.8 1190.0,279.8 L1190.0,286.2 C700.0,286.2 700.0,292.6 232.0,292.6 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008796892.4 - rna-XM_008811022.4 | Query: rna-COCNU_HT001RO01_01T017360 - rna-COCNU_HT001RO01_01T017680 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,951.8 C700.0,951.8 700.0,811.1 1190.0,811.1 L1190.0,811.5 C700.0,811.5 700.0,953.7 232.0,953.7 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_039125888.1 - rna-XM_039125893.1 | Query: rna-COCNU_HT001RO01_06T011130 - rna-COCNU_HT001RO01_06T011190 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2898.6 C700.0,2898.6 700.0,880.1 1190.0,880.1 L1190.0,889.8 C700.0,889.8 700.0,2902.3 232.0,2902.3 Z" fill="#9f4e9a" opacity="0.6" style="cursor:pointer" data-tip="Pd16 → Cn06 | Ref: rna-XM_008813416.4 - rna-XM_008778370.3 | Query: rna-COCNU_HT001RO01_06T018120 - rna-COCNU_HT001RO01_06T018380 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,524.3 C700.0,524.3 700.0,488.2 1190.0,488.2 L1190.0,492.5 C700.0,492.5 700.0,526.0 232.0,526.0 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_008813774.2 - rna-XM_008808217.4 | Query: rna-COCNU_HT001RO01_07T013720 - rna-COCNU_HT001RO01_07T013940 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,566.5 C700.0,566.5 700.0,519.6 1190.0,519.6 L1190.0,526.0 C700.0,526.0 700.0,568.7 232.0,568.7 Z" fill="#E63946" opacity="0.6" style="cursor:pointer" data-tip="Pd02 → Cn07 | Ref: rna-XM_008810164.2 - rna-XM_008807700.3 | Query: rna-COCNU_HT001RO01_07T015580 - rna-COCNU_HT001RO01_07T015830 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1141.2 C700.0,1141.2 700.0,1060.7 1190.0,1060.7 L1190.0,1070.2 C700.0,1070.2 700.0,1147.2 232.0,1147.2 Z" fill="#E06D10" opacity="0.6" style="cursor:pointer" data-tip="Pd05 → Cn10 | Ref: rna-XM_039126864.1 - rna-XM_039126832.1 | Query: rna-COCNU_HT001RO01_10T009290 - rna-COCNU_HT001RO01_10T009550 | Dir: - | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2809.5 C700.0,2809.5 700.0,2382.0 1190.0,2382.0 L1190.0,2382.3 C700.0,2382.3 700.0,2810.0 232.0,2810.0 Z" fill="#f2a69b" opacity="0.6" style="cursor:pointer" data-tip="Pd15 → Cn13 | Ref: rna-XM_008789733.4 - rna-XM_008789741.4 | Query: rna-COCNU_HT001RO01_13T000820 - rna-COCNU_HT001RO01_13T000910 | Dir: + | Size: 7 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,284.7 C700.0,284.7 700.0,236.2 1190.0,236.2 L1190.0,246.3 C700.0,246.3 700.0,286.2 232.0,286.2 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_026810314.2 - rna-XM_008800144.2 | Query: rna-COCNU_HT001RO01_01T016410 - rna-COCNU_HT001RO01_01T016540 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,119.2 C700.0,119.2 700.0,79.9 1190.0,79.9 L1190.0,80.2 C700.0,80.2 700.0,119.9 232.0,119.9 Z" fill="#FFD700" opacity="0.6" style="cursor:pointer" data-tip="Pd01 → Cn01 | Ref: rna-XM_008813085.3 - rna-XM_008813088.4 | Query: rna-COCNU_HT001RO01_01T003470 - rna-COCNU_HT001RO01_01T003530 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,1947.8 C700.0,1947.8 700.0,1760.2 1190.0,1760.2 L1190.0,1761.2 C700.0,1761.2 700.0,1948.3 232.0,1948.3 Z" fill="#0055a6" opacity="0.6" style="cursor:pointer" data-tip="Pd10 → Cn02 | Ref: rna-XM_008786004.4 - rna-XM_039130768.1 | Query: rna-COCNU_HT001RO01_02T009520 - rna-COCNU_HT001RO01_02T009610 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,990.2 C700.0,990.2 700.0,837.9 1190.0,837.9 L1190.0,838.8 C700.0,838.8 700.0,991.2 232.0,991.2 Z" fill="#9C27B0" opacity="0.6" style="cursor:pointer" data-tip="Pd04 → Cn06 | Ref: rna-XM_008801679.4 - rna-XM_008780716.4 | Query: rna-COCNU_HT001RO01_06T014770 - rna-COCNU_HT001RO01_06T014830 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2119.0 C700.0,2119.0 700.0,2782.7 1190.0,2782.7 L1190.0,2783.7 C700.0,2783.7 700.0,2120.5 232.0,2120.5 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_008791034.4 - rna-XM_008791058.4 | Query: rna-COCNU_HT001RO01_08T002090 - rna-COCNU_HT001RO01_08T002180 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2160.1 C700.0,2160.1 700.0,2776.2 1190.0,2776.2 L1190.0,2780.0 C700.0,2780.0 700.0,2161.2 232.0,2161.2 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn08 | Ref: rna-XM_008802530.4 - rna-XM_039131690.1 | Query: rna-COCNU_HT001RO01_08T001600 - rna-COCNU_HT001RO01_08T001840 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2986.8 C700.0,2986.8 700.0,2559.2 1190.0,2559.2 L1190.0,2560.8 C700.0,2560.8 700.0,2988.1 232.0,2988.1 Z" fill="#4ca3c7" opacity="0.6" style="cursor:pointer" data-tip="Pd17 → Cn09 | Ref: rna-XM_008815249.4 - rna-XM_008810582.4 | Query: rna-COCNU_HT001RO01_09T000180 - rna-COCNU_HT001RO01_09T000250 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2366.4 C700.0,2366.4 700.0,2068.5 1190.0,2068.5 L1190.0,2073.6 C700.0,2073.6 700.0,2381.2 232.0,2381.2 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pd12 → Cn12 | Ref: rna-XM_008779314.4 - rna-XM_039132601.1 | Query: rna-COCNU_HT001RO01_12T000190 - rna-COCNU_HT001RO01_12T000320 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2364.7 C700.0,2364.7 700.0,2076.6 1190.0,2076.6 L1190.0,2085.9 C700.0,2085.9 700.0,2375.0 232.0,2375.0 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pd12 → Cn12 | Ref: rna-XM_039132580.1 - rna-XM_039132596.1 | Query: rna-COCNU_HT001RO01_12T000390 - rna-COCNU_HT001RO01_12T000640 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2390.2 C700.0,2390.2 700.0,2081.6 1190.0,2081.6 L1190.0,2093.8 C700.0,2093.8 700.0,2395.9 232.0,2395.9 Z" fill="#f0c9a7" opacity="0.6" style="cursor:pointer" data-tip="Pd12 → Cn12 | Ref: rna-XM_039132652.1 - rna-XM_008795365.3 | Query: rna-COCNU_HT001RO01_12T000570 - rna-COCNU_HT001RO01_12T000860 | Dir: - | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+<path d="M232.0,2092.6 C700.0,2092.6 700.0,1898.1 1190.0,1898.1 L1190.0,1900.3 C700.0,1900.3 700.0,2093.6 232.0,2093.6 Z" fill="#e3b58f" opacity="0.6" style="cursor:pointer" data-tip="Pd11 → Cn14 | Ref: rna-XM_017846208.3 - rna-XM_039131304.1 | Query: rna-COCNU_HT001RO01_14T000010 - rna-COCNU_HT001RO01_14T000370 | Dir: + | Size: 6 genes" onmouseenter="showTip(event,this)" onmouseleave="hideTip()"/>
+</g>
+<g id="refChrs">
+<rect x="210" y="60" width="22" height="280" rx="5" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="1"/>
+<rect x="211" y="73.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="79.5" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="211" y="74.5" width="20" height="19.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="84.3" x2="226" y2="84.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="205" y="88.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="211" y="96.3" width="20" height="7.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="104.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="211" y="104.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="110.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="211" y="105.7" width="20" height="9.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="114.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="211" y="116.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="122.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="211" y="119.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="125.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="211" y="120.6" width="20" height="6.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="128.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="211" y="127.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="133.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="211" y="129.5" width="20" height="10.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="134.9" x2="216" y2="134.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd01)" opacity="0.8"/>
+<text x="205" y="138.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="211" y="141.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="147.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="211" y="146.9" width="20" height="9.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="155.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="211" y="158.5" width="20" height="5.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="165.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="211" y="164.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="170.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="211" y="166.7" width="20" height="19.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="176.6" x2="226" y2="176.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="205" y="180.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="211" y="189.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="195.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="211" y="192.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="198.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="211" y="196.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="202.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="211" y="200.6" width="20" height="20.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="211.0" x2="226" y2="211.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="205" y="215.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<rect x="211" y="222.3" width="20" height="11.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="228" y1="228.1" x2="216" y2="228.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd01)" opacity="0.8"/>
+<text x="205" y="232.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">20</text>
+<rect x="211" y="235.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="241.5" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">21</text>
+<rect x="211" y="240.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="246.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">22</text>
+<rect x="211" y="243.0" width="20" height="6.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="250.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">23</text>
+<rect x="211" y="252.1" width="20" height="8.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="260.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">24</text>
+<rect x="211" y="260.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="266.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">25</text>
+<rect x="211" y="262.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="268.8" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">26</text>
+<rect x="211" y="264.8" width="20" height="12.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="271.1" x2="226" y2="271.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="205" y="275.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">27</text>
+<rect x="211" y="277.6" width="20" height="6.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="285.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">28</text>
+<rect x="211" y="284.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="290.7" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">29</text>
+<rect x="211" y="286.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="292.4" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">30</text>
+<rect x="211" y="286.6" width="20" height="6.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="293.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">31</text>
+<rect x="211" y="288.1" width="20" height="4.9" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="294.5" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">32</text>
+<rect x="211" y="288.5" width="20" height="8.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="296.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">33</text>
+<rect x="211" y="298.9" width="20" height="4.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="305.2" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">34</text>
+<rect x="211" y="303.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="309.9" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">35</text>
+<rect x="211" y="305.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="311.6" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">36</text>
+<rect x="211" y="307.2" width="20" height="4.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="313.3" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">37</text>
+<rect x="211" y="311.7" width="20" height="5.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="205" y="318.1" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">38</text>
+<rect x="211" y="316.4" width="20" height="23.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="214" y1="328.0" x2="226" y2="328.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="205" y="332.0" text-anchor="end" fill="#FFD700" font-size="10" font-weight="500">39</text>
+<text x="205" y="55" text-anchor="end" fill="#FFD700" font-size="12" font-weight="700" letter-spacing="0.5">Pd01</text>
+<circle cx="221.0" cy="217.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="221.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="368" width="22" height="201" rx="5" fill="#E63946" opacity="0.15" stroke="#E63946" stroke-width="1"/>
+<rect x="211" y="368.2" width="20" height="34.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="385.4" x2="226" y2="385.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd02)" opacity="0.8"/>
+<text x="205" y="389.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="211" y="400.2" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="406.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="211" y="400.8" width="20" height="55.9" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="428.7" x2="226" y2="428.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd02)" opacity="0.8"/>
+<text x="205" y="432.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="211" y="457.0" width="20" height="6.7" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="464.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="211" y="465.1" width="20" height="19.9" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="475.0" x2="216" y2="475.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd02)" opacity="0.8"/>
+<text x="205" y="479.0" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="211" y="488.3" width="20" height="5.6" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="495.1" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="211" y="490.7" width="20" height="30.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="214" y1="505.7" x2="226" y2="505.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd02)" opacity="0.8"/>
+<text x="205" y="509.7" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="211" y="509.6" width="20" height="13.6" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="516.4" x2="216" y2="516.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd02)" opacity="0.8"/>
+<text x="205" y="520.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="211" y="524.3" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="530.3" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="211" y="530.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="536.9" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="211" y="534.0" width="20" height="8.8" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="542.4" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="211" y="548.5" width="20" height="17.3" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="228" y1="557.2" x2="216" y2="557.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd02)" opacity="0.8"/>
+<text x="205" y="561.2" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="211" y="566.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="205" y="572.5" text-anchor="end" fill="#E63946" font-size="10" font-weight="500">13</text>
+<text x="205" y="363" text-anchor="end" fill="#E63946" font-size="12" font-weight="700" letter-spacing="0.5">Pd02</text>
+<circle cx="221.0" cy="512.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="516.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="597" width="22" height="169" rx="5" fill="#1A237E" opacity="0.15" stroke="#1A237E" stroke-width="1"/>
+<rect x="211" y="599.9" width="20" height="8.2" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="608.0" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<rect x="211" y="610.5" width="20" height="22.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="621.9" x2="216" y2="621.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd03)" opacity="0.8"/>
+<text x="205" y="625.9" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="211" y="636.4" width="20" height="12.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="642.4" x2="226" y2="642.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd03)" opacity="0.8"/>
+<text x="205" y="646.4" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="211" y="651.1" width="20" height="6.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="205" y="658.1" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="211" y="660.0" width="20" height="15.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="667.7" x2="216" y2="667.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd03)" opacity="0.8"/>
+<text x="205" y="671.7" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="211" y="683.3" width="20" height="10.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="214" y1="688.5" x2="226" y2="688.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd03)" opacity="0.8"/>
+<text x="205" y="692.5" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="211" y="691.9" width="20" height="73.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="228" y1="728.8" x2="216" y2="728.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd03)" opacity="0.8"/>
+<text x="205" y="732.8" text-anchor="end" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<text x="205" y="592" text-anchor="end" fill="#1A237E" font-size="12" font-weight="700" letter-spacing="0.5">Pd03</text>
+<circle cx="221.0" cy="685.2" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="689.2" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="794" width="22" height="228" rx="5" fill="#9C27B0" opacity="0.15" stroke="#9C27B0" stroke-width="1"/>
+<rect x="211" y="796.0" width="20" height="9.1" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="804.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="211" y="798.6" width="20" height="11.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="804.3" x2="216" y2="804.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd04)" opacity="0.8"/>
+<text x="205" y="808.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="211" y="810.3" width="20" height="8.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="818.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="211" y="821.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="827.6" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="211" y="824.7" width="20" height="6.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="831.9" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="211" y="833.0" width="20" height="10.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="838.3" x2="216" y2="838.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd04)" opacity="0.8"/>
+<text x="205" y="842.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="211" y="841.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="847.6" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="211" y="845.3" width="20" height="70.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="880.3" x2="226" y2="880.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd04)" opacity="0.8"/>
+<text x="205" y="884.3" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<rect x="211" y="915.8" width="20" height="5.3" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="922.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="211" y="923.4" width="20" height="16.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="228" y1="931.5" x2="216" y2="931.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd04)" opacity="0.8"/>
+<text x="205" y="935.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="211" y="940.3" width="20" height="8.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="948.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="211" y="946.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="952.1" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="211" y="951.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="957.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="211" y="952.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="958.4" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="211" y="959.9" width="20" height="13.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="966.8" x2="226" y2="966.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd04)" opacity="0.8"/>
+<text x="205" y="970.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="211" y="973.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="979.0" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="211" y="990.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="996.2" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<rect x="211" y="996.6" width="20" height="4.5" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="205" y="1002.8" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">18</text>
+<rect x="211" y="1001.8" width="20" height="19.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="214" y1="1011.5" x2="226" y2="1011.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd04)" opacity="0.8"/>
+<text x="205" y="1015.5" text-anchor="end" fill="#9C27B0" font-size="10" font-weight="500">19</text>
+<text x="205" y="789" text-anchor="end" fill="#9C27B0" font-size="12" font-weight="700" letter-spacing="0.5">Pd04</text>
+<circle cx="221.0" cy="970.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="974.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1050" width="22" height="127" rx="5" fill="#E06D10" opacity="0.15" stroke="#E06D10" stroke-width="1"/>
+<rect x="211" y="1050.2" width="20" height="6.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1057.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1057.3" width="20" height="8.5" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1065.5" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1066.5" width="20" height="9.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1075.3" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1077.3" width="20" height="4.7" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1083.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1082.2" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1088.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1082.6" width="20" height="21.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1093.4" x2="226" y2="1093.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd05)" opacity="0.8"/>
+<text x="205" y="1097.4" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1104.3" width="20" height="14.6" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="214" y1="1111.6" x2="226" y2="1111.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd05)" opacity="0.8"/>
+<text x="205" y="1115.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1117.1" width="20" height="17.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1125.6" x2="216" y2="1125.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd05)" opacity="0.8"/>
+<text x="205" y="1129.6" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1141.2" width="20" height="6.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1148.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1164.5" width="20" height="11.4" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="228" y1="1170.2" x2="216" y2="1170.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd05)" opacity="0.8"/>
+<text x="205" y="1174.2" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1174.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="205" y="1180.1" text-anchor="end" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<text x="205" y="1045" text-anchor="end" fill="#E06D10" font-size="12" font-weight="700" letter-spacing="0.5">Pd05</text>
+<circle cx="221.0" cy="1131.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1135.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1205" width="22" height="127" rx="5" fill="#43A047" opacity="0.15" stroke="#43A047" stroke-width="1"/>
+<rect x="211" y="1205.3" width="20" height="49.1" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1229.8" x2="216" y2="1229.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd06)" opacity="0.8"/>
+<text x="205" y="1233.8" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1251.1" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1257.1" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1257.0" width="20" height="4.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1263.4" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1270.2" width="20" height="13.8" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1277.0" x2="216" y2="1277.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd06)" opacity="0.8"/>
+<text x="205" y="1281.0" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1292.7" width="20" height="19.3" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="228" y1="1302.3" x2="216" y2="1302.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd06)" opacity="0.8"/>
+<text x="205" y="1306.3" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1314.9" width="20" height="5.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1321.5" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1321.7" width="20" height="9.8" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="205" y="1330.7" text-anchor="end" fill="#43A047" font-size="10" font-weight="500">7</text>
+<text x="205" y="1200" text-anchor="end" fill="#43A047" font-size="12" font-weight="700" letter-spacing="0.5">Pd06</text>
+<circle cx="221.0" cy="1275.7" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1279.7" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1360" width="22" height="114" rx="5" fill="#3498DB" opacity="0.15" stroke="#3498DB" stroke-width="1"/>
+<rect x="211" y="1360.1" width="20" height="8.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1368.4" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1369.2" width="20" height="49.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="228" y1="1394.1" x2="216" y2="1394.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd07)" opacity="0.8"/>
+<text x="205" y="1398.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1419.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1425.1" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1421.9" width="20" height="13.7" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1428.8" x2="226" y2="1428.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd07)" opacity="0.8"/>
+<text x="205" y="1432.8" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1435.2" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1441.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1441.4" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1447.4" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1445.7" width="20" height="5.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1452.2" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1450.9" width="20" height="19.6" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="214" y1="1460.6" x2="226" y2="1460.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd07)" opacity="0.8"/>
+<text x="205" y="1464.6" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1464.6" width="20" height="6.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="205" y="1471.8" text-anchor="end" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<text x="205" y="1355" text-anchor="end" fill="#3498DB" font-size="12" font-weight="700" letter-spacing="0.5">Pd07</text>
+<circle cx="221.0" cy="1426.6" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1430.6" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1502" width="22" height="217" rx="5" fill="#FFA07A" opacity="0.15" stroke="#FFA07A" stroke-width="1"/>
+<rect x="211" y="1505.6" width="20" height="7.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1513.3" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1515.3" width="20" height="7.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1523.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1523.9" width="20" height="8.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1532.1" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1535.6" width="20" height="10.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1540.7" x2="216" y2="1540.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd08)" opacity="0.8"/>
+<text x="205" y="1544.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1543.4" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1549.4" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1550.7" width="20" height="20.6" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1561.0" x2="226" y2="1561.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd08)" opacity="0.8"/>
+<text x="205" y="1565.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1573.3" width="20" height="18.5" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1582.5" x2="226" y2="1582.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd08)" opacity="0.8"/>
+<text x="205" y="1586.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1593.4" width="20" height="51.2" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="214" y1="1618.9" x2="226" y2="1618.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd08)" opacity="0.8"/>
+<text x="205" y="1622.9" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1645.2" width="20" height="23.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1656.7" x2="216" y2="1656.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd08)" opacity="0.8"/>
+<text x="205" y="1660.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1675.8" width="20" height="7.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1683.3" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<rect x="211" y="1684.7" width="20" height="5.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1691.3" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">11</text>
+<rect x="211" y="1695.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1701.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">12</text>
+<rect x="211" y="1697.0" width="20" height="12.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="228" y1="1703.2" x2="216" y2="1703.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd08)" opacity="0.8"/>
+<text x="205" y="1707.2" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">13</text>
+<rect x="211" y="1709.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1715.7" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">14</text>
+<rect x="211" y="1711.5" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1717.5" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">15</text>
+<rect x="211" y="1716.0" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="205" y="1722.0" text-anchor="end" fill="#FFA07A" font-size="10" font-weight="500">16</text>
+<text x="205" y="1497" text-anchor="end" fill="#FFA07A" font-size="12" font-weight="700" letter-spacing="0.5">Pd08</text>
+<circle cx="221.0" cy="1576.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1580.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1747" width="22" height="156" rx="5" fill="#72d1b9" opacity="0.15" stroke="#72d1b9" stroke-width="1"/>
+<rect x="211" y="1750.0" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="1756.0" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1760.9" width="20" height="11.7" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="1766.8" x2="216" y2="1766.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd09)" opacity="0.8"/>
+<text x="205" y="1770.8" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1778.2" width="20" height="14.6" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="1785.5" x2="216" y2="1785.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd09)" opacity="0.8"/>
+<text x="205" y="1789.5" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1809.0" width="20" height="73.3" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="228" y1="1845.6" x2="216" y2="1845.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd09)" opacity="0.8"/>
+<text x="205" y="1849.6" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1878.6" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="1884.6" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="211" y="1883.0" width="20" height="8.6" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="1891.3" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="211" y="1889.9" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="1895.9" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="211" y="1893.6" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="1899.6" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="211" y="1895.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="1901.2" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">9</text>
+<rect x="211" y="1899.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="205" y="1905.3" text-anchor="end" fill="#72d1b9" font-size="10" font-weight="500">10</text>
+<text x="205" y="1742" text-anchor="end" fill="#72d1b9" font-size="12" font-weight="700" letter-spacing="0.5">Pd09</text>
+<circle cx="221.0" cy="1788.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="1792.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="1931" width="22" height="108" rx="5" fill="#0055a6" opacity="0.15" stroke="#0055a6" stroke-width="1"/>
+<rect x="211" y="1937.0" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="1943.0" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="211" y="1945.7" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="1951.7" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="211" y="1947.8" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="1953.8" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<rect x="211" y="1948.5" width="20" height="50.5" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="214" y1="1973.8" x2="226" y2="1973.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd10)" opacity="0.8"/>
+<text x="205" y="1977.8" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<rect x="211" y="1995.9" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2001.9" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2000.1" width="20" height="22.8" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="228" y1="2011.5" x2="216" y2="2011.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd10)" opacity="0.8"/>
+<text x="205" y="2015.5" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2028.2" width="20" height="7.6" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2036.0" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2032.3" width="20" height="6.2" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="205" y="2039.4" text-anchor="end" fill="#0055a6" font-size="10" font-weight="500">8</text>
+<text x="205" y="1926" text-anchor="end" fill="#0055a6" font-size="12" font-weight="700" letter-spacing="0.5">Pd10</text>
+<circle cx="221.0" cy="2013.4" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2017.4" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2067" width="22" height="202" rx="5" fill="#e3b58f" opacity="0.15" stroke="#e3b58f" stroke-width="1"/>
+<rect x="211" y="2067.2" width="20" height="17.3" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="228" y1="2075.8" x2="216" y2="2075.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd11)" opacity="0.8"/>
+<text x="205" y="2079.8" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2085.4" width="20" height="7.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2092.9" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2092.6" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2098.6" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2095.8" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2101.8" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2095.8" width="20" height="6.5" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2103.1" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2102.9" width="20" height="6.1" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2109.9" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2106.5" width="20" height="5.5" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2113.3" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2112.4" width="20" height="6.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2119.6" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2119.0" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2125.0" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2119.6" width="20" height="5.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2126.4" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">10</text>
+<rect x="211" y="2125.1" width="20" height="4.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2131.2" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">11</text>
+<rect x="211" y="2132.5" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2138.5" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">12</text>
+<rect x="211" y="2137.0" width="20" height="22.5" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="228" y1="2148.3" x2="216" y2="2148.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd11)" opacity="0.8"/>
+<text x="205" y="2152.3" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">13</text>
+<rect x="211" y="2160.1" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2166.1" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">14</text>
+<rect x="211" y="2163.0" width="20" height="21.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="214" y1="2173.8" x2="226" y2="2173.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd11)" opacity="0.8"/>
+<text x="205" y="2177.8" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">15</text>
+<rect x="211" y="2184.5" width="20" height="6.3" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2191.7" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">16</text>
+<rect x="211" y="2200.2" width="20" height="9.8" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="205" y="2209.1" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">17</text>
+<rect x="211" y="2231.3" width="20" height="19.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="228" y1="2240.9" x2="216" y2="2240.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd11)" opacity="0.8"/>
+<text x="205" y="2244.9" text-anchor="end" fill="#e3b58f" font-size="10" font-weight="500">18</text>
+<text x="205" y="2062" text-anchor="end" fill="#e3b58f" font-size="12" font-weight="700" letter-spacing="0.5">Pd11</text>
+<circle cx="221.0" cy="2233.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2237.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2297" width="22" height="101" rx="5" fill="#f0c9a7" opacity="0.15" stroke="#f0c9a7" stroke-width="1"/>
+<rect x="211" y="2297.0" width="20" height="6.2" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2304.1" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2303.6" width="20" height="44.4" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="214" y1="2325.9" x2="226" y2="2325.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd12)" opacity="0.8"/>
+<text x="205" y="2329.9" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2349.4" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2355.4" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2352.4" width="20" height="9.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2360.9" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2364.7" width="20" height="10.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="214" y1="2369.9" x2="226" y2="2369.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd12)" opacity="0.8"/>
+<text x="205" y="2373.9" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2366.4" width="20" height="14.8" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="214" y1="2373.8" x2="226" y2="2373.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd12)" opacity="0.8"/>
+<text x="205" y="2377.8" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2385.4" width="20" height="7.7" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2393.2" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2390.2" width="20" height="5.7" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="205" y="2397.0" text-anchor="end" fill="#f0c9a7" font-size="10" font-weight="500">8</text>
+<text x="205" y="2292" text-anchor="end" fill="#f0c9a7" font-size="12" font-weight="700" letter-spacing="0.5">Pd12</text>
+<circle cx="221.0" cy="2356.1" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2360.1" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2426" width="22" height="88" rx="5" fill="#f5aa3e" opacity="0.15" stroke="#f5aa3e" stroke-width="1"/>
+<rect x="211" y="2435.9" width="20" height="33.5" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="228" y1="2452.7" x2="216" y2="2452.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd13)" opacity="0.8"/>
+<text x="205" y="2456.7" text-anchor="end" fill="#f5aa3e" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2470.4" width="20" height="4.0" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<text x="205" y="2476.4" text-anchor="end" fill="#f5aa3e" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2474.3" width="20" height="39.0" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="214" y1="2493.8" x2="226" y2="2493.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd13)" opacity="0.8"/>
+<text x="205" y="2497.8" text-anchor="end" fill="#f5aa3e" font-size="10" font-weight="500">3</text>
+<text x="205" y="2421" text-anchor="end" fill="#f5aa3e" font-size="12" font-weight="700" letter-spacing="0.5">Pd13</text>
+<circle cx="221.0" cy="2461.7" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2465.7" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2542" width="22" height="168" rx="5" fill="#7b0d1a" opacity="0.15" stroke="#7b0d1a" stroke-width="1"/>
+<rect x="211" y="2542.1" width="20" height="20.9" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="228" y1="2552.5" x2="216" y2="2552.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd14)" opacity="0.8"/>
+<text x="205" y="2556.5" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2562.9" width="20" height="4.0" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<text x="205" y="2568.9" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2567.3" width="20" height="23.9" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="214" y1="2579.2" x2="226" y2="2579.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd14)" opacity="0.8"/>
+<text x="205" y="2583.2" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2591.5" width="20" height="10.7" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="214" y1="2596.8" x2="226" y2="2596.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd14)" opacity="0.8"/>
+<text x="205" y="2600.8" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2600.4" width="20" height="4.0" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<text x="205" y="2606.4" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2646.5" width="20" height="6.9" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<text x="205" y="2653.9" text-anchor="end" fill="#7b0d1a" font-size="10" font-weight="500">6</text>
+<text x="205" y="2537" text-anchor="end" fill="#7b0d1a" font-size="12" font-weight="700" letter-spacing="0.5">Pd14</text>
+<circle cx="221.0" cy="2670.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2674.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2738" width="22" height="82" rx="5" fill="#f2a69b" opacity="0.15" stroke="#f2a69b" stroke-width="1"/>
+<rect x="211" y="2739.0" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="2745.0" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2743.8" width="20" height="4.2" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="2750.0" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2748.3" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="2754.3" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2749.6" width="20" height="57.3" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="228" y1="2778.2" x2="216" y2="2778.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd15)" opacity="0.8"/>
+<text x="205" y="2782.2" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2805.9" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="2811.9" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2807.2" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="2813.2" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2809.5" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="2815.5" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2810.8" width="20" height="5.9" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="2817.7" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2817.2" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="205" y="2823.2" text-anchor="end" fill="#f2a69b" font-size="10" font-weight="500">9</text>
+<text x="205" y="2733" text-anchor="end" fill="#f2a69b" font-size="12" font-weight="700" letter-spacing="0.5">Pd15</text>
+<circle cx="221.0" cy="2774.3" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2778.3" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2848" width="22" height="92" rx="5" fill="#9f4e9a" opacity="0.15" stroke="#9f4e9a" stroke-width="1"/>
+<rect x="211" y="2850.4" width="20" height="9.0" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="205" y="2858.9" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2856.7" width="20" height="6.2" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="205" y="2863.8" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2859.6" width="20" height="9.0" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="205" y="2868.1" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2871.8" width="20" height="8.0" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="205" y="2879.8" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">4</text>
+<rect x="211" y="2880.2" width="20" height="6.9" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="205" y="2887.6" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">5</text>
+<rect x="211" y="2888.0" width="20" height="10.2" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="228" y1="2893.1" x2="216" y2="2893.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd16)" opacity="0.8"/>
+<text x="205" y="2897.1" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">6</text>
+<rect x="211" y="2898.6" width="20" height="4.0" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="205" y="2904.6" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">7</text>
+<rect x="211" y="2905.5" width="20" height="5.2" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="205" y="2912.1" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">8</text>
+<rect x="211" y="2907.6" width="20" height="4.0" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="205" y="2913.6" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">9</text>
+<rect x="211" y="2911.4" width="20" height="13.3" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="214" y1="2918.1" x2="226" y2="2918.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd16)" opacity="0.8"/>
+<text x="205" y="2922.1" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">10</text>
+<rect x="211" y="2925.9" width="20" height="11.9" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="214" y1="2931.9" x2="226" y2="2931.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd16)" opacity="0.8"/>
+<text x="205" y="2935.9" text-anchor="end" fill="#9f4e9a" font-size="10" font-weight="500">11</text>
+<text x="205" y="2843" text-anchor="end" fill="#9f4e9a" font-size="12" font-weight="700" letter-spacing="0.5">Pd16</text>
+<circle cx="221.0" cy="2865.8" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2869.8" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="2968" width="22" height="110" rx="5" fill="#4ca3c7" opacity="0.15" stroke="#4ca3c7" stroke-width="1"/>
+<rect x="211" y="2968.7" width="20" height="10.5" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="228" y1="2974.0" x2="216" y2="2974.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd17)" opacity="0.8"/>
+<text x="205" y="2978.0" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">1</text>
+<rect x="211" y="2978.8" width="20" height="7.8" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<text x="205" y="2986.7" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">2</text>
+<rect x="211" y="2986.8" width="20" height="4.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<text x="205" y="2992.8" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">3</text>
+<rect x="211" y="2990.7" width="20" height="36.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="214" y1="3008.7" x2="226" y2="3008.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd17)" opacity="0.8"/>
+<text x="205" y="3012.7" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">4</text>
+<rect x="211" y="3026.8" width="20" height="4.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<text x="205" y="3032.8" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">5</text>
+<rect x="211" y="3028.9" width="20" height="4.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<text x="205" y="3034.9" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">6</text>
+<rect x="211" y="3032.5" width="20" height="14.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="214" y1="3039.5" x2="226" y2="3039.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd17)" opacity="0.8"/>
+<text x="205" y="3043.5" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">7</text>
+<rect x="211" y="3046.9" width="20" height="31.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="214" y1="3062.4" x2="226" y2="3062.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd17)" opacity="0.8"/>
+<text x="205" y="3066.4" text-anchor="end" fill="#4ca3c7" font-size="10" font-weight="500">8</text>
+<text x="205" y="2963" text-anchor="end" fill="#4ca3c7" font-size="12" font-weight="700" letter-spacing="0.5">Pd17</text>
+<circle cx="221.0" cy="2989.0" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="2993.0" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+<rect x="210" y="3106" width="22" height="67" rx="5" fill="#b0d7e6" opacity="0.15" stroke="#b0d7e6" stroke-width="1"/>
+<rect x="211" y="3107.0" width="20" height="16.7" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="228" y1="3115.3" x2="216" y2="3115.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd18)" opacity="0.8"/>
+<text x="205" y="3119.3" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">1</text>
+<rect x="211" y="3123.6" width="20" height="4.0" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="205" y="3129.6" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">2</text>
+<rect x="211" y="3125.9" width="20" height="11.0" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="214" y1="3131.4" x2="226" y2="3131.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd18)" opacity="0.8"/>
+<text x="205" y="3135.4" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">3</text>
+<rect x="211" y="3136.7" width="20" height="7.8" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="205" y="3144.6" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">4</text>
+<rect x="211" y="3146.0" width="20" height="14.0" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="228" y1="3153.0" x2="216" y2="3153.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd18)" opacity="0.8"/>
+<text x="205" y="3157.0" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">5</text>
+<rect x="211" y="3161.0" width="20" height="11.9" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="214" y1="3166.9" x2="226" y2="3166.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd18)" opacity="0.8"/>
+<text x="205" y="3170.9" text-anchor="end" fill="#b0d7e6" font-size="10" font-weight="500">6</text>
+<text x="205" y="3101" text-anchor="end" fill="#b0d7e6" font-size="12" font-weight="700" letter-spacing="0.5">Pd18</text>
+<circle cx="221.0" cy="3161.9" r="5" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.95"/>
+<text x="202" y="3165.9" text-anchor="end" fill="#ff6b6b" font-size="9" font-weight="600" opacity="0.95">CEN</text>
+</g>
+<g id="queryChrs">
+<rect x="1190" y="60" width="22" height="280" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="60.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="66.1" fill="#FFD700" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="60.5" width="20" height="7.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="68.2" fill="#FFD700" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="71.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="77.2" fill="#FFD700" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="71.4" width="20" height="4.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="77.6" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="76.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="82.0" fill="#FFD700" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="79.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="85.9" fill="#FFD700" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="82.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="88.1" fill="#FFD700" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="86.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="92.0" fill="#FFD700" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="87.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="93.1" fill="#FFD700" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="88.3" width="20" height="4.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="94.6" fill="#FFD700" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="93.1" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="99.1" fill="#FFD700" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="94.0" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="100.0" fill="#FFD700" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="96.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="102.4" fill="#FFD700" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="98.8" width="20" height="4.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="105.1" fill="#FFD700" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="100.9" width="20" height="9.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="109.8" fill="#FFD700" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="110.6" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="116.6" fill="#FFD700" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="114.4" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="120.4" fill="#FFD700" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="115.9" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="121.9" fill="#FFD700" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="124.1" width="20" height="11.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="129.8" x2="1206" y2="129.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="1217" y="133.8" fill="#FFD700" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="147.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="153.3" fill="#FFD700" font-size="10" font-weight="500">22</text>
+<rect x="1191" y="150.0" width="20" height="6.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="157.0" fill="#FFD700" font-size="10" font-weight="500">20</text>
+<rect x="1191" y="159.2" width="20" height="5.3" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="165.9" fill="#FFD700" font-size="10" font-weight="500">28</text>
+<rect x="1191" y="164.7" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="170.7" fill="#FFD700" font-size="10" font-weight="500">25</text>
+<rect x="1191" y="165.2" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="171.2" fill="#FFD700" font-size="10" font-weight="500">26</text>
+<rect x="1191" y="165.6" width="20" height="14.6" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="172.8" x2="1206" y2="172.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="1217" y="176.8" fill="#FFD700" font-size="10" font-weight="500">24</text>
+<rect x="1191" y="184.2" width="20" height="9.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="192.7" fill="#FFD700" font-size="10" font-weight="500">21</text>
+<rect x="1191" y="214.9" width="20" height="13.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="221.8" x2="1206" y2="221.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="1217" y="225.8" fill="#FFD700" font-size="10" font-weight="500">23</text>
+<rect x="1191" y="236.2" width="20" height="10.2" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="241.3" x2="1196" y2="241.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd01)" opacity="0.8"/>
+<text x="1217" y="245.3" fill="#FFD700" font-size="10" font-weight="500">29</text>
+<rect x="1191" y="244.9" width="20" height="32.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1208" y1="260.9" x2="1196" y2="260.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd01)" opacity="0.8"/>
+<text x="1217" y="264.9" fill="#FFD700" font-size="10" font-weight="500">33</text>
+<rect x="1191" y="276.5" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="282.5" fill="#FFD700" font-size="10" font-weight="500">32</text>
+<rect x="1191" y="279.8" width="20" height="6.4" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="287.0" fill="#FFD700" font-size="10" font-weight="500">31</text>
+<rect x="1191" y="282.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="288.3" fill="#FFD700" font-size="10" font-weight="500">36</text>
+<rect x="1191" y="282.3" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="288.3" fill="#FFD700" font-size="10" font-weight="500">35</text>
+<rect x="1191" y="285.8" width="20" height="4.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="291.8" fill="#FFD700" font-size="10" font-weight="500">30</text>
+<rect x="1191" y="290.9" width="20" height="9.0" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="299.4" fill="#FFD700" font-size="10" font-weight="500">37</text>
+<rect x="1191" y="294.3" width="20" height="16.7" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="302.7" x2="1206" y2="302.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="1217" y="306.7" fill="#FFD700" font-size="10" font-weight="500">27</text>
+<rect x="1191" y="310.3" width="20" height="5.1" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="316.8" fill="#FFD700" font-size="10" font-weight="500">34</text>
+<rect x="1191" y="316.0" width="20" height="4.5" rx="3" fill="#FFD700" opacity="0.9"/>
+<text x="1217" y="322.2" fill="#FFD700" font-size="10" font-weight="500">38</text>
+<rect x="1191" y="320.9" width="20" height="18.8" rx="3" fill="#FFD700" opacity="0.9"/>
+<line x1="1194" y1="330.3" x2="1206" y2="330.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd01)" opacity="0.8"/>
+<text x="1217" y="334.3" fill="#FFD700" font-size="10" font-weight="500">39</text>
+<text x="1217" y="55" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn01</text>
+<rect x="1190" y="368" width="22" height="158" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="368.4" width="20" height="17.0" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="376.9" x2="1206" y2="376.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd02)" opacity="0.8"/>
+<text x="1217" y="380.9" fill="#E63946" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="384.9" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="390.9" fill="#E63946" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="386.8" width="20" height="27.3" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="400.4" x2="1206" y2="400.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd02)" opacity="0.8"/>
+<text x="1217" y="404.4" fill="#E63946" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="412.6" width="20" height="4.7" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="418.9" fill="#E63946" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="422.4" width="20" height="11.7" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="428.2" x2="1196" y2="428.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd02)" opacity="0.8"/>
+<text x="1217" y="432.2" fill="#E63946" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="433.5" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="439.5" fill="#E63946" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="434.7" width="20" height="20.5" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1194" y1="445.0" x2="1206" y2="445.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd02)" opacity="0.8"/>
+<text x="1217" y="449.0" fill="#E63946" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="450.7" width="20" height="5.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="457.2" fill="#E63946" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="454.4" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="460.4" fill="#E63946" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="461.5" width="20" height="9.6" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="470.3" fill="#E63946" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="488.2" width="20" height="4.3" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="494.4" fill="#E63946" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="500.4" width="20" height="18.4" rx="3" fill="#E63946" opacity="0.9"/>
+<line x1="1208" y1="509.6" x2="1196" y2="509.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd02)" opacity="0.8"/>
+<text x="1217" y="513.6" fill="#E63946" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="519.6" width="20" height="6.4" rx="3" fill="#E63946" opacity="0.9"/>
+<text x="1217" y="526.8" fill="#E63946" font-size="10" font-weight="500">13</text>
+<text x="1217" y="363" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn07</text>
+<rect x="1190" y="554" width="22" height="155" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="554.6" width="20" height="58.0" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="583.6" x2="1196" y2="583.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd03)" opacity="0.8"/>
+<text x="1217" y="587.6" fill="#1A237E" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="616.9" width="20" height="4.8" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="623.3" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="650.2" width="20" height="23.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="662.2" x2="1196" y2="662.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd03)" opacity="0.8"/>
+<text x="1217" y="666.2" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="676.1" width="20" height="5.7" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="683.0" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="682.2" width="20" height="6.9" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="689.6" fill="#1A237E" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="689.2" width="20" height="13.1" rx="3" fill="#1A237E" opacity="0.9"/>
+<line x1="1208" y1="695.8" x2="1196" y2="695.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd03)" opacity="0.8"/>
+<text x="1217" y="699.8" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="702.5" width="20" height="6.4" rx="3" fill="#1A237E" opacity="0.9"/>
+<text x="1217" y="709.7" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<text x="1217" y="549" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn04</text>
+<rect x="1190" y="737" width="22" height="190" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="745.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="751.7" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="746.8" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="752.8" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="749.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="755.1" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="755.7" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="761.7" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="759.4" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="765.4" fill="#9C27B0" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="759.6" width="20" height="5.8" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="766.4" fill="#9C27B0" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="763.3" width="20" height="4.4" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="769.5" fill="#9C27B0" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="767.3" width="20" height="28.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<line x1="1194" y1="781.3" x2="1206" y2="781.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd04)" opacity="0.8"/>
+<text x="1217" y="785.3" fill="#9C27B0" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="795.4" width="20" height="6.6" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="802.7" fill="#9C27B0" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="802.0" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="808.0" fill="#9C27B0" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="807.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="813.2" fill="#9C27B0" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="807.6" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="813.6" fill="#9C27B0" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="810.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="816.1" fill="#9C27B0" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="811.1" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="817.1" fill="#9C27B0" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="811.8" width="20" height="6.2" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="818.9" fill="#9C27B0" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="817.3" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="823.3" fill="#9C27B0" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="819.2" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="825.2" fill="#9C27B0" font-size="10" font-weight="500">18</text>
+<rect x="1191" y="821.2" width="20" height="5.9" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="1217" y="828.2" fill="#9f4e9a" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="827.1" width="20" height="4.0" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="1217" y="833.1" fill="#9f4e9a" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="827.1" width="20" height="4.0" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="1217" y="833.1" fill="#9f4e9a" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="837.9" width="20" height="4.0" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="843.9" fill="#9C27B0" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="839.5" width="20" height="4.4" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="1217" y="845.6" fill="#9f4e9a" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="844.7" width="20" height="8.7" rx="3" fill="#9C27B0" opacity="0.9"/>
+<text x="1217" y="853.0" fill="#9C27B0" font-size="10" font-weight="500">19</text>
+<rect x="1191" y="856.6" width="20" height="7.1" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="1217" y="864.2" fill="#9f4e9a" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="859.1" width="20" height="4.0" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="1217" y="865.1" fill="#9f4e9a" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="863.0" width="20" height="19.6" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="1208" y1="872.8" x2="1196" y2="872.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd16)" opacity="0.8"/>
+<text x="1217" y="876.8" fill="#9f4e9a" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="880.1" width="20" height="9.7" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="1217" y="889.0" fill="#9f4e9a" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="892.7" width="20" height="13.5" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="1194" y1="899.5" x2="1206" y2="899.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd16)" opacity="0.8"/>
+<text x="1217" y="903.5" fill="#9f4e9a" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="908.1" width="20" height="6.5" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<text x="1217" y="915.3" fill="#9f4e9a" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="913.6" width="20" height="13.2" rx="3" fill="#9f4e9a" opacity="0.9"/>
+<line x1="1194" y1="920.2" x2="1206" y2="920.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd16)" opacity="0.8"/>
+<text x="1217" y="924.2" fill="#9f4e9a" font-size="10" font-weight="500">11</text>
+<text x="1217" y="732" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn06</text>
+<rect x="1190" y="955" width="22" height="133" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="955.5" width="20" height="6.1" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="962.5" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="964.1" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="970.1" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="967.7" width="20" height="6.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="974.7" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="973.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="979.8" fill="#E06D10" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="978.8" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="984.8" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="979.0" width="20" height="17.3" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="987.6" x2="1206" y2="987.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd05)" opacity="0.8"/>
+<text x="1217" y="991.6" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1004.4" width="20" height="12.9" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1194" y1="1010.8" x2="1206" y2="1010.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd05)" opacity="0.8"/>
+<text x="1217" y="1014.8" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1021.5" width="20" height="25.8" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1034.4" x2="1196" y2="1034.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd05)" opacity="0.8"/>
+<text x="1217" y="1038.4" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1060.7" width="20" height="9.4" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1069.4" fill="#E06D10" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1071.9" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<text x="1217" y="1077.9" fill="#E06D10" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1073.9" width="20" height="14.0" rx="3" fill="#E06D10" opacity="0.9"/>
+<line x1="1208" y1="1080.9" x2="1196" y2="1080.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd05)" opacity="0.8"/>
+<text x="1217" y="1084.9" fill="#E06D10" font-size="10" font-weight="500">10</text>
+<text x="1217" y="950" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn10</text>
+<rect x="1190" y="1116" width="22" height="134" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1116.1" width="20" height="6.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1123.2" fill="#43A047" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1122.4" width="20" height="4.0" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1128.4" fill="#43A047" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1126.5" width="20" height="14.5" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="1133.7" x2="1196" y2="1133.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd06)" opacity="0.8"/>
+<text x="1217" y="1137.7" fill="#43A047" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1149.7" width="20" height="25.6" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="1162.5" x2="1196" y2="1162.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd06)" opacity="0.8"/>
+<text x="1217" y="1166.5" fill="#43A047" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1193.0" width="20" height="4.7" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1199.3" fill="#43A047" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1203.2" width="20" height="6.3" rx="3" fill="#43A047" opacity="0.9"/>
+<text x="1217" y="1210.3" fill="#43A047" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1207.8" width="20" height="42.2" rx="3" fill="#43A047" opacity="0.9"/>
+<line x1="1208" y1="1228.9" x2="1196" y2="1228.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd06)" opacity="0.8"/>
+<text x="1217" y="1232.9" fill="#43A047" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1111" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn05</text>
+<rect x="1190" y="1278" width="22" height="145" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1290.7" width="20" height="29.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1194" y1="1305.4" x2="1206" y2="1305.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd07)" opacity="0.8"/>
+<text x="1217" y="1309.4" fill="#3498DB" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1318.9" width="20" height="16.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="1327.3" x2="1196" y2="1327.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd07)" opacity="0.8"/>
+<text x="1217" y="1331.3" fill="#3498DB" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1346.7" width="20" height="5.8" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1353.6" fill="#3498DB" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1357.2" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1363.2" fill="#3498DB" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1362.9" width="20" height="8.3" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1371.1" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1368.6" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1374.6" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1381.1" width="20" height="4.0" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1387.1" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1387.8" width="20" height="28.9" rx="3" fill="#3498DB" opacity="0.9"/>
+<line x1="1208" y1="1402.3" x2="1196" y2="1402.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd07)" opacity="0.8"/>
+<text x="1217" y="1406.3" fill="#3498DB" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1416.8" width="20" height="5.2" rx="3" fill="#3498DB" opacity="0.9"/>
+<text x="1217" y="1423.4" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1273" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn11</text>
+<rect x="1190" y="1451" width="22" height="192" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1451.1" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1457.1" fill="#FFA07A" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1453.4" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1459.4" fill="#FFA07A" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="1455.5" width="20" height="5.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1462.2" fill="#FFA07A" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1461.6" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1467.6" fill="#FFA07A" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="1472.4" width="20" height="23.3" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1484.1" x2="1206" y2="1484.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd08)" opacity="0.8"/>
+<text x="1217" y="1488.1" fill="#FFA07A" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1524.4" width="20" height="13.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1531.1" x2="1196" y2="1531.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd08)" opacity="0.8"/>
+<text x="1217" y="1535.1" fill="#FFA07A" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1536.5" width="20" height="10.6" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1541.9" x2="1196" y2="1541.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd08)" opacity="0.8"/>
+<text x="1217" y="1545.9" fill="#FFA07A" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="1548.2" width="20" height="16.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1556.3" x2="1196" y2="1556.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd08)" opacity="0.8"/>
+<text x="1217" y="1560.3" fill="#FFA07A" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1567.4" width="20" height="11.7" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1573.2" x2="1206" y2="1573.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd08)" opacity="0.8"/>
+<text x="1217" y="1577.2" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1579.8" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1585.8" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1583.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1589.7" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1587.7" width="20" height="4.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1593.7" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1591.6" width="20" height="4.1" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1597.7" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1595.7" width="20" height="27.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1194" y1="1609.4" x2="1206" y2="1609.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd08)" opacity="0.8"/>
+<text x="1217" y="1613.4" fill="#FFA07A" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1623.3" width="20" height="12.4" rx="3" fill="#FFA07A" opacity="0.9"/>
+<line x1="1208" y1="1629.5" x2="1196" y2="1629.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd08)" opacity="0.8"/>
+<text x="1217" y="1633.5" fill="#FFA07A" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1635.9" width="20" height="7.0" rx="3" fill="#FFA07A" opacity="0.9"/>
+<text x="1217" y="1643.4" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<text x="1217" y="1446" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn03</text>
+<rect x="1190" y="1671" width="22" height="199" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1671.1" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1677.1" fill="#72d1b9" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="1673.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1679.2" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1675.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1681.3" fill="#72d1b9" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="1677.3" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1683.3" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1679.1" width="20" height="4.7" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1685.4" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1684.1" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1690.1" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1685.8" width="20" height="50.8" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="1711.2" x2="1196" y2="1711.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd09)" opacity="0.8"/>
+<text x="1217" y="1715.2" fill="#72d1b9" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1746.6" width="20" height="10.6" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="1751.9" x2="1196" y2="1751.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd09)" opacity="0.8"/>
+<text x="1217" y="1755.9" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1760.2" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1766.2" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1767.0" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1773.0" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1771.8" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1777.8" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1775.1" width="20" height="29.9" rx="3" fill="#0055a6" opacity="0.9"/>
+<line x1="1194" y1="1790.1" x2="1206" y2="1790.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd10)" opacity="0.8"/>
+<text x="1217" y="1794.1" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="1804.5" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1810.5" fill="#0055a6" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="1808.0" width="20" height="4.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1814.0" fill="#0055a6" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="1809.2" width="20" height="8.0" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1817.2" fill="#0055a6" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="1820.7" width="20" height="8.4" rx="3" fill="#0055a6" opacity="0.9"/>
+<text x="1217" y="1828.9" fill="#0055a6" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="1858.2" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
+<text x="1217" y="1864.2" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1858.5" width="20" height="10.3" rx="3" fill="#72d1b9" opacity="0.9"/>
+<line x1="1208" y1="1863.6" x2="1196" y2="1863.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd09)" opacity="0.8"/>
+<text x="1217" y="1867.6" fill="#72d1b9" font-size="10" font-weight="500">2</text>
+<text x="1217" y="1666" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn02</text>
+<rect x="1190" y="1898" width="22" height="131" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="1898.1" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1904.1" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="1898.3" width="20" height="5.8" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1905.2" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="1904.7" width="20" height="9.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1913.2" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="1913.9" width="20" height="12.8" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="1920.3" x2="1196" y2="1920.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd11)" opacity="0.8"/>
+<text x="1217" y="1924.3" fill="#e3b58f" font-size="10" font-weight="500">13</text>
+<rect x="1191" y="1926.8" width="20" height="19.2" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1194" y1="1936.4" x2="1206" y2="1936.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd11)" opacity="0.8"/>
+<text x="1217" y="1940.4" fill="#e3b58f" font-size="10" font-weight="500">15</text>
+<rect x="1191" y="1942.7" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="1948.7" fill="#e3b58f" font-size="10" font-weight="500">16</text>
+<rect x="1191" y="1955.0" width="20" height="12.9" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="1961.4" x2="1196" y2="1961.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd11)" opacity="0.8"/>
+<text x="1217" y="1965.4" fill="#e3b58f" font-size="10" font-weight="500">17</text>
+<rect x="1191" y="1970.6" width="20" height="26.1" rx="3" fill="#e3b58f" opacity="0.9"/>
+<line x1="1208" y1="1983.6" x2="1196" y2="1983.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd11)" opacity="0.8"/>
+<text x="1217" y="1987.6" fill="#e3b58f" font-size="10" font-weight="500">18</text>
+<text x="1217" y="1893" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn14</text>
+<rect x="1190" y="2057" width="22" height="93" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2068.5" width="20" height="5.2" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="2075.1" fill="#f0c9a7" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="2076.6" width="20" height="9.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="2085.3" fill="#f0c9a7" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2081.6" width="20" height="12.2" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1208" y1="2087.7" x2="1196" y2="2087.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd12)" opacity="0.8"/>
+<text x="1217" y="2091.7" fill="#f0c9a7" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="2094.1" width="20" height="6.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="2101.1" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="2101.1" width="20" height="6.6" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="2108.4" fill="#f0c9a7" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="2115.6" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="2121.6" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="2119.4" width="20" height="26.6" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<line x1="1194" y1="2132.7" x2="1206" y2="2132.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd12)" opacity="0.8"/>
+<text x="1217" y="2136.7" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2145.7" width="20" height="4.0" rx="3" fill="#f0c9a7" opacity="0.9"/>
+<text x="1217" y="2151.8" fill="#f0c9a7" font-size="10" font-weight="500">1</text>
+<text x="1217" y="2052" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn12</text>
+<rect x="1190" y="2178" width="22" height="89" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2221.1" width="20" height="18.8" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="1208" y1="2230.6" x2="1196" y2="2230.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd13)" opacity="0.8"/>
+<text x="1217" y="2234.6" fill="#f5aa3e" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="2240.1" width="20" height="4.0" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<text x="1217" y="2246.1" fill="#f5aa3e" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2243.6" width="20" height="23.0" rx="3" fill="#f5aa3e" opacity="0.9"/>
+<line x1="1194" y1="2255.1" x2="1206" y2="2255.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd13)" opacity="0.8"/>
+<text x="1217" y="2259.1" fill="#f5aa3e" font-size="10" font-weight="500">3</text>
+<text x="1217" y="2173" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn16</text>
+<rect x="1190" y="2295" width="22" height="54" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2295.0" width="20" height="4.0" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<text x="1217" y="2301.0" fill="#7b0d1a" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2295.1" width="20" height="13.9" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="1208" y1="2302.0" x2="1196" y2="2302.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd14)" opacity="0.8"/>
+<text x="1217" y="2306.0" fill="#7b0d1a" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="2309.1" width="20" height="5.5" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<text x="1217" y="2315.8" fill="#7b0d1a" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="2313.3" width="20" height="4.0" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<text x="1217" y="2319.3" fill="#7b0d1a" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2327.5" width="20" height="4.1" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<text x="1217" y="2333.5" fill="#7b0d1a" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="2331.9" width="20" height="17.0" rx="3" fill="#7b0d1a" opacity="0.9"/>
+<line x1="1194" y1="2340.4" x2="1206" y2="2340.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd14)" opacity="0.8"/>
+<text x="1217" y="2344.4" fill="#7b0d1a" font-size="10" font-weight="500">3</text>
+<text x="1217" y="2290" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn15</text>
+<rect x="1190" y="2377" width="22" height="143" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2377.0" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="1217" y="2383.0" fill="#f2a69b" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="2377.4" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="1217" y="2383.4" fill="#f2a69b" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="2379.7" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="1217" y="2385.7" fill="#f2a69b" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="2382.0" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="1217" y="2388.0" fill="#f2a69b" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="2382.6" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="1217" y="2388.6" fill="#f2a69b" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2383.1" width="20" height="33.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<line x1="1208" y1="2399.6" x2="1196" y2="2399.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd15)" opacity="0.8"/>
+<text x="1217" y="2403.6" fill="#f2a69b" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="2414.2" width="20" height="4.9" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="1217" y="2420.6" fill="#f2a69b" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="2419.7" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="1217" y="2425.7" fill="#f2a69b" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2430.3" width="20" height="4.0" rx="3" fill="#f2a69b" opacity="0.9"/>
+<text x="1217" y="2436.3" fill="#f2a69b" font-size="10" font-weight="500">1</text>
+<text x="1217" y="2372" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn13</text>
+<rect x="1190" y="2548" width="22" height="138" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2559.2" width="20" height="4.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<text x="1217" y="2565.2" fill="#4ca3c7" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="2564.6" width="20" height="15.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="1194" y1="2572.1" x2="1206" y2="2572.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd17)" opacity="0.8"/>
+<text x="1217" y="2576.1" fill="#4ca3c7" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2606.0" width="20" height="11.2" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="1208" y1="2611.6" x2="1196" y2="2611.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd17)" opacity="0.8"/>
+<text x="1217" y="2615.6" fill="#4ca3c7" font-size="10" font-weight="500">1</text>
+<rect x="1191" y="2617.8" width="20" height="26.8" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="1194" y1="2631.2" x2="1206" y2="2631.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd17)" opacity="0.8"/>
+<text x="1217" y="2635.2" fill="#4ca3c7" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="2644.9" width="20" height="4.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<text x="1217" y="2650.9" fill="#4ca3c7" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="2647.9" width="20" height="4.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<text x="1217" y="2653.9" fill="#4ca3c7" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2657.1" width="20" height="17.3" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<line x1="1194" y1="2665.8" x2="1206" y2="2665.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pd17)" opacity="0.8"/>
+<text x="1217" y="2669.8" fill="#4ca3c7" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="2674.6" width="20" height="9.6" rx="3" fill="#4ca3c7" opacity="0.9"/>
+<text x="1217" y="2683.4" fill="#4ca3c7" font-size="10" font-weight="500">7</text>
+<text x="1217" y="2543" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn09</text>
+<rect x="1190" y="2714" width="22" height="137" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
+<rect x="1191" y="2776.2" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2782.2" fill="#e3b58f" font-size="10" font-weight="500">14</text>
+<rect x="1191" y="2782.7" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2788.7" fill="#e3b58f" font-size="10" font-weight="500">9</text>
+<rect x="1191" y="2783.4" width="20" height="5.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2789.9" fill="#e3b58f" font-size="10" font-weight="500">10</text>
+<rect x="1191" y="2786.3" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2792.3" fill="#e3b58f" font-size="10" font-weight="500">11</text>
+<rect x="1191" y="2788.5" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2794.5" fill="#e3b58f" font-size="10" font-weight="500">12</text>
+<rect x="1191" y="2791.3" width="20" height="5.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2797.8" fill="#e3b58f" font-size="10" font-weight="500">8</text>
+<rect x="1191" y="2795.6" width="20" height="4.4" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2801.8" fill="#e3b58f" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="2796.9" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2802.9" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<rect x="1191" y="2799.1" width="20" height="4.6" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2805.4" fill="#e3b58f" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2800.2" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
+<text x="1217" y="2806.2" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="2813.3" width="20" height="6.4" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="1217" y="2820.5" fill="#b0d7e6" font-size="10" font-weight="500">6</text>
+<rect x="1191" y="2820.8" width="20" height="9.7" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="1217" y="2829.6" fill="#b0d7e6" font-size="10" font-weight="500">5</text>
+<rect x="1191" y="2829.8" width="20" height="5.2" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="1217" y="2836.4" fill="#b0d7e6" font-size="10" font-weight="500">4</text>
+<rect x="1191" y="2835.2" width="20" height="4.0" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="1217" y="2841.2" fill="#b0d7e6" font-size="10" font-weight="500">2</text>
+<rect x="1191" y="2835.4" width="20" height="4.8" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<text x="1217" y="2841.8" fill="#b0d7e6" font-size="10" font-weight="500">3</text>
+<rect x="1191" y="2839.5" width="20" height="10.9" rx="3" fill="#b0d7e6" opacity="0.9"/>
+<line x1="1208" y1="2845.0" x2="1196" y2="2845.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pd18)" opacity="0.8"/>
+<text x="1217" y="2849.0" fill="#b0d7e6" font-size="10" font-weight="500">1</text>
+<text x="1217" y="2709" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Cn08</text>
+</g>
+</svg>
+</div>
+
+<div class="legend"><div class="legend-item"><div class="legend-dot" style="background:#FFD700"></div><span>Pd01</span></div><div class="legend-item"><div class="legend-dot" style="background:#E63946"></div><span>Pd02</span></div><div class="legend-item"><div class="legend-dot" style="background:#1A237E"></div><span>Pd03</span></div><div class="legend-item"><div class="legend-dot" style="background:#9C27B0"></div><span>Pd04</span></div><div class="legend-item"><div class="legend-dot" style="background:#E06D10"></div><span>Pd05</span></div><div class="legend-item"><div class="legend-dot" style="background:#43A047"></div><span>Pd06</span></div><div class="legend-item"><div class="legend-dot" style="background:#3498DB"></div><span>Pd07</span></div><div class="legend-item"><div class="legend-dot" style="background:#FFA07A"></div><span>Pd08</span></div><div class="legend-item"><div class="legend-dot" style="background:#72d1b9"></div><span>Pd09</span></div><div class="legend-item"><div class="legend-dot" style="background:#0055a6"></div><span>Pd10</span></div><div class="legend-item"><div class="legend-dot" style="background:#e3b58f"></div><span>Pd11</span></div><div class="legend-item"><div class="legend-dot" style="background:#f0c9a7"></div><span>Pd12</span></div><div class="legend-item"><div class="legend-dot" style="background:#f5aa3e"></div><span>Pd13</span></div><div class="legend-item"><div class="legend-dot" style="background:#7b0d1a"></div><span>Pd14</span></div><div class="legend-item"><div class="legend-dot" style="background:#f2a69b"></div><span>Pd15</span></div><div class="legend-item"><div class="legend-dot" style="background:#9f4e9a"></div><span>Pd16</span></div><div class="legend-item"><div class="legend-dot" style="background:#4ca3c7"></div><span>Pd17</span></div><div class="legend-item"><div class="legend-dot" style="background:#b0d7e6"></div><span>Pd18</span></div></div>
+<div class="stats-bar"><span><b>208</b> synteny fragments</span><span><b>18</b> ref chromosomes</span><span><b>16</b> query chromosomes</span><span><b>106</b> forward &nbsp;|&nbsp; <b>102</b> reverse</span><span>max size <b>461</b> genes</span></div>
+<div id="tooltip"></div>
+
+<script>
+function showTip(e, el) {
+  const parts = el.dataset.tip.split(' | ');
+  const tip = document.getElementById('tooltip');
+  tip.innerHTML = parts.map((p,i) => i===0
+    ? `<div style="color:#0ea5e9;font-weight:700;margin-bottom:5px">${p}</div>`
+    : `<div>${p}</div>`
+  ).join('');
+  tip.style.left = (e.clientX + 14) + 'px';
+  tip.style.top  = (e.clientY - 10) + 'px';
+  tip.classList.add('show');
+}
+function hideTip() { document.getElementById('tooltip').classList.remove('show'); }
+</script>
+</body>
+</html>
