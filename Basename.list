@@ -1,53 +1,106 @@
 Basename	Query	Reference	Family
+
 01_Tg	Tectona grandis	Paulownia fortunei	Lamiaceae
+
 02_Lj	Leonurus japonicus	Paulownia fortunei	Lamiaceae
+
 03_Sb	Scutellaria baicalensis	Paulownia fortunei	Lamiaceae
+
 04_Is	Isodon serra	Paulownia fortunei	Lamiaceae
+
 05_Ca	Callicarpa americana	Paulownia fortunei	Lamiaceae
+
 06_Cn	Camelina neglecta	Capsella rubella	Brassicaceae
+
 07_At	Arabidopsis thaliana	Capsella rubella	Brassicaceae
+
 08_Bf	Boechera falcata	Capsella rubella	Brassicaceae
+
 09_Hc	Hopea chinensis	Vatica mangachapoi	Dipterocarpaceae
+
 10_Sr	Shorea robusta	Vatica mangachapoi	Dipterocarpaceae
+
 11_Pc	Parashorea chinensis	Vatica mangachapoi	Dipterocarpaceae
+
 12_Cc	Corchorus capsularis	Theobroma cacao	Malvaceae
+
 13_Mp	Microcos paniculata	Theobroma cacao	Malvaceae
+
 14_Dc	Dovyalis caffra	Casearia decandra	Salicaceae
+
 15_Fj	Flacourtia jangomas	Casearia decandra	Salicaceae
+
 16_Xl	Xylosma longifolia	Casearia decandra	Salicaceae
+
 17_Rc	Rosa chinensis	Gillenia trifoliata (RT)	Rosaceae
+
 18_Fv	Fragaria vesca	Gillenia trifoliata (RT)	Rosaceae
+
 19_Fn	Fragaria nipponica	Gillenia trifoliata (RT)	Rosaceae
+
 20_Fn	Fragaria nilgerrensis	Gillenia trifoliata (RT)	Rosaceae
+
 21_Ra	Rubus argutus	Gillenia trifoliata (RT)	Rosaceae
+
 22_Pa	Prunus armeniaca	Gillenia trifoliata (RT)	Rosaceae
+
 23_Pp	Prunus persica	Gillenia trifoliata (RT)	Rosaceae
+
 24_Td	Tillandsia duratii	Ananas comosus	Bromeliaceae
+
 25_Al	Avena longiglumis	Oryza sativa	Poaceae
+
 26_Cl	Coix lacryma-jobi	Oryza sativa	Poaceae
+
 27_Lp	Lolium perenne	Oryza sativa	Poaceae
+
 28_Ca	Cenchrus americanus	Oryza sativa	Poaceae
+
 29_Sc	Secale cereale	Oryza sativa	Poaceae
+
 30_Si	Setaria italica	Oryza sativa	Poaceae
+
 31_Sb	Sorghum bicolor	Oryza sativa	Poaceae
+
 32_Tu	Triticum urartu	Oryza sativa	Poaceae
+
 33_Am	Aegilops mutica	Oryza sativa	Poaceae
+
 34_Ol	Olyra latifolia	Oryza sativa	Poaceae
+
 35_Aa	Alopecurus aequalis	Oryza sativa	Poaceae
+
 36_Dr	Digitaria radicosa	Oryza sativa	Poaceae
+
 37_Pv	Paspalum vaginatum	Oryza sativa	Poaceae
+
 38_Ph	Panicum hallii	Oryza sativa	Poaceae
+
 39_Eh	Echinochloa haploclada	Oryza sativa	Poaceae
+
 40_Rg	Raddia guianensis	Oryza sativa	Poaceae
+
 41_Hv	Hordeum vulgare	Oryza sativa	Poaceae
+
 42_Hm	Hordeum marinum	Oryza sativa	Poaceae
+
 43_Bd	Brachypodium distachyon	Oryza sativa	Poaceae
+
 44_Bs	Brachypodium sylvaticum	Oryza sativa	Poaceae
+
 45_Ac	Areca catechu	Phoenix dactylifera	Arecaceae
+
 46_Cn	Cocos nucifera	Phoenix dactylifera	Arecaceae
+
 47_Nf	Nypa fruticans	Phoenix dactylifera	Arecaceae
+
 48_Eg	Elaeis guineensis	Phoenix dactylifera	Arecaceae
+
 49_Dz	Dioscorea zingiberensis	Dioscorea alata	Dioscoreaceae
+
 50_Cj	Cryptomeria japonica	Ginkgo biloba	Cupressaceae
+
 51_Fh	Fokienia hodginsii	Ginkgo biloba	Cupressaceae
+
 52_Tg	Torreya grandis	Ginkgo biloba	Taxaceae
+
