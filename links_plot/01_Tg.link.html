@@ -7,9 +7,28 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background:#0a0e1a; color:#e2e8f0; font-family:'JetBrains Mono',monospace; min-height:100vh; }
-  .canvas-container { padding:20px 32px; overflow-x:auto; }
-  svg { display:block; max-width:100%; }
+  html, body {
+    background:#0a0e1a; color:#e2e8f0;
+    font-family:'JetBrains Mono',monospace;
+    height:100%; width:100%;
+  }
+  body {
+    display:flex; flex-direction:column;
+    min-height:100vh;
+  }
+  .canvas-container {
+    flex:1;
+    padding:20px 32px 0;
+    display:flex;
+    align-items:stretch;
+    min-height:0;
+  }
+  .canvas-container svg {
+    width:100%;
+    height:100%;
+    min-height:400px;
+    display:block;
+  }
   .legend {
     padding:10px 32px 16px; display:flex; gap:18px; flex-wrap:wrap;
     border-top:1px solid #1e2d45;
@@ -32,7 +51,7 @@
 <body>
 
 <div class="canvas-container">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 4815" width="1400" height="4815" style="background:#0a0e1a;font-family:'JetBrains Mono',monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 4815" preserveAspectRatio="xMidYMid meet" style="background:#0a0e1a; width:100%; height:100%; display:block;font-family:'JetBrains Mono',monospace">
 <defs>
 <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <marker id="arr_Pf01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#FFD700"/></marker>
@@ -580,16 +599,16 @@
 <rect x="1190" y="293" width="22" height="219" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="293.2" width="20" height="18.4" rx="3" fill="#E63946" opacity="0.9"/>
 <line x1="1194" y1="302.4" x2="1206" y2="302.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf02)" opacity="0.8"/>
-<text x="1217" y="306.4" fill="#E63946" font-size="10" font-weight="500">3</text>
+<text x="1217" y="306.4" fill="#E63946" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="319.8" width="20" height="46.0" rx="3" fill="#E63946" opacity="0.9"/>
 <line x1="1208" y1="342.8" x2="1196" y2="342.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf02)" opacity="0.8"/>
 <text x="1217" y="346.8" fill="#E63946" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="359.7" width="20" height="100.9" rx="3" fill="#E63946" opacity="0.9"/>
 <line x1="1208" y1="410.1" x2="1196" y2="410.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf02)" opacity="0.8"/>
-<text x="1217" y="414.1" fill="#E63946" font-size="10" font-weight="500">1</text>
+<text x="1217" y="414.1" fill="#E63946" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="462.3" width="20" height="26.3" rx="3" fill="#e3b58f" opacity="0.9"/>
 <line x1="1208" y1="475.4" x2="1196" y2="475.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
-<text x="1217" y="479.4" fill="#e3b58f" font-size="10" font-weight="500">2</text>
+<text x="1217" y="479.4" fill="#e3b58f" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="488.9" width="20" height="23.0" rx="3" fill="#e3b58f" opacity="0.9"/>
 <line x1="1208" y1="500.4" x2="1196" y2="500.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
 <text x="1217" y="504.4" fill="#e3b58f" font-size="10" font-weight="500">5</text>
@@ -597,44 +616,44 @@
 <rect x="1190" y="540" width="22" height="224" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="555.3" width="20" height="17.8" rx="3" fill="#1A237E" opacity="0.9"/>
 <line x1="1194" y1="564.2" x2="1206" y2="564.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf03)" opacity="0.8"/>
-<text x="1217" y="568.2" fill="#1A237E" font-size="10" font-weight="500">5</text>
+<text x="1217" y="568.2" fill="#1A237E" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="573.2" width="20" height="20.1" rx="3" fill="#1A237E" opacity="0.9"/>
 <line x1="1208" y1="583.2" x2="1196" y2="583.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf03)" opacity="0.8"/>
-<text x="1217" y="587.2" fill="#1A237E" font-size="10" font-weight="500">6</text>
+<text x="1217" y="587.2" fill="#1A237E" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="593.5" width="20" height="13.4" rx="3" fill="#1A237E" opacity="0.9"/>
 <line x1="1208" y1="600.2" x2="1196" y2="600.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf03)" opacity="0.8"/>
 <text x="1217" y="604.2" fill="#1A237E" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="607.7" width="20" height="6.4" rx="3" fill="#1A237E" opacity="0.9"/>
-<text x="1217" y="614.9" fill="#1A237E" font-size="10" font-weight="500">2</text>
+<text x="1217" y="614.9" fill="#1A237E" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="610.0" width="20" height="18.9" rx="3" fill="#1A237E" opacity="0.9"/>
 <line x1="1208" y1="619.5" x2="1196" y2="619.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf03)" opacity="0.8"/>
-<text x="1217" y="623.5" fill="#1A237E" font-size="10" font-weight="500">1</text>
+<text x="1217" y="623.5" fill="#1A237E" font-size="10" font-weight="500">5</text>
 <rect x="1191" y="629.4" width="20" height="49.9" rx="3" fill="#e3b58f" opacity="0.9"/>
 <line x1="1194" y1="654.3" x2="1206" y2="654.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf11)" opacity="0.8"/>
-<text x="1217" y="658.3" fill="#e3b58f" font-size="10" font-weight="500">1</text>
+<text x="1217" y="658.3" fill="#e3b58f" font-size="10" font-weight="500">6</text>
 <rect x="1191" y="680.4" width="20" height="13.8" rx="3" fill="#e3b58f" opacity="0.9"/>
 <line x1="1208" y1="687.3" x2="1196" y2="687.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
-<text x="1217" y="691.3" fill="#e3b58f" font-size="10" font-weight="500">3</text>
+<text x="1217" y="691.3" fill="#e3b58f" font-size="10" font-weight="500">7</text>
 <rect x="1191" y="695.1" width="20" height="34.6" rx="3" fill="#9f4e9a" opacity="0.9"/>
 <line x1="1194" y1="712.4" x2="1206" y2="712.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf16)" opacity="0.8"/>
-<text x="1217" y="716.4" fill="#9f4e9a" font-size="10" font-weight="500">2</text>
+<text x="1217" y="716.4" fill="#9f4e9a" font-size="10" font-weight="500">8</text>
 <rect x="1191" y="736.4" width="20" height="26.4" rx="3" fill="#7b0d1a" opacity="0.9"/>
 <line x1="1194" y1="749.6" x2="1206" y2="749.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf14)" opacity="0.8"/>
-<text x="1217" y="753.6" fill="#7b0d1a" font-size="10" font-weight="500">1</text>
+<text x="1217" y="753.6" fill="#7b0d1a" font-size="10" font-weight="500">9</text>
 <text x="1217" y="535" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg07</text>
 <rect x="1190" y="792" width="22" height="218" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="792.1" width="20" height="35.2" rx="3" fill="#b0d7e6" opacity="0.9"/>
 <line x1="1194" y1="809.7" x2="1206" y2="809.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf18)" opacity="0.8"/>
-<text x="1217" y="813.7" fill="#b0d7e6" font-size="10" font-weight="500">3</text>
+<text x="1217" y="813.7" fill="#b0d7e6" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="827.8" width="20" height="11.5" rx="3" fill="#f0c9a7" opacity="0.9"/>
 <line x1="1208" y1="833.6" x2="1196" y2="833.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf12)" opacity="0.8"/>
-<text x="1217" y="837.6" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
+<text x="1217" y="837.6" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="839.1" width="20" height="66.4" rx="3" fill="#f0c9a7" opacity="0.9"/>
 <line x1="1194" y1="872.3" x2="1206" y2="872.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf12)" opacity="0.8"/>
-<text x="1217" y="876.3" fill="#f0c9a7" font-size="10" font-weight="500">1</text>
+<text x="1217" y="876.3" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="906.0" width="20" height="20.4" rx="3" fill="#9C27B0" opacity="0.9"/>
 <line x1="1194" y1="916.1" x2="1206" y2="916.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
-<text x="1217" y="920.1" fill="#9C27B0" font-size="10" font-weight="500">2</text>
+<text x="1217" y="920.1" fill="#9C27B0" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="926.7" width="20" height="82.7" rx="3" fill="#9C27B0" opacity="0.9"/>
 <line x1="1194" y1="968.0" x2="1206" y2="968.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
 <text x="1217" y="972.0" fill="#9C27B0" font-size="10" font-weight="500">5</text>
@@ -642,212 +661,212 @@
 <rect x="1190" y="1038" width="22" height="254" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="1066.7" width="20" height="23.2" rx="3" fill="#9C27B0" opacity="0.9"/>
 <line x1="1194" y1="1078.3" x2="1206" y2="1078.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
-<text x="1217" y="1082.3" fill="#9C27B0" font-size="10" font-weight="500">3</text>
+<text x="1217" y="1082.3" fill="#9C27B0" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="1095.4" width="20" height="21.6" rx="3" fill="#9C27B0" opacity="0.9"/>
 <line x1="1194" y1="1106.2" x2="1206" y2="1106.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf04)" opacity="0.8"/>
-<text x="1217" y="1110.2" fill="#9C27B0" font-size="10" font-weight="500">4</text>
+<text x="1217" y="1110.2" fill="#9C27B0" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="1118.1" width="20" height="56.2" rx="3" fill="#9C27B0" opacity="0.9"/>
 <line x1="1208" y1="1146.2" x2="1196" y2="1146.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf04)" opacity="0.8"/>
-<text x="1217" y="1150.2" fill="#9C27B0" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1150.2" fill="#9C27B0" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="1177.4" width="20" height="20.3" rx="3" fill="#FFA07A" opacity="0.9"/>
 <line x1="1194" y1="1187.6" x2="1206" y2="1187.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf08)" opacity="0.8"/>
-<text x="1217" y="1191.6" fill="#FFA07A" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1191.6" fill="#FFA07A" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="1228.3" width="20" height="55.4" rx="3" fill="#0055a6" opacity="0.9"/>
 <line x1="1194" y1="1256.0" x2="1206" y2="1256.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
-<text x="1217" y="1260.0" fill="#0055a6" font-size="10" font-weight="500">4</text>
+<text x="1217" y="1260.0" fill="#0055a6" font-size="10" font-weight="500">5</text>
 <text x="1217" y="1033" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg17</text>
 <rect x="1190" y="1320" width="22" height="218" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="1320.1" width="20" height="44.3" rx="3" fill="#E06D10" opacity="0.9"/>
 <line x1="1208" y1="1342.3" x2="1196" y2="1342.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
-<text x="1217" y="1346.3" fill="#E06D10" font-size="10" font-weight="500">7</text>
+<text x="1217" y="1346.3" fill="#E06D10" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="1363.4" width="20" height="4.0" rx="3" fill="#E06D10" opacity="0.9"/>
-<text x="1217" y="1369.4" fill="#E06D10" font-size="10" font-weight="500">6</text>
+<text x="1217" y="1369.4" fill="#E06D10" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="1364.5" width="20" height="21.1" rx="3" fill="#E06D10" opacity="0.9"/>
 <line x1="1194" y1="1375.0" x2="1206" y2="1375.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf05)" opacity="0.8"/>
-<text x="1217" y="1379.0" fill="#E06D10" font-size="10" font-weight="500">5</text>
+<text x="1217" y="1379.0" fill="#E06D10" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="1386.8" width="20" height="42.3" rx="3" fill="#E06D10" opacity="0.9"/>
 <line x1="1208" y1="1407.9" x2="1196" y2="1407.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
 <text x="1217" y="1411.9" fill="#E06D10" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="1435.2" width="20" height="13.2" rx="3" fill="#E06D10" opacity="0.9"/>
 <line x1="1194" y1="1441.8" x2="1206" y2="1441.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf05)" opacity="0.8"/>
-<text x="1217" y="1445.8" fill="#E06D10" font-size="10" font-weight="500">3</text>
+<text x="1217" y="1445.8" fill="#E06D10" font-size="10" font-weight="500">5</text>
 <rect x="1191" y="1458.7" width="20" height="32.2" rx="3" fill="#E06D10" opacity="0.9"/>
 <line x1="1208" y1="1474.8" x2="1196" y2="1474.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
-<text x="1217" y="1478.8" fill="#E06D10" font-size="10" font-weight="500">2</text>
+<text x="1217" y="1478.8" fill="#E06D10" font-size="10" font-weight="500">6</text>
 <rect x="1191" y="1499.3" width="20" height="36.7" rx="3" fill="#E06D10" opacity="0.9"/>
 <line x1="1208" y1="1517.7" x2="1196" y2="1517.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
-<text x="1217" y="1521.7" fill="#E06D10" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1521.7" fill="#E06D10" font-size="10" font-weight="500">7</text>
 <text x="1217" y="1315" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg13</text>
 <rect x="1190" y="1566" width="22" height="280" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="1598.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
-<text x="1217" y="1604.6" fill="#E63946" font-size="10" font-weight="500">6</text>
+<text x="1217" y="1604.6" fill="#E63946" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="1602.6" width="20" height="4.0" rx="3" fill="#E63946" opacity="0.9"/>
-<text x="1217" y="1608.6" fill="#E63946" font-size="10" font-weight="500">7</text>
+<text x="1217" y="1608.6" fill="#E63946" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="1613.3" width="20" height="34.9" rx="3" fill="#43A047" opacity="0.9"/>
 <line x1="1194" y1="1630.7" x2="1206" y2="1630.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf06)" opacity="0.8"/>
-<text x="1217" y="1634.7" fill="#43A047" font-size="10" font-weight="500">1</text>
+<text x="1217" y="1634.7" fill="#43A047" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="1648.4" width="20" height="9.4" rx="3" fill="#43A047" opacity="0.9"/>
-<text x="1217" y="1657.1" fill="#43A047" font-size="10" font-weight="500">2</text>
+<text x="1217" y="1657.1" fill="#43A047" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="1657.9" width="20" height="57.8" rx="3" fill="#43A047" opacity="0.9"/>
 <line x1="1194" y1="1686.8" x2="1206" y2="1686.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf06)" opacity="0.8"/>
 <text x="1217" y="1690.8" fill="#43A047" font-size="10" font-weight="500">5</text>
 <rect x="1191" y="1714.9" width="20" height="20.2" rx="3" fill="#43A047" opacity="0.9"/>
 <line x1="1208" y1="1725.0" x2="1196" y2="1725.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf06)" opacity="0.8"/>
-<text x="1217" y="1729.0" fill="#43A047" font-size="10" font-weight="500">3</text>
+<text x="1217" y="1729.0" fill="#43A047" font-size="10" font-weight="500">6</text>
 <rect x="1191" y="1739.2" width="20" height="39.6" rx="3" fill="#43A047" opacity="0.9"/>
 <line x1="1208" y1="1759.1" x2="1196" y2="1759.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf06)" opacity="0.8"/>
-<text x="1217" y="1763.1" fill="#43A047" font-size="10" font-weight="500">4</text>
+<text x="1217" y="1763.1" fill="#43A047" font-size="10" font-weight="500">7</text>
 <rect x="1191" y="1774.3" width="20" height="64.7" rx="3" fill="#43A047" opacity="0.9"/>
 <line x1="1194" y1="1806.6" x2="1206" y2="1806.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf06)" opacity="0.8"/>
-<text x="1217" y="1810.6" fill="#43A047" font-size="10" font-weight="500">6</text>
+<text x="1217" y="1810.6" fill="#43A047" font-size="10" font-weight="500">8</text>
 <text x="1217" y="1561" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg11</text>
 <rect x="1190" y="1874" width="22" height="242" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="1884.4" width="20" height="46.7" rx="3" fill="#7b0d1a" opacity="0.9"/>
 <line x1="1208" y1="1907.8" x2="1196" y2="1907.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf14)" opacity="0.8"/>
-<text x="1217" y="1911.8" fill="#7b0d1a" font-size="10" font-weight="500">4</text>
+<text x="1217" y="1911.8" fill="#7b0d1a" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="1930.7" width="20" height="21.8" rx="3" fill="#7b0d1a" opacity="0.9"/>
 <line x1="1194" y1="1941.6" x2="1206" y2="1941.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf14)" opacity="0.8"/>
-<text x="1217" y="1945.6" fill="#7b0d1a" font-size="10" font-weight="500">3</text>
+<text x="1217" y="1945.6" fill="#7b0d1a" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="1957.8" width="20" height="124.2" rx="3" fill="#3498DB" opacity="0.9"/>
 <line x1="1208" y1="2019.9" x2="1196" y2="2019.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf07)" opacity="0.8"/>
-<text x="1217" y="2023.9" fill="#3498DB" font-size="10" font-weight="500">1</text>
+<text x="1217" y="2023.9" fill="#3498DB" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="2087.3" width="20" height="28.0" rx="3" fill="#4e2e5c" opacity="0.9"/>
 <line x1="1194" y1="2101.4" x2="1206" y2="2101.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf20)" opacity="0.8"/>
-<text x="1217" y="2105.4" fill="#4e2e5c" font-size="10" font-weight="500">1</text>
+<text x="1217" y="2105.4" fill="#4e2e5c" font-size="10" font-weight="500">4</text>
 <text x="1217" y="1869" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg08</text>
 <rect x="1190" y="2144" width="22" height="224" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="2144.2" width="20" height="11.0" rx="3" fill="#3498DB" opacity="0.9"/>
 <line x1="1194" y1="2149.7" x2="1206" y2="2149.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf07)" opacity="0.8"/>
-<text x="1217" y="2153.7" fill="#3498DB" font-size="10" font-weight="500">3</text>
+<text x="1217" y="2153.7" fill="#3498DB" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="2144.2" width="20" height="25.3" rx="3" fill="#3498DB" opacity="0.9"/>
 <line x1="1208" y1="2156.8" x2="1196" y2="2156.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf07)" opacity="0.8"/>
 <text x="1217" y="2160.8" fill="#3498DB" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="2151.3" width="20" height="5.9" rx="3" fill="#3498DB" opacity="0.9"/>
-<text x="1217" y="2158.3" fill="#3498DB" font-size="10" font-weight="500">4</text>
+<text x="1217" y="2158.3" fill="#3498DB" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="2185.3" width="20" height="88.4" rx="3" fill="#3498DB" opacity="0.9"/>
 <line x1="1194" y1="2229.5" x2="1206" y2="2229.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf07)" opacity="0.8"/>
-<text x="1217" y="2233.5" fill="#3498DB" font-size="10" font-weight="500">5</text>
+<text x="1217" y="2233.5" fill="#3498DB" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="2274.1" width="20" height="15.5" rx="3" fill="#7b0d1a" opacity="0.9"/>
 <line x1="1208" y1="2281.8" x2="1196" y2="2281.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf14)" opacity="0.8"/>
 <text x="1217" y="2285.8" fill="#7b0d1a" font-size="10" font-weight="500">5</text>
 <rect x="1191" y="2290.0" width="20" height="49.6" rx="3" fill="#7b0d1a" opacity="0.9"/>
 <line x1="1194" y1="2314.8" x2="1206" y2="2314.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf14)" opacity="0.8"/>
-<text x="1217" y="2318.8" fill="#7b0d1a" font-size="10" font-weight="500">2</text>
+<text x="1217" y="2318.8" fill="#7b0d1a" font-size="10" font-weight="500">6</text>
 <rect x="1191" y="2341.1" width="20" height="26.2" rx="3" fill="#0055a6" opacity="0.9"/>
 <line x1="1194" y1="2354.2" x2="1206" y2="2354.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
-<text x="1217" y="2358.2" fill="#0055a6" font-size="10" font-weight="500">3</text>
+<text x="1217" y="2358.2" fill="#0055a6" font-size="10" font-weight="500">7</text>
 <text x="1217" y="2139" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg15</text>
 <rect x="1190" y="2396" width="22" height="235" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="2398.1" width="20" height="37.9" rx="3" fill="#FFA07A" opacity="0.9"/>
 <line x1="1194" y1="2417.1" x2="1206" y2="2417.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf08)" opacity="0.8"/>
-<text x="1217" y="2421.1" fill="#FFA07A" font-size="10" font-weight="500">2</text>
+<text x="1217" y="2421.1" fill="#FFA07A" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="2436.1" width="20" height="7.8" rx="3" fill="#FFA07A" opacity="0.9"/>
-<text x="1217" y="2444.0" fill="#FFA07A" font-size="10" font-weight="500">3</text>
+<text x="1217" y="2444.0" fill="#FFA07A" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="2444.6" width="20" height="5.3" rx="3" fill="#FFA07A" opacity="0.9"/>
-<text x="1217" y="2451.2" fill="#FFA07A" font-size="10" font-weight="500">4</text>
+<text x="1217" y="2451.2" fill="#FFA07A" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="2450.7" width="20" height="38.0" rx="3" fill="#FFA07A" opacity="0.9"/>
 <line x1="1208" y1="2469.7" x2="1196" y2="2469.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf08)" opacity="0.8"/>
-<text x="1217" y="2473.7" fill="#FFA07A" font-size="10" font-weight="500">5</text>
+<text x="1217" y="2473.7" fill="#FFA07A" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="2490.5" width="20" height="116.1" rx="3" fill="#FFA07A" opacity="0.9"/>
 <line x1="1194" y1="2548.5" x2="1206" y2="2548.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf08)" opacity="0.8"/>
-<text x="1217" y="2552.5" fill="#FFA07A" font-size="10" font-weight="500">6</text>
+<text x="1217" y="2552.5" fill="#FFA07A" font-size="10" font-weight="500">5</text>
 <text x="1217" y="2391" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg14</text>
 <rect x="1190" y="2659" width="22" height="210" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="2666.3" width="20" height="36.6" rx="3" fill="#FFD700" opacity="0.9"/>
 <line x1="1194" y1="2684.6" x2="1206" y2="2684.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf01)" opacity="0.8"/>
-<text x="1217" y="2688.6" fill="#FFD700" font-size="10" font-weight="500">5</text>
+<text x="1217" y="2688.6" fill="#FFD700" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="2726.3" width="20" height="87.5" rx="3" fill="#72d1b9" opacity="0.9"/>
 <line x1="1194" y1="2770.1" x2="1206" y2="2770.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
 <text x="1217" y="2774.1" fill="#72d1b9" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="2817.6" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
-<text x="1217" y="2823.6" fill="#72d1b9" font-size="10" font-weight="500">1</text>
+<text x="1217" y="2823.6" fill="#72d1b9" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="2825.8" width="20" height="4.0" rx="3" fill="#72d1b9" opacity="0.9"/>
-<text x="1217" y="2831.8" fill="#72d1b9" font-size="10" font-weight="500">8</text>
+<text x="1217" y="2831.8" fill="#72d1b9" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="2831.5" width="20" height="32.9" rx="3" fill="#b0d7e6" opacity="0.9"/>
 <line x1="1194" y1="2847.9" x2="1206" y2="2847.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf18)" opacity="0.8"/>
-<text x="1217" y="2851.9" fill="#b0d7e6" font-size="10" font-weight="500">1</text>
+<text x="1217" y="2851.9" fill="#b0d7e6" font-size="10" font-weight="500">5</text>
 <rect x="1191" y="2861.2" width="20" height="7.7" rx="3" fill="#b0d7e6" opacity="0.9"/>
-<text x="1217" y="2869.0" fill="#b0d7e6" font-size="10" font-weight="500">2</text>
+<text x="1217" y="2869.0" fill="#b0d7e6" font-size="10" font-weight="500">6</text>
 <text x="1217" y="2654" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg04</text>
 <rect x="1190" y="2897" width="22" height="229" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="2897.0" width="20" height="6.1" rx="3" fill="#E63946" opacity="0.9"/>
-<text x="1217" y="2904.0" fill="#E63946" font-size="10" font-weight="500">5</text>
+<text x="1217" y="2904.0" fill="#E63946" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="2906.7" width="20" height="65.0" rx="3" fill="#E63946" opacity="0.9"/>
 <line x1="1208" y1="2939.2" x2="1196" y2="2939.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf02)" opacity="0.8"/>
-<text x="1217" y="2943.2" fill="#E63946" font-size="10" font-weight="500">4</text>
+<text x="1217" y="2943.2" fill="#E63946" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="2972.0" width="20" height="9.1" rx="3" fill="#72d1b9" opacity="0.9"/>
-<text x="1217" y="2980.6" fill="#72d1b9" font-size="10" font-weight="500">7</text>
+<text x="1217" y="2980.6" fill="#72d1b9" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="2981.3" width="20" height="45.6" rx="3" fill="#72d1b9" opacity="0.9"/>
 <line x1="1208" y1="3004.0" x2="1196" y2="3004.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf09)" opacity="0.8"/>
 <text x="1217" y="3008.0" fill="#72d1b9" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="3025.7" width="20" height="20.9" rx="3" fill="#72d1b9" opacity="0.9"/>
 <line x1="1194" y1="3036.1" x2="1206" y2="3036.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
-<text x="1217" y="3040.1" fill="#72d1b9" font-size="10" font-weight="500">6</text>
+<text x="1217" y="3040.1" fill="#72d1b9" font-size="10" font-weight="500">5</text>
 <rect x="1191" y="3046.9" width="20" height="32.3" rx="3" fill="#72d1b9" opacity="0.9"/>
 <line x1="1194" y1="3063.0" x2="1206" y2="3063.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
-<text x="1217" y="3067.0" fill="#72d1b9" font-size="10" font-weight="500">5</text>
+<text x="1217" y="3067.0" fill="#72d1b9" font-size="10" font-weight="500">6</text>
 <text x="1217" y="2892" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg06</text>
 <rect x="1190" y="3154" width="22" height="237" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="3160.4" width="20" height="51.0" rx="3" fill="#0055a6" opacity="0.9"/>
 <line x1="1194" y1="3185.9" x2="1206" y2="3185.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
-<text x="1217" y="3189.9" fill="#0055a6" font-size="10" font-weight="500">5</text>
+<text x="1217" y="3189.9" fill="#0055a6" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="3214.2" width="20" height="37.3" rx="3" fill="#0055a6" opacity="0.9"/>
 <line x1="1208" y1="3232.9" x2="1196" y2="3232.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf10)" opacity="0.8"/>
-<text x="1217" y="3236.9" fill="#0055a6" font-size="10" font-weight="500">1</text>
+<text x="1217" y="3236.9" fill="#0055a6" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="3252.4" width="20" height="20.7" rx="3" fill="#0055a6" opacity="0.9"/>
 <line x1="1194" y1="3262.8" x2="1206" y2="3262.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf10)" opacity="0.8"/>
-<text x="1217" y="3266.8" fill="#0055a6" font-size="10" font-weight="500">2</text>
+<text x="1217" y="3266.8" fill="#0055a6" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="3273.6" width="20" height="61.1" rx="3" fill="#72d1b9" opacity="0.9"/>
 <line x1="1194" y1="3304.1" x2="1206" y2="3304.1" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf09)" opacity="0.8"/>
-<text x="1217" y="3308.1" fill="#72d1b9" font-size="10" font-weight="500">3</text>
+<text x="1217" y="3308.1" fill="#72d1b9" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="3340.8" width="20" height="42.1" rx="3" fill="#1A237E" opacity="0.9"/>
 <line x1="1194" y1="3361.9" x2="1206" y2="3361.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf03)" opacity="0.8"/>
-<text x="1217" y="3365.9" fill="#1A237E" font-size="10" font-weight="500">4</text>
+<text x="1217" y="3365.9" fill="#1A237E" font-size="10" font-weight="500">5</text>
 <text x="1217" y="3149" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg18</text>
 <rect x="1190" y="3419" width="22" height="240" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="3419.1" width="20" height="26.2" rx="3" fill="#e3b58f" opacity="0.9"/>
 <line x1="1208" y1="3432.2" x2="1196" y2="3432.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf11)" opacity="0.8"/>
-<text x="1217" y="3436.2" fill="#e3b58f" font-size="10" font-weight="500">7</text>
+<text x="1217" y="3436.2" fill="#e3b58f" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="3445.5" width="20" height="14.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
 <line x1="1194" y1="3452.6" x2="1206" y2="3452.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf12)" opacity="0.8"/>
-<text x="1217" y="3456.6" fill="#f0c9a7" font-size="10" font-weight="500">5</text>
+<text x="1217" y="3456.6" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="3460.4" width="20" height="22.1" rx="3" fill="#f0c9a7" opacity="0.9"/>
 <line x1="1194" y1="3471.4" x2="1206" y2="3471.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf12)" opacity="0.8"/>
-<text x="1217" y="3475.4" fill="#f0c9a7" font-size="10" font-weight="500">6</text>
+<text x="1217" y="3475.4" fill="#f0c9a7" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="3482.9" width="20" height="5.7" rx="3" fill="#f0c9a7" opacity="0.9"/>
-<text x="1217" y="3489.7" fill="#f0c9a7" font-size="10" font-weight="500">2</text>
+<text x="1217" y="3489.7" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="3488.8" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
-<text x="1217" y="3494.8" fill="#e3b58f" font-size="10" font-weight="500">4</text>
+<text x="1217" y="3494.8" fill="#e3b58f" font-size="10" font-weight="500">5</text>
 <rect x="1191" y="3490.9" width="20" height="4.0" rx="3" fill="#e3b58f" opacity="0.9"/>
 <text x="1217" y="3496.9" fill="#e3b58f" font-size="10" font-weight="500">6</text>
 <rect x="1191" y="3491.5" width="20" height="28.3" rx="3" fill="#f0c9a7" opacity="0.9"/>
 <line x1="1208" y1="3505.7" x2="1196" y2="3505.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf12)" opacity="0.8"/>
-<text x="1217" y="3509.7" fill="#f0c9a7" font-size="10" font-weight="500">4</text>
+<text x="1217" y="3509.7" fill="#f0c9a7" font-size="10" font-weight="500">7</text>
 <rect x="1191" y="3519.9" width="20" height="36.9" rx="3" fill="#b0d7e6" opacity="0.9"/>
 <line x1="1194" y1="3538.3" x2="1206" y2="3538.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf18)" opacity="0.8"/>
-<text x="1217" y="3542.3" fill="#b0d7e6" font-size="10" font-weight="500">4</text>
+<text x="1217" y="3542.3" fill="#b0d7e6" font-size="10" font-weight="500">8</text>
 <rect x="1191" y="3560.0" width="20" height="29.7" rx="3" fill="#b0d7e6" opacity="0.9"/>
 <line x1="1208" y1="3574.8" x2="1196" y2="3574.8" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf18)" opacity="0.8"/>
-<text x="1217" y="3578.8" fill="#b0d7e6" font-size="10" font-weight="500">6</text>
+<text x="1217" y="3578.8" fill="#b0d7e6" font-size="10" font-weight="500">9</text>
 <rect x="1191" y="3594.9" width="20" height="41.7" rx="3" fill="#b0d7e6" opacity="0.9"/>
 <line x1="1208" y1="3615.7" x2="1196" y2="3615.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf18)" opacity="0.8"/>
-<text x="1217" y="3619.7" fill="#b0d7e6" font-size="10" font-weight="500">5</text>
+<text x="1217" y="3619.7" fill="#b0d7e6" font-size="10" font-weight="500">10</text>
 <text x="1217" y="3414" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg01</text>
 <rect x="1190" y="3687" width="22" height="212" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="3706.0" width="20" height="29.0" rx="3" fill="#4e2e5c" opacity="0.9"/>
 <line x1="1194" y1="3720.5" x2="1206" y2="3720.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf20)" opacity="0.8"/>
-<text x="1217" y="3724.5" fill="#4e2e5c" font-size="10" font-weight="500">2</text>
+<text x="1217" y="3724.5" fill="#4e2e5c" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="3733.3" width="20" height="70.5" rx="3" fill="#f5aa3e" opacity="0.9"/>
 <line x1="1208" y1="3768.5" x2="1196" y2="3768.5" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf13)" opacity="0.8"/>
-<text x="1217" y="3772.5" fill="#f5aa3e" font-size="10" font-weight="500">5</text>
+<text x="1217" y="3772.5" fill="#f5aa3e" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="3800.7" width="20" height="51.7" rx="3" fill="#f5aa3e" opacity="0.9"/>
 <line x1="1194" y1="3826.6" x2="1206" y2="3826.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf13)" opacity="0.8"/>
-<text x="1217" y="3830.6" fill="#f5aa3e" font-size="10" font-weight="500">4</text>
+<text x="1217" y="3830.6" fill="#f5aa3e" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="3850.5" width="20" height="4.0" rx="3" fill="#f5aa3e" opacity="0.9"/>
-<text x="1217" y="3856.5" fill="#f5aa3e" font-size="10" font-weight="500">3</text>
+<text x="1217" y="3856.5" fill="#f5aa3e" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="3851.4" width="20" height="47.5" rx="3" fill="#f5aa3e" opacity="0.9"/>
 <line x1="1208" y1="3875.2" x2="1196" y2="3875.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf13)" opacity="0.8"/>
-<text x="1217" y="3879.2" fill="#f5aa3e" font-size="10" font-weight="500">2</text>
+<text x="1217" y="3879.2" fill="#f5aa3e" font-size="10" font-weight="500">5</text>
 <text x="1217" y="3682" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg09</text>
 <rect x="1190" y="3927" width="22" height="245" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="3930.1" width="20" height="112.6" rx="3" fill="#f2a69b" opacity="0.9"/>
@@ -855,36 +874,36 @@
 <text x="1217" y="3990.4" fill="#f2a69b" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="4042.9" width="20" height="13.1" rx="3" fill="#f2a69b" opacity="0.9"/>
 <line x1="1208" y1="4049.4" x2="1196" y2="4049.4" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf15)" opacity="0.8"/>
-<text x="1217" y="4053.4" fill="#f2a69b" font-size="10" font-weight="500">5</text>
+<text x="1217" y="4053.4" fill="#f2a69b" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="4056.8" width="20" height="29.6" rx="3" fill="#f2a69b" opacity="0.9"/>
 <line x1="1208" y1="4071.6" x2="1196" y2="4071.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf15)" opacity="0.8"/>
-<text x="1217" y="4075.6" fill="#f2a69b" font-size="10" font-weight="500">2</text>
+<text x="1217" y="4075.6" fill="#f2a69b" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="4090.6" width="20" height="36.0" rx="3" fill="#f2a69b" opacity="0.9"/>
 <line x1="1194" y1="4108.6" x2="1206" y2="4108.6" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf15)" opacity="0.8"/>
 <text x="1217" y="4112.6" fill="#f2a69b" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="4127.1" width="20" height="11.7" rx="3" fill="#f2a69b" opacity="0.9"/>
 <line x1="1208" y1="4133.0" x2="1196" y2="4133.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf15)" opacity="0.8"/>
-<text x="1217" y="4137.0" fill="#f2a69b" font-size="10" font-weight="500">3</text>
+<text x="1217" y="4137.0" fill="#f2a69b" font-size="10" font-weight="500">5</text>
 <rect x="1191" y="4138.8" width="20" height="16.4" rx="3" fill="#f2a69b" opacity="0.9"/>
 <line x1="1194" y1="4147.0" x2="1206" y2="4147.0" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf15)" opacity="0.8"/>
 <text x="1217" y="4151.0" fill="#f2a69b" font-size="10" font-weight="500">6</text>
 <rect x="1191" y="4155.4" width="20" height="16.6" rx="3" fill="#E06D10" opacity="0.9"/>
 <line x1="1208" y1="4163.7" x2="1196" y2="4163.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf05)" opacity="0.8"/>
-<text x="1217" y="4167.7" fill="#E06D10" font-size="10" font-weight="500">8</text>
+<text x="1217" y="4167.7" fill="#E06D10" font-size="10" font-weight="500">7</text>
 <text x="1217" y="3922" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg12</text>
 <rect x="1190" y="4200" width="22" height="222" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="4229.3" width="20" height="23.3" rx="3" fill="#4e2e5c" opacity="0.9"/>
 <line x1="1194" y1="4240.9" x2="1206" y2="4240.9" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf20)" opacity="0.8"/>
-<text x="1217" y="4244.9" fill="#4e2e5c" font-size="10" font-weight="500">3</text>
+<text x="1217" y="4244.9" fill="#4e2e5c" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="4254.2" width="20" height="52.0" rx="3" fill="#4ca3c7" opacity="0.9"/>
 <line x1="1194" y1="4280.2" x2="1206" y2="4280.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf17)" opacity="0.8"/>
 <text x="1217" y="4284.2" fill="#4ca3c7" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="4306.2" width="20" height="29.9" rx="3" fill="#4e2e5c" opacity="0.9"/>
 <line x1="1208" y1="4321.2" x2="1196" y2="4321.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf20)" opacity="0.8"/>
-<text x="1217" y="4325.2" fill="#4e2e5c" font-size="10" font-weight="500">4</text>
+<text x="1217" y="4325.2" fill="#4e2e5c" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="4336.3" width="20" height="75.9" rx="3" fill="#4ca3c7" opacity="0.9"/>
 <line x1="1208" y1="4374.3" x2="1196" y2="4374.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf17)" opacity="0.8"/>
-<text x="1217" y="4378.3" fill="#4ca3c7" font-size="10" font-weight="500">1</text>
+<text x="1217" y="4378.3" fill="#4ca3c7" font-size="10" font-weight="500">4</text>
 <text x="1217" y="4195" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg02</text>
 <rect x="1190" y="4450" width="22" height="277" rx="5" fill="#1e2d45" stroke="#2a4060" stroke-width="1"/>
 <rect x="1191" y="4468.1" width="20" height="14.3" rx="3" fill="#f5aa3e" opacity="0.9"/>
@@ -892,21 +911,21 @@
 <text x="1217" y="4479.3" fill="#f5aa3e" font-size="10" font-weight="500">1</text>
 <rect x="1191" y="4483.5" width="20" height="33.6" rx="3" fill="#a32a3a" opacity="0.9"/>
 <line x1="1194" y1="4500.3" x2="1206" y2="4500.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf19)" opacity="0.8"/>
-<text x="1217" y="4504.3" fill="#a32a3a" font-size="10" font-weight="500">3</text>
+<text x="1217" y="4504.3" fill="#a32a3a" font-size="10" font-weight="500">2</text>
 <rect x="1191" y="4521.6" width="20" height="111.1" rx="3" fill="#a32a3a" opacity="0.9"/>
 <line x1="1208" y1="4577.2" x2="1196" y2="4577.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf19)" opacity="0.8"/>
-<text x="1217" y="4581.2" fill="#a32a3a" font-size="10" font-weight="500">1</text>
+<text x="1217" y="4581.2" fill="#a32a3a" font-size="10" font-weight="500">3</text>
 <rect x="1191" y="4633.2" width="20" height="7.3" rx="3" fill="#a32a3a" opacity="0.9"/>
-<text x="1217" y="4640.9" fill="#a32a3a" font-size="10" font-weight="500">5</text>
+<text x="1217" y="4640.9" fill="#a32a3a" font-size="10" font-weight="500">4</text>
 <rect x="1191" y="4634.2" width="20" height="39.9" rx="3" fill="#a32a3a" opacity="0.9"/>
 <line x1="1208" y1="4654.2" x2="1196" y2="4654.2" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf19)" opacity="0.8"/>
-<text x="1217" y="4658.2" fill="#a32a3a" font-size="10" font-weight="500">4</text>
+<text x="1217" y="4658.2" fill="#a32a3a" font-size="10" font-weight="500">5</text>
 <rect x="1191" y="4675.9" width="20" height="35.4" rx="3" fill="#a32a3a" opacity="0.9"/>
 <line x1="1194" y1="4693.7" x2="1206" y2="4693.7" stroke="white" stroke-width="1.5" marker-end="url(#arr_Pf19)" opacity="0.8"/>
-<text x="1217" y="4697.7" fill="#a32a3a" font-size="10" font-weight="500">2</text>
+<text x="1217" y="4697.7" fill="#a32a3a" font-size="10" font-weight="500">6</text>
 <rect x="1191" y="4711.7" width="20" height="15.3" rx="3" fill="#9f4e9a" opacity="0.9"/>
 <line x1="1208" y1="4719.3" x2="1196" y2="4719.3" stroke="white" stroke-width="1.5" marker-end="url(#arr_rev_Pf16)" opacity="0.8"/>
-<text x="1217" y="4723.3" fill="#9f4e9a" font-size="10" font-weight="500">1</text>
+<text x="1217" y="4723.3" fill="#9f4e9a" font-size="10" font-weight="500">7</text>
 <text x="1217" y="4445" fill="#94a3b8" font-size="12" font-weight="700" letter-spacing="0.5">Tg10</text>
 </g>
 </svg>
